@@ -1,57 +1,41 @@
 # Toybird LP Site
 
-このZIPには、既存の「AI暗記シート」LPと、新規作成した「Pocket Screen」LPが含まれています。
+公開用LP一式です
 
 ```text
 toybird-lp-site/
-├── README.md
+├── index.html
+├── robots.txt
+├── sitemap.xml
+├── GA4_SETUP_NOTES.md
 ├── ai-memorize-sheet/
-└── pocket-screen/
+├── pocket-screen/
+└── prompt-ready/
     ├── index.html
     ├── styles.css
     ├── script.js
     ├── favicon.svg
+    ├── UPDATE_NOTES.md
     └── assets/
         ├── app-icon.png
         ├── app-store-badge.svg
-        ├── word-pdf-real-screen.png
         └── og-image.png
 ```
 
-## Pocket Screen 公開URL
+## 公開URL
 
-`https://lp.toybird.com/pocket-screen/`
+- AI暗記シート：`https://lp.toybird.com/ai-memorize-sheet/`
+- Pocket Screen：`https://lp.toybird.com/pocket-screen/`
+- Prompt Ready：`https://lp.toybird.com/prompt-ready/`
 
-## 公開前に必要な作業
+## 共通設定
 
-`pocket-screen/index.html` 内の以下の文字列を、Pocket Screenの実際のMac App Store URLへ一括置換してください。
+- GA4測定ID：`G-MTD9Z8S7QG`
+- ルートの `index.html` は空白かつnoindex
+- 公開対象LPは `sitemap.xml` に登録
+- `robots.txt` からサイトマップを案内
 
-```text
-https://apps.apple.com/jp/app/id6788211562
-```
+## Prompt Ready ストアURL
 
-App Store URLが未提供だったため、現時点では誤ったリンクを入れず、明示的な置換トークンにしています。
-
-## Pocket Screen LPの前提
-
-- メイン訴求：MacBook一台でも、資料を見ながら仕事ができる
-- ターゲット：カフェ、コワーキングスペース、オフィス、出張先などで一画面作業をする人
-- CTA：Mac App Storeから無料ダウンロード
-- 無料版：1回10分まで、期間制限なく何度でも利用可能
-- 無制限版：1,500円の買い切り
-- 対応環境：macOS 14以降
-- 実画面素材：Word + PDFのPocket Screen実画面
-- 動画：初期版には含めていません
-
-## 外部依存
-
-外部ライブラリ、外部フォント、外部解析ツールは使用していません。
-
-
-Pocket Screen App Store: https://apps.apple.com/jp/app/id6788211562
-
-SEO files
-- `sitemap.xml`: lists the public LPs that should be indexed
-- `robots.txt`: allows crawling and points search engines to the sitemap
-
-When adding or removing an LP, update `sitemap.xml` before publishing.
+- Windows：`https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-jp&gl=JP&ocid=pdpshare`
+- macOS：`https://apps.apple.com/jp/app/id6779955570`
