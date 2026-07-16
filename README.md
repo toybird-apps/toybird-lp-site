@@ -10,16 +10,17 @@ toybird-lp-site/
 ├── GA4_SETUP_NOTES.md
 ├── ai-memorize-sheet/
 ├── pocket-screen/
-└── prompt-ready/
+├── prompt-ready/
+└── pointer-cue/
     ├── index.html
     ├── styles.css
     ├── script.js
-    ├── favicon.svg
     ├── UPDATE_NOTES.md
-    └── assets/
-        ├── app-icon.png
-        ├── app-store-badge.svg
-        └── og-image.png
+    ├── assets/
+    │   ├── app-icon.png
+    │   └── app-store-badge.svg
+    └── downloads/
+        └── PointerCue_v1.1.0_Direct2026.zip
 ```
 
 ## 公開URL
@@ -27,6 +28,7 @@ toybird-lp-site/
 - AI暗記シート：`https://lp.toybird.com/ai-memorize-sheet/`
 - Pocket Screen：`https://lp.toybird.com/pocket-screen/`
 - Prompt Ready：`https://lp.toybird.com/prompt-ready/`
+- Pointer Cue：`https://lp.toybird.com/pointer-cue/`
 
 ## 共通設定
 
@@ -35,7 +37,18 @@ toybird-lp-site/
 - 公開対象LPは `sitemap.xml` に登録
 - `robots.txt` からサイトマップを案内
 
-## Prompt Ready ストアURL
+## Pointer Cue販売・試用URL
 
-- Windows：`https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-jp&gl=JP&ocid=pdpshare`
-- macOS：`https://apps.apple.com/jp/app/id6779955570`
+- Windows：`https://apps.microsoft.com/detail/9mtdqf2f42xv?hl=ja-jp&gl=JP&ocid=pdpshare`
+- macOS App Store：`https://apps.apple.com/jp/app/ポインター-キュー/id6778272209?mt=12`
+- macOS期間限定版：`/pointer-cue/downloads/PointerCue_v1.1.0_Direct2026.zip`
+
+
+## macOS直接配布版
+
+- 収録内容：`Pointer Cue.app`
+- バージョン：1.1.0（Build 8）
+- アーキテクチャ：Universal（Apple Silicon / Intel）
+- 最低対応OS：macOS 13.5
+- 利用期限：2026年12月31日
+- SHA-256：`23e6d8c72d218d496f4aed47a52de6597727e3b32e32d1700c792c88fe36e76c`

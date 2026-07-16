@@ -7,10 +7,23 @@ Implemented on:
 - `/index.html`
 - `/ai-memorize-sheet/index.html`
 - `/pocket-screen/index.html`
+- `/prompt-ready/index.html`
+- `/pointer-cue/index.html`
 
-In addition to GA4 enhanced measurement, App Store links send a custom event:
+Pointer Cue custom events:
 
-- Event name: `app_store_click`
-- Parameters: `app_name`, `link_url`, `link_text`, `page_location`
+- `microsoft_store_click`
+- `app_store_click`
+- `trial_download_click`
+- `os_tab_select`
+- `comparison_view`
 
-After publishing, open GA4 Realtime and click an App Store button to confirm both `page_view` and `app_store_click`.
+Common parameters include:
+
+- `app_name`
+- `store_platform`
+- `link_url`
+- `link_text`
+- `page_location`
+
+After publishing, open GA4 Realtime and confirm `page_view` and each CTA event.

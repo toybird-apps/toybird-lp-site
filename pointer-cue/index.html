@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MTD9Z8S7QG');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pointer Cue｜デモの流れを止めずに、見てほしい場所を伝える</title>
+  <meta name="description" content="Pointer Cueは、キー操作だけでポインターを強調し、見てほしい範囲を囲めるWindows・macOS対応のプレゼンテーション補助ツールです">
+  <meta name="theme-color" content="#f5f7ff">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="Pointer Cue｜デモの流れを止めずに、見てほしい場所を伝える">
+  <meta property="og:description" content="描画モードに入らず、指す・囲むをすぐ使えるWindows・macOS対応ツール">
+  <meta property="og:url" content="https://lp.toybird.com/pointer-cue/">
+  <meta property="og:image" content="https://lp.toybird.com/pointer-cue/assets/app-icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://lp.toybird.com/pointer-cue/">
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Pointer Cue",
+    "applicationCategory":"UtilitiesApplication",
+    "operatingSystem":"Windows 10以降、macOS 13.5以降",
+    "description":"キー操作だけでポインターを強調し、見てほしい範囲を一時的に囲めるプレゼンテーション補助アプリ",
+    "url":"https://lp.toybird.com/pointer-cue/",
+    "offers":[
+      {"@type":"Offer","price":"200","priceCurrency":"JPY","description":"Windows版、30日間無料試用"},
+      {"@type":"Offer","price":"600","priceCurrency":"JPY","description":"macOS App Store版"}
+    ],
+    "author":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Pointer Cue トップ">
+        <img src="assets/app-icon.png" alt="" width="42" height="42">
+        <span>Pointer Cue</span>
+      </a>
+      <nav class="nav-links" aria-label="ページ内メニュー">
+        <a href="#how">使い方</a>
+        <a href="#compare">画面描画ツールSとの違い</a>
+        <a href="#scenes">活用シーン</a>
+        <a href="#download">入手</a>
+      </nav>
+      <a class="button button-small button-primary" href="#download">無料で試す</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> プレゼンテーション補助ツール</p>
+          <h1><span>デモの流れを止めずに</span><em>見てほしい場所を伝える</em></h1>
+          <p class="hero-lead">キーを押してポインターを強調<br>そのままドラッグして、見てほしい範囲を囲む</p>
+          <div class="platform-row" aria-label="WindowsとmacOSに対応">
+            <span class="platform-chip"><i class="windows-icon"><b></b><b></b><b></b><b></b></i>Windows</span>
+            <span class="platform-chip"><i class="mac-icon"></i>macOS</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download" data-hero-cta>無料で試す</a>
+            <a class="button button-secondary" href="#compare">画面描画ツールSとの違いを見る</a>
+          </div>
+          <p class="hero-note"><span>アカウント登録不要</span><span>サブスクリプションなし</span><span>データ収集なし</span></p>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay" aria-label="Pointer Cueの動作イメージ">
+          <div class="demo-stage">
+            <div class="demo-window">
+              <div class="window-top"><span></span><span></span><span></span><b>Product Demo</b></div>
+              <div class="demo-sidebar">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="demo-content">
+                <div class="demo-heading"><span></span><small></small></div>
+                <div class="demo-cards"><article></article><article></article><article></article></div>
+                <div class="demo-panel"><span></span><span></span><span></span></div>
+                <div class="selection-frame"><b>この範囲</b></div>
+                <div class="pointer-ring"><i></i></div>
+              </div>
+            </div>
+            <div class="key-callout key-ring"><kbd>Command</kbd><span>指す</span></div>
+            <div class="key-callout key-range"><kbd>＋ ドラッグ</kbd><span>囲む</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Pointer Cueの特徴">
+      <div class="container trust-grid">
+        <div><strong>2つの操作</strong><span>指す・囲むだけ</span></div>
+        <div><strong>Windows / macOS</strong><span>いつものPCで使える</span></div>
+        <div><strong>買い切り</strong><span>月額料金なし</span></div>
+        <div><strong>ローカル動作</strong><span>データを収集しない</span></div>
+      </div>
+    </section>
+
+    <section class="section problems">
+      <div class="container narrow center reveal">
+        <p class="section-kicker">画面を見せながら説明するとき</p>
+        <h2>「ここを見てください」が<br>伝わっていないかもしれません</h2>
+      </div>
+      <div class="container card-grid three">
+        <article class="info-card reveal">
+          <span class="card-number">01</span>
+          <div class="problem-icon cursor-problem"><i></i></div>
+          <h3>カーソルが見つからない</h3>
+          <p>画面共有ではポインターが小さく、速い動きも見落とされやすい</p>
+        </article>
+        <article class="info-card reveal reveal-delay">
+          <span class="card-number">02</span>
+          <div class="problem-icon range-problem"><i></i></div>
+          <h3>範囲が伝わらない</h3>
+          <p>「右上の設定」「中央の項目」だけでは、相手の視線が迷いやすい</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-number">03</span>
+          <div class="problem-icon mode-problem"><i></i><i></i><i></i></div>
+          <h3>ツール操作で説明が止まる</h3>
+          <p>描画モードやツールの切り替えに意識を取られると、デモのテンポが崩れる</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section how" id="how">
+      <div class="container section-heading reveal">
+        <div><p class="section-kicker">覚える操作は2つだけ</p><h2>描画モードに入らず<br>すぐに使える</h2></div>
+        <p>普段の操作を続けたまま、相手に見てほしい場所と範囲を一時的に強調できます</p>
+      </div>
+      <div class="container action-grid">
+        <article class="action-card reveal">
+          <div class="action-demo ring-demo"><div class="mini-pointer"></div><div class="mini-ring"></div><kbd>Command / Control</kbd></div>
+          <div class="action-copy"><span>01</span><h3>見てほしい場所を指す</h3><p>MacはCommandキー、WindowsはControlキーを押すと、ポインターの周囲にリングを表示</p></div>
+        </article>
+        <article class="action-card reveal reveal-delay">
+          <div class="action-demo frame-demo"><div class="mini-frame"></div><div class="mini-pointer"></div><kbd>キー ＋ ドラッグ</kbd></div>
+          <div class="action-copy"><span>02</span><h3>見てほしい範囲を囲む</h3><p>キーを押しながらドラッグすると、資料や設定画面の重要な範囲を一時的なフレームで強調</p></div>
+        </article>
+      </div>
+      <div class="container tuning-card reveal">
+        <div class="motion-visual"><span class="motion-dot one"></span><span class="motion-dot two"></span><span class="motion-dot three"></span><span class="motion-ring"></span></div>
+        <div><p class="section-kicker">画面共有を考えたチューニング</p><h3>リングは、あえて少し遅れて動く</h3><p>低いフレームレートの画面共有でも注目位置を追いやすいよう、リングはカーソルへ少し遅れて追従します</p></div>
+      </div>
+    </section>
+
+    <section class="section compare" id="compare">
+      <div class="container narrow center reveal">
+        <p class="section-kicker">画面描画ツールSとの違い</p>
+        <h2>描画するためのツールか<br>視線を誘導するための<wbr>ツールか</h2>
+        <p class="section-intro">画面描画ツールSは多彩な描画に強いツール<br>Pointer Cueはデモで頻繁に使う「指す」「囲む」を、モード切り替えなしですぐ使うことを優先しています</p>
+      </div>
+      <div class="container comparison-wrap reveal">
+        <div class="comparison-head">
+          <div></div>
+          <div class="product-label screenbrush-label"><span>画面描画ツールS</span><small>画面への描画・注釈</small></div>
+          <div class="product-label pointer-label"><img src="assets/app-icon.png" alt="" width="44" height="44"><span>Pointer Cue</span><small>視線の誘導</small></div>
+        </div>
+        <div class="comparison-row"><strong>主な目的</strong><span>画面上へ描画・注釈する</span><span>見てほしい場所へ視線を誘導する</span></div>
+        <div class="comparison-row"><strong>機能</strong><span>多彩な描画や設定</span><span>指す・囲むに特化</span></div>
+        <div class="comparison-row"><strong>操作</strong><span>描画モードやツールを選択</span><span>キー操作だけですぐ表示</span></div>
+        <div class="comparison-row"><strong>範囲の強調</strong><span>描画ツールで囲む</span><span>キーを押しながらドラッグ</span></div>
+        <div class="comparison-row"><strong>向いている場面</strong><span>書き込みながら詳しく説明</span><span>製品デモ、商談、研修、画面共有</span></div>
+        <div class="comparison-row"><strong>選ぶ基準</strong><span>画面へ自由に描きたい</span><span>説明の流れを止めたくない</span></div>
+      </div>
+    </section>
+
+    <section class="section scenes" id="scenes">
+      <div class="container section-heading reveal">
+        <div><p class="section-kicker">活用シーン</p><h2>画面を見せながら説明する<br>あらゆる場面に</h2></div>
+        <p>相手が迷わず内容へ集中できるよう、必要な瞬間だけ視線の手がかりを加えます</p>
+      </div>
+      <div class="container card-grid four">
+        <article class="scene-card reveal"><span>01</span><div class="scene-icon demo-icon"></div><h3>製品デモ</h3><p>見てほしい機能や設定をその場で強調</p></article>
+        <article class="scene-card reveal reveal-delay"><span>02</span><div class="scene-icon meeting-icon"></div><h3>オンライン商談</h3><p>相手の視線を迷わせず説明</p></article>
+        <article class="scene-card reveal"><span>03</span><div class="scene-icon training-icon"></div><h3>社内研修・操作説明</h3><p>クリックする場所や入力範囲を明確化</p></article>
+        <article class="scene-card reveal reveal-delay"><span>04</span><div class="scene-icon record-icon"></div><h3>画面収録</h3><p>編集で強調表示を追加せず、その場で案内</p></article>
+      </div>
+    </section>
+
+    <section class="section privacy">
+      <div class="container privacy-card reveal">
+        <div class="privacy-mark"><img src="assets/app-icon.png" alt="" width="88" height="88"></div>
+        <div>
+          <p class="section-kicker">必要な機能だけを、軽く使える</p>
+          <h2>説明に集中できる<br>シンプルな常駐アプリ</h2>
+          <p>アカウント登録やクラウド連携は不要<br>入力内容や画面の情報を収集・送信しません</p>
+        </div>
+        <ul>
+          <li>データ収集なし</li>
+          <li>外部サーバーへの送信なし</li>
+          <li>ネットワーク接続不要</li>
+          <li>強調色を変更可能</li>
+          <li>ショートカットを変更可能</li>
+          <li>ログイン時に自動起動</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="container narrow center reveal">
+        <p class="section-kicker">まずは無料で操作感を確認</p>
+        <h2>お使いのOSを選んでください</h2>
+        <p class="section-intro">WindowsはMicrosoft Storeで30日間無料試用<br>Macは2026年中使える直接配布版とMac App Store版を用意しています</p>
+      </div>
+
+      <div class="container os-picker reveal">
+        <div class="os-tabs" role="tablist" aria-label="OSを選択">
+          <button class="os-tab" type="button" role="tab" aria-selected="true" aria-controls="windows-panel" id="windows-tab" data-os="windows">
+            <i class="tab-icon windows-tab-icon"><b></b><b></b><b></b><b></b></i>
+            <span><small>30日間無料試用</small><strong>Windows</strong></span>
+          </button>
+          <button class="os-tab" type="button" role="tab" aria-selected="false" aria-controls="macos-panel" id="macos-tab" data-os="macos" tabindex="-1">
+            <i class="tab-icon mac-tab-icon"></i>
+            <span><small>直接配布版あり</small><strong>macOS</strong></span>
+          </button>
+        </div>
+
+        <div class="os-panels">
+          <section class="os-panel" id="windows-panel" role="tabpanel" aria-labelledby="windows-tab" data-panel="windows">
+            <div class="plan-main">
+              <p class="plan-label">Microsoft Store版</p>
+              <h3>30日間、無料で試す</h3>
+              <p class="plan-copy">試用期間中はすべての基本機能を利用できます</p>
+              <div class="price-line"><strong>200円</strong><span>税込・買い切り</span></div>
+              <ul class="check-list">
+                <li>30日間無料試用</li>
+                <li>無料試用終了後の自動購入なし</li>
+                <li>サブスクリプションなし</li>
+                <li>Microsoft Storeから安全に更新</li>
+              </ul>
+            </div>
+            <div class="plan-actions">
+              <a class="store-cta windows-store store-link" href="https://apps.microsoft.com/detail/9mtdqf2f42xv?hl=ja-jp&amp;gl=JP&amp;ocid=pdpshare" target="_blank" rel="noopener" data-event="microsoft_store_click" data-platform="windows" aria-label="Microsoft StoreでPointer Cueを30日間無料試用">
+                <i class="windows-logo"><b></b><b></b><b></b><b></b></i>
+                <span><small>Microsoft Storeで</small><strong>30日間無料試用</strong></span>
+              </a>
+              <small>Windows 10 バージョン19041.0以降</small>
+            </div>
+          </section>
+
+          <section class="os-panel" id="macos-panel" role="tabpanel" aria-labelledby="macos-tab" data-panel="macos" hidden>
+            <div class="mac-options">
+              <article class="mac-option featured">
+                <span class="recommended">まずはこちら</span>
+                <p class="plan-label">期間限定・直接配布版</p>
+                <h3>2026年中、無料で試す</h3>
+                <p>アカウント登録も支払い情報も不要<br>2026年12月31日まで利用できます</p>
+                <ul class="check-list">
+                  <li>基本機能を無料で利用可能</li>
+                  <li>期限後の自動課金なし</li>
+                  <li>ZIPを展開してアプリを起動</li>
+                  <li>Apple Silicon / Intel Mac対応</li>
+                </ul>
+                <a class="button button-primary download-link" href="downloads/PointerCue_v1.1.0_Direct2026.zip" download data-event="trial_download_click" data-platform="macos" aria-label="Mac版Pointer Cue 2026年期間限定版をダウンロード">Mac版を無料ダウンロード</a>
+                <small>Pointer Cue v1.1.0・Universal・2026年12月31日まで</small>
+              </article>
+
+              <article class="mac-option">
+                <p class="plan-label">Mac App Store版</p>
+                <h3>正式版を購入</h3>
+                <div class="price-line compact"><strong>600円</strong><span>税込・買い切り</span></div>
+                <ul class="check-list">
+                  <li>利用期限なし</li>
+                  <li>Mac App Storeから自動更新</li>
+                  <li>ファミリー共有対応</li>
+                </ul>
+                <a class="app-store-badge store-link" href="https://apps.apple.com/jp/app/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC-%E3%82%AD%E3%83%A5%E3%83%BC/id6778272209?mt=12" target="_blank" rel="noopener" data-event="app_store_click" data-platform="macos" aria-label="Mac App StoreでPointer Cueを購入">
+                  <img src="assets/app-store-badge.svg" alt="Mac App Storeからダウンロード" width="205" height="61">
+                </a>
+                <small>macOS 13.5以降</small>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container narrow center reveal">
+        <p class="section-kicker">よくある質問</p>
+        <h2>使い始める前に</h2>
+      </div>
+      <div class="container faq-list reveal">
+        <details><summary>画面描画ツールSとは何が違いますか？</summary><p>画面描画ツールSは多彩な描画や注釈に適しています。Pointer Cueは、描画モードへ切り替えず「指す」「囲む」をすぐ使うことに特化しています</p></details>
+        <details><summary>Windows版の無料試用終了後に課金されますか？</summary><p>いいえ。30日間の試用終了後に自動的に購入されることはありません。継続して使う場合はMicrosoft Storeで200円の正式版を購入します</p></details>
+        <details><summary>Macの期間限定版はいつまで使えますか？</summary><p>2026年12月31日まで利用できます。期限後に自動課金されることはありません</p></details>
+        <details><summary>Macの期間限定版とApp Store版の違いは何ですか？</summary><p>基本機能は同じです。期間限定版には利用期限があり、App Store版は600円の買い切りで期限なく利用できます</p></details>
+        <details><summary>Zoom、Teams、Google Meetで使えますか？</summary><p>はい。画面共有にPointer Cueの表示が含まれるため、一般的なオンライン会議や製品デモで利用できます</p></details>
+        <details><summary>入力したキーや画面の情報を記録しますか？</summary><p>いいえ。文字入力や画面の内容を収集、保存、送信するアプリではありません</p></details>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container final-card reveal">
+        <img src="assets/app-icon.png" alt="" width="92" height="92">
+        <div><p class="section-kicker">Pointer Cue</p><h2>説明する場所ではなく<br>見てほしい場所に意識を向ける</h2></div>
+        <a class="button button-primary" href="#download">無料で試す</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="assets/app-icon.png" alt="" width="38" height="38"><div><strong>Pointer Cue</strong><span>by Toybird Labs</span></div></div>
+      <div class="footer-links">
+        <a href="https://labs.toybird.com/" target="_blank" rel="noopener">Toybird Labs</a>
+        <a href="https://toybird-apps.github.io/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+        <a href="mailto:support@toybird.com">お問い合わせ</a>
+      </div>
+      <small>© 2026 Toybird Labs</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
