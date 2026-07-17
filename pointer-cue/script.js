@@ -30,6 +30,7 @@ function selectOS(os, remember = true) {
   if (typeof window.gtag === 'function' && remember) {
     window.gtag('event', 'os_tab_select', {
       app_name: 'Pointer Cue',
+    page_language: document.documentElement.lang || 'unknown',
       selected_os: os,
       page_location: window.location.href
     });
@@ -72,6 +73,7 @@ document.addEventListener('click', (event) => {
 
   const parameters = {
     app_name: 'Pointer Cue',
+    page_language: document.documentElement.lang || 'unknown',
     store_platform: link.dataset.platform || 'unknown',
     link_url: link.href,
     link_text: link.getAttribute('aria-label') || link.textContent.trim().replace(/\s+/g, ' '),
@@ -87,7 +89,9 @@ if (compareSection) {
     if (entries.some((entry) => entry.isIntersecting) && typeof window.gtag === 'function') {
       window.gtag('event', 'comparison_view', {
         app_name: 'Pointer Cue',
-        comparison_target: '画面描画ツールS',
+    page_language: document.documentElement.lang || 'unknown',
+        comparison_target: document.documentElement.lang === 'en' ? 'screen annotation tool' : '画面描画ツールS',
+        page_language: document.documentElement.lang || 'unknown',
         page_location: window.location.href
       });
       comparisonObserver.disconnect();

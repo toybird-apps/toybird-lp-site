@@ -16,6 +16,7 @@ document.addEventListener('click', (event) => {
 
   window.gtag('event', 'app_store_click', {
     app_name: 'Pocket Screen',
+    page_language: document.documentElement.lang || 'unknown',
     link_url: link.href,
     link_text: link.getAttribute('aria-label') || link.textContent.trim().replace(/\s+/g, ' '),
     page_location: window.location.href

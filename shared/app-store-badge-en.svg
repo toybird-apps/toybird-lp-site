@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="70" viewBox="0 0 210 70" role="img" aria-labelledby="title desc">
+  <title id="title">View on the App Store</title>
+  <desc id="desc">A black rounded badge linking to the App Store</desc>
+  <rect x="1" y="1" width="208" height="68" rx="13" fill="#050505" stroke="#8a8a8a" stroke-width="2"/>
+  <g transform="translate(22 17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2">
+    <path d="M5 31L19 7M13 31L27 7M8 25h19"/>
+    <path d="M19 7l4-7"/>
+  </g>
+  <text x="66" y="27" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="12">View on the</text>
+  <text x="66" y="50" fill="#fff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="23" font-weight="600">App Store</text>
+</svg>

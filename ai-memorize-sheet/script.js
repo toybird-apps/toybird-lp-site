@@ -25,7 +25,8 @@
     if (!link || typeof window.gtag !== 'function') return;
 
     window.gtag('event', 'app_store_click', {
-      app_name: 'AI暗記シート',
+      app_name: document.documentElement.lang === 'en' ? 'AI Memorize Sheet' : 'AI暗記シート',
+      page_language: document.documentElement.lang || 'unknown',
       link_url: link.href,
       link_text: link.textContent.trim().replace(/\s+/g, ' '),
       page_location: window.location.href

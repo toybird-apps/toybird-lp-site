@@ -65,6 +65,7 @@ document.addEventListener('click', (event) => {
   const eventName = link.dataset.event || 'store_click';
   const parameters = {
     app_name: 'Prompt Ready',
+    page_language: document.documentElement.lang || 'unknown',
     store_platform: link.dataset.platform || 'unknown',
     link_url: link.href,
     link_text: link.getAttribute('aria-label') || link.textContent.trim().replace(/\s+/g, ' '),

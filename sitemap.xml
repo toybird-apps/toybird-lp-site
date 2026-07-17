@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lp.toybird.com/ai-memorize-sheet/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/ai-memorize-sheet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/ai-memorize-sheet/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/ai-memorize-sheet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
   </url>
   <url>
     <loc>https://lp.toybird.com/pocket-screen/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pocket-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pocket-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pocket-screen/"/>
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/pocket-screen/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pocket-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pocket-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pocket-screen/"/>
   </url>
   <url>
     <loc>https://lp.toybird.com/prompt-ready/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/prompt-ready/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/prompt-ready/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/prompt-ready/"/>
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/prompt-ready/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/prompt-ready/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/prompt-ready/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/prompt-ready/"/>
   </url>
   <url>
     <loc>https://lp.toybird.com/pointer-cue/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pointer-cue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pointer-cue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pointer-cue/"/>
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/pointer-cue/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pointer-cue/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pointer-cue/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pointer-cue/"/>
   </url>
 </urlset>
