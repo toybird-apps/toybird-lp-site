@@ -13,6 +13,9 @@ const osTabs = Array.from(document.querySelectorAll('.os-tab'));
 const osPanels = Array.from(document.querySelectorAll('.os-panel[data-panel]'));
 
 function selectOS(os, remember = true) {
+  const previousOS = osTabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.os;
+  const selectionChanged = previousOS !== os;
+
   osTabs.forEach((tab) => {
     const selected = tab.dataset.os === os;
     tab.setAttribute('aria-selected', String(selected));
@@ -34,6 +37,10 @@ function selectOS(os, remember = true) {
       selected_os: os,
       page_location: window.location.href
     });
+  }
+
+  if (remember && selectionChanged) {
+    document.dispatchEvent(new CustomEvent('toybird:os-select', { detail: { os_name: os } }));
   }
 }
 
@@ -66,22 +73,6 @@ osTabs.forEach((tab, index) => {
 });
 
 selectOS(detectOS(), false);
-
-document.addEventListener('click', (event) => {
-  const link = event.target.closest('a[data-event]');
-  if (!link || typeof window.gtag !== 'function') return;
-
-  const parameters = {
-    app_name: 'Pointer Cue',
-    page_language: document.documentElement.lang || 'unknown',
-    store_platform: link.dataset.platform || 'unknown',
-    link_url: link.href,
-    link_text: link.getAttribute('aria-label') || link.textContent.trim().replace(/\s+/g, ' '),
-    page_location: window.location.href
-  };
-
-  window.gtag('event', link.dataset.event, parameters);
-});
 
 const compareSection = document.querySelector('#compare');
 if (compareSection) {

@@ -53,7 +53,7 @@
   } catch (_) {}
 })();
 </script></head>
-<body>
+<body data-app-name="Prompt Ready" data-page-language="ja">
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
 <div class="container nav">
@@ -67,11 +67,11 @@
 <a href="#features">できること</a>
 <a href="#download">入手</a>
 </nav>
-<a class="language-switch" data-language-switch="en" href="../en/prompt-ready/">English</a><a class="button button-small button-primary" href="#download">対応OSを選ぶ</a>
+<a class="language-switch" data-language-switch="en" href="../en/prompt-ready/">English</a><a class="button button-small button-primary" data-track-cta data-cta-id="platform_selector_header" data-cta-location="header" href="#download">対応OSを選ぶ</a>
 </div>
 </header>
 <main id="main">
-<section class="hero" id="top">
+<section class="hero" id="top" data-track-section data-section-id="hero" data-section-name="Hero" data-section-order="1">
 <div class="hero-glow glow-one"></div>
 <div class="hero-glow glow-two"></div>
 <div class="container hero-grid">
@@ -89,7 +89,7 @@
 <span>ChatGPT</span><span>Gemini</span><span>Claude</span><span>その他</span>
 </div>
 <div class="hero-actions single-action">
-<a class="button button-primary" href="#download">お使いのOS版を入手</a>
+<a class="button button-primary" data-track-cta data-cta-id="platform_selector_hero" data-cta-location="hero" href="#download">お使いのOS版を入手</a>
 </div>
 <p class="hero-note"><span>アカウント登録不要</span><span>サブスクリプションなし</span><span>入力内容は端末内で処理</span></p>
 </div>
@@ -136,7 +136,7 @@
 </div>
 </div>
 </section>
-<section aria-label="Prompt Readyの特徴" class="trust-strip">
+<section aria-label="Prompt Readyの特徴" class="trust-strip" data-track-section data-section-id="quick_facts" data-section-name="Quick Facts" data-section-order="2">
 <div class="container trust-grid">
 <div><strong>複数の生成AIに対応</strong><span>利用先に合わせた依頼文</span></div>
 <div><strong>Windows / macOS</strong><span>いつものPCで使える</span></div>
@@ -144,7 +144,7 @@
 <div><strong>ローカル処理</strong><span>内容を自動送信しない</span></div>
 </div>
 </section>
-<section class="section challenges" id="challenges">
+<section class="section challenges" id="challenges" data-track-section data-section-id="problem" data-section-name="Problem" data-section-order="3">
 <div class="container narrow center reveal">
 <p class="section-kicker">生成AIを使い始めても、活用はなかなか広がらない</p>
 <h2>こんなところで<br/>止まっていませんか？</h2>
@@ -170,7 +170,7 @@
 </article>
 </div>
 </section>
-<section class="section principle">
+<section class="section principle" data-track-section data-section-id="principle" data-section-name="Principle" data-section-order="4">
 <div class="container principle-card reveal">
 <div class="principle-mark">“</div>
 <div>
@@ -180,7 +180,7 @@
 </div>
 </div>
 </section>
-<section class="section how" id="how">
+<section class="section how" id="how" data-track-section data-section-id="how_it_works" data-section-name="How It Works" data-section-order="5">
 <div class="container section-heading reveal">
 <div><p class="section-kicker">難しいプロンプト設計を覚える必要はありません</p><h2>3つのステップで、<br/>仕事に使える依頼文へ</h2></div>
 <p>専門的な書き方を暗記するのではなく、やりたいことを選び、必要な情報を入力して、いつもの生成AIへ貼り付けます</p>
@@ -191,7 +191,7 @@
 <article class="step-card reveal"><span>STEP 3</span><div class="step-visual paste"><b>コピー</b><em>→</em><strong>AI</strong></div><h3>生成AIへ貼り付ける</h3><p>作成された依頼文を確認し、ChatGPT、Gemini、Claudeなどで利用</p></article>
 </div>
 </section>
-<section class="section features" id="features">
+<section class="section features" id="features" data-track-section data-section-id="features" data-section-name="Features" data-section-order="6">
 <div class="container narrow center reveal">
 <p class="section-kicker">使い方の幅を広げる</p>
 <h2>日々の業務で使える<br/>6つのカテゴリー</h2>
@@ -206,7 +206,7 @@
 <article class="feature-card reveal reveal-delay"><i>✦</i><div><h3>アイデア・計画を作る</h3><p>企画、手順、質問、チェックリスト、練習</p></div></article>
 </div>
 </section>
-<section class="section discovery">
+<section class="section discovery" data-track-section data-section-id="discovery" data-section-name="Discovery" data-section-order="7">
 <div class="container discovery-grid">
 <div class="discovery-copy reveal">
 <p class="section-kicker">「何に使えるか分からない」を解消</p>
@@ -222,7 +222,7 @@
 </div>
 </div>
 </section>
-<section class="section compatible">
+<section class="section compatible" data-track-section data-section-id="compatibility" data-section-name="Compatibility" data-section-order="8">
 <div class="container compatible-grid">
 <div class="compatible-copy reveal">
 <p class="section-kicker">使う生成AIを固定しない</p>
@@ -237,14 +237,14 @@
 </div>
 </div>
 </section>
-<section class="section privacy">
+<section class="section privacy" data-track-section data-section-id="privacy" data-section-name="Privacy" data-section-order="9">
 <div class="container privacy-card reveal">
 <div aria-hidden="true" class="privacy-icon">⌂</div>
 <div><p class="section-kicker">業務の文章を扱うから、端末内で処理</p><h2>入力した内容を、自動で外部送信しません</h2><p>元の文章と作成した依頼文はWindows PCまたはMac上で処理されます<br/>Prompt Readyが開発者のサーバーや生成AIサービスへ自動送信することはありません</p></div>
 <div class="privacy-points"><span>アカウント登録不要</span><span>広告なし</span><span>自動送信なし</span></div>
 </div>
 </section>
-<section class="section download" id="download">
+<section class="section download" id="download" data-track-section data-section-id="pricing" data-section-name="Pricing" data-section-order="10">
 <div class="container narrow center reveal">
 <p class="section-kicker">Windows / macOS対応</p>
 <h2>お使いのOS版を選択</h2>
@@ -252,11 +252,11 @@
 </div>
 <div class="container os-picker reveal">
 <div aria-label="対応OSを選択" class="os-tabs" role="tablist">
-<button aria-controls="panel-windows" aria-selected="false" class="os-tab" data-os="windows" id="tab-windows" role="tab" type="button">
+<button aria-controls="panel-windows" aria-selected="false" class="os-tab" data-os="windows" data-track-os id="tab-windows" role="tab" type="button">
 <span aria-hidden="true" class="os-tab-icon windows-symbol"><i></i><i></i><i></i><i></i></span>
 <span><small>Windows版</small><strong>Windows</strong></span>
 </button>
-<button aria-controls="panel-macos" aria-selected="false" class="os-tab" data-os="macos" id="tab-macos" role="tab" type="button">
+<button aria-controls="panel-macos" aria-selected="false" class="os-tab" data-os="macos" data-track-os id="tab-macos" role="tab" type="button">
 <span aria-hidden="true" class="os-tab-icon apple-symbol">●</span>
 <span><small>macOS版</small><strong>macOS</strong></span>
 </button>
@@ -276,7 +276,7 @@
 </div>
 <div class="os-store-box">
 <p>Microsoft Store公式</p>
-<a aria-label="Microsoft StoreからPrompt Readyを入手" class="official-store-badge store-link" data-event="microsoft_store_click" data-platform="Windows" href="https://apps.microsoft.com/detail/9pd31c5s8v7p" target="_self">
+<a aria-label="Microsoft StoreからPrompt Readyを入手" class="official-store-badge store-link" data-event="microsoft_store_click" data-platform="Windows" data-track-cta data-cta-id="microsoft_store_pricing" data-cta-location="pricing" data-store-platform="windows" data-extra-legacy-event="store_click" href="https://apps.microsoft.com/detail/9pd31c5s8v7p" target="_self">
 <img alt="Microsoft Storeから入手" src="https://get.microsoft.com/images/ja%20dark.svg" width="200"/>
 </a>
 <small>Microsoft Storeを開いてインストールします</small>
@@ -296,7 +296,7 @@
 </div>
 <div class="os-store-box">
 <p>Mac App Store公式</p>
-<a aria-label="Mac App StoreからPrompt Readyをダウンロード" class="official-store-badge store-link" data-event="app_store_click" data-platform="macOS" href="https://apps.apple.com/jp/app/id6779955570" rel="noopener" target="_blank">
+<a aria-label="Mac App StoreからPrompt Readyをダウンロード" class="official-store-badge store-link" data-event="app_store_click" data-platform="macOS" data-track-cta data-cta-id="app_store_pricing" data-cta-location="pricing" data-store-platform="macos" data-extra-legacy-event="store_click" href="https://apps.apple.com/jp/app/id6779955570" rel="noopener" target="_blank">
 <img alt="Mac App Storeからダウンロード" height="70" src="assets/app-store-badge.svg" width="210"/>
 </a>
 <small>Mac App Storeを開いて購入します</small>
@@ -305,32 +305,33 @@
 </div>
 </div>
 </section>
-<section class="section faq" id="faq">
+<section class="section faq" id="faq" data-track-section data-section-id="faq" data-section-name="FAQ" data-section-order="11">
 <div class="container faq-grid">
 <div class="reveal"><p class="section-kicker">FAQ</p><h2>よくある質問</h2><p>Prompt Readyは、生成AIそのものではなく、生成AIへ渡す前の依頼文を整理するためのアプリです</p></div>
 <div class="faq-list reveal reveal-delay">
-<details open=""><summary>Prompt ReadyだけでAIの回答を得られますか？</summary><p>いいえ<br/>Prompt Readyで依頼文を作成し、内容を確認してからChatGPT、Gemini、Claudeなどへ貼り付けて利用します</p></details>
-<details><summary>Windows版とmacOS版で機能は違いますか？</summary><p>主要な依頼文作成機能、活用アイデア、最近の依頼文の復元など、基本機能は共通です<br/>OSごとの操作体系に合わせて画面や起動方法の一部が異なります</p></details>
-<details><summary>生成AIの有料プランは必要ですか？</summary><p>Prompt Readyは特定の生成AIプランを必要としません<br/>作成した依頼文は、利用している生成AIサービスの利用条件に従って使用します</p></details>
-<details><summary>入力した文章は保存されますか？</summary><p>最近コピーした依頼文は最大20件まで端末内に保存され、個別または一括で削除できます<br/>外部サーバーへ自動送信されることはありません</p></details>
+<details open="" data-track-faq data-faq-id="ai_answers"><summary>Prompt ReadyだけでAIの回答を得られますか？</summary><p>いいえ<br/>Prompt Readyで依頼文を作成し、内容を確認してからChatGPT、Gemini、Claudeなどへ貼り付けて利用します</p></details>
+<details data-track-faq data-faq-id="platform_differences"><summary>Windows版とmacOS版で機能は違いますか？</summary><p>主要な依頼文作成機能、活用アイデア、最近の依頼文の復元など、基本機能は共通です<br/>OSごとの操作体系に合わせて画面や起動方法の一部が異なります</p></details>
+<details data-track-faq data-faq-id="ai_plan"><summary>生成AIの有料プランは必要ですか？</summary><p>Prompt Readyは特定の生成AIプランを必要としません<br/>作成した依頼文は、利用している生成AIサービスの利用条件に従って使用します</p></details>
+<details data-track-faq data-faq-id="data_storage"><summary>入力した文章は保存されますか？</summary><p>最近コピーした依頼文は最大20件まで端末内に保存され、個別または一括で削除できます<br/>外部サーバーへ自動送信されることはありません</p></details>
 </div>
 </div>
 </section>
-<section class="final-cta">
+<section class="final-cta" data-track-section data-section-id="final_cta" data-section-name="Final CTA" data-section-order="12">
 <div class="container final-card reveal">
 <img alt="Prompt Ready" height="112" src="assets/app-icon.png" width="112"/>
 <div><p class="section-kicker">知識で終わらせず、今日の仕事で使う</p><h2>生成AI活用を、<br/>一つ上の段階へ</h2><p>用途を選んで、文章や条件を入力するだけ<br/>いつもの生成AIへ伝わる依頼文を作成します</p></div>
-<a class="button button-primary" href="#download">対応OSを選ぶ</a>
+<a class="button button-primary" data-track-cta data-cta-id="platform_selector_final" data-cta-location="final" href="#download">対応OSを選ぶ</a>
 </div>
 </section>
 </main>
 <footer class="site-footer">
 <div class="container footer-grid">
 <div class="footer-brand"><img alt="" height="36" src="assets/app-icon.png" width="36"/><strong>Prompt Ready</strong></div>
-<div class="footer-links"><a href="https://labs.toybird.com/" rel="noopener" target="_blank">Toybird Labs</a><a href="https://apps.apple.com/jp/app/id6779955570" rel="noopener" target="_blank">macOS版</a><a href="https://apps.microsoft.com/detail/9pd31c5s8v7p" rel="noopener" target="_blank">Windows版</a></div>
+<div class="footer-links"><a href="https://labs.toybird.com/" rel="noopener" target="_blank">Toybird Labs</a><a data-track-cta data-cta-id="app_store_footer" data-cta-location="footer" data-store-platform="macos" data-legacy-event="app_store_click" data-extra-legacy-event="store_click" href="https://apps.apple.com/jp/app/id6779955570" rel="noopener" target="_blank">macOS版</a><a data-track-cta data-cta-id="microsoft_store_footer" data-cta-location="footer" data-store-platform="windows" data-legacy-event="microsoft_store_click" data-extra-legacy-event="store_click" href="https://apps.microsoft.com/detail/9pd31c5s8v7p" rel="noopener" target="_blank">Windows版</a></div>
 <small>© 2026 Toybird Labs</small>
 </div>
 </footer>
 <script src="script.js"></script>
+<script src="../shared/analytics.js"></script>
 <script src="../shared/locale.js"></script></body>
 </html>
