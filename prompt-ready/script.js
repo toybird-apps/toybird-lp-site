@@ -63,4 +63,40 @@ osTabs.forEach((tab, index) => {
   });
 });
 
-selectOS(detectOS(), false);
+selectOS('windows', false);
+
+const WINDOWS_STORE_URL = 'https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-JP&gl=JP';
+const MAC_STORE_URL = 'https://apps.apple.com/jp/app/prompt-ready-ai%E4%BE%9D%E9%A0%BC%E6%96%87%E4%BD%9C%E6%88%90/id6779955570?mt=12';
+
+function preferredDeviceOS() {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('os');
+  if (requested === 'windows' || requested === 'macos') return requested;
+
+  try {
+    const saved = localStorage.getItem('promptReadySelectedOS');
+    if (saved === 'windows' || saved === 'macos') return saved;
+  } catch (_) {}
+
+  const platform = `${navigator.userAgent || ''} ${navigator.platform || ''}`;
+  if (/iPhone|iPad|iPod|Android|Mobile/i.test(platform)) return null;
+  if (/Windows/i.test(platform)) return 'windows';
+  if (/Macintosh|Mac OS X|MacIntel/i.test(platform)) return 'macos';
+  return null;
+}
+
+function configureOSRecommendations() {
+  const preferred = preferredDeviceOS();
+
+  document.querySelectorAll('[data-os-cta]').forEach((link) => {
+    link.classList.toggle('is-recommended', Boolean(preferred && link.dataset.osCta === preferred));
+  });
+}
+
+configureOSRecommendations();
+
+document.querySelectorAll('[data-app-info-link]').forEach((link) => {
+  link.addEventListener('click', () => {
+    selectOS('windows', false);
+  });
+});
