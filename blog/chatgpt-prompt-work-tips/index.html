@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MTD9Z8S7QG', { content_group: 'Toybird Labs Blog', page_type: 'article', article_id: 'chatgpt_prompt_work_tips' });
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例</title>
+<meta content="ChatGPTを仕事で使うための指示（プロンプト）のコツを、返信メール・会議メモの具体例と10の活用例で解説。目的・条件・出力形式の伝え方が分かります。" name="description"/>
+<meta content="#f6f8ff" name="theme-color"/>
+<meta content="飯野 昌紀" name="author"/>
+<link href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="Toybird Labs Blog" property="og:site_name"/>
+<meta content="ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例" property="og:title"/>
+<meta content="短い指示に目的・条件・出力形式を加え、ChatGPTの回答を仕事で使える形にする方法を具体例付きで解説します。" property="og:description"/>
+<meta content="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" property="og:url"/>
+<meta content="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/assets/chatgpt-prompt-guide-og.jpg" property="og:image"/>
+<meta content="2026-07-30T20:37:00+09:00" property="article:published_time"/>
+<meta content="2026-08-03T09:30:00+09:00" property="article:modified_time"/>
+<meta content="生成AI・仕事効率化" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../styles.css?v=20260803-2" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例",
+        "description": "ChatGPTを仕事で使うための指示（プロンプト）のコツを、返信メール・会議メモの具体例と10の活用例で解説します。",
+        "image": "https://lp.toybird.com/blog/chatgpt-prompt-work-tips/assets/chatgpt-prompt-guide-og.jpg",
+        "datePublished": "2026-07-30T20:37:00+09:00",
+        "dateModified": "2026-08-03T09:30:00+09:00",
+        "mainEntityOfPage": "https://lp.toybird.com/blog/chatgpt-prompt-work-tips/",
+        "author": {"@type": "Person", "name": "飯野 昌紀"},
+        "publisher": {"@type": "Organization", "name": "Toybird Labs", "url": "https://labs.toybird.com/"},
+        "articleSection": "生成AI・仕事効率化",
+        "keywords": ["ChatGPT 使い方", "ChatGPT 仕事", "プロンプト コツ", "生成AI 活用例"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Toybird Labs Blog", "item": "https://lp.toybird.com/blog/"},
+          {"@type": "ListItem", "position": 2, "name": "生成AI・仕事効率化"},
+          {"@type": "ListItem", "position": 3, "name": "ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例", "item": "https://lp.toybird.com/blog/chatgpt-prompt-work-tips/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type":"Question","name":"ChatGPTへの指示は長いほど良いのでしょうか？","acceptedAnswer":{"@type":"Answer","text":"長ければ良いわけではありません。何をしてほしいのか、目的、条件、回答形式など、判断に必要な情報が含まれていることが重要です。"}},
+          {"@type":"Question","name":"ChatGPTの回答が期待と違う場合はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"どこが違うのかを具体的に伝えて修正を依頼します。長さ、結論の位置、専門用語、読み手に合わせた表現など、変更箇所を明確にします。"}},
+          {"@type":"Question","name":"何を指示すればよいか分からない場合はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"回答に必要な情報をChatGPT側から一度に一つずつ質問してもらう方法があります。質問に回答しながら目的や条件を整理できます。"}},
+          {"@type":"Question","name":"ChatGPTを仕事で使う場合、社内情報を入力してもよいですか？","acceptedAnswer":{"@type":"Answer","text":"利用するサービスと所属企業のルールによって異なります。個人情報、顧客情報、契約内容、未公開情報などを入力する前に、社内ルールとサービスのデータ利用条件を確認してください。"}},
+          {"@type":"Question","name":"ChatGPTのプロンプトは毎回作り直す必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"毎回すべてを作り直す必要はありません。うまくいった指示を保存し、元の文章、相手、期限など毎回変わる部分を差し替えます。ただし今回の目的に合うかは確認してください。"}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-app-name="Toybird Labs Blog" data-article-id="chatgpt_prompt_work_tips" data-article-title="ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例" data-page-language="ja">
+<a class="skip-link" href="#article">本文へ移動</a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="Toybird Labs Blogトップ" class="brand" href="../">
+<span aria-hidden="true" class="brand-mark">T</span>
+<span>Toybird Labs Blog</span>
+</a>
+<nav aria-label="メインメニュー" class="header-nav">
+<a href="../">記事一覧</a>
+<a href="../../prompt-ready/">Prompt Ready</a>
+<a class="header-cta" data-cta-id="prompt_ready_header" data-cta-location="article_header" data-track-cta="" href="../../prompt-ready/#download">アプリを見る</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="article-hero" data-section-id="article_hero" data-section-name="Article Hero" data-section-order="1" data-track-section="">
+<nav aria-label="パンくずリスト" class="breadcrumbs">
+<ol>
+<li><a href="../">Toybird Labs Blog</a></li>
+<li>生成AI・仕事効率化</li>
+<li aria-current="page">ChatGPTの使い方</li>
+</ol>
+</nav>
+<div class="article-heading">
+<span class="category">生成AI・仕事効率化</span>
+<h1>ChatGPTの使い方｜仕事で役立つ指示（プロンプト）のコツと10の活用例</h1>
+<p class="article-deck">メールや要約だけで終わらせず、比較・調査・資料確認・商談練習まで。短い指示に必要な情報を加え、仕事で使える回答へ近づける方法を具体例付きで紹介します。</p>
+<div class="byline">
+<span>著者：飯野 昌紀</span>
+<time datetime="2026-07-30">公開：2026年7月30日</time>
+<time datetime="2026-08-03">更新：2026年8月3日</time>
+<span>読了目安：約15分</span>
+</div>
+</div>
+<figure class="article-hero-image">
+<img alt="ChatGPTの使い方、仕事で役立つプロンプトのコツと10の活用例" fetchpriority="high" height="628" src="assets/chatgpt-prompt-guide-og.jpg" width="1200"/>
+</figure>
+</section>
+<div class="article-shell">
+<article class="article-content" id="article">
+<p>ChatGPTの使い方を調べ、メール作成や文章の要約を試したものの、仕事ではいつも同じ使い方になっている。そんな方も多いのではないでしょうか。</p>
+<p>ChatGPTを仕事で使いこなすコツは、長いプロンプトを暗記することではありません。<strong>何をしてほしいのか、何のために行うのか、守ってほしい条件、必要な回答形式</strong>を伝えることが大切です。</p>
+<p>また、一度の指示で完成させようとせず、元になる資料を渡し、不足している情報を確認しながら回答を改善すると、生成AIを実際の業務に活用しやすくなります。</p>
+<p>この記事では、ChatGPTへの指示に少し情報を加えることで回答がどのように変わるのかを具体例とともに紹介します。後半では、メール作成や要約以外にも使える仕事向けの活用例を10個掲載しています。</p>
+<div class="note-box"><strong>この記事での用語</strong><br/>ChatGPTへ入力する依頼文を、分かりやすさのため「指示」または「プロンプト」と呼びます。</div>
+<section aria-labelledby="summary-heading" class="summary-box">
+<h2 id="summary-heading">この記事の要点</h2>
+<ul class="check-list">
+<li>ChatGPTへの指示は、長さより必要な情報が入っているかが重要</li>
+<li>元になるメール、資料、メモを渡すと回答を具体化しやすい</li>
+<li>情報が足りない場合は、先に質問してもらう</li>
+<li>最初の回答を下書きとして、対話しながら改善する</li>
+<li>事実確認や最終判断は人が行う</li>
+</ul>
+</section>
+<section data-section-id="what_chatgpt_can_do" data-section-name="What ChatGPT Can Do" data-section-order="2" data-track-section="" id="what-chatgpt-can-do">
+<h2>ChatGPTには、いろいろな仕事を頼める</h2>
+<p>ChatGPTは、分からないことを質問するためだけのものではありません。仕事では、たとえば次のような作業を依頼できます。</p>
+<ul>
+<li>箇条書きからメールを作る</li>
+<li>相手に配慮した断りの文章を作る</li>
+<li>長い資料を短くまとめる</li>
+<li>会議メモからTo-Doを抜き出す</li>
+<li>複数の選択肢を比較する</li>
+<li>計画の弱点を指摘してもらう</li>
+<li>商談や面接の相手役になってもらう</li>
+</ul>
+<p>同じ文章を扱う場合でも、何を目的にするかによって指示は変わります。会議メモを渡す場合でも、「短く要約する」「決定事項だけを確認する」「担当者と期限を整理する」「参加者へのフォローアップメールを作る」では、必要な回答が異なります。</p>
+<p>重要なのは難しい言葉を使うことではなく、<strong>何をしてほしいのか、何のために行うのか、どのような条件を守ってほしいのか</strong>を伝えることです。</p>
+</section>
+<section data-section-id="five_tips" data-section-name="Five Tips" data-section-order="3" data-track-section="" id="five-tips">
+<h2>ChatGPTを仕事で使いこなす5つのコツ</h2>
+<p>プロンプトの型を覚えることも役立ちます。ただし、実際の業務では次の5つを意識した方が回答を改善しやすくなります。</p>
+<figure class="article-figure">
+<img alt="ChatGPTを仕事で使いこなす5つのコツ" height="900" loading="lazy" src="assets/five-tips.webp" width="1200"/>
+<figcaption>長さより、回答に必要な情報が入っているかが重要です。</figcaption>
+</figure>
+<h3 id="tip-1">1．ゼロから考えさせず、元になる情報を渡す</h3>
+<p>ChatGPTは、何もない状態から完成品を作らせるだけでなく、既存の情報を整理したり改善したりする用途にも向いています。メールを作る場合は、テーマだけでなく、相手から届いたメール、こちらが伝えたい要点、過去のやり取り、日程や金額などの確定事項、使ってはいけない表現も渡します。</p>
+<p>会議メモ、箇条書き、既存の資料など、多少整理されていない情報でも構いません。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>元になる情報の範囲を指定する例</span><button class="copy-button" data-copy-target="prompt-tip-1" data-prompt-id="tip_1_source_info" data-prompt-label="元になる情報を渡す" type="button">コピー</button></div>
+<pre id="prompt-tip-1"><code>以下のメモだけを材料にして、顧客向けのメールを作成してください。
+メモに書かれていない事実は追加しないでください。</code></pre>
+</div>
+<p>回答の材料にしてよい情報の範囲を指定すると、ChatGPTが推測で内容を補うことを減らせます。</p>
+<h3 id="tip-2">2．情報が足りなければ、先に質問してもらう</h3>
+<p>自分では必要な情報をすべて書いたつもりでも、回答を作るには条件が不足していることがあります。そのような場合は、ChatGPTに不足している情報を確認してもらいます。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>不足情報を確認してもらう例</span><button class="copy-button" data-copy-target="prompt-tip-2" data-prompt-id="tip_2_questions" data-prompt-label="不足情報を質問" type="button">コピー</button></div>
+<pre id="prompt-tip-2"><code>回答を作るために必要な情報が不足している場合は、推測して回答せず、先に最大3つまで質問してください。</code></pre>
+</div>
+<p>何を伝えればよいか自分でも分からない場合に、特に役立ちます。質問を一度に多く出してほしくない場合は、次のようにも頼めます。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>一問ずつ確認する例</span><button class="copy-button" data-copy-target="prompt-tip-2b" data-prompt-id="tip_2_one_by_one" data-prompt-label="一度に一つずつ質問" type="button">コピー</button></div>
+<pre id="prompt-tip-2b"><code>この作業に必要な情報を、一度に一つずつ質問してください。</code></pre>
+</div>
+<h3 id="tip-3">3．最初から完成品を求めない</h3>
+<p>ChatGPTの最初の回答は、完成品ではなく、確認や修正のための下書きとして利用できます。複雑な作業ほど、整理、確認、作成の順に分けた方が意図を反映しやすくなります。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>まず構成を確認する例</span><button class="copy-button" data-copy-target="prompt-tip-3" data-prompt-id="tip_3_draft" data-prompt-label="構成を先に確認" type="button">コピー</button></div>
+<pre id="prompt-tip-3"><code>まず、メールに含める内容を箇条書きで整理してください。
+まだメール本文は作成しないでください。</code></pre>
+</div>
+<p>内容に問題がなければ、次に文章へ変換します。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>確認後に本文を作る例</span><button class="copy-button" data-copy-target="prompt-tip-3b" data-prompt-id="tip_3_finalize" data-prompt-label="確認後に文章化" type="button">コピー</button></div>
+<pre id="prompt-tip-3b"><code>この内容で問題ありません。
+取引先向けの丁寧なメールにしてください。</code></pre>
+</div>
+<h3 id="tip-4">4．事実、提案、不明点を分けてもらう</h3>
+<p>ChatGPTの回答には、元の資料に書かれている事実と、AIが考えた提案が混ざる場合があります。重要な業務では両者を分けるように指示します。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>事実と提案を分ける例</span><button class="copy-button" data-copy-target="prompt-tip-4" data-prompt-id="tip_4_fact_proposal_unknown" data-prompt-label="事実・提案・不明点を分ける" type="button">コピー</button></div>
+<pre id="prompt-tip-4"><code>回答を次の3つに分けてください。
+1．資料から確認できる事実
+2．事実を基にした提案
+3．判断に必要だが確認できない情報</code></pre>
+</div>
+<p>この方法は、調査、提案書の確認、会議メモの整理、選択肢の比較などに利用できます。</p>
+<h3 id="tip-5">5．回答を見て、追加の指示を出す</h3>
+<p>期待した回答にならなかった場合、最初からすべて書き直す必要はありません。どこを変えてほしいのかを具体的に伝えます。</p>
+<ul>
+<li>内容は変えず、半分程度の長さにしてください。</li>
+<li>謝罪が強すぎるため、落ち着いた表現に変更してください。</li>
+<li>結論を最初に置き、その後に理由を説明してください。</li>
+<li>専門用語を減らし、初めて読む人にも分かるようにしてください。</li>
+</ul>
+<p>一度で完璧なプロンプトを作ろうとするより、最初の回答を確認し、必要な部分だけを修正する方が実務では使いやすい場合があります。</p>
+</section>
+<section data-section-id="email_example" data-section-name="Email Example" data-section-order="4" data-track-section="" id="email-example">
+<h2>プロンプト例①：顧客への返信メールを作る</h2>
+<p>小規模なソフトウェア会社で、顧客から次の問い合わせを受けた場面を想定します。</p>
+<div class="lead-box">今朝からデータを同期できず、業務を進められません。<br/>復旧の見込みを教えてください。</div>
+<h3>短い指示</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>短い指示</span><button class="copy-button" data-copy-target="prompt-email-short" data-prompt-id="email_short" data-prompt-label="顧客返信の短い指示" type="button">コピー</button></div>
+<pre id="prompt-email-short"><code>この問い合わせに返信してください。</code></pre>
+</div>
+<p>この指示でも返信文は作れます。ただし、謝罪が必要か、原因が判明しているか、復旧時間を案内できるか、相手に何をしてほしいか、どの程度丁寧にするかが伝わっていません。</p>
+<div class="example-answer">
+<h4>回答のイメージ</h4>
+<p>お問い合わせありがとうございます。<br/>データを同期できないとのこと、承知しました。<br/>状況を確認いたしますので、しばらくお待ちください。</p>
+</div>
+<p>文章としては成立していますが、顧客への正式な回答としては少し情報が足りません。</p>
+<h3>条件を加えた指示</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>目的と条件を加えた指示</span><button class="copy-button" data-copy-target="prompt-email-detailed" data-prompt-id="email_detailed" data-prompt-label="顧客返信の詳細指示" type="button">コピー</button></div>
+<pre id="prompt-email-detailed"><code>以下のお客様からの問い合わせに返信してください。
+データを同期できず、業務を進められないという問い合わせです。
+
+ご不便をおかけしていることを、最初に謝罪してください。
+現在、技術担当が原因を確認中です。復旧時間はまだ分からないため、具体的な時間は約束しないでください。
+状況が分かり次第、改めて連絡することを伝えてください。
+丁寧で落ち着いたビジネスメールにしてください。</code></pre>
+</div>
+<div class="example-answer">
+<h4>回答のイメージ</h4>
+<p><strong>件名：データ同期に関するお問い合わせについて</strong></p>
+<p>○○様<br/><br/>お問い合わせいただきありがとうございます。<br/>このたびは、データを同期できない状況により、ご不便をおかけしており申し訳ございません。<br/><br/>現在、技術担当にて原因を確認しております。現時点では復旧までの時間をご案内できない状況ですが、詳細が分かり次第、改めてご連絡いたします。<br/><br/>ご不便をおかけいたしますが、今しばらくお待ちくださいますようお願いいたします。</p>
+</div>
+<p>補足したことで、誰に送るか、最初に何を伝えるか、何を約束してはいけないか、次にどのような対応をするか、どの程度丁寧にするかが明確になりました。長い指示を書いたから改善したのではなく、<strong>回答を作るために必要な条件を伝えたこと</strong>が重要です。</p>
+</section>
+<section data-section-id="meeting_example" data-section-name="Meeting Example" data-section-order="5" data-track-section="" id="meeting-example">
+<h2>プロンプト例②：会議メモを要約してTo-Doを整理する</h2>
+<p>新しいサービスの公開準備について、社内会議を行った場面を想定します。</p>
+<div class="lead-box">
+            新サービスの公開日は8月20日で進める。<br/>
+            操作説明ページは公開前に更新が必要。田中さんが8月15日までに対応。<br/>
+            公開前の動作確認は8月18日までに行うが、担当者はまだ決まっていない。<br/>
+            顧客への案内メールを送る日程は、次回の会議で決める。
+          </div>
+<h3>短い指示</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>短い指示</span><button class="copy-button" data-copy-target="prompt-meeting-short" data-prompt-id="meeting_short" data-prompt-label="会議メモの短い指示" type="button">コピー</button></div>
+<pre id="prompt-meeting-short"><code>以下の会議メモを要約してください。</code></pre>
+</div>
+<p>この指示では、会議全体を短くまとめた文章が返る可能性があります。しかし、仕事で会議メモを確認する目的は単に短くすることではなく、決定事項、担当者、期限、未決事項を把握することかもしれません。</p>
+<h3>目的と出力形式を加えた指示</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>目的・条件・出力形式を追加</span><button class="copy-button" data-copy-target="prompt-meeting-detailed" data-prompt-id="meeting_detailed" data-prompt-label="会議メモの詳細指示" type="button">コピー</button></div>
+<pre id="prompt-meeting-detailed"><code>以下の会議メモを整理してください。
+参加者が、決定事項と次の対応を短時間で確認できるようにすることが目的です。
+
+次の形式で整理してください。
+1．全体の要約
+2．決定事項
+3．To-Do、担当者、期限
+4．未決事項
+
+担当者や期限が書かれていない場合は、推測せず「未確認」と記載してください。
+会議メモに書かれていない内容は追加しないでください。</code></pre>
+</div>
+<div class="example-answer">
+<h4>回答のイメージ</h4>
+<p><strong>全体の要約</strong><br/>新サービスの公開日と、公開前に必要な確認作業について話し合った。</p>
+<p><strong>決定事項</strong><br/>・公開予定日は8月20日とする。<br/>・公開前に操作説明ページを更新する。</p>
+<p><strong>To-Do</strong><br/>・操作説明ページの更新<br/>担当者：田中さん<br/>期限：8月15日<br/><br/>・公開前の動作確認<br/>担当者：未確認<br/>期限：8月18日</p>
+<p><strong>未決事項</strong><br/>顧客への案内メールを送る日程は未決定。</p>
+</div>
+<figure class="article-figure">
+<img alt="短い指示を改善する依頼、目的、条件、出力形式の4要素" height="900" loading="lazy" src="assets/four-elements.webp" width="1200"/>
+<figcaption>指示を「依頼・目的・条件・出力形式」に分けると、不足している情報を確認しやすくなります。</figcaption>
+</figure>
+<p>毎回この4項目をすべて細かく書く必要はありません。ただし、期待した回答にならなかった場合は、どの情報が不足していたのかを確認すると指示を改善しやすくなります。</p>
+</section>
+<section data-section-id="ten_use_cases" data-section-name="Ten Use Cases" data-section-order="6" data-track-section="" id="ten-use-cases">
+<h2>ChatGPTを仕事で活用する10の具体例</h2>
+<p>ここからは、メール作成や単純な要約以外にも使える仕事向けのChatGPT活用例を紹介します。そのまま試せるように、指示の例も記載します。</p>
+<figure class="article-figure">
+<img alt="ChatGPTを仕事で活用する10の具体例" height="900" loading="lazy" src="assets/ten-use-cases.webp" width="1200"/>
+<figcaption>メール、要約、比較、調査、練習など、まずは今の仕事に近い用途を一つ試します。</figcaption>
+</figure>
+<section class="use-case" id="use-case-1">
+<h3>1．箇条書きからメールを作る</h3>
+<p>最初から整った文章を書く必要はありません。伝えたい内容を箇条書きで入力し、メールへ変換してもらえます。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-1" data-prompt-id="use_case_1_email_from_bullets" data-prompt-label="箇条書きからメール" type="button">コピー</button></div><pre id="prompt-use-1"><code>以下の箇条書きを、取引先に送るメールにしてください。
+・打ち合わせのお礼
+・提案資料を添付した
+・社内で検討してもらいたい
+・来週金曜日までに回答がほしい
+丁寧なビジネスメールにしてください。件名も作成してください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-2">
+<h3>2．相手に配慮した断りの文章を作る</h3>
+<p>依頼を断る場面では、断る意思を明確にしながら相手との関係にも配慮する必要があります。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-2" data-prompt-id="use_case_2_polite_decline" data-prompt-label="配慮した断りメール" type="button">コピー</button></div><pre id="prompt-use-2"><code>以下の依頼を断るメールを作ってください。
+取引先から、予定していなかった追加作業を今週中に対応してほしいと依頼されています。
+現在の人員では今週中の対応はできません。来週水曜日であれば対応可能です。
+相手の依頼を否定するような表現は避けてください。代替案として、来週水曜日の対応を提案してください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-3">
+<h3>3．同じ内容を読み手別に書き換える</h3>
+<p>同じ情報でも、社内の担当者、経営者、顧客では必要な説明が異なります。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-3" data-prompt-id="use_case_3_audience_rewrite" data-prompt-label="読み手別の書き換え" type="button">コピー</button></div><pre id="prompt-use-3"><code>以下の新機能の説明を、2種類の文章に書き換えてください。
+1．社内の営業担当者向け
+2．製品を初めて使う顧客向け
+営業担当者向けには、顧客へ説明する際のポイントを含めてください。
+顧客向けには、専門用語を使わず、利用するメリットを中心に説明してください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-4">
+<h3>4．長い文章を目的に合わせて要約する</h3>
+<p>「誰が何を確認するための要約なのか」を指定すると、必要な情報を残しやすくなります。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-4" data-prompt-id="use_case_4_purpose_summary" data-prompt-label="目的に合わせた要約" type="button">コピー</button></div><pre id="prompt-use-4"><code>以下の文章を、部門責任者が3分で確認できる長さに要約してください。
+次の3項目に分けてください。
+1．結論
+2．業務への影響
+3．対応が必要なこと
+背景説明は短くし、判断に必要な内容を優先してください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-5">
+<h3>5．会議メモを整理する</h3>
+<p>会議メモから、決定事項や次の対応を抽出できます。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-5" data-prompt-id="use_case_5_meeting_notes" data-prompt-label="会議メモの整理" type="button">コピー</button></div><pre id="prompt-use-5"><code>以下の会議メモを整理してください。
+決定事項、To-Do、担当者、期限、未決事項に分けてください。
+書かれていない担当者や期限は推測せず、「未確認」としてください。
+重複している内容は一つにまとめてください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-6">
+<h3>6．文章やメモからTo-Doを抜き出す</h3>
+<p>長い文章の中から、実際に行う必要がある作業だけを抽出できます。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-6" data-prompt-id="use_case_6_extract_todos" data-prompt-label="To-Do抽出" type="button">コピー</button></div><pre id="prompt-use-6"><code>以下の文章から、対応が必要な作業を抜き出してください。
+「確認するだけの情報」と「実際に行う作業」を分けてください。
+作業には、担当者、期限、優先度を付けてください。
+情報が書かれていない項目は「未確認」としてください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-7">
+<h3>7．資料から確認すべき質問を作る</h3>
+<p>資料を読んでも、どこを確認すればよいか分からない場合は、不足情報や曖昧な部分を探してもらえます。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-7" data-prompt-id="use_case_7_questions_from_document" data-prompt-label="資料から質問を作る" type="button">コピー</button></div><pre id="prompt-use-7"><code>以下の提案書を確認し、契約前に質問すべき内容を作ってください。
+次の観点で確認してください。
+・料金に含まれる範囲
+・追加費用が発生する条件
+・導入までの期間
+・サポート内容
+・解約条件
+資料に答えが書かれている質問は除外してください。
+資料から確認できない内容だけを質問にしてください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-8">
+<h3>8．最新情報を出典付きで調べる</h3>
+<p>Web検索を利用できる生成AIでは、最新情報の調査にも使えます。ただし、表示された回答だけで判断せず、元の情報源まで確認することが大切です。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-8" data-prompt-id="use_case_8_latest_research" data-prompt-label="出典付き最新情報調査" type="button">コピー</button></div><pre id="prompt-use-8"><code>2026年7月時点の情報を調べてください。
+公式サイト、行政機関、企業の発表を優先してください。
+情報ごとに、出典、公開日、確認日を記載してください。
+確認できた事実と、推測や予測を分けてください。
+確認できない内容は、分からないと明記してください。</code></pre></div>
+<p>生成AIが提示した出典が、実際の内容を正しく裏付けているとは限りません。法律、医療、金融、人事など重要な判断に関わる内容は、公式情報や専門家にも確認します。</p>
+</section>
+<section class="use-case" id="use-case-9">
+<h3>9．複数の選択肢を比較する</h3>
+<p>候補を並べるだけでなく、自分が重視する条件を伝えると比較しやすくなります。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-9" data-prompt-id="use_case_9_compare_options" data-prompt-label="選択肢の比較" type="button">コピー</button></div><pre id="prompt-use-9"><code>以下の3つの研修サービスを比較してください。
+比較する項目は、料金、受講人数、サポート内容、導入までの期間、初心者向けかどうかです。
+当社は社員30人で、生成AIを初めて使う社員が多い会社です。
+予算よりも、初心者が継続して利用できることを重視します。
+比較表を作成し、最後に推奨案とその理由を説明してください。
+判断に必要な情報が不足している場合は、不足項目を明記してください。</code></pre></div>
+</section>
+<section class="use-case" id="use-case-10">
+<h3>10．商談や面接の相手役になってもらう</h3>
+<p>ChatGPTに相手役を依頼し、実際の会話に近い形で練習できます。</p>
+<div class="prompt-box"><div class="prompt-head"><span>指示の例</span><button class="copy-button" data-copy-target="prompt-use-10" data-prompt-id="use_case_10_roleplay" data-prompt-label="商談・面接練習" type="button">コピー</button></div><pre id="prompt-use-10"><code>あなたは、業務効率化ツールの導入を検討している企業の部門責任者です。
+私はツールを提案する営業担当者です。
+実際の商談のように、一度に一つずつ質問してください。
+私の回答に曖昧な点があれば、追加で質問してください。
+10分程度の商談が終わったら、次の3点を評価してください。
+1．分かりやすかった点
+2．説明が不足していた点
+3．次回改善すべき回答</code></pre></div>
+</section>
+</section><section class="related-articles" data-section-id="detailed_guides" data-section-name="Detailed Guides" data-section-order="7" data-track-section="" id="long-tail-guides">
+<h2>仕事の場面別に、詳しい手順を読む</h2>
+<p>ここまで紹介した活用例のうち、よく使う業務を個別の記事で詳しく解説しています。各記事には、そのままコピーできるプロンプトと回答例があります。</p>
+<div class="related-grid"><a class="related-card" data-cta-id="hub_chatgpt_decline_email_business" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-decline-email-business/"><span>詳しい手順</span><strong>ChatGPTで取引先への断りメールを作る方法｜角が立たない例文とプロンプト</strong><small>取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。</small></a><a class="related-card" data-cta-id="hub_chatgpt_meeting_notes_todo" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-meeting-notes-todo/"><span>詳しい手順</span><strong>ChatGPTで会議メモからTo-Doを整理する方法｜担当者・期限・未決事項を抽出</strong><small>ChatGPTで会議メモからTo-Do、担当者、期限、決定事項、未決事項を整理する方法を解説。雑なメモを業務で使える一覧へ変えるプロンプト例を掲載します。</small></a><a class="related-card" data-cta-id="hub_chatgpt_answer_off_target_fix" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-answer-off-target-fix/"><span>詳しい手順</span><strong>ChatGPTの回答がずれる原因と修正方法｜期待通りに直す指示例</strong><small>ChatGPTの回答が意図とずれる原因を整理し、長すぎる、文体が違う、事実が混ざるなどの問題を追加指示で直す方法とプロンプト例を解説します。</small></a><a class="related-card" data-cta-id="hub_chatgpt_customer_reply_email" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-customer-reply-email/"><span>詳しい手順</span><strong>ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト</strong><small>ChatGPTで顧客からの問い合わせに返信する方法を解説。元の問い合わせ、確認済みの事実、不明点、次の対応を入れたプロンプトと状況別の例文を紹介します。</small></a><a class="related-card" data-cta-id="hub_chatgpt_ask_questions_prompt" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-ask-questions-prompt/"><span>詳しい手順</span><strong>ChatGPTに不足情報を質問してもらう方法｜質問させるプロンプト例</strong><small>何を指示すればよいか分からないときに、ChatGPTへ不足情報を先に質問させる方法を解説。一度に一つ、最大3つ、選択式などのプロンプト例を紹介します。</small></a><a class="related-card" data-cta-id="hub_chatgpt_long_document_summary" data-cta-location="hub_detailed_guides" data-track-cta="" href="../chatgpt-long-document-summary/"><span>詳しい手順</span><strong>ChatGPTで長い資料を目的別に要約する方法｜仕事向けプロンプト例</strong><small>ChatGPTで長い資料や文章を仕事向けに要約する方法を解説。経営者向け、実務担当者向け、顧客説明向けに残す情報を変えるプロンプト例を紹介します。</small></a></div>
+</section>
+<section data-section-id="safety" data-section-name="Safety" data-section-order="7" data-track-section="" id="safety">
+<h2>ChatGPTを仕事で使うときの注意点</h2>
+<p>ChatGPTは、メール作成、要約、比較、アイデア出しなど、さまざまな業務に活用できます。一方で、回答をそのまま利用せず、次の点を確認する必要があります。</p>
+<figure class="article-figure">
+<img alt="ChatGPTを仕事で使うときの4つの注意点" height="900" loading="lazy" src="assets/safety-points.webp" width="1200"/>
+<figcaption>生成AIは下書き・整理・比較に強く、責任判断は人が行います。</figcaption>
+</figure>
+<h3>回答の事実確認を行う</h3>
+<p>ChatGPTは、事実とは異なる情報や、実際には存在しない出典を回答する場合があります。日付、金額、法律、制度、製品仕様などは公式サイトや元の資料でも確認してください。最新情報の場合は、回答が作成された時点ではなく、参照している情報の公開日も確認します。</p>
+<h3>機密情報や個人情報を安易に入力しない</h3>
+<p>顧客情報、個人情報、契約内容、未公開の製品情報などを入力する場合は、所属する会社のルールと、利用しているAIサービスのデータ利用条件を確認します。必要に応じて、氏名、会社名、金額などを仮の情報へ置き換えます。</p>
+<h3>最終的な判断は人が行う</h3>
+<p>生成AIは、選択肢の整理や下書きの作成には役立ちますが、業務上の責任は負いません。顧客への連絡、契約、採用、人事評価、法律、医療、金融などに関する判断は、担当者や専門家が確認する必要があります。</p>
+<h3>重要な指示は保存する</h3>
+<p>同じ指示でも、利用するモデルや入力内容によって回答は変わることがあります。繰り返し利用する業務では、うまくいった指示だけでなく、確認項目や最終的な修正内容も保存しておくと回答を再現しやすくなります。</p>
+</section>
+<section data-section-id="faq" data-section-name="FAQ" data-section-order="8" data-track-section="" id="faq">
+<h2>ChatGPTの使い方に関するよくある質問</h2>
+<div class="faq-list">
+<details data-faq-id="prompt_length" data-track-faq="">
+<summary>ChatGPTへの指示は長いほど良いのでしょうか？</summary>
+<p>長ければ良いわけではありません。何をしてほしいのか、目的、条件、回答形式など、判断に必要な情報が含まれていることが重要です。不要な説明が多すぎると、重要な条件が分かりにくくなる場合もあります。</p>
+</details>
+<details data-faq-id="unexpected_answer" data-track-faq="">
+<summary>ChatGPTの回答が期待と違う場合はどうすればよいですか？</summary>
+<p>どこが違うのかを具体的に伝えて修正を依頼します。「もっと良くして」ではなく、半分の長さにする、結論を最初に置く、専門用語を減らす、顧客向けの丁寧な表現にするなど、変更箇所を明確にします。</p>
+</details>
+<details data-faq-id="dont_know_instruction" data-track-faq="">
+<summary>何を指示すればよいか分からない場合はどうすればよいですか？</summary>
+<p>最初に、必要な情報をChatGPT側から質問してもらう方法があります。「この作業を進めるために必要な情報を、一度に一つずつ質問してください」と伝え、質問に回答しながら目的や条件を整理します。</p>
+</details>
+<details data-faq-id="company_information" data-track-faq="">
+<summary>ChatGPTを仕事で使う場合、社内情報を入力してもよいですか？</summary>
+<p>利用するサービスや会社のルールによって異なります。個人情報、顧客情報、契約内容、未公開情報などを入力する前に、会社の生成AI利用ルールと、利用しているサービスのデータ利用条件を確認してください。</p>
+</details>
+<details data-faq-id="reuse_prompts" data-track-faq="">
+<summary>ChatGPTのプロンプトは毎回作り直す必要がありますか？</summary>
+<p>毎回すべてを作り直す必要はありません。繰り返し使う業務では、うまくいった指示を保存し、元の文章、相手、期限など毎回変わる部分だけを差し替えます。ただし、同じメール返信でも顧客向けと社内向けでは必要な条件が異なるため、今回の目的に合っているかを確認します。</p>
+</details>
+</div>
+</section>
+<section class="product-callout" data-section-id="prompt_ready" data-section-name="Prompt Ready" data-section-order="9" data-track-section="" id="prompt-ready">
+<p class="eyebrow">よく使われる指示を、用途から選んで作れる</p>
+<h2>Prompt Ready</h2>
+<p>ここまで紹介したような仕事向けの指示を、用途から選んで組み立てられるようにしたのが「Prompt Ready」です。</p>
+<p>Prompt Readyは生成AIそのものではありません。ChatGPT、Gemini、Claudeなどへ渡す依頼文を作成する、Windows／macOSアプリです。仕事で使える指示が6カテゴリー・40種類用意され、メールへの返信、会議メモの整理、読み手別の書き換え、選択肢の比較、調査計画、商談や面接の練習などから選べます。</p>
+<div class="product-shots">
+<figure><img alt="Prompt Readyの用途選択画面" height="883" loading="lazy" src="assets/prompt-ready-home.webp" width="1200"/></figure>
+<figure><img alt="Prompt Readyで作成したAI依頼文の画面" height="1003" loading="lazy" src="assets/prompt-ready-generated-prompt.webp" width="1200"/></figure>
+</div>
+<p>元になる文章やテーマを入力し、読み手、文章の雰囲気、条件、出力形式などを選ぶと、生成AIへ貼り付けられる依頼文が作成されます。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>Prompt Readyで作成した依頼文の例</span><button class="copy-button" data-copy-target="prompt-ready-example" data-prompt-id="prompt_ready_output_example" data-prompt-label="Prompt Ready出力例" type="button">コピー</button></div>
+<pre id="prompt-ready-example"><code>## 依頼
+以下のメールまたはメッセージへの返信文を作成してください。
+
+## 目的
+読み手に意図を分かりやすく伝え、次のアクションを明確にすることです。
+
+## 元の文章・伝えたい内容
+以下の依頼を断るメールを作ってください。取引先から、予定していなかった追加作業を今週中に対応してほしいと依頼されています。現在の人員では今週中の対応はできません。来週水曜日であれば対応可能です。相手の依頼を否定するような表現は避けてください。代替案として、来週水曜日の対応を提案してください。
+
+## 条件
+- 想定する読み手は、顧客・取引先です。
+- 文章の雰囲気は、フォーマルにしてください。
+- 日本語で回答してください。
+- 不明な点は推測せず、確認が必要な点として分けてください。
+
+## 出力形式
+1. 件名
+2. 本文
+3. 確認が必要な点</code></pre>
+</div>
+<div class="warning-box">Prompt Readyが入力した文章を自動的に外部のAIや開発者のサーバーへ送信することはありません。文章と依頼文は端末内で処理されます。ただし、作成した依頼文や元の文章をChatGPT、Gemini、Claudeなどへ貼り付けると、その内容は利用先のAIサービスへ送信されます。機密情報を扱う場合は、所属する会社のルールと利用するAIサービスの条件を確認してください。</div>
+<div class="cta-row">
+<a class="button button-primary" data-cta-id="prompt_ready_product_page" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-track-cta="" href="../../prompt-ready/">Prompt Readyの詳細を見る</a>
+<a class="button button-secondary" data-cta-id="prompt_ready_windows_store" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-store-platform="windows" data-track-cta="" href="https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-JP&amp;gl=JP" rel="noopener" target="_blank">Windows版</a>
+<a class="button button-secondary" data-cta-id="prompt_ready_macos_store" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-store-platform="macos" data-track-cta="" href="https://apps.apple.com/jp/app/prompt-ready-ai%E4%BE%9D%E9%A0%BC%E6%96%87%E4%BD%9C%E6%88%90/id6779955570?mt=12" rel="noopener" target="_blank">macOS版</a>
+</div>
+</section>
+<section data-article-end="" data-section-id="conclusion" data-section-name="Conclusion" data-section-order="10" data-track-section="" id="conclusion">
+<h2>ChatGPTを仕事で使いこなすために大切なこと</h2>
+<p>長いプロンプトや複雑なプロンプトを暗記するだけでは、生成AIを十分に活用できるとは限りません。</p>
+<ul class="check-list">
+<li>どのような仕事を頼めるのかを知る</li>
+<li>何をしてほしいのかを明確にする</li>
+<li>目的や条件を補足する</li>
+<li>必要な回答形式を指定する</li>
+<li>回答を確認し、追加の指示で改善する</li>
+<li>事実確認と最終判断を人が行う</li>
+</ul>
+<p>まずは、この記事で紹介した10の活用例から、現在の仕事に近いものを一つ試してみてください。短い指示に少し条件を加えるだけでも、回答は具体的になり、自分の目的に近づきます。</p>
+<p>仕事でのAI活用をさらに広げたい方や、毎回プロンプトを考える負担を減らしたい方は、Prompt Readyもお試しください。</p>
+<div class="article-end">
+<div class="article-end-links">
+<a class="button button-primary" data-cta-id="prompt_ready_article_end" data-cta-location="article_end" data-link-location="article_end" data-product-link="" data-product-name="Prompt Ready" data-track-cta="" href="../../prompt-ready/">Prompt Readyを見る</a>
+<a class="button button-secondary" href="../">ブログの記事一覧へ</a>
+</div>
+</div>
+</section>
+</article>
+<aside aria-label="記事の目次" class="toc-panel">
+<strong>目次</strong>
+<ol>
+<li><a href="#what-chatgpt-can-do">ChatGPTに頼める仕事</a></li>
+<li><a href="#five-tips">仕事で使いこなす5つのコツ</a></li>
+<li><a href="#email-example">例① 顧客への返信メール</a></li>
+<li><a href="#meeting-example">例② 会議メモとTo-Do</a></li>
+<li><a href="#ten-use-cases">仕事で使える10の活用例</a></li>
+<li><a href="#long-tail-guides">仕事の場面別ガイド</a></li><li><a href="#safety">仕事で使うときの注意点</a></li>
+<li><a href="#faq">よくある質問</a></li>
+<li><a href="#prompt-ready">Prompt Ready</a></li>
+<li><a href="#conclusion">まとめ</a></li>
+</ol>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+<div class="site-footer-inner">
+<a class="brand" href="../"><span aria-hidden="true" class="brand-mark">T</span><span>Toybird Labs Blog</span></a>
+<div class="footer-links">
+<a href="https://labs.toybird.com/" rel="noopener">Toybird Labs</a>
+<a href="../../prompt-ready/">Prompt Ready</a>
+<a href="../../pocket-screen/">Pocket Screen</a>
+<a href="../../ai-memorize-sheet/">AI暗記シート</a>
+</div>
+<small>© 2026 Toybird Labs</small>
+</div>
+</footer>
+<script src="../../shared/analytics.js"></script>
+<script src="../article.js?v=20260803-2"></script>
+</body>
+</html>

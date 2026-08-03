@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MTD9Z8S7QG', { content_group: 'Toybird Labs Blog', page_type: 'article', article_id: 'chatgpt_customer_reply_email' });
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPTで顧客への返信メールを作る方法｜例文とプロンプト</title>
+  <meta name="description" content="ChatGPTで顧客からの問い合わせに返信する方法を解説。元の問い合わせ、確認済みの事実、不明点、次の対応を入れたプロンプトと状況別の例文を紹介します。">
+  <meta name="theme-color" content="#f6f8ff">
+  <meta name="author" content="飯野 昌紀">
+  <link rel="canonical" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Toybird Labs Blog">
+  <meta property="og:title" content="ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト">
+  <meta property="og:description" content="顧客の問い合わせへ、確認済みの事実と次の対応を誤解なく伝える返信メールの作り方を解説します。">
+  <meta property="og:url" content="https://lp.toybird.com/blog/chatgpt-customer-reply-email/">
+  <meta property="og:image" content="https://lp.toybird.com/blog/chatgpt-customer-reply-email/assets/chatgpt-customer-reply-email-og.jpg">
+  <meta property="article:published_time" content="2026-08-03T09:30:00+09:00">
+  <meta property="article:modified_time" content="2026-08-03T09:30:00+09:00">
+  <meta property="article:section" content="生成AI・仕事効率化">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../styles.css?v=20260803-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト","description":"ChatGPTで顧客からの問い合わせに返信する方法を解説。元の問い合わせ、確認済みの事実、不明点、次の対応を入れたプロンプトと状況別の例文を紹介します。","image":"https://lp.toybird.com/blog/chatgpt-customer-reply-email/assets/chatgpt-customer-reply-email-og.jpg","datePublished":"2026-08-03T09:30:00+09:00","dateModified":"2026-08-03T09:30:00+09:00","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-customer-reply-email/","author":{"@type":"Person","name":"飯野 昌紀"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/"},"articleSection":"生成AI・仕事効率化","keywords":["ChatGPT 顧客 返信メール 作り方","ChatGPT 問い合わせ 返信 例文","ChatGPT カスタマーサポート メール","顧客対応 プロンプト"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"生成AI・仕事効率化"},{"@type":"ListItem","position":3,"name":"ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト","item":"https://lp.toybird.com/blog/chatgpt-customer-reply-email/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"顧客から届いたメールをそのままChatGPTへ貼り付けてもよいですか？","acceptedAnswer":{"@type":"Answer","text":"会社のルールと利用するサービスのデータ利用条件によって異なります。個人情報や契約情報が含まれる場合は、必要な部分だけを残し、固有名詞を仮の情報へ置き換える方法があります。"}},{"@type":"Question","name":"原因が分からない場合、どのように返信すればよいですか？","acceptedAnswer":{"@type":"Answer","text":"原因を推測せず、現在確認中であること、次に連絡するタイミング、顧客へお願いする情報があればその内容を伝えます。"}},{"@type":"Question","name":"謝罪文は必ず入れるべきですか？","acceptedAnswer":{"@type":"Answer","text":"状況と自社の方針によります。不便をかけていることへの配慮と、過失を認める表現は同じではありません。責任範囲が未確認の場合は、社内ルールに合う表現か確認します。"}},{"@type":"Question","name":"同じ問い合わせへの定型文を作れますか？","acceptedAnswer":{"@type":"Answer","text":"作れます。固定部分と毎回変わる項目を分け、顧客名、発生日、状況、次回連絡時刻などを差し替えるテンプレートにします。送信前の事実確認は毎回必要です。"}}]}]}</script>
+</head>
+<body data-app-name="Toybird Labs Blog" data-page-language="ja" data-article-id="chatgpt_customer_reply_email" data-article-title="ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト">
+  <a class="skip-link" href="#article">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="Toybird Labs Blogトップ"><span class="brand-mark" aria-hidden="true">T</span><span>Toybird Labs Blog</span></a>
+      <nav class="header-nav" aria-label="メインメニュー">
+        <a href="../">記事一覧</a>
+        <a href="../../prompt-ready/">Prompt Ready</a>
+        <a class="header-cta" href="../../prompt-ready/#download" data-track-cta data-cta-id="prompt_ready_header" data-cta-location="article_header">アプリを見る</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero" data-track-section data-section-id="article_hero" data-section-name="Article Hero" data-section-order="1">
+      <nav class="breadcrumbs" aria-label="パンくずリスト"><ol><li><a href="../">Toybird Labs Blog</a></li><li>生成AI・仕事効率化</li><li aria-current="page">顧客への返信メール</li></ol></nav>
+      <div class="article-heading">
+        <span class="category">生成AI・仕事効率化</span>
+        <h1>ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト</h1>
+        <p class="article-deck">問い合わせへの受領連絡、調査中の案内、追加情報の依頼、解決報告まで。事実を推測せず、顧客が次に何をすればよいか分かる返信を作ります。</p>
+        <div class="byline"><span>著者：飯野 昌紀</span><time datetime="2026-08-03">公開：2026年8月3日</time><span>読了目安：約10分</span></div>
+      </div>
+      <figure class="article-hero-image"><img src="assets/chatgpt-customer-reply-email-og.jpg" width="1200" height="630" alt="ChatGPTで顧客への返信メールを作る方法｜問い合わせ対応の例文とプロンプト" fetchpriority="high"></figure>
+    </section>
+
+    <div class="article-shell">
+      <article class="article-content" id="article">
+        <p>問い合わせへの受領連絡、調査中の案内、追加情報の依頼、解決報告まで。事実を推測せず、顧客が次に何をすればよいか分かる返信を作ります。</p>
+        <p>この記事では、すぐに試せるプロンプト、入力例、確認ポイントを使い、仕事の場面でChatGPTを活用する手順を具体的に説明します。</p>
+        <section class="summary-box" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">この記事の要点</h2>
+          <ul class="check-list"><li>顧客から届いた問い合わせ本文を、回答の材料として渡す</li><li>確認済みの事実、不明点、次の対応を分ける</li><li>復旧時間や原因など、分からない情報を約束しない</li><li>顧客に求める操作や返信内容を明確にする</li><li>送信前に名前、日程、製品名、社内ルールを確認する</li></ul>
+        </section>
+
+        
+<section id="reply-elements" data-track-section data-section-id="reply_elements" data-section-name="Reply Elements" data-section-order="2">
+  <h2>顧客への返信メールでChatGPTに伝える6つの項目</h2>
+  <p>顧客からの問い合わせに返信するときは、文章の丁寧さだけでなく、確認できた事実と次の対応を正確に伝える必要があります。</p>
+  <ol class="step-list">
+    <li><strong>顧客から届いた問い合わせ</strong><br>可能な範囲で元の文章を渡し、何に困っているかを明確にします。</li>
+    <li><strong>返信の目的</strong><br>受領連絡、状況報告、追加確認、解決報告など、今回の返信で行うことを指定します。</li>
+    <li><strong>確認済みの事実</strong><br>原因、影響範囲、対応状況など、社内で確認できた内容だけを列挙します。</li>
+    <li><strong>まだ分からないこと</strong><br>復旧時間、原因、対象範囲など、未確認の情報を明示します。</li>
+    <li><strong>次の対応</strong><br>自社から次に連絡するのか、顧客に情報を送ってもらうのかを伝えます。</li>
+    <li><strong>文体と避ける表現</strong><br>謝罪の程度、フォーマルさ、約束してはいけない内容を指定します。</li>
+  </ol>
+</section>
+
+<section id="prompt-template" data-track-section data-section-id="customer_reply_template" data-section-name="Customer Reply Template" data-section-order="3">
+  <h2>顧客への返信メールを作るプロンプト</h2>
+  <div class="prompt-box">
+    <div class="prompt-head"><span>顧客問い合わせ返信用テンプレート</span><button class="copy-button" type="button" data-copy-target="customer-reply-template" data-prompt-id="customer_reply_template" data-prompt-label="顧客への返信メール">コピー</button></div>
+    <pre id="customer-reply-template"><code>## 依頼
+以下の顧客からの問い合わせに返信するメールを作成してください。
+
+## 顧客からの問い合わせ
+[問い合わせ本文を貼り付ける]
+
+## 今回の返信の目的
+[受領連絡／状況報告／追加情報の依頼／解決報告]
+
+## 確認済みの事実
+- [確認できたこと]
+
+## まだ分からないこと
+- [原因、時間、影響範囲など]
+
+## 次の対応
+- 当社側：[次に行うこと、連絡予定]
+- 顧客へお願いすること：[必要な操作や返信]
+
+## 条件
+- 確認できていない原因や復旧時間を推測しないでください。
+- 顧客が次に何をすればよいかを明確にしてください。
+- 丁寧で落ち着いたビジネスメールにしてください。
+- 不明な情報は、本文へ事実として追加せず「確認が必要な点」に分けてください。
+
+## 出力形式
+1. 件名
+2. 本文
+3. 送信前に確認が必要な点</code></pre>
+  </div>
+</section>
+
+<section id="worked-example" data-track-section data-section-id="customer_reply_example" data-section-name="Customer Reply Example" data-section-order="4">
+  <h2>例：データを同期できないという問い合わせへ返信する</h2>
+  <p>顧客から次の問い合わせが届いた場面を想定します。</p>
+  <div class="note-box">今朝からデータを同期できず、業務を進められません。復旧の見込みを教えてください。</div>
+  <p>原因は技術担当が確認中で、復旧時間はまだ分かっていません。分からない時間を推測せず、状況が分かり次第連絡することを伝えます。</p>
+  <div class="prompt-box">
+    <div class="prompt-head"><span>条件を入れた返信指示</span><button class="copy-button" type="button" data-copy-target="customer-reply-sync" data-prompt-id="customer_reply_sync" data-prompt-label="同期問題への返信">コピー</button></div>
+    <pre id="customer-reply-sync"><code>以下のお客様からの問い合わせに返信してください。
+データを同期できず、業務を進められないという問い合わせです。
+
+ご不便をおかけしていることを最初に謝罪してください。
+現在、技術担当が原因を確認中です。
+復旧時間はまだ分からないため、具体的な時間は約束しないでください。
+状況が分かり次第、改めて連絡することを伝えてください。
+丁寧で落ち着いたビジネスメールにしてください。</code></pre>
+  </div>
+  <div class="example-answer">
+    <h3>回答のイメージ</h3>
+    <p><strong>件名：データ同期に関するお問い合わせについて</strong></p>
+    <p>○○様</p>
+    <p>お問い合わせいただきありがとうございます。このたびは、データを同期できない状況により、ご不便をおかけしており申し訳ございません。</p>
+    <p>現在、技術担当にて原因を確認しております。現時点では復旧までの時間をご案内できない状況ですが、詳細が分かり次第、改めてご連絡いたします。</p>
+    <p>ご不便をおかけいたしますが、今しばらくお待ちくださいますようお願いいたします。</p>
+  </div>
+</section>
+
+<section id="situation-patterns" data-track-section data-section-id="situation_patterns" data-section-name="Situation Patterns" data-section-order="5">
+  <h2>顧客対応の状況別に変えるポイント</h2>
+  <div class="use-case">
+    <h3>まず受領したことだけを連絡する</h3>
+    <p>調査前の段階では、原因や解決策を追加せず、受領時刻、確認を開始すること、次回連絡の目安だけを伝えます。</p>
+    <div class="prompt-box"><div class="prompt-head"><span>受領連絡の指示</span><button class="copy-button" type="button" data-copy-target="reply-received" data-prompt-id="reply_received" data-prompt-label="問い合わせの受領連絡">コピー</button></div><pre id="reply-received"><code>問い合わせを受領し、内容を確認していることを伝えるメールを作ってください。
+原因や解決策はまだ確認できていないため、推測しないでください。
+本日17時までに一度状況を連絡することだけを約束してください。</code></pre></div>
+  </div>
+  <div class="use-case">
+    <h3>追加情報をお願いする</h3>
+    <p>顧客の負担を減らすため、必要な情報だけを番号付きで尋ねます。すでに受け取っている情報は再度質問しません。</p>
+    <div class="prompt-box"><div class="prompt-head"><span>追加情報を依頼する指示</span><button class="copy-button" type="button" data-copy-target="reply-more-info" data-prompt-id="reply_more_info" data-prompt-label="追加情報を依頼">コピー</button></div><pre id="reply-more-info"><code>原因調査に必要な次の情報を顧客へお願いするメールを作ってください。
+1. エラーが表示された時刻
+2. 表示されたメッセージ
+3. 利用していた端末
+なぜ必要かを一文で説明し、分かる範囲で回答してもらう表現にしてください。</code></pre></div>
+  </div>
+  <div class="use-case">
+    <h3>対応が完了したことを連絡する</h3>
+    <p>実施した対応、顧客に確認してほしいこと、再発した場合の連絡方法を分けます。</p>
+    <div class="prompt-box"><div class="prompt-head"><span>解決報告の指示</span><button class="copy-button" type="button" data-copy-target="reply-resolved" data-prompt-id="reply_resolved" data-prompt-label="問題解決の連絡">コピー</button></div><pre id="reply-resolved"><code>問題への対応が完了したことを顧客へ伝えるメールを作ってください。
+実施した対応は「同期処理の再設定」です。
+顧客には、再度同期を実行し、正常に完了するか確認してもらいます。
+原因は確定していないため、原因の説明は追加しないでください。</code></pre></div>
+  </div>
+  <div class="use-case">
+    <h3>回答に時間がかかることを伝える</h3>
+    <p>最終回答の期限を約束できない場合は、次回の進捗連絡時刻を決める方法があります。</p>
+  </div>
+</section>
+
+<section id="review-points" data-track-section data-section-id="customer_review_points" data-section-name="Customer Review Points" data-section-order="6">
+  <h2>顧客への返信を送る前に確認すること</h2>
+  <ul class="check-list">
+    <li>顧客名、製品名、日時、問い合わせ内容が正しいか</li>
+    <li>未確認の原因や復旧時間を、確定事項として書いていないか</li>
+    <li>自社が次に行うことと、顧客へお願いすることが分かれているか</li>
+    <li>謝罪表現が、実際の責任範囲や社内方針に合っているか</li>
+    <li>専門用語を、顧客が理解できる表現へ置き換えているか</li>
+    <li>返信の約束時刻や担当部署が実際に対応可能か</li>
+  </ul>
+</section>
+
+<section id="sensitive-info" data-track-section data-section-id="sensitive_information" data-section-name="Sensitive Information" data-section-order="7">
+  <h2>顧客情報や社内情報を入力するときの注意点</h2>
+  <p>問い合わせ本文には、氏名、メールアドレス、契約内容、利用状況などが含まれる場合があります。所属する会社の生成AI利用ルールと、利用しているサービスのデータ利用条件を確認してください。</p>
+  <p>必要に応じて、顧客名を「A社」、担当者名を「○○様」、契約金額を仮の数字へ置き換え、返信の構成だけを作る方法があります。</p>
+  <p class="reference-note">ChatGPTのデータ設定は利用形態によって異なります。最新の設定方法は、<a href="https://help.openai.com/en/articles/8983130-how-does-chatgpt-use-my-data" target="_blank" rel="noopener noreferrer">OpenAI公式のData Controls案内</a>も確認してください。</p>
+</section>
+
+
+        <section class="related-articles" id="related-articles" data-track-section data-section-id="related_articles" data-section-name="Related Articles" data-section-order="18">
+          <h2>あわせて読みたい記事</h2>
+          <div class="related-grid">
+<a class="related-card" href="../chatgpt-decline-email-business/" data-track-cta data-cta-id="related_chatgpt_decline_email_business" data-cta-location="related_articles">
+  <span>関連記事</span>
+  <strong>ChatGPTで取引先への断りメールを作る方法｜角が立たない例文とプロンプト</strong>
+  <small>取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。</small>
+</a>
+<a class="related-card" href="../chatgpt-ask-questions-prompt/" data-track-cta data-cta-id="related_chatgpt_ask_questions_prompt" data-cta-location="related_articles">
+  <span>関連記事</span>
+  <strong>ChatGPTに不足情報を質問してもらう方法｜質問させるプロンプト例</strong>
+  <small>何を指示すればよいか分からないときに、ChatGPTへ不足情報を先に質問させる方法を解説。一度に一つ、最大3つ、選択式などのプロンプト例を紹介します。</small>
+</a>
+<a class="related-card" href="../chatgpt-prompt-work-tips/" data-track-cta data-cta-id="related_chatgpt_prompt_work_tips" data-cta-location="related_articles">
+  <span>関連記事</span>
+  <strong>ChatGPTの使い方｜仕事で役立つ指示（プロンプト）のコツと10の活用例</strong>
+  <small>メール、要約、比較、調査、商談練習まで。仕事で使える10の活用例と、指示を具体化する5つのコツを紹介します。</small>
+</a>
+</div>
+        </section>
+
+        <section id="faq" data-track-section data-section-id="faq" data-section-name="FAQ" data-section-order="19">
+          <h2>顧客への返信メールに関するよくある質問</h2>
+          <div class="faq-list"><details data-track-faq data-faq-id="faq_1">
+  <summary>顧客から届いたメールをそのままChatGPTへ貼り付けてもよいですか？</summary>
+  <p>会社のルールと利用するサービスのデータ利用条件によって異なります。個人情報や契約情報が含まれる場合は、必要な部分だけを残し、固有名詞を仮の情報へ置き換える方法があります。</p>
+</details>
+<details data-track-faq data-faq-id="faq_2">
+  <summary>原因が分からない場合、どのように返信すればよいですか？</summary>
+  <p>原因を推測せず、現在確認中であること、次に連絡するタイミング、顧客へお願いする情報があればその内容を伝えます。</p>
+</details>
+<details data-track-faq data-faq-id="faq_3">
+  <summary>謝罪文は必ず入れるべきですか？</summary>
+  <p>状況と自社の方針によります。不便をかけていることへの配慮と、過失を認める表現は同じではありません。責任範囲が未確認の場合は、社内ルールに合う表現か確認します。</p>
+</details>
+<details data-track-faq data-faq-id="faq_4">
+  <summary>同じ問い合わせへの定型文を作れますか？</summary>
+  <p>作れます。固定部分と毎回変わる項目を分け、顧客名、発生日、状況、次回連絡時刻などを差し替えるテンプレートにします。送信前の事実確認は毎回必要です。</p>
+</details></div>
+        </section>
+
+        
+<section class="product-callout" id="prompt-ready" data-track-section data-section-id="prompt_ready" data-section-name="Prompt Ready" data-section-order="20">
+  <p class="eyebrow">仕事向けの指示を、用途から選んで組み立てる</p>
+  <h2>Prompt Ready</h2>
+  <p>この記事で使ったように、ChatGPTへ仕事を頼むときは、元の文章、読み手、目的、条件、出力形式を整理する必要があります。Prompt Readyは、ChatGPT、Gemini、Claudeなどへ渡す依頼文を作成するWindows／macOSアプリです。</p>
+  <p>メールへの返信、会議メモの整理、文章の書き換え、比較、調査、商談練習などから用途を選び、必要な条件を入力すると、生成AIへ貼り付けられる依頼文を作れます。</p>
+  <div class="product-shots">
+    <figure><img src="../chatgpt-prompt-work-tips/assets/prompt-ready-home.webp" width="1200" height="883" alt="Prompt Readyの用途選択画面" loading="lazy"></figure>
+    <figure><img src="../chatgpt-prompt-work-tips/assets/prompt-ready-generated-prompt.webp" width="1200" height="1003" alt="Prompt Readyで作成したAI依頼文の画面" loading="lazy"></figure>
+  </div>
+  <div class="warning-box">Prompt Readyが入力した文章を自動的に外部のAIや開発者のサーバーへ送信することはありません。文章と依頼文は端末内で処理されます。ただし、作成した依頼文や元の文章を生成AIへ貼り付けた後は、利用先サービスの条件が適用されます。</div>
+  <div class="cta-row">
+    <a class="button button-primary" href="../../prompt-ready/" data-product-link data-product-name="Prompt Ready" data-link-location="article_product_section" data-track-cta data-cta-id="prompt_ready_chatgpt_customer_reply_email_product" data-cta-location="article_product_section">Prompt Readyの詳細を見る</a>
+    <a class="button button-secondary" href="https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-JP&amp;gl=JP" target="_blank" rel="noopener" data-product-link data-product-name="Prompt Ready" data-link-location="article_product_section" data-store-platform="windows" data-track-cta data-cta-id="prompt_ready_chatgpt_customer_reply_email_windows" data-cta-location="article_product_section">Windows版</a>
+    <a class="button button-secondary" href="https://apps.apple.com/jp/app/prompt-ready-ai%E4%BE%9D%E9%A0%BC%E6%96%87%E4%BD%9C%E6%88%90/id6779955570?mt=12" target="_blank" rel="noopener" data-product-link data-product-name="Prompt Ready" data-link-location="article_product_section" data-store-platform="macos" data-track-cta data-cta-id="prompt_ready_chatgpt_customer_reply_email_macos" data-cta-location="article_product_section">macOS版</a>
+  </div>
+</section>
+
+        <section id="conclusion" data-track-section data-section-id="conclusion" data-section-name="Conclusion" data-section-order="21" data-article-end>
+          <h2>顧客への返信メールを仕事で使うために</h2>
+          <p>ChatGPTへ依頼するときは、長いプロンプトを暗記するより、今回の仕事に必要な事実、目的、条件、回答形式を伝えることが重要です。最初の回答を確認し、ずれた部分だけを追加指示で直します。</p>
+          <p>この記事のテンプレートをそのまま使う場合も、固有名詞、日程、金額、社内ルールなどを今回の状況に合わせて確認してください。</p>
+          <div class="article-end"><div class="article-end-links">
+            <a class="button button-primary" href="../../prompt-ready/" data-product-link data-product-name="Prompt Ready" data-link-location="article_end" data-track-cta data-cta-id="prompt_ready_article_end" data-cta-location="article_end">Prompt Readyを見る</a>
+            <a class="button button-secondary" href="../">ブログの記事一覧へ</a>
+          </div></div>
+        </section>
+      </article>
+
+      <aside class="toc-panel" aria-label="記事の目次"><strong>目次</strong><ol><li><a href="#reply-elements">顧客返信に必要な6項目</a></li><li><a href="#prompt-template">そのまま使えるプロンプト</a></li><li><a href="#worked-example">同期できない問い合わせの例</a></li><li><a href="#situation-patterns">状況別の返信パターン</a></li><li><a href="#review-points">送信前の確認ポイント</a></li><li><a href="#sensitive-info">顧客情報を扱う注意点</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#prompt-ready">Prompt Ready</a></li><li><a href="#conclusion">まとめ</a></li></ol></aside>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="site-footer-inner">
+    <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">T</span><span>Toybird Labs Blog</span></a>
+    <div class="footer-links"><a href="https://labs.toybird.com/" rel="noopener">Toybird Labs</a><a href="../../prompt-ready/">Prompt Ready</a><a href="../../pocket-screen/">Pocket Screen</a><a href="../../ai-memorize-sheet/">AI暗記シート</a></div>
+    <small>© 2026 Toybird Labs</small>
+  </div></footer>
+  <script src="../../shared/analytics.js"></script>
+  <script src="../article.js?v=20260803-2"></script>
+</body>
+</html>
