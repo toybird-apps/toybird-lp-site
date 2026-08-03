@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MTD9Z8S7QG', {content_group: 'Toybird Labs Blog', page_type: 'blog_article', page_language: 'ko', article_id: 'chatgpt_ask_questions_prompt'});
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT가 먼저 질문하게 하기 | 확인 프롬프트 예시</title><meta name="description" content="어떤 정보를 제공해야 할지 모를 때 ChatGPT가 최종 답변 전에 부족한 정보를 질문하도록 만드는 방법을 소개합니다. 한 번에 하나, 최대 3개, 선택형 예시를 포함합니다."><meta name="keywords" content="ChatGPT 질문하게 하기, ChatGPT 확인 질문 프롬프트, 답변 전에 질문, ChatGPT 한 번에 하나씩 질문, ChatGPT 추측 방지"><meta name="theme-color" content="#f6f8ff">
+<link rel="canonical" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/">
+<link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/">
+<meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="Toybird Labs Blog"><meta property="og:title" content="ChatGPT가 먼저 질문하게 하기 | 확인 프롬프트 예시"><meta property="og:description" content="어떤 정보를 제공해야 할지 모를 때 ChatGPT가 최종 답변 전에 부족한 정보를 질문하도록 만드는 방법을 소개합니다. 한 번에 하나, 최대 3개, 선택형 예시를 포함합니다."><meta property="og:url" content="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/"><meta property="og:image" content="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/assets/chatgpt-ask-questions-prompt-og.jpg"><meta property="article:published_time" content="2026-08-03"><meta property="article:modified_time" content="2026-08-03"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../blog/assets/toybird-labs-icon.png" type="image/png" sizes="512x512"><link rel="stylesheet" href="../../../blog/styles.css?v=20260803-6">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPT가 답변 전에 질문하게 만드는 방법: 정보 확인 프롬프트 예시","description":"어떤 정보를 제공해야 할지 모를 때 ChatGPT가 최종 답변 전에 부족한 정보를 질문하도록 만드는 방법을 소개합니다. 한 번에 하나, 최대 3개, 선택형 예시를 포함합니다.","image":["https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/assets/chatgpt-ask-questions-prompt-og.jpg"],"datePublished":"2026-08-03","dateModified":"2026-08-03","inLanguage":"ko","mainEntityOfPage":{"@type":"WebPage","@id":"https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/"},"author":{"@type":"Person","name":"Masaki Iino"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png","width":512,"height":512}},"keywords":["ChatGPT 질문하게 하기","ChatGPT 확인 질문 프롬프트","답변 전에 질문","ChatGPT 한 번에 하나씩 질문","ChatGPT 추측 방지"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs","item":"https://labs.toybird.com/"},{"@type":"ListItem","position":2,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/ko/blog/"},{"@type":"ListItem","position":3,"name":"ChatGPT가 답변 전에 질문하게 만드는 방법: 정보 확인 프롬프트 예시","item":"https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"질문은 몇 개가 적당한가요?","acceptedAnswer":{"@type":"Answer","text":"작은 작업은 최대 3개 정도면 충분할 수 있습니다. 복잡한 작업은 한 번에 하나씩 질문하는 방식이 답하기 쉽습니다."}},{"@type":"Question","name":"선택지를 주는 질문도 요청할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"가능합니다. “가능하면 2~4개의 선택지와 기타 항목을 함께 제시하세요”라고 추가합니다."}},{"@type":"Question","name":"관련 없는 질문을 할 때는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"작업 목적을 다시 적고 최종 판단, 문장, 출력 형식을 바꾸는 정보만 우선하도록 요청합니다."}}]}]}</script>
+</head><body data-app-name="Toybird Labs Blog" data-page-language="ko" data-article-id="chatgpt_ask_questions_prompt">
+<a class="skip-link" href="#main">본문으로 이동</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="https://lp.toybird.com/ko/blog/" aria-label="Toybird Labs Blog 홈">
+<img class="brand-mark" src="../../../blog/assets/toybird-labs-icon.webp" alt="" aria-hidden="true" width="34" height="34" decoding="async">
+<span>Toybird Labs Blog</span></a>
+<nav class="header-nav" aria-label="주요 메뉴">
+<a href="https://labs.toybird.com/" rel="noopener">Toybird Labs</a>
+<a href="/en/prompt-ready/">Prompt Ready</a>
+<details class="language-menu"><summary aria-label="Language">한국어</summary><div class="language-menu-panel"><a href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" hreflang="ja">日本語</a><a href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" hreflang="en">English</a><a href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" hreflang="es">Español</a><a href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" hreflang="fr">Français</a><a href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" hreflang="de">Deutsch</a><a href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" hreflang="it">Italiano</a><a href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" hreflang="pt-BR">Português (Brasil)</a><a class="is-current" aria-current="page" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" hreflang="ko">한국어</a></div></details>
+<a class="header-cta" href="/en/prompt-ready/#download">앱 보기</a>
+</nav></div></header>
+<main id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="https://labs.toybird.com/">Toybird Labs</a><span>›</span><a href="https://lp.toybird.com/ko/blog/">Toybird Labs Blog</a><span>›</span><span>ChatGPT가 먼저 질문하게 하기</span></nav>
+<header class="article-heading"><p class="eyebrow">생성형 AI와 업무 생산성</p><h1>ChatGPT가 답변 전에 질문하게 만드는 방법: 정보 확인 프롬프트 예시</h1><p class="article-deck">AI가 빈칸을 추측하는 대신 필요한 조건을 함께 정리하도록 합니다.</p><div class="article-meta"><time datetime="2026-08-03">2026년 8월 3일</time><span>8 분</span><span>작성자 Masaki Iino</span></div></header>
+<div class="article-hero-image"><img src="assets/chatgpt-ask-questions-prompt-og.jpg" alt="ChatGPT가 답변 전에 질문하게 만드는 방법: 정보 확인 프롬프트 예시" width="1200" height="630" fetchpriority="high"></div>
+<div class="article-shell"><article class="article-content" data-section-id="article_body" data-section-name="Article body" data-track-section>
+<p>이 글에서는 ChatGPT를 업무에 활용하는 실용적인 방법을 설명합니다. 마법 같은 프롬프트를 외우는 것이 아니라, 작업에 필요한 배경과 조건, 출력 형식을 명확히 전달하는 것이 핵심입니다.</p><p>예시 요청문을 복사한 뒤 대괄호 안의 내용을 자신의 상황에 맞게 바꾸고, 실제 업무에 사용하기 전에 결과를 확인하세요.</p>
+<div class="summary-box"><h2>핵심 요약</h2><ul class="check-list"><li>충분한 정보가 모일 때까지 최종 답변을 만들지 않도록 합니다.</li><li>질문 수를 제한해 대화가 너무 길어지지 않게 합니다.</li><li>복잡하거나 익숙하지 않은 작업은 한 번에 하나씩 질문하게 합니다.</li><li>조건이 모호하면 왜 그 질문이 필요한지 설명하도록 요청합니다.</li><li>수집된 조건을 요약하고 확인한 뒤 최종 결과를 작성하게 합니다.</li></ul></div>
+<section id="problem"><h2>정보가 부족하면 ChatGPT가 멈추지 않고 추측할 수 있습니다</h2><div class="compare-grid"><div class="compare-card before"><h3>짧은 지시만으로 원하는 결과가 나오지 않는 이유</h3><p>제안서를 작성해 주세요.</p></div><div class="compare-card after"><h3>더 안정적인 접근 방법</h3><p>부족한 조건을 찾고 먼저 질문한 뒤, 이해한 내용을 요약하고 확인받은 후에만 최종 결과를 작성하도록 지시합니다.</p></div></div></section>
+<section id="inputs"><h2>함께 제공할 정보</h2><ul class="step-list"><li>현재 알고 있는 대략적인 작업 또는 목적</li><li>결과를 사용할 상황</li><li>질문 수와 순서에 대한 제한</li><li>없는 사실을 추론하지 않는 규칙</li><li>질문에서 작성 단계로 넘어가는 조건</li></ul></section>
+<section id="template"><h2>재사용 가능한 요청문 템플릿</h2><p>대괄호 안의 내용을 자신의 상황으로 바꾸세요. 누락된 사실을 추측하지 말고 확인이 필요한 항목을 따로 정리하도록 요청하는 것이 좋습니다.</p><div class="prompt-box"><div class="prompt-head"><span>재사용 가능한 요청문 템플릿</span><button class="copy-button" type="button" data-copy-prompt>복사</button></div><pre><code>아래 작업을 도와주되 필요한 정보가 모두 제공되지 않았을 수 있습니다.
+
+## 작업
+[작업을 간단히 설명]
+
+## 지시
+- 아직 최종 답변을 작성하지 마세요.
+- 작업을 정확하게 수행하는 데 필요한 정보를 찾아 주세요.
+- 한 번에 하나씩 질문하세요.
+- 결과를 크게 바꿀 수 있는 질문을 우선하세요.
+- 일반적인 사례를 바탕으로 누락된 사실을 추측하지 마세요.
+- 충분한 정보가 모이면 합의된 요구 사항을 요약하고 확인을 요청하세요.
+- 제가 확인한 뒤에만 최종 답변을 작성하세요.</code></pre></div></section>
+<section id="example"><h2>예시: 요구 사항이 정해지지 않은 사내 교육 계획</h2><p>회사에서 생성형 AI 교육을 원하지만 참가자, 시간, 현재 수준, 목표가 정해지지 않았습니다.</p><div class="prompt-box"><div class="prompt-head"><span>실전 예시</span><button class="copy-button" type="button" data-copy-prompt>복사</button></div><pre><code>생성형 AI 사내 교육을 계획하도록 도와주세요. 아직 계획을 만들지 말고 참가자, 현재 수준, 가능한 시간, 기대 결과, 회사 제한 사항을 한 번에 하나씩 질문하세요. 충분한 정보를 모은 뒤 요구 사항을 요약해 확인받으세요.</code></pre></div><div class="example-answer"><h3>실전 예시</h3><p>첫 번째 질문: 교육에 참여하는 사람들은 누구이며 어떤 업무를 담당하나요?<br><br>답변 후에는 일반적인 교육안을 바로 제시하지 않고 다음으로 중요한 질문을 합니다.</p></div></section>
+<section id="review"><h2>결과를 사용하기 전 확인 사항</h2><p>결과는 초안으로 활용하세요. 이름, 날짜, 금액, 약속 내용, 회사 정책을 확인한 뒤 전송하거나 결정에 사용해야 합니다.</p><ul class="check-list"><li>질문이 실제 결과를 바꾸는 정보에 집중합니다.</li><li>이미 제공한 내용을 다시 묻지 않습니다.</li><li>작업에 맞는 적절한 수의 질문을 합니다.</li><li>작성 전에 요구 사항을 요약합니다.</li><li>없는 사실이 자동으로 가정으로 바뀌지 않습니다.</li></ul><div class="warning-box"><strong>회사 정책에서 허용하지 않는 개인정보, 고객 기밀, 계약 내용, 미공개 사내 정보를 입력하지 마세요. 필요한 경우 이름과 수치를 예시 정보로 바꾸세요.</strong></div></section>
+<section id="faq"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>질문은 몇 개가 적당한가요?</summary><p>작은 작업은 최대 3개 정도면 충분할 수 있습니다. 복잡한 작업은 한 번에 하나씩 질문하는 방식이 답하기 쉽습니다.</p></details><details><summary>선택지를 주는 질문도 요청할 수 있나요?</summary><p>가능합니다. “가능하면 2~4개의 선택지와 기타 항목을 함께 제시하세요”라고 추가합니다.</p></details><details><summary>관련 없는 질문을 할 때는 어떻게 하나요?</summary><p>작업 목적을 다시 적고 최종 판단, 문장, 출력 형식을 바꾸는 정보만 우선하도록 요청합니다.</p></details></div></section>
+<section class="product-callout" data-section-id="prompt_ready" data-section-name="Prompt Ready" data-track-section>
+<p class="eyebrow">업무 목적에 맞는 AI 요청문을 단계별로 만들기</p>
+<h2>미확인 정보와 최종 답변을 분리한 요청문 만들기</h2>
+<p>Prompt Ready에서 “불명확한 항목을 별도로 정리”를 선택하고 대상, 목적, 조건, 출력 형식을 구성할 수 있습니다.</p>
+<div class="product-language-support"><strong>Prompt Ready는 앱 화면과 AI 요청문 생성 모두 한국어를 지원합니다.</strong></div>
+<p>Prompt Ready는 ChatGPT, Gemini, Claude 등에서 사용할 구조화된 요청문을 만드는 Windows 및 macOS 앱입니다. 업무를 선택하고 원문과 조건을 입력한 뒤 바로 붙여 넣을 수 있는 요청문을 복사할 수 있습니다.</p>
+<p class="reference-note">Prompt Ready는 입력한 내용을 기기 안에서 처리하며 외부 AI 서비스나 개발자 서버로 자동 전송하지 않습니다. 생성한 요청문을 AI 서비스에 붙여 넣은 뒤에는 해당 서비스의 데이터 정책이 적용됩니다.</p>
+<div class="cta-row">
+<a class="button button-primary" href="/en/prompt-ready/" data-track-cta data-cta-id="prompt_ready_article" data-cta-location="article">확인 질문 요청문 만들기</a>
+<a class="button button-secondary" href="https://apps.microsoft.com/detail/9pd31c5s8v7p" rel="noopener" data-track-cta data-cta-id="windows_store" data-cta-location="article">Windows 버전</a>
+<a class="button button-secondary" href="https://apps.apple.com/app/id6779955570?mt=12" rel="noopener" data-track-cta data-cta-id="mac_store" data-cta-location="article">macOS 버전</a>
+</div></section>
+<section class="related-articles"><h2>함께 읽을 글</h2><div class="related-grid"><a class="related-card" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" data-track-cta data-cta-id="related_chatgpt_answer_off_target_fix" data-cta-location="related_articles"><span>관련 가이드</span><strong>의도와 다른 답변 수정하기</strong><small>ChatGPT 답변이 너무 길거나 일반적이고, 대상이 다르거나 사실과 추측이 섞이는 이유를 확인하고 구체적인 후속 지시로 수정하는 방법을 설명합니다.</small></a><a class="related-card" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" data-track-cta data-cta-id="related_chatgpt_sales_roleplay" data-cta-location="related_articles"><span>관련 가이드</span><strong>영업 대화 롤플레이하기</strong><small>ChatGPT를 실제 고객 역할로 설정해 영업 대화를 연습하는 방법을 소개합니다. 한 번에 하나씩 질문하고 종료 후 대화 근거로 피드백하는 프롬프트를 포함합니다.</small></a><a class="related-card" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" data-track-cta data-cta-id="related_chatgpt_prompt_work_tips" data-cta-location="related_articles"><span>관련 가이드</span><strong>업무에서 ChatGPT 활용하기</strong><small>이메일, 회의, 요약, 비교, 조사, 영업 연습 등 업무에서 ChatGPT를 더 정확하게 활용하기 위한 5가지 원칙과 10가지 실전 예시를 소개합니다.</small></a></div></section>
+<section class="article-end"><h2>질문은 프롬프트가 실패한 것이 아니라 작업 과정의 일부입니다</h2><p>작업 조건이 아직 정해지지 않았다면 필요한 정보를 찾는 단계부터 시작해야 합니다. 질문 수와 순서를 조절하고 요약을 확인한 뒤 최종 결과를 요청하세요.</p><div class="article-end-links"><a class="button button-secondary" href="https://lp.toybird.com/ko/blog/">전체 글 보기</a></div></section>
+</article><aside class="toc-panel" aria-label="목차"><strong>목차</strong><ol><li><a href="#problem">짧은 지시만으로 원하는 결과가 나오지 않는 이유</a></li><li><a href="#inputs">함께 제공할 정보</a></li><li><a href="#template">재사용 가능한 요청문 템플릿</a></li><li><a href="#example">실전 예시</a></li><li><a href="#review">결과를 사용하기 전 확인 사항</a></li><li><a href="#faq">자주 묻는 질문</a></li></ol></aside></div></main>
+<footer class="site-footer"><div class="site-footer-inner"><a class="brand" href="https://lp.toybird.com/ko/blog/"><img class="brand-mark" src="../../../blog/assets/toybird-labs-icon.webp" alt="" aria-hidden="true" width="34" height="34"><span>Toybird Labs Blog</span></a><div class="footer-links"><a href="https://labs.toybird.com/">Toybird Labs</a><a href="/en/prompt-ready/">Prompt Ready</a><a href="https://lp.toybird.com/ko/blog/">글 목록</a></div><small>© 2026 Toybird Labs</small></div></footer>
+<script src="../../../shared/analytics.js"></script><script src="../../../blog/article.js?v=20260803-6"></script></body></html>
