@@ -1,83 +1,1195 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lp.toybird.com/ai-memorize-sheet/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/ai-memorize-sheet/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
+    <xhtml:link href="https://lp.toybird.com/ai-memorize-sheet/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/ai-memorize-sheet/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/ai-memorize-sheet/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/en/ai-memorize-sheet/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/ai-memorize-sheet/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/ai-memorize-sheet/"/>
+    <xhtml:link href="https://lp.toybird.com/ai-memorize-sheet/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/ai-memorize-sheet/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/ai-memorize-sheet/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/pocket-screen/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pocket-screen/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pocket-screen/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pocket-screen/"/>
+    <xhtml:link href="https://lp.toybird.com/pocket-screen/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pocket-screen/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pocket-screen/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/en/pocket-screen/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pocket-screen/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pocket-screen/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pocket-screen/"/>
+    <xhtml:link href="https://lp.toybird.com/pocket-screen/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pocket-screen/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pocket-screen/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/prompt-ready/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/prompt-ready/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/prompt-ready/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/prompt-ready/"/>
+    <xhtml:link href="https://lp.toybird.com/prompt-ready/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/prompt-ready/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/prompt-ready/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/en/prompt-ready/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/prompt-ready/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/prompt-ready/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/prompt-ready/"/>
+    <xhtml:link href="https://lp.toybird.com/prompt-ready/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/prompt-ready/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/prompt-ready/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/pointer-cue/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pointer-cue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pointer-cue/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pointer-cue/"/>
+    <xhtml:link href="https://lp.toybird.com/pointer-cue/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pointer-cue/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pointer-cue/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/en/pointer-cue/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/pointer-cue/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/pointer-cue/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/pointer-cue/"/>
+    <xhtml:link href="https://lp.toybird.com/pointer-cue/" hreflang="ja" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pointer-cue/" hreflang="en" rel="alternate" />
+    <xhtml:link href="https://lp.toybird.com/en/pointer-cue/" hreflang="x-default" rel="alternate" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-prompt-work-tips/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-prompt-work-tips/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-decline-email-business/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-decline-email-business/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-decline-email-business/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-meeting-notes-todo/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-answer-off-target-fix/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-answer-off-target-fix/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-customer-reply-email/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-customer-reply-email/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-ask-questions-prompt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-ask-questions-prompt/" />
   </url>
   <url>
     <loc>https://lp.toybird.com/blog/chatgpt-long-document-summary/</loc>
     <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-long-document-summary/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-long-document-summary/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-rewrite-for-audience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-rewrite-for-audience/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-compare-options/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+  </url>
+  <url>
+    <loc>https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://lp.toybird.com/es/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lp.toybird.com/fr/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://lp.toybird.com/de/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://lp.toybird.com/it/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lp.toybird.com/pt-br/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://lp.toybird.com/ko/blog/chatgpt-sales-roleplay/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lp.toybird.com/en/blog/chatgpt-sales-roleplay/" />
   </url>
 </urlset>
