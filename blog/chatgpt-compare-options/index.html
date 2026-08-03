@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MTD9Z8S7QG', { content_group: 'Toybird Labs Blog', page_type: 'article', article_id: 'chatgpt_compare_options' });
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト</title>
+<meta content="ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。" name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="#f6f8ff" name="theme-color"/>
+<meta content="飯野 昌紀" name="author"/>
+<link href="https://lp.toybird.com/blog/chatgpt-compare-options/" rel="canonical"/><link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="x-default" rel="alternate"/><link href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" hreflang="ko" rel="alternate"/><link href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" hreflang="pt-BR" rel="alternate"/><link href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" hreflang="it" rel="alternate"/><link href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" hreflang="de" rel="alternate"/><link href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" hreflang="fr" rel="alternate"/><link href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" hreflang="es" rel="alternate"/><link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="en" rel="alternate"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja" rel="alternate"/>
+<meta content="article" property="og:type"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="Toybird Labs Blog" property="og:site_name"/>
+<meta content="ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト" property="og:title"/>
+<meta content="候補、比較項目、優先順位、不足情報を整理し、判断に使える比較表と推奨案を作る方法を解説します。" property="og:description"/>
+<meta content="https://lp.toybird.com/blog/chatgpt-compare-options/" property="og:url"/>
+<meta content="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト" property="og:image:alt"/>
+<meta content="2026-08-03T09:30:00+09:00" property="article:published_time"/>
+<meta content="2026-08-03T09:30:00+09:00" property="article:modified_time"/>
+<meta content="生成AI・仕事効率化" property="article:section"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト" name="twitter:title"/>
+<meta content="候補、比較項目、優先順位、不足情報を整理し、判断に使える比較表と推奨案を作る方法を解説します。" name="twitter:description"/>
+<meta content="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.jpg" name="twitter:image"/>
+<link href="../assets/toybird-labs-icon.png" rel="icon" sizes="512x512" type="image/png">
+<link href="../styles.css?v=20260803-6" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト","description":"ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。","image":"https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.jpg","datePublished":"2026-08-03T09:30:00+09:00","dateModified":"2026-08-03T09:30:00+09:00","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-compare-options/","author":{"@type":"Person","name":"飯野 昌紀"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png","width":512,"height":512}},"articleSection":"生成AI・仕事効率化","keywords":["ChatGPT 比較表 プロンプト","ChatGPT 選択肢 比較","ChatGPT 推奨案 作成","ChatGPT サービス 比較 方法","ChatGPT 比較項目"],"inLanguage":"ja-JP"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"生成AI・仕事効率化"},{"@type":"ListItem","position":3,"name":"複数の候補を比較する","item":"https://lp.toybird.com/blog/chatgpt-compare-options/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ChatGPTにWeb上の製品情報を調べながら比較してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"Web検索を利用できる環境では可能ですが、情報の時点、地域、プラン、出典を確認する必要があります。公式サイトや見積書を優先し、比較表の各項目へ出典と確認日を付けるよう指示します。"}},{"@type":"Question","name":"比較項目はChatGPTに考えてもらってもよいですか？","acceptedAnswer":{"@type":"Answer","text":"候補を選ぶ前の整理には役立ちます。ただし、AIが提案した項目をそのまま採用せず、今回の目的、社内ルール、必須条件に合うかを人が確認してください。"}},{"@type":"Question","name":"点数を付けて比較した方が分かりやすいですか？","acceptedAnswer":{"@type":"Answer","text":"点数は分かりやすい一方、配点の根拠が曖昧だと結論を強く見せすぎます。重みと採点基準を明示し、不明項目をゼロ点にしないようにします。"}},{"@type":"Question","name":"推奨案が毎回変わる場合はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"候補情報、優先順位、必須条件、出力形式を固定し、変わる部分だけを差し替えます。それでも変わる場合は、複数回の共通点と相違点を整理し、最終判断は原資料を基に行います。"}}]}]}</script>
+</link></head>
+<body data-app-name="Toybird Labs Blog" data-article-id="chatgpt_compare_options" data-article-title="ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト" data-page-language="ja">
+<a class="skip-link" href="#article">本文へ移動</a>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="Toybird Labs Blogトップ" class="brand" href="../"><img alt="" aria-hidden="true" class="brand-mark" decoding="async" height="34" src="../assets/toybird-labs-icon.webp" width="34"/><span>Toybird Labs Blog</span></a>
+<nav aria-label="メインメニュー" class="header-nav">
+<a href="../">記事一覧</a>
+<a href="../../prompt-ready/">Prompt Ready</a>
+<details class="language-menu"><summary aria-label="Language">日本語</summary><div class="language-menu-panel"><a aria-current="page" class="is-current" href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja">日本語</a><a href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="en">English</a><a href="https://lp.toybird.com/es/blog/chatgpt-compare-options/" hreflang="es">Español</a><a href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" hreflang="fr">Français</a><a href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" hreflang="de">Deutsch</a><a href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" hreflang="it">Italiano</a><a href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" hreflang="pt-BR">Português (Brasil)</a><a href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" hreflang="ko">한국어</a></div></details><a class="header-cta" data-cta-id="prompt_ready_header_chatgpt_compare_options" data-cta-location="article_header" data-track-cta="" href="../../prompt-ready/#download">アプリを見る</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="article-hero" data-section-id="article_hero" data-section-name="Article Hero" data-section-order="1" data-track-section="">
+<nav aria-label="パンくずリスト" class="breadcrumbs"><ol><li><a href="../">Toybird Labs Blog</a></li><li>生成AI・仕事効率化</li><li aria-current="page">複数の候補を比較する</li></ol></nav>
+<div class="article-heading">
+<span class="category">生成AI・仕事効率化</span>
+<h1>ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト</h1>
+<p class="article-deck">候補を並べるだけでなく、利用条件、比較項目、優先順位、不足情報を指定し、判断に使える比較表と推奨案を作る方法を紹介します。</p>
+<div class="byline"><span>著者：飯野 昌紀</span><time datetime="2026-08-03">公開：2026年8月3日</time><span>読了目安：約11分</span></div>
+</div>
+<figure class="article-hero-image"><img alt="ChatGPTで複数の候補を比較する方法｜比較表と推奨案を作るプロンプト" fetchpriority="high" height="630" src="assets/chatgpt-compare-options-og.jpg" width="1200"/></figure>
+</section>
+<div class="article-shell">
+<article class="article-content" id="article">
+<p>候補を並べるだけでなく、利用条件、比較項目、優先順位、不足情報を指定し、判断に使える比較表と推奨案を作る方法を紹介します。</p>
+<p>この記事では、すぐに試せるプロンプト、具体的な入力例、回答の確認ポイントを使い、仕事の場面でChatGPTを活用する手順を説明します。</p>
+<section aria-labelledby="summary-heading" class="summary-box">
+<h2 id="summary-heading">この記事の要点</h2>
+<ul class="check-list"><li>候補の情報を同じ形式で揃え、入力されていない事実は推測させない</li><li>利用者、目的、必須条件、比較項目、優先順位を指定する</li><li>比較表の事実と、目的に基づく評価・推奨を分ける</li><li>不明な項目は「なし」ではなく「未確認」とする</li><li>優先順位を変えた場合の推奨案も確認し、判断の偏りを減らす</li></ul>
+</section>
+<section data-section-id="why_comparison_fails" data-section-name="Why Comparison Fails" data-section-order="2" data-track-section="" id="why-comparison-fails">
+<h2>「A・B・Cを比較して」だけでは、一般的な違いで終わる</h2>
+<p>ChatGPTは候補を表にまとめることができます。しかし、誰が何のために選ぶのかが分からなければ、一般的なメリットとデメリットを並べるだけになりやすくなります。</p>
+<div class="compare-grid">
+<div class="compare-card before"><h3>情報が少ない指示</h3><p>サービスA、B、Cを比較して、一番良いものを教えてください。</p><p>「一番良い」の基準がなく、ChatGPTが価格、機能、知名度などを勝手に重視する可能性があります。</p></div>
+<div class="compare-card after"><h3>判断に使える指示</h3><p>利用者、目的、予算、期限、比較項目、優先順位を指定します。確認できない項目は推測せず、不足情報として分けます。</p></div>
+</div>
+<p>比較のゴールは、表を作ることではありません。<strong>今回の条件ではどの候補が合い、その判断にどの情報が不足しているか</strong>を明らかにすることです。</p>
+</section>
+<section data-section-id="comparison_elements" data-section-name="Comparison Elements" data-section-order="3" data-track-section="" id="comparison-elements">
+<h2>比較前に整理する6つの要素</h2>
+<ol class="step-list">
+<li><strong>候補と確認済みの事実</strong><br/>料金、機能、対応範囲、期限など、資料から確認できた内容を候補ごとに揃えます。</li>
+<li><strong>利用する状況</strong><br/>人数、経験、業務、導入時期など、候補を使う側の条件を伝えます。</li>
+<li><strong>比較項目</strong><br/>料金、サポート、導入期間、使いやすさなど、判断に必要な軸を指定します。</li>
+<li><strong>必須条件</strong><br/>予算上限、期限、対応人数など、満たさなければ選べない条件を分けます。</li>
+<li><strong>優先順位</strong><br/>すべての項目を同じ重さにせず、最も重視する条件を決めます。</li>
+<li><strong>不足情報の扱い</strong><br/>分からない項目をゼロ評価にせず、「未確認」として判断前の質問へ回します。</li>
+</ol>
+<div class="note-box"><strong>比較表と推奨案は別物</strong><br/>比較表は事実を並べるためのものです。推奨案は、その事実を今回の目的と優先順位に当てはめた評価です。両者を分けると、AIの判断根拠を確認しやすくなります。</div>
+</section>
+<section data-section-id="prompt_template" data-section-name="Prompt Template" data-section-order="4" data-track-section="" id="prompt-template">
+<h2>比較表と推奨案を作るプロンプト</h2>
+<p>候補の情報を同じ形式で渡し、優先順位と不明点の扱いを指定します。Web上の情報を使う場合は、別途、参照元と確認日を求めてください。</p>
+<div class="prompt-box">
+<div class="prompt-head"><span>複数候補の比較用テンプレート</span><button class="copy-button" data-copy-target="compare-options-template" data-prompt-id="compare_options_template" data-prompt-label="複数の候補を比較する" type="button">コピー</button></div>
+<pre id="compare-options-template"><code>## 依頼
+以下の候補を比較し、目的に合う選択肢を検討してください。
+
+## 比較する候補
+[候補ごとの確認済み情報を記載する]
+
+## 利用する状況
+- 利用者：[人数、経験、役割]
+- 目的：[何を達成したいか]
+- 制約：[予算、期限、必須条件]
+
+## 比較項目
+1. [比較項目1]
+2. [比較項目2]
+3. [比較項目3]
+
+## 優先順位
+1. [最も重視する条件]
+2. [次に重視する条件]
+3. [あると望ましい条件]
+
+## 条件
+- 入力されていない料金、機能、評価を推測しないでください。
+- 不明な項目は「未確認」としてください。
+- 事実と、事実を基にした評価を分けてください。
+- 条件によって推奨案が変わる場合は、その条件を明記してください。
+
+## 出力形式
+1. 比較表
+2. 各候補の主な強みと注意点
+3. 推奨案と理由
+4. 判断前に確認すべき不足情報</code></pre>
+</div>
+</section>
+<section data-section-id="worked_example" data-section-name="Worked Example" data-section-order="5" data-track-section="" id="worked-example">
+<h2>例：社員30人向けの生成AI研修サービスを比較する</h2>
+<p>次の3候補は架空の例です。比較する情報を揃え、初心者が継続しやすいことを最優先にします。</p>
+<div aria-label="研修サービス3候補の入力情報" class="data-table-wrap" role="region" tabindex="0">
+<table class="data-table"><thead><tr><th scope="col">候補</th><th scope="col">料金</th><th scope="col">受講人数</th><th scope="col">支援内容</th><th scope="col">開始まで</th></tr></thead><tbody><tr><td>サービスA</td><td>12万円</td><td>30人</td><td>動画教材、メールサポート（2営業日以内）</td><td>1週間</td></tr><tr><td>サービスB</td><td>18万円</td><td>50人</td><td>動画教材、ライブ研修2回、チャットサポート</td><td>3週間</td></tr><tr><td>サービスC</td><td>15万円</td><td>人数無制限</td><td>動画教材、月1回の質問会、メールサポート</td><td>2週間</td></tr></tbody></table>
+</div>
+<div class="prompt-box">
+<div class="prompt-head"><span>条件と優先順位を入れた比較指示</span><button class="copy-button" data-copy-target="compare-options-worked" data-prompt-id="compare_options_training_services" data-prompt-label="研修サービス3候補を比較する" type="button">コピー</button></div>
+<pre id="compare-options-worked"><code>以下の3つの研修サービスを比較してください。
+
+## 候補
+- サービスA：12万円、30人まで、動画教材、メールサポートは2営業日以内、1週間で開始可能
+- サービスB：18万円、50人まで、動画教材、ライブ研修2回、チャットサポート、3週間で開始可能
+- サービスC：15万円、人数無制限、動画教材、月1回の質問会、メールサポート、2週間で開始可能
+
+## 当社の状況
+- 社員30人が受講する
+- 生成AIを初めて使う社員が多い
+- 1か月以内に開始したい
+- 予算上限は20万円
+- 価格の安さより、初心者が質問しながら継続できることを重視する
+
+## 比較項目
+料金、人数、初心者への支援、質問方法、開始までの期間
+
+## 条件
+- 記載されていない修了率、教材品質、導入実績は推測しないでください。
+- 比較表を作り、最後に推奨案と理由を示してください。
+- 判断前に確認すべき不足情報を分けてください。</code></pre>
+</div>
+<div class="example-answer">
+<h3>回答のイメージ</h3>
+<div aria-label="比較結果の例" class="data-table-wrap" role="region" tabindex="0">
+<table class="data-table"><thead><tr><th scope="col">評価項目</th><th scope="col">サービスA</th><th scope="col">サービスB</th><th scope="col">サービスC</th></tr></thead><tbody><tr><td>30人での利用</td><td>上限と一致</td><td>利用可能</td><td>利用可能</td></tr><tr><td>初心者支援</td><td>動画＋メール</td><td><strong>ライブ研修＋チャット</strong></td><td>動画＋月1回質問会</td></tr><tr><td>開始速度</td><td><strong>1週間</strong></td><td>3週間</td><td>2週間</td></tr><tr><td>予算20万円以内</td><td>○</td><td>○</td><td>○</td></tr><tr><td>継続的な質問</td><td>メール</td><td><strong>チャット</strong></td><td>月1回＋メール</td></tr></tbody></table>
+</div>
+<p><strong>推奨案：</strong>初心者が質問しながら継続できることを最優先にする場合、現時点ではサービスBが有力です。ライブ研修とチャットサポートがあり、30人で利用でき、予算と開始期限も満たしています。</p>
+<p><strong>確認が必要な点：</strong>チャットサポートの対応時間、ライブ研修の内容、契約期間、追加費用、教材の更新頻度は入力情報から確認できません。最終判断前に確認が必要です。</p>
+</div>
+<p>「Bが最も高機能だから」ではなく、初心者支援を重視するという今回の優先順位に基づいて推奨しています。優先順位を価格や開始速度へ変えると、推奨案も変わる可能性があります。</p>
+<p class="reference-note">Prompt Readyの「選択肢を比較する」では、表、推奨案、リスク、不明点を含めるか選びながら比較用の依頼文を作れます。<a data-cta-id="prompt_ready_compare_inline" data-cta-location="article_mid" data-link-location="article_mid" data-product-link="" data-product-name="Prompt Ready" data-track-cta="" href="../../prompt-ready/">Prompt Readyを見る</a></p>
+</section>
+<section data-section-id="missing_information" data-section-name="Missing Information" data-section-order="6" data-track-section="" id="missing-information">
+<h2>情報が足りない候補を、勝手に低く評価させない</h2>
+<p>比較資料では、候補によって記載項目が異なることがあります。Aにはサポート時間が書かれているのに、Bには書かれていない場合、Bのサポートが存在しないとは限りません。</p>
+<ul class="check-list">
+<li>不明な項目は「なし」ではなく「未確認」とする</li>
+<li>推奨案へ大きく影響する不足情報を優先して質問にする</li>
+<li>資料から確認できた事実と、一般的な推測を分ける</li>
+<li>候補ごとの情報量の差を、品質の差として扱わない</li>
+</ul>
+<div class="prompt-box">
+<div class="prompt-head"><span>不足情報だけを質問へ変える指示</span><button class="copy-button" data-copy-target="compare-missing-info" data-prompt-id="compare_missing_information" data-prompt-label="比較に不足する情報を質問へ変える" type="button">コピー</button></div>
+<pre id="compare-missing-info"><code>上の比較結果から、最終判断に影響する未確認項目だけを抜き出してください。候補ごとに質問を作り、「なぜ確認が必要か」「回答によって判断がどう変わるか」を添えてください。資料に答えがある質問は除外してください。</code></pre>
+</div>
+</section>
+<section data-section-id="change_perspective" data-section-name="Change Perspective" data-section-order="7" data-track-section="" id="change-perspective">
+<h2>重視する条件を変えて、推奨案の違いを見る</h2>
+<p>一つの推奨案だけを見ると、AIの判断をそのまま受け入れやすくなります。優先順位を変えた場合に結論がどう動くかを確認すると、判断の感度が分かります。</p>
+<div class="use-case">
+<h3>予算を最優先にする</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>予算重視で再比較する指示</span><button class="copy-button" data-copy-target="compare-budget-first" data-prompt-id="compare_budget_first" data-prompt-label="予算重視で候補を再比較する" type="button">コピー</button></div>
+<pre id="compare-budget-first"><code>同じ候補を、予算の低さを最優先、初心者支援を第2優先として再評価してください。最初の推奨案から変わる場合は、変わった理由を説明してください。</code></pre>
+</div>
+</div>
+<div class="use-case">
+<h3>導入速度を最優先にする</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>開始時期重視で再比較する指示</span><button class="copy-button" data-copy-target="compare-speed-first" data-prompt-id="compare_speed_first" data-prompt-label="導入速度重視で候補を再比較する" type="button">コピー</button></div>
+<pre id="compare-speed-first"><code>同じ候補を、2週間以内に開始できることを必須条件として再評価してください。条件を満たさない候補は推奨対象から外し、残った候補の注意点を比較してください。</code></pre>
+</div>
+</div>
+<div class="use-case">
+<h3>推奨せず、事実だけを整理する</h3>
+<div class="prompt-box">
+<div class="prompt-head"><span>推奨を外して比較する指示</span><button class="copy-button" data-copy-target="compare-facts-only" data-prompt-id="compare_facts_only" data-prompt-label="候補の事実だけを比較する" type="button">コピー</button></div>
+<pre id="compare-facts-only"><code>推奨案は作らず、確認できた事実だけを比較表にしてください。評価や優劣を示す表現は使わず、不足情報を別欄にしてください。</code></pre>
+</div>
+</div>
+</section>
+<section data-section-id="review_checklist" data-section-name="Review Checklist" data-section-order="8" data-track-section="" id="review-checklist">
+<h2>ChatGPTの比較結果を判断に使う前の確認</h2>
+<ul class="check-list">
+<li><strong>候補ごとの情報が同じ時点・同じ条件で揃っているか</strong></li>
+<li><strong>入力していない価格、機能、評判、実績が追加されていないか</strong></li>
+<li><strong>必須条件と、あると望ましい条件が混ざっていないか</strong></li>
+<li><strong>推奨理由が、指定した優先順位と一致しているか</strong></li>
+<li><strong>未確認項目が、悪い評価として扱われていないか</strong></li>
+<li><strong>最終判断に必要な契約条件、例外、追加費用を原資料で確認したか</strong></li>
+</ul>
+<div class="warning-box">ChatGPTは候補の整理と判断材料の可視化に利用できますが、契約や購入の最終責任は負いません。重要な比較では、公式資料、見積書、契約条件、担当者への確認結果を基に人が判断します。</div>
+</section>
+<section data-section-id="faq" data-section-name="FAQ" data-section-order="19" data-track-section="" id="faq">
+<h2>複数の候補を比較するに関するよくある質問</h2>
+<div class="faq-list"><details data-faq-id="faq_1" data-track-faq="">
+<summary>ChatGPTにWeb上の製品情報を調べながら比較してもらえますか？</summary>
+<p>Web検索を利用できる環境では可能ですが、情報の時点、地域、プラン、出典を確認する必要があります。公式サイトや見積書を優先し、比較表の各項目へ出典と確認日を付けるよう指示します。</p>
+</details>
+<details data-faq-id="faq_2" data-track-faq="">
+<summary>比較項目はChatGPTに考えてもらってもよいですか？</summary>
+<p>候補を選ぶ前の整理には役立ちます。ただし、AIが提案した項目をそのまま採用せず、今回の目的、社内ルール、必須条件に合うかを人が確認してください。</p>
+</details>
+<details data-faq-id="faq_3" data-track-faq="">
+<summary>点数を付けて比較した方が分かりやすいですか？</summary>
+<p>点数は分かりやすい一方、配点の根拠が曖昧だと結論を強く見せすぎます。重みと採点基準を明示し、不明項目をゼロ点にしないようにします。</p>
+</details>
+<details data-faq-id="faq_4" data-track-faq="">
+<summary>推奨案が毎回変わる場合はどうすればよいですか？</summary>
+<p>候補情報、優先順位、必須条件、出力形式を固定し、変わる部分だけを差し替えます。それでも変わる場合は、複数回の共通点と相違点を整理し、最終判断は原資料を基に行います。</p>
+</details></div>
+</section>
+<section class="product-callout" data-section-id="prompt_ready" data-section-name="Prompt Ready" data-section-order="20" data-track-section="" id="prompt-ready">
+<p class="eyebrow">仕事向けの依頼文を、用途から組み立てる</p>
+<h2>比較表・推奨案・リスクを含む依頼文を用途から作る</h2>
+<p>Prompt Readyの「比較・分析」には「選択肢を比較する」が用意されています。候補と比較条件を入力し、表を作る、推奨案を示す、リスクや見落としを確認する、不明点を分けるといった条件を選んで依頼文を作れます。</p><p>作成された依頼文では、比較表、重要な点、注意点、推奨理由、不足情報を分けて回答するよう整理されます。候補の事実と、自社の優先順位は入力内容として加え、ChatGPT、Gemini、Claudeなどへコピーして利用します。</p>
+
+<div class="product-shots">
+<figure><img alt="Prompt Readyの用途選択画面" height="883" loading="lazy" src="../chatgpt-prompt-work-tips/assets/prompt-ready-home.webp" width="1200"/></figure>
+<figure><img alt="Prompt Readyで作成したAI依頼文の画面" height="1003" loading="lazy" src="../chatgpt-prompt-work-tips/assets/prompt-ready-generated-prompt.webp" width="1200"/></figure>
+</div>
+<div class="warning-box">Prompt Readyが入力した文章や作成した依頼文を、外部のAIや開発者のサーバーへ自動送信することはありません。端末内で依頼文を作成し、利用する生成AIへ自分でコピーして使います。生成AIへ貼り付けた後は、そのサービスのデータ利用条件が適用されます。</div>
+<div class="cta-row">
+<a class="button button-primary" data-cta-id="prompt_ready_chatgpt_compare_options_product" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-track-cta="" href="../../prompt-ready/">比較用の依頼文を作る</a>
+<a class="button button-secondary" data-cta-id="prompt_ready_chatgpt_compare_options_windows" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-store-platform="windows" data-track-cta="" href="https://apps.microsoft.com/detail/9pd31c5s8v7p?hl=ja-JP&amp;gl=JP" rel="noopener" target="_blank">Windows版</a>
+<a class="button button-secondary" data-cta-id="prompt_ready_chatgpt_compare_options_macos" data-cta-location="article_product_section" data-link-location="article_product_section" data-product-link="" data-product-name="Prompt Ready" data-store-platform="macos" data-track-cta="" href="https://apps.apple.com/jp/app/prompt-ready-ai%E4%BE%9D%E9%A0%BC%E6%96%87%E4%BD%9C%E6%88%90/id6779955570?mt=12" rel="noopener" target="_blank">macOS版</a>
+</div>
+</section>
+<section class="related-articles" data-section-id="related_articles" data-section-name="Related Articles" data-section-order="21" data-track-section="" id="related-articles">
+<h2>あわせて読みたい記事</h2>
+<div class="related-grid">
+<a class="related-card" data-cta-id="related_chatgpt_compare_options_chatgpt_ask_questions_prompt" data-cta-location="related_articles" data-track-cta="" href="../chatgpt-ask-questions-prompt/">
+<span>関連記事</span>
+<strong>ChatGPTに不足情報を質問してもらう方法｜質問させるプロンプト例</strong>
+<small>何を指示すればよいか分からないときに、ChatGPTへ不足情報を先に質問させる方法を解説。一度に一つ、最大3つ、選択式などのプロンプト例を紹介します。</small>
+</a>
+<a class="related-card" data-cta-id="related_chatgpt_compare_options_chatgpt_long_document_summary" data-cta-location="related_articles" data-track-cta="" href="../chatgpt-long-document-summary/">
+<span>関連記事</span>
+<strong>ChatGPTで長い資料を目的別に要約する方法｜仕事向けプロンプト例</strong>
+<small>ChatGPTで長い資料や文章を仕事向けに要約する方法を解説。経営者向け、実務担当者向け、顧客説明向けに残す情報を変えるプロンプト例を紹介します。</small>
+</a>
+<a class="related-card" data-cta-id="related_chatgpt_compare_options_chatgpt_prompt_work_tips" data-cta-location="related_articles" data-track-cta="" href="../chatgpt-prompt-work-tips/">
+<span>関連記事</span>
+<strong>ChatGPTの使い方｜仕事で役立つ指示（プロンプト）のコツと10の活用例</strong>
+<small>メール、要約、比較、調査、商談練習まで。仕事で使える10の活用例と、指示を具体化する5つのコツを紹介します。</small>
+</a>
+</div>
+</section>
+<section data-article-end="" data-section-id="conclusion" data-section-name="Conclusion" data-section-order="22" data-track-section="" id="conclusion">
+<h2>比較の質は、候補数より判断条件の明確さで決まる</h2>
+<p>ChatGPTで複数の候補を比較するときは、候補名だけでなく、確認済みの事実、利用状況、必須条件、比較項目、優先順位を渡します。比較表と推奨案を分け、不明な項目は未確認として残すことが重要です。</p><p>まずは実際に検討中の2〜3候補について、同じ項目の情報を揃えてください。そのうえで、価格重視、支援重視、導入速度重視の3通りで結果を比べると、自分たちの判断軸が見えやすくなります。</p>
+<div class="article-end"><div class="article-end-links">
+<a class="button button-primary" data-cta-id="prompt_ready_end_chatgpt_compare_options" data-cta-location="article_end" data-link-location="article_end" data-product-link="" data-product-name="Prompt Ready" data-track-cta="" href="../../prompt-ready/">Prompt Readyを見る</a>
+<a class="button button-secondary" href="../">ブログの記事一覧へ</a>
+</div></div>
+</section>
+</article>
+<aside aria-label="記事の目次" class="toc-panel"><strong>目次</strong><ol><li><a href="#why-comparison-fails">短い比較指示の問題</a></li><li><a href="#comparison-elements">比較前に整理する6要素</a></li><li><a href="#prompt-template">そのまま使えるプロンプト</a></li><li><a href="#worked-example">研修サービスの比較例</a></li><li><a href="#missing-information">不足情報の扱い</a></li><li><a href="#change-perspective">優先順位を変えて比較</a></li><li><a href="#review-checklist">比較結果の確認</a></li><li><a href="#faq">よくある質問</a></li><li><a href="#prompt-ready">Prompt Ready</a></li><li><a href="#conclusion">まとめ</a></li></ol></aside>
+</div>
+</main>
+<footer class="site-footer"><div class="site-footer-inner">
+<a class="brand" href="../"><img alt="" aria-hidden="true" class="brand-mark" decoding="async" height="34" src="../assets/toybird-labs-icon.webp" width="34"><span>Toybird Labs Blog</span></img></a>
+<div class="footer-links"><a href="https://labs.toybird.com/" rel="noopener">Toybird Labs</a><a href="../../prompt-ready/">Prompt Ready</a><a href="../../pocket-screen/">Pocket Screen</a><a href="../../ai-memorize-sheet/">AI暗記シート</a></div>
+<small>© 2026 Toybird Labs</small>
+</div></footer>
+<script src="../../shared/analytics.js"></script>
+<script src="../article.js?v=20260803-6"></script>
+</body>
+</html>
