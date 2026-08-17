@@ -1,0 +1,82 @@
+{
+  "school-print-smartphone-memorization": {
+    "title": "学校プリントを テストで答えられる教材へ",
+    "group": "機能・課題解決",
+    "read": "約7分"
+  },
+  "iphone-red-sheet-study": {
+    "title": "iPhoneを赤シートに 教材を、そのまま暗記テストへ",
+    "group": "機能・課題解決",
+    "read": "約7分"
+  },
+  "pdf-material-iphone-memorization": {
+    "title": "保存したPDFを 開くだけの資料から復習教材へ",
+    "group": "機能・課題解決",
+    "read": "約7分"
+  },
+  "junior-high-regular-test-print-study": {
+    "title": "中学の定期テストは 学校プリントを使い切る",
+    "group": "学習ステージ",
+    "read": "約8分"
+  },
+  "high-school-entrance-exam-memorization": {
+    "title": "高校受験の理科・社会を 「習った」で終わらせない",
+    "group": "学習ステージ",
+    "read": "約8分"
+  },
+  "high-school-regular-test-print-study": {
+    "title": "高校の定期テストは 「まとめ直す」より先に答える",
+    "group": "学習ステージ",
+    "read": "約8分"
+  },
+  "university-entrance-exam-memorization": {
+    "title": "大学受験の暗記は 用語を「使える知識」に変える",
+    "group": "学習ステージ",
+    "read": "約9分"
+  },
+  "qualification-exam-smartphone-memorization": {
+    "title": "資格試験の暗記を 通勤・スキマ時間で前へ進める",
+    "group": "資格試験",
+    "read": "約9分"
+  },
+  "takken-memorization-study": {
+    "title": "宅建の数字は 条件とセットで覚える",
+    "group": "資格試験",
+    "read": "約9分"
+  },
+  "it-passport-memorization-study": {
+    "title": "ITパスポートの略語を 意味と使い道まで結びつける",
+    "group": "資格試験",
+    "read": "約9分"
+  },
+  "fp-memorization-study": {
+    "title": "FPの暗記は 数字の前に「誰の話か」を決める",
+    "group": "資格試験",
+    "read": "約9分"
+  },
+  "gyoseishoshi-memorization-study": {
+    "title": "行政書士の法律知識を 条文の言葉から事例判断へ",
+    "group": "資格試験",
+    "read": "約10分"
+  },
+  "sharoshi-memorization-study": {
+    "title": "社労士の制度暗記を 法律を横断して整理する",
+    "group": "資格試験",
+    "read": "約10分"
+  },
+  "registered-seller-memorization-study": {
+    "title": "登録販売者の成分暗記を 名前だけで終わらせない",
+    "group": "資格試験",
+    "read": "約10分"
+  },
+  "red-sheet-vs-flashcards": {
+    "title": "赤シートと暗記カード 教材と目的で使い分ける",
+    "group": "比較",
+    "read": "約8分"
+  },
+  "chugaku-juken-juku-print-review": {
+    "title": "中学受験の塾プリントを 合格につながる復習へ",
+    "group": "学習ステージ",
+    "read": "約8分"
+  }
+}
