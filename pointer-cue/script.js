@@ -57,7 +57,7 @@ function detectOS() {
   const platform = `${navigator.userAgent || ''} ${navigator.platform || ''}`;
   if (/Macintosh|Mac OS X|MacIntel/i.test(platform)) return 'macos';
   if (/Windows/i.test(platform)) return 'windows';
-  return 'windows';
+  return 'macos';
 }
 
 osTabs.forEach((tab, index) => {
