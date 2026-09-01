@@ -1,0 +1,185 @@
+name: IndexNow URL notification
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "Optional URLs to submit (one per line or comma-separated). Leave blank to submit the homepage as a test."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  notify-indexnow:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Submit changed page URLs to IndexNow
+        env:
+          INDEXNOW_HOST: lp.toybird.com
+          INDEXNOW_BASE_URL: https://lp.toybird.com/
+          INDEXNOW_KEY: 7a3b4046a5384da2a36d59297c7b7650
+          INDEXNOW_KEY_LOCATION: https://lp.toybird.com/7a3b4046a5384da2a36d59297c7b7650.txt
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_URLS: ${{ github.event.inputs.urls }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import subprocess
+          import sys
+          import time
+          import urllib.error
+          import urllib.request
+
+          HOST = os.environ["INDEXNOW_HOST"]
+          BASE = os.environ["INDEXNOW_BASE_URL"]
+          KEY = os.environ["INDEXNOW_KEY"]
+          KEY_LOCATION = os.environ["INDEXNOW_KEY_LOCATION"]
+          EVENT = os.environ.get("EVENT_NAME", "")
+          BEFORE = os.environ.get("BEFORE_SHA", "")
+          AFTER = os.environ.get("AFTER_SHA", "HEAD") or "HEAD"
+          MANUAL = os.environ.get("MANUAL_URLS", "").strip()
+          KEY_FILENAME = f"{KEY}.txt"
+
+          def page_url_from_path(path: str):
+              path = path.strip().lstrip("./")
+              if path == "index.html":
+                  return BASE
+              if path.endswith("/index.html"):
+                  folder = path[:-len("index.html")]
+                  return BASE + folder
+              return None
+
+          def changed_paths():
+              zero = "0" * 40
+              try:
+                  if BEFORE and BEFORE != zero:
+                      cmd = ["git", "diff", "--name-status", BEFORE, AFTER]
+                  else:
+                      cmd = ["git", "show", "--pretty=", "--name-status", AFTER]
+                  out = subprocess.check_output(cmd, text=True)
+              except subprocess.CalledProcessError as exc:
+                  print(f"Could not determine changed files: {exc}", file=sys.stderr)
+                  return []
+
+              paths = []
+              for line in out.splitlines():
+                  if not line.strip():
+                      continue
+                  parts = line.split("\t")
+                  status = parts[0]
+                  if status.startswith(("R", "C")) and len(parts) >= 3:
+                      paths.extend(parts[1:3])
+                  elif len(parts) >= 2:
+                      paths.append(parts[-1])
+              return paths
+
+          urls = set()
+
+          if EVENT == "workflow_dispatch":
+              if MANUAL:
+                  normalized = MANUAL.replace(",", "\n")
+                  for value in normalized.splitlines():
+                      value = value.strip()
+                      if value:
+                          urls.add(value)
+              else:
+                  urls.add(BASE)
+          else:
+              paths = changed_paths()
+              print("Changed files considered by IndexNow:")
+              for path in paths:
+                  print(f"  {path}")
+                  url = page_url_from_path(path)
+                  if url:
+                      urls.add(url)
+
+              if KEY_FILENAME in paths:
+                  urls.add(BASE)
+
+          invalid = sorted(u for u in urls if not u.startswith(BASE))
+          if invalid:
+              print("Refusing URLs outside https://lp.toybird.com/:", file=sys.stderr)
+              for u in invalid:
+                  print(f"  {u}", file=sys.stderr)
+              sys.exit(1)
+
+          urls = sorted(urls)
+          if not urls:
+              print("No changed HTML page URLs to submit. Nothing to do.")
+              sys.exit(0)
+
+          if len(urls) > 10000:
+              print(f"Too many URLs for one IndexNow request: {len(urls)}", file=sys.stderr)
+              sys.exit(1)
+
+          payload = json.dumps({
+              "host": HOST,
+              "key": KEY,
+              "keyLocation": KEY_LOCATION,
+              "urlList": urls,
+          }).encode("utf-8")
+
+          print("IndexNow URLs:")
+          for url in urls:
+              print(f"  {url}")
+
+          if EVENT == "push":
+              print("Waiting 75 seconds for site deployment before notifying IndexNow...")
+              time.sleep(75)
+
+          retry_delays = [0, 60, 120, 180]
+          last_error = None
+
+          for attempt, delay in enumerate(retry_delays, start=1):
+              if delay:
+                  print(f"Retrying in {delay} seconds...")
+                  time.sleep(delay)
+
+              request = urllib.request.Request(
+                  "https://api.indexnow.org/indexnow",
+                  data=payload,
+                  method="POST",
+                  headers={
+                      "Content-Type": "application/json; charset=utf-8",
+                      "User-Agent": "Toybird-Labs-IndexNow/1.0",
+                  },
+              )
+
+              try:
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      code = response.getcode()
+                      body = response.read().decode("utf-8", "replace")
+                      print(f"IndexNow response: HTTP {code} {body}".strip())
+                      if code in (200, 202):
+                          print("IndexNow notification accepted.")
+                          sys.exit(0)
+                      last_error = f"HTTP {code}: {body}"
+              except urllib.error.HTTPError as exc:
+                  body = exc.read().decode("utf-8", "replace")
+                  last_error = f"HTTP {exc.code}: {body}"
+                  print(f"IndexNow attempt {attempt} failed: {last_error}", file=sys.stderr)
+                  if exc.code in (400, 422):
+                      break
+              except Exception as exc:
+                  last_error = repr(exc)
+                  print(f"IndexNow attempt {attempt} failed: {last_error}", file=sys.stderr)
+
+          print(f"IndexNow notification failed after retries: {last_error}", file=sys.stderr)
+          sys.exit(1)
+          PY
