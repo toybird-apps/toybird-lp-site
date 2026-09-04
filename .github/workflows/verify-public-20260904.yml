@@ -1,0 +1,72 @@
+name: Verify public LP deployment 20260904
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-public-20260904.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify all 56 public files byte-for-byte
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, time, urllib.parse, urllib.request
+          expected = json.loads(r'''{"ai-memorize-sheet/index.html":"48934814745bad24a7357ee91dc5629ad4f124f49edd8882dd238a7c100df629","blog/chugaku-juken-juku-print-review/index.html":"8d0a1cebb5988afd0e014c5cc4c7fb4aee0052e559873d1d3af1f1b175071177","blog/fp-memorization-study/index.html":"55fd994f3fac5f2edee7cbe754102fcc7e3ca26e43d069f968b401d3920afa89","blog/gyoseishoshi-memorization-study/index.html":"9f0c7d84f70aaa95edfbdd1aeacb3e026a0964f0757bb4fa67d2f0074b4edba3","blog/high-school-entrance-exam-memorization/index.html":"af2b4eb9a12cb3d414eae82ca75ed0f8b9c5c96e49b1e20be789ffcd428a8a0e","blog/high-school-regular-test-print-study/index.html":"c1f45a7ae24aebd3fc14134964388af933894f65e457a70092adf4489e88c887","blog/index.html":"617618277ab859ad71ce1d8e7591176ef04d5730a46137cd00ae946746864586","blog/iphone-red-sheet-study/index.html":"1fd09e33aadc715f205a018532112642c0c986568251f6c5370a11e105279da5","blog/it-passport-memorization-study/index.html":"e1e0eed182809fbc6cae200ad4870ae87e6c3027b57f9856ec2e5b09e7c0b9d9","blog/junior-high-regular-test-print-study/index.html":"40317612bebe403ed5ed0a3514f852dd3a8dbdb1c95c8cab6c992ad047786ec2","blog/pdf-material-iphone-memorization/index.html":"a4fe36cd06adbe693328cc9853e5fcc02d467e115e5e1b92325af5e8a61d41cb","blog/qualification-exam-smartphone-memorization/index.html":"2b18a0e9e4709c1e20e60699126c1e0cec4e9c600b4264f0cee47fbb266b57c1","blog/red-sheet-vs-flashcards/index.html":"732339603264ef15e59aff8c79e054992d03c88d06bb8df123cc8c3482f3d96e","blog/registered-seller-memorization-study/index.html":"52d7eb070f6702c099afee39f212bf7fcdb822b3d79af8fa414aacfacb0380b2","blog/school-print-smartphone-memorization/index.html":"debb32df8a34282c160504627d1bb68279598ded647ee510a33639e3ff417a79","blog/sharoshi-memorization-study/index.html":"1341ed901e8bc9d1f02111976a86542768ee71b7d3ab5af8747cbb32c5e3acac","blog/study.css":"01ef11076762674b0975ff7161431a0dfba579eb9ea48609719aeeb9567a9a82","blog/takken-memorization-study/index.html":"338675c883b9f7d538a2c37b12853e4ee095141231b116d37ce01cbb4a4e920d","blog/university-entrance-exam-memorization/index.html":"97608baafa9cb6e61226e783312ae44b6c6e092a511814a974d990f5b50e9507","de/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","de/blog/abitur-ausbildung-studium-eigene-unterlagen/index.html":"c1a390a08cd9ee5cb61e69ab011ae5cc0dabd43ff5e702d4337fe940ee5d23c0","de/blog/index.html":"7036f29a10d2f9e13ef8e8f1d8e7607bfce1a2fdcb3ce950999800095163eab5","de/blog/lernzettel-arbeitsblaetter-aktiv-abfragen/index.html":"9e73d8269cd4ee5a74c13c81becb0fb12c86f093bac7dc789b6fa12f7acd6177","en/ai-memorize-sheet/index.html":"dd0625fae2b895d0e27fa53fff23f96c904db883ec0ff1e480dd8c49a0de260a","en/blog/index.html":"0733349c5f552ec79cb524b41c0497dd155320c124aedf65e93b25221507ea27","en/blog/photos-pdfs-active-recall-iphone/index.html":"ed972aeabf45f7e0667d40b6261f3218641a2d3ec47850c74dd89d03bc982450","en/blog/worksheets-without-rewriting/index.html":"abea5fd868e95c24797f8188add14a47608012a5685bb11debc2f4e9fb57c204","es/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","es/blog/eso-bachillerato-oposiciones-material-propio/index.html":"64ebbf1acb1eb72b610296e50fa612e1af82950acde3ce144ab6433029003c37","es/blog/fotos-apuntes-repaso-activo/index.html":"c4f871c44607d7d90e84f0c3056decda8c6d2deab3b4c1763ffecd4804e8a584","es/blog/index.html":"109ff8fe9880d65d10262eb48e1d74f9d8d3d64c85d355c3c7ed480299fb5bce","fr/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","fr/blog/bac-brevet-concours-propres-supports/index.html":"79dc824d4a49281371c415b73726b1f4d52ef103aa6ff4646f6782963bf83fc7","fr/blog/index.html":"5957eaa5f3debf70f2610fcc6816b7f65174e065d5c4fb9ad10e1e77c8f1b038","fr/blog/photo-cours-revision-active/index.html":"a185ffee5392f6d955bd477d07b207e25fb20453d6410406840e01d0c85ca8b2","it/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","it/blog/foto-appunti-ripasso-attivo/index.html":"a5f2d4090ff64f5a3c8b4aa6ed83cb8c7b1bdfb81258ab3d8071f580bdcb0bd0","it/blog/index.html":"0feaa4e55e437959672958d3c34271f51c65542b465fff3b38b1310b84658f99","it/blog/maturita-universita-concorsi-materiali-propri/index.html":"c6beffb2cad3d7a292a2866d4143513b66d2eba787d1d81feda873da568a3339","ko/ai-memorize-sheet/index.html":"a5bf31f65765325b487cc94328b08f7bc576c381a233daa60287a2afebb5c886","ko/blog/교재-사진-빈칸-복습/index.html":"7164421470b991ce7fd8f8a3107028e5db5be2cc20ad9bac018aaa89ca92ddd6","ko/blog/내신-수능-자격증-내-교재/index.html":"8e747c349f98649e4319690e756a50609a771e645f54a269ded5593bc477b561","pt-br/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","pt-br/blog/enem-vestibular-concurso-material-proprio/index.html":"a1013a5453cb749cd5ee5ba6e9cb407a3479d1ec2c4584c95179c3131b761905","pt-br/blog/fotos-apostilas-revisao-ativa/index.html":"b55baf02c92eb0b7fdd431f92fe6da1f3a6ac66d9be433ea39d2ac29e31d3c93","pt-br/blog/index.html":"e005c18067101e84f85196adbccdf90c0a8343461bb93992d1ad291b68371787","zh-cn/ai-memorize-sheet/index.html":"0965da322c5c7f2474cdc43402cdba945b9971671bec8e3bfe1614c7eb06f457","zh-cn/blog/index.html":"a9a2371cfc7d5f12cc733bfc6179c2633d4ff65a0e893bc505044b40a7a7ffac","zh-cn/blog/学习资料-本地处理-隐私/index.html":"bfc233505268bf86a5d9ea88783e19836b2cdf8d12215d5052e4cfe66727467c","zh-cn/blog/教材照片-遮挡自测/index.html":"e336efb8c3d70d6c569b61c3a041ce67f302f5357f6d4ad51246312c8a469c03","zh-cn/blog/高考考研-自己的讲义-pdf/index.html":"40e5b28da9f338849e25ff48e86c0be27c29632393a0b6eb374866b9d96c789b","zh-tw/ai-memorize-sheet/index.html":"4ef83fbf5313d40fba2c2869f98119906c13a667690cb98f54a7b00525215d0c","zh-tw/blog/index.html":"2a17f305ed50ee18b6843d079e4965e135e26deca909cd88a9fd84f5b94e856c","zh-tw/blog/學習資料-本機處理-隱私/index.html":"13d117c3e28f3c1c83b5e0461334c8fd2a09d1a6c5b1fe7be9a04ba3d7e45c69","zh-tw/blog/會考學測國考-自己的pdf/index.html":"4b499d5979b05b728e10f823b57933ec6179d73bc52729b62343157b6a42dcb2","zh-tw/blog/課本講義-遮罩自我測驗/index.html":"1e5e248f1a6f190746e999b70f6ba743ee1727774e79b815487cfa158eaa55a9"}''')
+          failures=[]
+          for path, want in expected.items():
+              url='https://lp.toybird.com/'+urllib.parse.quote(path, safe='/')+'?verify=20260904-0120'
+              req=urllib.request.Request(url, headers={'Cache-Control':'no-cache','Pragma':'no-cache','User-Agent':'Toybird-Public-Deploy-Check/1.0'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      data=r.read(); status=r.status
+                  got=hashlib.sha256(data).hexdigest()
+                  ok=status==200 and got==want
+                  print(('PASS' if ok else 'FAIL'), status, path, got)
+                  if not ok: failures.append((path,status,want,got))
+              except Exception as e:
+                  print('ERROR', path, repr(e)); failures.append((path,'error',want,repr(e)))
+          print(f'PUBLIC_VERIFY_SUMMARY passed={len(expected)-len(failures)} total={len(expected)} failed={len(failures)}')
+          if failures:
+              for x in failures: print('MISMATCH', x)
+              raise SystemExit(1)
+          PY
+
+      - name: Verify visible metadata on key pages
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re, urllib.request
+          checks={
+            'https://lp.toybird.com/ai-memorize-sheet/?verify=meta-20260904': ['AI赤シート - 撮るだけで重要語句を自動マスク', 'AI赤シートは、教科書・プリント・ノート・写真・PDFを取り込み'],
+            'https://lp.toybird.com/en/ai-memorize-sheet/?verify=meta-20260904': ['AI Study Sheet - Active Recall', 'AI Study Sheet turns textbooks, worksheets, notes, photos, and PDFs'],
+            'https://lp.toybird.com/ko/ai-memorize-sheet/?verify=meta-20260904': ['AI 암기 시트 - 빈칸 암기'],
+            'https://lp.toybird.com/ko/blog/%EA%B5%90%EC%9E%AC-%EC%82%AC%EC%A7%84-%EB%B9%88%EC%B9%B8-%EB%B3%B5%EC%8A%B5/?verify=meta-20260904': ['교재 사진을 빈칸 복습 자료로 바꾸는 방법'],
+            'https://lp.toybird.com/ko/blog/%EB%82%B4%EC%8B%A0-%EC%88%98%EB%8A%A5-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EB%82%B4-%EA%B5%90%EC%9E%AC/?verify=meta-20260904': ['내신·수능·자격증을 내 교재로 반복 복습하는 방법']
+          }
+          for url, needles in checks.items():
+              req=urllib.request.Request(url,headers={'Cache-Control':'no-cache','User-Agent':'Toybird-Public-Deploy-Check/1.0'})
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  html=r.read().decode('utf-8','replace'); status=r.status
+              missing=[n for n in needles if n not in html]
+              print('META_CHECK', status, url, 'PASS' if not missing else 'FAIL', missing)
+              if status!=200 or missing: raise SystemExit(1)
+          PY
+
+      - name: Remove temporary verification workflow
+        shell: bash
+        run: |
+          git config user.name "Toybird Labs"
+          git config user.email "tb.masaki@gmail.com"
+          git rm .github/workflows/verify-public-20260904.yml
+          git commit -m "Remove temporary public deployment verifier"
+          git push origin HEAD:main
