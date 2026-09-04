@@ -1,0 +1,11 @@
+name: Migration Retry Sentinel
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  sentinel:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo sentinel
