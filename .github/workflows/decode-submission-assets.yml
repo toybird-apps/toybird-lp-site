@@ -1,0 +1,52 @@
+name: Decode submission assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'en/pocket-screen/submission-assets/*.b64'
+      - '.github/workflows/decode-submission-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode Pocket Screen submission assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(en/pocket-screen/submission-assets/*.b64)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo 'No .b64 assets to decode.'
+            exit 0
+          fi
+          for f in "${files[@]}"; do
+            out="${f%.b64}"
+            base64 --decode "$f" > "$out"
+            rm "$f"
+          done
+          rm -f en/pocket-screen/submission-assets/.keep \
+                en/pocket-screen/submission-assets/DO-NOT-USE.txt \
+                en/pocket-screen/submission-assets/README-upload-note.txt \
+                en/pocket-screen/submission-assets/README-PENDING.txt \
+                en/pocket-screen/submission-assets/STATUS.txt \
+                en/pocket-screen/submission-assets/test.txt \
+                en/pocket-screen/submission-assets/NOTICE.txt \
+                en/pocket-screen/submission-assets/icon.svg
+      - name: Commit decoded assets
+        shell: bash
+        run: |
+          if git diff --quiet --exit-code; then
+            echo 'Nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add en/pocket-screen/submission-assets
+          git commit -m 'Decode Pocket Screen submission assets [skip assets-decode]'
+          git push
