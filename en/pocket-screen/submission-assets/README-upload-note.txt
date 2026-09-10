@@ -1,1 +1,0 @@
-Preparing official Pocket Screen submission assets.
