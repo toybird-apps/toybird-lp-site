@@ -1,0 +1,20 @@
+{
+  "product_name": "Pocket Screen",
+  "website": "https://lp.toybird.com/en/pocket-screen/",
+  "app_store": "https://apps.apple.com/us/app/id6788211562",
+  "maker": "Masaki Iino",
+  "contact_email": "masaki@toybird.com",
+  "x": "https://x.com/Masaki_Iino_tbl",
+  "platform": "macOS",
+  "pricing": "Freemium",
+  "price": "Free + $9.99 one-time purchase",
+  "launch_year": 2026,
+  "tagline": "Keep your reference in view without switching windows",
+  "logo": "https://lp.toybird.com/en/pocket-screen/submission-assets/icon.png",
+  "screenshots": [
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-01.jpg",
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-02.jpg",
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-03.jpg",
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-04.jpg"
+  ]
+}
