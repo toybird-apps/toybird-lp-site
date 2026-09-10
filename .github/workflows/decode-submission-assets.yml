@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'en/pocket-screen/submission-assets/*.b64'
-      - '.github/workflows/decode-submission-assets.yml'
+      - 'en/pocket-screen/submission-assets/.decode-ready'
 
 permissions:
   contents: write
@@ -30,7 +29,8 @@ jobs:
             base64 --decode "$f" > "$out"
             rm "$f"
           done
-          rm -f en/pocket-screen/submission-assets/.keep \
+          rm -f en/pocket-screen/submission-assets/.decode-ready \
+                en/pocket-screen/submission-assets/.keep \
                 en/pocket-screen/submission-assets/DO-NOT-USE.txt \
                 en/pocket-screen/submission-assets/README-upload-note.txt \
                 en/pocket-screen/submission-assets/README-PENDING.txt \
@@ -48,5 +48,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add en/pocket-screen/submission-assets
-          git commit -m 'Decode Pocket Screen submission assets [skip assets-decode]'
+          git commit -m 'Publish Pocket Screen submission image assets [skip assets-decode]'
           git push
