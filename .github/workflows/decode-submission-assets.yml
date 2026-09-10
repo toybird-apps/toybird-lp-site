@@ -21,14 +21,12 @@ jobs:
           dir='en/pocket-screen/submission-assets'
           shopt -s nullglob
 
-          # Decode single-file base64 assets if present.
           for f in "$dir"/*.b64; do
             out="${f%.b64}"
             base64 --decode "$f" > "$out"
             rm "$f"
           done
 
-          # Decode chunked base64 assets named file.ext.b64.part-001, etc.
           bases=$(find "$dir" -maxdepth 1 -type f -name '*.b64.part-*' -printf '%f\n' | sed -E 's/\.part-[0-9]+$//' | sort -u || true)
           while IFS= read -r base; do
             [ -z "$base" ] && continue
@@ -37,6 +35,11 @@ jobs:
             base64 --decode "$dir/$base" > "$out"
             rm "$dir/$base" "$dir/$base".part-*
           done <<< "$bases"
+
+          if [ -f "$dir/submission-assets.tar.gz" ]; then
+            tar -xzf "$dir/submission-assets.tar.gz" -C "$dir"
+            rm "$dir/submission-assets.tar.gz"
+          fi
 
           rm -f "$dir/.decode-ready" \
                 "$dir/.keep" \
