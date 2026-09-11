@@ -12,9 +12,198 @@
   "tagline": "Keep your reference in view without switching windows",
   "logo": "https://lp.toybird.com/en/pocket-screen/submission-assets/icon.png",
   "screenshots": [
-    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-01.png",
-    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-02.png",
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-04.png",
     "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-03.png",
-    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-04.png"
-  ]
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-02.png",
+    "https://lp.toybird.com/en/pocket-screen/submission-assets/screenshot-01.png"
+  ],
+  "brand": "Toybird Labs",
+  "product_type": "macOS productivity app / utility",
+  "categories": {
+    "primary": "Productivity",
+    "alternatives": [
+      "Utilities",
+      "Mac Utilities",
+      "Window Management",
+      "Desktop Productivity",
+      "Multitasking",
+      "Menu Bar Apps"
+    ]
+  },
+  "platform_details": {
+    "minimum_os": "macOS 14 or later",
+    "supported_macs": [
+      "Apple silicon",
+      "Intel Mac"
+    ]
+  },
+  "launch_date": "2026-07-14",
+  "pricing_details": {
+    "free_version": {
+      "sessions": "Unlimited number of sessions",
+      "session_limit_minutes": 10,
+      "expiration": "None"
+    },
+    "paid_version": {
+      "product": "Unlimited Access",
+      "currency": "USD",
+      "regular_price": 9.99,
+      "purchase_type": "One-time purchase",
+      "subscription": "None"
+    }
+  },
+  "description": "Pocket Screen is a macOS productivity app that lets users keep another app window visible as a small, resizable live Picture-in-Picture view while continuing to work in a different app. Instead of repeatedly switching between windows, users can keep the information they need in sight while working. Typical reference material includes PDFs, web pages, documents, videos, dashboards, chats, instructions, timers, and other reference information. Pocket Screen is particularly useful when working on a single MacBook display or whenever users want to reduce repeated window switching. Pocket Screen creates a separate live reference view rather than simply forcing the original application window to remain always on top.",
+  "positioning": {
+    "core_value": "Keep another window available as a compact live reference view so users can continue working without constantly switching between windows.",
+    "definition_rule": "Do not define Pocket Screen as a generic always-on-top utility. It creates a separate live reference view of another Mac app window."
+  },
+  "use_cases": [
+    "Writing while checking a PDF or document",
+    "Working while referencing a webpage",
+    "Following a tutorial while using another application",
+    "Monitoring a dashboard or progress window",
+    "Keeping chat or instructions visible while completing a task",
+    "Working more comfortably on a single MacBook display"
+  ],
+  "features": [
+    "Live Picture-in-Picture reference view of another Mac app window",
+    "Up to two simultaneous reference views",
+    "Move and resize each view",
+    "Opacity control",
+    "Click Through",
+    "Pause live updating",
+    "Adjustable update quality",
+    "Global keyboard shortcuts",
+    "Menu bar operation",
+    "Optional exclusion from supported screenshots, screen recordings and screen sharing",
+    "Local processing on the Mac"
+  ],
+  "shortcuts": {
+    "open_pip": "Option + Command + P",
+    "close_pip": "Option + Command + X"
+  },
+  "privacy": {
+    "window_content_processing": "Window content is processed locally on the user's Mac. Pocket Screen does not upload captured window content to an external server.",
+    "capture_exclusion": "Optional exclusion from supported screenshots, screen recordings and screen sharing.",
+    "capture_exclusion_rule": "Always include supported when describing capture exclusion. Do not guarantee exclusion from every third-party app or capture environment."
+  },
+  "recognition": {
+    "verified": [
+      {
+        "source": "Six Colors",
+        "recognition": "Featured by Six Colors",
+        "date": "2026-09"
+      },
+      {
+        "source": "Product Hunt",
+        "recognition": "#4 Product of the Day",
+        "launch_date": "2026-07-17"
+      }
+    ],
+    "usage_rules": {
+      "editorial_media": "Six Colors and Product Hunt recognition may be used to support credibility.",
+      "directory": {
+        "auto_include_in_description": false,
+        "dedicated_fields_only": true,
+        "allowed_fields": [
+          "Press",
+          "Recognition",
+          "Featured in",
+          "Awards",
+          "Launch history"
+        ]
+      }
+    }
+  },
+  "logo_details": {
+    "format": "PNG",
+    "width": 512,
+    "height": 512
+  },
+  "screenshot_usage": {
+    "standard_order": ["04", "03", "02", "01"],
+    "selection_by_image_limit": {
+      "1": ["04"],
+      "2": ["04", "03"],
+      "3": ["04", "03", "02"],
+      "4": ["04", "03", "02", "01"]
+    },
+    "rule": "Use the screenshots array in its listed priority order. Take the first images up to the site's limit; never reorder them into ascending filename order."
+  },
+  "demo": {
+    "url": "https://youtu.be/OgYgTVTlnO8",
+    "visibility": "unlisted"
+  },
+  "promotions": {
+    "getfree_app": {
+      "provider": "GetFree.APP",
+      "offer_type": "Discount Code",
+      "product": "Unlimited Access",
+      "currency": "USD",
+      "regular_price": 9.99,
+      "discounted_price": 7.99,
+      "discount_amount": 2.00,
+      "custom_code": "GETFREEAPP",
+      "redemption_url": "https://apps.apple.com/redeem?ctx=offercodes&id=6788211562&code=GETFREEAPP",
+      "expiration_date": "2026-10-31",
+      "maximum_code_limit": 500,
+      "usage_rules": {
+        "exclusive_to": "GetFree.APP",
+        "reuse_on_other_sites_allowed": false,
+        "create_new_offer_codes_allowed": false,
+        "modify_existing_code_settings_allowed": false,
+        "change_expiration_date_allowed": false,
+        "change_code_limit_allowed": false,
+        "discount_percentage": "Do not guess a discount percentage. Use the verified price facts; a percentage is not stored in this Master.",
+        "maximum_or_total_quantity": "Use 500 only when the form explicitly asks for the maximum or total code quantity.",
+        "remaining_quantity": "Do not infer remaining quantity from the maximum code limit of 500. Use a remaining quantity only when independently confirmed.",
+        "ambiguous_quantity": "If the field does not clearly distinguish total capacity from remaining availability, use Needs confirmation."
+      }
+    }
+  },
+  "tags": {
+    "priority": [
+      "Productivity",
+      "macOS",
+      "Picture in Picture",
+      "Window Management",
+      "Multitasking"
+    ],
+    "additional": [
+      "Mac",
+      "PiP",
+      "Reference Window",
+      "Floating Window",
+      "Always on Top",
+      "Menu Bar",
+      "Desktop Productivity",
+      "Reference Tool",
+      "Single Display",
+      "MacBook",
+      "Screen Productivity",
+      "Workflow",
+      "Utility",
+      "Live View"
+    ],
+    "always_on_top_rule": "Always on Top may be used as a search tag, but must not be the product's primary positioning."
+  },
+  "work_rules": {
+    "source_of_truth": "This JSON is the Pocket Screen Submission Master and Source of Truth for external directory and editorial media submissions.",
+    "adaptation": {
+      "shortening_allowed": true,
+      "restructuring_allowed": true,
+      "scope": "Adapt descriptions and taglines to each site's character limits, audience and form structure while preserving the facts and product positioning.",
+      "change_facts_allowed": false,
+      "invent_features_allowed": false,
+      "guess_missing_required_facts_allowed": false
+    },
+    "recognition": "Apply recognition.usage_rules separately for directories and editorial media.",
+    "screenshots": "Follow screenshots and screenshot_usage: 04, 03, 02, 01, limited to the number accepted by the site.",
+    "listing_policy": {
+      "prefer_free_submission": true,
+      "paid_listing_allowed": false,
+      "paid_only_result": "Skipped — Paid only"
+    },
+    "needs_confirmation": "Use Needs confirmation only when a required fact is absent from this Master or another necessary decision cannot be made safely from the available information. Paid-only listings are skipped, not sent for approval."
+  }
 }
