@@ -1962,3 +1962,6 @@ p, li, figcaption, summary {
     font-size: .8rem;
   }
 }
+
+/* Version 3 product assets */
+.brand-mark-v3{background:none;padding:0;overflow:visible;box-shadow:none}.brand-mark-v3 img{display:block;width:100%;height:100%;border-radius:24%}.v3-nobreak{white-space:nowrap}.v3-update .section-heading{display:block}.v3-update .section-heading h2{max-width:none}.v3-update .section-heading>p{max-width:none;margin-top:20px}.v3-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.phone img{height:auto}.phone-speaker{display:none}.gallery-track .phone-gallery{aspect-ratio:1178/2556}.gallery-track .phone-gallery img{object-fit:contain;height:100%;width:100%}@media(max-width:800px){.v3-grid{grid-template-columns:1fr}}
