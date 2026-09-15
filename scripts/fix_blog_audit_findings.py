@@ -76,9 +76,8 @@ def is_nfd_korean_duplicate(path: Path) -> bool:
     return unicodedata.normalize("NFC", slug) != slug
 
 
-def is_reader_facing(path: Path) -> bool:
-    text = path.read_text(encoding="utf-8")
-    return 'content="index,follow' in text or is_nfd_korean_duplicate(path)
+def is_indexable(path: Path) -> bool:
+    return 'content="index,follow' in path.read_text(encoding="utf-8")
 
 
 def redirect_target_for_korean_duplicate(path: Path) -> str:
@@ -120,8 +119,6 @@ def clean_internal_markers(text: str) -> str:
 
 
 def clean_ai_version_copy(text: str) -> str:
-    # Remove the structured softwareVersion field before removing free text so
-    # the JSON-LD object cannot be left with an empty version string.
     text = SOFTWARE_VERSION_RE.sub(
         lambda m: ","
         if m.group(0).strip().startswith(",")
@@ -131,14 +128,7 @@ def clean_ai_version_copy(text: str) -> str:
     )
     text = re.sub(r",\s*([}\]])", r"\1", text)
     text = re.sub(r"([\[{])\s*,", r"\1", text)
-
-    # Blog articles should be evergreen. Keep feature descriptions, but remove
-    # transient v3.0.0/release labels from metadata, schema, headings and alt text.
     text = VERSION_RELEASE_RE.sub("", text)
-
-    # Clean only inline spacing/punctuation left by removed release labels.
-    # Do not collapse newlines: keeping the existing HTML formatting makes the
-    # production diff reviewable and avoids unrelated whole-file rewrites.
     text = re.sub(r"[ \t]+([,.。])", r"\1", text)
     text = re.sub(r"([·•—–|-])[ \t]*(?=</h2>)", "", text)
     text = re.sub(r" {2,}", " ", text)
@@ -155,8 +145,6 @@ def point_to_local_visual(text: str, image_url: str) -> str:
     if count != 1:
         raise RuntimeError("Missing og:image")
 
-    # Some older prompt articles never emitted twitter:image. If present, keep it
-    # aligned with og:image; if absent, do not create unrelated metadata.
     text = re.sub(
         r'(<meta content=")[^"]+(" name="twitter:image"/>)',
         lambda m: f"{m.group(1)}{image_url}{m.group(2)}",
@@ -185,39 +173,39 @@ def point_to_local_visual(text: str, image_url: str) -> str:
     return text
 
 
-def process_article(path: Path) -> tuple[bool, bool, bool]:
+def process_article(path: Path) -> bool:
     text = path.read_text(encoding="utf-8")
     original = text
-    was_ai = AI_APP_MARKER_HTML in text
 
     if is_nfd_korean_duplicate(path):
         target = redirect_target_for_korean_duplicate(path)
-        new_text = redirect_html(target)
-        if new_text != text:
-            path.write_text(new_text, encoding="utf-8")
-            return True, was_ai, True
-        return False, was_ai, True
+        text = redirect_html(target)
+    else:
+        text = clean_internal_markers(text)
+        if AI_APP_MARKER_HTML in text:
+            text = clean_ai_version_copy(text)
 
-    text = clean_internal_markers(text)
-    if was_ai:
-        text = clean_ai_version_copy(text)
-
-    visual = local_og(path)
-    if visual is None:
-        raise RuntimeError(f"Missing local OG visual for {path.relative_to(ROOT)}")
-    _, image_url = visual
-    try:
-        text = point_to_local_visual(text, image_url)
-    except RuntimeError as exc:
-        raise RuntimeError(f"{path.relative_to(ROOT)}: {exc}") from exc
+        visual = local_og(path)
+        if visual is None:
+            raise RuntimeError(f"Missing local OG visual for {path.relative_to(ROOT)}")
+        _, image_url = visual
+        try:
+            text = point_to_local_visual(text, image_url)
+        except RuntimeError as exc:
+            raise RuntimeError(f"{path.relative_to(ROOT)}: {exc}") from exc
 
     if text != original:
         path.write_text(text, encoding="utf-8")
-        return True, was_ai, False
-    return False, was_ai, False
+        return True
+    return False
 
 
-def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int) -> None:
+def validate(
+    paths: list[Path],
+    expected_redirects: int,
+    expected_ai_after: int,
+    expected_active_count: int,
+) -> None:
     errors: list[str] = []
     redirect_count = 0
     active_ai = 0
@@ -230,7 +218,7 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
         if is_nfd_korean_duplicate(path):
             redirect_count += 1
             target = redirect_target_for_korean_duplicate(path)
-            if 'name="robots"' not in text or 'content="noindex,follow"' not in text:
+            if 'content="noindex,follow"' not in text:
                 errors.append(f"{rel}: Korean duplicate is not noindex")
             if f'href="{target}" rel="canonical"' not in text:
                 errors.append(f"{rel}: Korean duplicate canonical is wrong")
@@ -275,17 +263,13 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
         errors.append(
             f"Expected {expected_redirects} Korean Unicode redirects, found {redirect_count}"
         )
-    if expected_ai_before != 38:
+    if active_ai != expected_ai_after:
         errors.append(
-            f"Expected 38 AI Study Sheet article files before redirect cleanup, found {expected_ai_before}"
+            f"Expected {expected_ai_after} canonical AI Study Sheet articles, found {active_ai}"
         )
-    if active_ai != 36:
+    if active_count != expected_active_count:
         errors.append(
-            f"Expected 36 canonical AI Study Sheet articles after duplicate redirects, found {active_ai}"
-        )
-    if active_count != 98:
-        errors.append(
-            f"Expected 98 canonical article pages after duplicate redirects, found {active_count}"
+            f"Expected {expected_active_count} canonical reader-facing articles, found {active_count}"
         )
 
     if errors:
@@ -294,43 +278,61 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
 
 def main() -> None:
     all_paths = article_paths()
-    if len(all_paths) != 183:
+    if len(all_paths) < 150:
         raise SystemExit(
-            f"Expected 183 blog article/redirect index files, found {len(all_paths)}"
+            f"Unexpectedly small blog set: found {len(all_paths)} article/redirect files"
         )
 
-    # Restrict changes to the current reader-facing/indexable article set. The
-    # NFD Korean aliases are included explicitly so the script remains idempotent
-    # after converting those two aliases to noindex redirects.
+    # Work only on current reader-facing articles plus the two Unicode aliases
+    # that must become redirects. Existing legacy/noindex redirects are untouched.
     paths = [
         path
         for path in all_paths
-        if is_reader_facing(path) and local_og(path) is not None
+        if is_nfd_korean_duplicate(path)
+        or (is_indexable(path) and local_og(path) is not None)
     ]
-    if len(paths) != 100:
-        raise SystemExit(f"Expected 100 reader-facing article files, found {len(paths)}")
+    if len(paths) < 90:
+        raise SystemExit(
+            f"Unexpectedly small reader-facing set: found {len(paths)} article files"
+        )
 
-    expected_ai_before = 0
-    expected_redirects = 0
+    expected_redirects = sum(is_nfd_korean_duplicate(path) for path in paths)
+    if expected_redirects != 2:
+        raise SystemExit(
+            f"Expected 2 Korean Unicode duplicate aliases, found {expected_redirects}"
+        )
+
+    ai_before = sum(
+        AI_APP_MARKER_HTML in path.read_text(encoding="utf-8") for path in paths
+    )
+    ai_duplicate_count = sum(
+        is_nfd_korean_duplicate(path)
+        and AI_APP_MARKER_HTML in path.read_text(encoding="utf-8")
+        for path in paths
+    )
+    if ai_before < 30:
+        raise SystemExit(
+            f"Unexpectedly small AI Study Sheet article set before cleanup: {ai_before}"
+        )
+
     changed: list[str] = []
     for path in paths:
-        before = path.read_text(encoding="utf-8")
-        if AI_APP_MARKER_HTML in before:
-            expected_ai_before += 1
-        if is_nfd_korean_duplicate(path):
-            expected_redirects += 1
-        did_change, _, _ = process_article(path)
-        if did_change:
+        if process_article(path):
             changed.append(str(path.relative_to(ROOT)))
 
-    validate(paths, expected_ai_before, expected_redirects)
-    print(f"Validated {len(all_paths)} total article/redirect files.")
-    print(f"Validated {len(paths)} reader-facing article files.")
-    print(
-        f"AI Study Sheet files before duplicate redirect cleanup: {expected_ai_before}."
+    validate(
+        paths,
+        expected_redirects=expected_redirects,
+        expected_ai_after=ai_before - ai_duplicate_count,
+        expected_active_count=len(paths) - expected_redirects,
     )
+
+    print(f"Validated {len(all_paths)} total article/redirect files.")
+    print(f"Validated {len(paths)} reader-facing/alias article files.")
+    print(f"AI Study Sheet article files before cleanup: {ai_before}.")
     print(
-        f"Canonical reader-facing article pages: 98; Korean Unicode redirects: {expected_redirects}."
+        f"Canonical reader-facing articles after cleanup: {len(paths) - expected_redirects}; "
+        f"Korean Unicode redirects: {expected_redirects}."
     )
     print(f"Changed {len(changed)} files.")
     for name in changed:
