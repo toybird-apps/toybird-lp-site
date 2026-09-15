@@ -293,9 +293,15 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
 
 
 def main() -> None:
-    paths = article_paths()
+    all_paths = article_paths()
+    if len(all_paths) != 183:
+        raise SystemExit(f"Expected 183 blog article/redirect index files, found {len(all_paths)}")
+
+    # Only reader-facing article pages have the generated localized OG visual.
+    # The other 83 files are legacy/noindex redirects and should not be rewritten.
+    paths = [path for path in all_paths if local_og(path) is not None]
     if len(paths) != 100:
-        raise SystemExit(f"Expected 100 blog article index files, found {len(paths)}")
+        raise SystemExit(f"Expected 100 reader-facing article files, found {len(paths)}")
 
     expected_ai_before = 0
     expected_redirects = 0
@@ -311,12 +317,13 @@ def main() -> None:
             changed.append(str(path.relative_to(ROOT)))
 
     validate(paths, expected_ai_before, expected_redirects)
-    print(f"Validated {len(paths)} article files.")
+    print(f"Validated {len(all_paths)} total article/redirect files.")
+    print(f"Validated {len(paths)} reader-facing article files.")
     print(
         f"AI Study Sheet files before duplicate redirect cleanup: {expected_ai_before}."
     )
     print(
-        f"Canonical article pages: 98; Korean Unicode redirects: {expected_redirects}."
+        f"Canonical reader-facing article pages: 98; Korean Unicode redirects: {expected_redirects}."
     )
     print(f"Changed {len(changed)} files.")
     for name in changed:
