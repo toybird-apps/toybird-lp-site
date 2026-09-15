@@ -76,6 +76,11 @@ def is_nfd_korean_duplicate(path: Path) -> bool:
     return unicodedata.normalize("NFC", slug) != slug
 
 
+def is_reader_facing(path: Path) -> bool:
+    text = path.read_text(encoding="utf-8")
+    return 'content="index,follow' in text or is_nfd_korean_duplicate(path)
+
+
 def redirect_target_for_korean_duplicate(path: Path) -> str:
     slug = unicodedata.normalize("NFC", path.parent.name)
     target_dir = path.parent.parent / slug
@@ -294,9 +299,14 @@ def main() -> None:
             f"Expected 183 blog article/redirect index files, found {len(all_paths)}"
         )
 
-    # Only reader-facing article pages have the generated localized OG visual.
-    # The other 83 files are legacy/noindex redirects and should not be rewritten.
-    paths = [path for path in all_paths if local_og(path) is not None]
+    # Restrict changes to the current reader-facing/indexable article set. The
+    # NFD Korean aliases are included explicitly so the script remains idempotent
+    # after converting those two aliases to noindex redirects.
+    paths = [
+        path
+        for path in all_paths
+        if is_reader_facing(path) and local_og(path) is not None
+    ]
     if len(paths) != 100:
         raise SystemExit(f"Expected 100 reader-facing article files, found {len(paths)}")
 
