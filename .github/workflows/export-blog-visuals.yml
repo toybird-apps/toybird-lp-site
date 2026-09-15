@@ -16,19 +16,23 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Collect all blog hero and OG images
+      - name: Collect multilingual blog audit material
         run: |
-          mkdir -p review-images
-          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' \) \
+          mkdir -p review-material
+          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' -o -name 'index.html' \) \
             | while read -r f; do
-                mkdir -p "review-images/$(dirname "$f")"
-                cp "$f" "review-images/$f"
+                case "$f" in
+                  ./blog/*|./en/blog/*|./de/blog/*|./fr/blog/*|./es/blog/*|./it/blog/*|./pt-br/blog/*|./ko/blog/*|./zh-cn/blog/*|./zh-tw/blog/*|./shared/blog-visuals/*)
+                    mkdir -p "review-material/$(dirname "$f")"
+                    cp "$f" "review-material/$f"
+                    ;;
+                esac
               done
-          find review-images -type f | sort
+          find review-material -type f | sort
 
-      - name: Upload review images
+      - name: Upload review material
         uses: actions/upload-artifact@v4
         with:
-          name: blog-visuals-review-all
-          path: review-images
+          name: blog-audit-all-locales
+          path: review-material
           if-no-files-found: error
