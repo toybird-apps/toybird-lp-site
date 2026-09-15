@@ -19,10 +19,10 @@ jobs:
       - name: Collect multilingual blog audit material
         run: |
           mkdir -p review-material
-          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' -o -name 'index.html' \) \
+          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' -o -path './shared/ai-study-sheet-v3/*' -o -name 'index.html' \) \
             | while read -r f; do
                 case "$f" in
-                  ./blog/*|./en/blog/*|./de/blog/*|./fr/blog/*|./es/blog/*|./it/blog/*|./pt-br/blog/*|./ko/blog/*|./zh-cn/blog/*|./zh-tw/blog/*|./shared/blog-visuals/*)
+                  ./blog/*|./en/blog/*|./de/blog/*|./fr/blog/*|./es/blog/*|./it/blog/*|./pt-br/blog/*|./ko/blog/*|./zh-cn/blog/*|./zh-tw/blog/*|./shared/blog-visuals/*|./shared/ai-study-sheet-v3/*)
                     mkdir -p "review-material/$(dirname "$f")"
                     cp "$f" "review-material/$f"
                     ;;
