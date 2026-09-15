@@ -16,19 +16,19 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Collect review images
+      - name: Collect all blog hero and OG images
         run: |
-          mkdir -p review-images/shared review-images/ja-prompt review-images/ja-pointer review-images/ja-study
-          cp shared/blog-visuals/ai-memorize-sheet-en-v2.png review-images/shared/
-          cp shared/blog-visuals/prompt-ready-en-v2.png review-images/shared/
-          cp shared/blog-visuals/pointer-cue-en-v2.png review-images/shared/
-          cp blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png review-images/ja-prompt/
-          cp blog/screenbrush-pointer-cue/assets/screenbrush-pointer-cue-og.png review-images/ja-pointer/
-          find blog -path '*/assets/*' -type f \( -iname '*.png' -o -iname '*.jpg' \) | grep -E '(memor|red-sheet|study|school|juken|takken|sharoshi|gyosei|passport|seller|university|high-school|junior-high|qualification|pdf)' | head -80 | while read -r f; do cp --parents "$f" review-images/ja-study/; done
+          mkdir -p review-images
+          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' \) \
+            | while read -r f; do
+                mkdir -p "review-images/$(dirname "$f")"
+                cp "$f" "review-images/$f"
+              done
+          find review-images -type f | sort
 
       - name: Upload review images
         uses: actions/upload-artifact@v4
         with:
-          name: blog-visuals-review
+          name: blog-visuals-review-all
           path: review-images
           if-no-files-found: error
