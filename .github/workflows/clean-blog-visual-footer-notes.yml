@@ -1,0 +1,86 @@
+name: Clean multilingual blog visual footer notes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/clean_blog_visual_footer_notes.py'
+      - '.github/workflows/clean-blog-visual-footer-notes.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean-visuals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install image and font dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-core fonts-noto-cjk
+          python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Replace internal visual footer notes with reader-facing copy
+        run: python3 scripts/clean_blog_visual_footer_notes.py
+
+      - name: Validate change scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+
+          changed = subprocess.check_output(
+              ['git', '-c', 'core.quotepath=false', 'diff', '--name-only'],
+              text=True,
+          ).splitlines()
+          if len(changed) != 102:
+              raise SystemExit(f'Expected 102 changed visuals, got {len(changed)}')
+
+          shared_allowed = {
+              'shared/blog-visuals/pointer-cue-en.png',
+              'shared/blog-visuals/pointer-cue-en-v2.png',
+          }
+          bad = []
+          for name in changed:
+              p = Path(name)
+              is_blog_og = p.suffix == '.png' and p.name.endswith('-og.png') and 'blog' in p.parts
+              if not is_blog_og and name not in shared_allowed:
+                  bad.append(name)
+          if bad:
+              raise SystemExit(f'Unexpected files changed: {bad}')
+          print('Validated 102 expected visual-only changes.')
+          PY
+
+      - name: Check repository diff
+        run: git diff --check
+
+      - name: Prepare visual QA samples
+        run: |
+          mkdir -p visual-review
+          cp blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png visual-review/ja-prompt.png
+          cp blog/screenbrush-pointer-cue/assets/screenbrush-pointer-cue-og.png visual-review/ja-pointer.png
+          cp blog/iphone-red-sheet-study/assets/iphone-red-sheet-study-og.png visual-review/ja-study.png
+          cp en/blog/mac-view-reference-while-working/assets/mac-view-reference-while-working-og.png visual-review/en-pocket.png
+          cp de/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png visual-review/de-prompt.png
+          cp zh-cn/blog/教材照片-遮挡自测/assets/教材照片-遮挡自测-og.png visual-review/zh-cn-study.png
+          cp shared/blog-visuals/pointer-cue-en-v2.png visual-review/shared-pointer-en.png
+
+      - name: Upload visual QA samples
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleaned-blog-visual-samples
+          path: visual-review
+          if-no-files-found: error
+
+      - name: Commit production visual cleanup
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -u
+          git commit -m "Clean multilingual blog visual footer notes"
+          git push origin HEAD:main
