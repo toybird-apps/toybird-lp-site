@@ -150,14 +150,14 @@ def point_to_local_visual(text: str, image_url: str) -> str:
     if count != 1:
         raise RuntimeError("Missing og:image")
 
-    text, count = re.subn(
+    # Some older prompt articles never emitted twitter:image. If present, keep it
+    # aligned with og:image; if absent, do not create unrelated metadata.
+    text = re.sub(
         r'(<meta content=")[^"]+(" name="twitter:image"/>)',
         lambda m: f"{m.group(1)}{image_url}{m.group(2)}",
         text,
         count=1,
     )
-    if count != 1:
-        raise RuntimeError("Missing twitter:image")
 
     text, count = re.subn(
         r'("image"\s*:\s*")[^"]+(\")',
@@ -252,23 +252,18 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
             errors.append(f"{rel}: local OG visual missing")
             continue
         _, image_url = visual
-        checks = {
-            "og:image": f'<meta content="{image_url}" property="og:image"/>',
-            "twitter:image": f'<meta content="{image_url}" name="twitter:image"/>',
-            "schema image": f'"image": "{image_url}"',
-            "schema image compact": f'"image":"{image_url}"',
-            "hero image": f'src="{image_url}"',
-        }
-        if checks["og:image"] not in text:
+        if f'<meta content="{image_url}" property="og:image"/>' not in text:
             errors.append(f"{rel}: og:image is not localised article visual")
-        if checks["twitter:image"] not in text:
+        if 'name="twitter:image"' in text and (
+            f'<meta content="{image_url}" name="twitter:image"/>' not in text
+        ):
             errors.append(f"{rel}: twitter:image is not localised article visual")
         if (
-            checks["schema image"] not in text
-            and checks["schema image compact"] not in text
+            f'"image": "{image_url}"' not in text
+            and f'"image":"{image_url}"' not in text
         ):
             errors.append(f"{rel}: schema image is not localised article visual")
-        if checks["hero image"] not in text:
+        if f'src="{image_url}"' not in text:
             errors.append(f"{rel}: hero image is not localised article visual")
 
     if redirect_count != expected_redirects:
@@ -295,7 +290,9 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
 def main() -> None:
     all_paths = article_paths()
     if len(all_paths) != 183:
-        raise SystemExit(f"Expected 183 blog article/redirect index files, found {len(all_paths)}")
+        raise SystemExit(
+            f"Expected 183 blog article/redirect index files, found {len(all_paths)}"
+        )
 
     # Only reader-facing article pages have the generated localized OG visual.
     # The other 83 files are legacy/noindex redirects and should not be rewritten.
