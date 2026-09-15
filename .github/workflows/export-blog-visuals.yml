@@ -1,0 +1,34 @@
+name: Export blog visuals for editorial review
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-blog-visuals.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Collect review images
+        run: |
+          mkdir -p review-images/shared review-images/ja-prompt review-images/ja-pointer review-images/ja-study
+          cp shared/blog-visuals/ai-memorize-sheet-en-v2.png review-images/shared/
+          cp shared/blog-visuals/prompt-ready-en-v2.png review-images/shared/
+          cp shared/blog-visuals/pointer-cue-en-v2.png review-images/shared/
+          cp blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png review-images/ja-prompt/
+          cp blog/screenbrush-pointer-cue/assets/screenbrush-pointer-cue-og.png review-images/ja-pointer/
+          find blog -path '*/assets/*' -type f \( -iname '*.png' -o -iname '*.jpg' \) | grep -E '(memor|red-sheet|study|school|juken|takken|sharoshi|gyosei|passport|seller|university|high-school|junior-high|qualification|pdf)' | head -80 | while read -r f; do cp --parents "$f" review-images/ja-study/; done
+
+      - name: Upload review images
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-visuals-review
+          path: review-images
+          if-no-files-found: error
