@@ -1,5 +1,6 @@
 name: Export blog visuals for editorial review
 
+# Audit helper: collects all localized blog HTML and OG visuals.
 on:
   push:
     branches: [main]
