@@ -1,0 +1,66 @@
+name: Apply AI Study Sheet v3 LP refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_ai_study_sheet_lp_v30.py'
+      - '.github/workflows/apply-ai-study-sheet-v30.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply v3.0 Build 30 LP refresh
+        run: python3 scripts/update_ai_study_sheet_lp_v30.py
+
+      - name: Validate change scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          allowed = {
+              'ai-memorize-sheet/index.html',
+              'en/ai-memorize-sheet/index.html',
+              'ai-memorize-sheet/styles.css',
+          }
+          changed = set(subprocess.check_output(['git','diff','--name-only'], text=True).splitlines())
+          unexpected = changed - allowed
+          if unexpected:
+              raise SystemExit(f'Unexpected files changed: {sorted(unexpected)}')
+          if changed != allowed:
+              raise SystemExit(f'Expected exactly {sorted(allowed)}, got {sorted(changed)}')
+          print('Validated expected three-file LP change scope.')
+          PY
+
+      - name: Validate page structure
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for path in [Path('ai-memorize-sheet/index.html'), Path('en/ai-memorize-sheet/index.html')]:
+              text = path.read_text(encoding='utf-8')
+              for token in ['<header', '<main', '<section', '<footer', 'application/ld+json', 'App Store']:
+                  if token not in text:
+                      raise SystemExit(f'{token} missing in {path}')
+              if text.count('<section') < 10:
+                  raise SystemExit(f'Unexpected section loss in {path}')
+          css = Path('ai-memorize-sheet/styles.css').read_text(encoding='utf-8')
+          if 'AI-STUDY-SHEET-V3-LIGHT-REFRESH:START' not in css:
+              raise SystemExit('Light refresh CSS marker missing')
+          print('Structure and light-theme validation passed.')
+          PY
+
+      - name: Commit production update
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add ai-memorize-sheet/index.html en/ai-memorize-sheet/index.html ai-memorize-sheet/styles.css
+          git commit -m "Refresh AI Study Sheet LP for v3.0 Build 30"
+          git push origin HEAD:main
