@@ -1,0 +1,177 @@
+name: Fix Bing meta descriptions
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-bing-meta-descriptions.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update only head metadata on the four Bing-reported pages
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import re
+          from pathlib import Path
+
+          targets = {
+              "blog/chatgpt-sales-roleplay/index.html": "ChatGPTを顧客役にして営業・商談をロールプレイする方法を解説。業種・役職・商談段階の設定、一度に一問ずつ進める会話ルール、実務的な反論への対応、終了後のフィードバックまで、すぐ使えるプロンプト例とともに紹介します。営業練習を実践的に繰り返したい人向けのガイドです。初回商談から提案・価格交渉の練習にも使えます。",
+              "ai-memorize-sheet/index.html": "AI赤シートは、教科書・プリント・ノート・写真・PDFを取り込むと重要語句を自動で隠し、AI選択の調整や手動マスク設定までできるiPhone・iPad向け暗記学習アプリです。PDFの中断・再開、ランダム・弱点優先の復習、赤シート用教材にも対応。教材データは外部AIへ送らず端末内で処理します。学習履歴も保存できます。",
+              "zh-tw/blog/mac-view-reference-while-working/index.html": "介紹如何在單一 MacBook 螢幕上，一邊查看 PDF、網頁、聊天或儀表板，一邊保留主要工作空間。比較並排視窗、Split View、Stage Manager、Space 與浮動參考視窗的差異，說明各自適合的使用情境、可讀性與切換成本，並整理需要頻繁核對資料時的實用工作流程。並提供實際設定步驟。",
+              "blog/red-sheet-vs-flashcards/index.html": "赤シートと暗記カードの違いを、作成の手間、文脈、図表、ランダム出題、手掛かり、見直しやすさ、復習管理の7つの軸で比較。教科書・プリント・資格教材など、教材の種類や学習段階に合わせた使い分けと、赤シートから暗記カードへ移る判断の目安を具体的に紹介します。AI赤シートで両方の強みを活かす方法も解説します。",
+          }
+
+          def replace_meta(head: str, key_attr: str, key_value: str, description: str) -> str:
+              pattern = re.compile(
+                  rf'<meta\b(?=[^>]*\b{re.escape(key_attr)}=["\']{re.escape(key_value)}["\'])[^>]*>',
+                  re.I,
+              )
+              match = pattern.search(head)
+              if not match:
+                  raise SystemExit(f"Missing meta {key_attr}={key_value}")
+              tag = match.group(0)
+              if not re.search(r'\bcontent=["\'][^"\']*["\']', tag, re.I):
+                  raise SystemExit(f"Missing content attribute on {key_value}")
+              new_tag = re.sub(
+                  r'\bcontent=["\'][^"\']*["\']',
+                  lambda _m: 'content="' + description.replace('&', '&amp;').replace('"', '&quot;') + '"',
+                  tag,
+                  count=1,
+                  flags=re.I,
+              )
+              return head[:match.start()] + new_tag + head[match.end():]
+
+          def update_json_ld(head: str, description: str) -> str:
+              script_re = re.compile(
+                  r'(<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)',
+                  re.I | re.S,
+              )
+
+              def rewrite(match):
+                  raw = match.group(2).strip()
+                  try:
+                      data = json.loads(raw)
+                  except Exception:
+                      return match.group(0)
+
+                  changed = False
+
+                  def visit(node):
+                      nonlocal changed
+                      if isinstance(node, dict):
+                          node_type = node.get("@type")
+                          if node_type in {"Article", "SoftwareApplication"} and "description" in node:
+                              node["description"] = description
+                              changed = True
+                          for value in node.values():
+                              visit(value)
+                      elif isinstance(node, list):
+                          for value in node:
+                              visit(value)
+
+                  visit(data)
+                  if not changed:
+                      return match.group(0)
+                  encoded = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+                  return match.group(1) + encoded + match.group(3)
+
+              return script_re.sub(rewrite, head)
+
+          for path_text, description in targets.items():
+              if not 150 <= len(description) <= 160:
+                  raise SystemExit(f"Description length out of range: {path_text}: {len(description)}")
+
+              path = Path(path_text)
+              text = path.read_text(encoding="utf-8")
+              if "</head>" not in text or "<body" not in text:
+                  raise SystemExit(f"Unexpected HTML structure: {path_text}")
+
+              head, rest = text.split("</head>", 1)
+              body_hash_before = hashlib.sha256(rest.encode("utf-8")).hexdigest()
+
+              head = replace_meta(head, "name", "description", description)
+              head = replace_meta(head, "property", "og:description", description)
+              head = update_json_ld(head, description)
+
+              updated = head + "</head>" + rest
+              body_hash_after = hashlib.sha256(rest.encode("utf-8")).hexdigest()
+              if body_hash_before != body_hash_after:
+                  raise SystemExit(f"Visible content changed unexpectedly: {path_text}")
+
+              path.write_text(updated, encoding="utf-8")
+              print(f"Updated {path_text}: {len(description)} chars")
+          PY
+
+      - name: Validate metadata and unchanged visible bodies
+        run: |
+          python3 - <<'PY'
+          import html
+          import json
+          import re
+          from pathlib import Path
+
+          targets = [
+              "blog/chatgpt-sales-roleplay/index.html",
+              "ai-memorize-sheet/index.html",
+              "zh-tw/blog/mac-view-reference-while-working/index.html",
+              "blog/red-sheet-vs-flashcards/index.html",
+          ]
+
+          for path_text in targets:
+              text = Path(path_text).read_text(encoding="utf-8")
+              head = text.split("</head>", 1)[0]
+              m = re.search(r'<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*\bcontent=["\']([^"\']*)["\'][^>]*>', head, re.I)
+              if not m:
+                  raise SystemExit(f"Missing description: {path_text}")
+              desc = html.unescape(m.group(1))
+              if not 150 <= len(desc) <= 160:
+                  raise SystemExit(f"Bad description length {len(desc)}: {path_text}")
+              if 'property="og:description"' not in head and "property='og:description'" not in head:
+                  raise SystemExit(f"Missing og:description: {path_text}")
+              if 'application/ld+json' not in head:
+                  raise SystemExit(f"Missing JSON-LD: {path_text}")
+              print(f"Validated {path_text}: {len(desc)} chars")
+          PY
+
+      - name: Verify changed-file scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          allowed = {
+              "blog/chatgpt-sales-roleplay/index.html",
+              "ai-memorize-sheet/index.html",
+              "zh-tw/blog/mac-view-reference-while-working/index.html",
+              "blog/red-sheet-vs-flashcards/index.html",
+          }
+          changed = set(subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines())
+          unexpected = changed - allowed
+          if unexpected:
+              raise SystemExit(f"Unexpected files changed: {sorted(unexpected)}")
+          if changed != allowed:
+              raise SystemExit(f"Expected four changed pages, got: {sorted(changed)}")
+          print("Scope verified: exactly four HTML pages.")
+          PY
+
+      - name: Commit production fixes
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add \
+            blog/chatgpt-sales-roleplay/index.html \
+            ai-memorize-sheet/index.html \
+            zh-tw/blog/mac-view-reference-while-working/index.html \
+            blog/red-sheet-vs-flashcards/index.html
+          git commit -m "Fix Bing meta descriptions on four pages"
+          git push origin HEAD:main
