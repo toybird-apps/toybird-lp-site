@@ -1,0 +1,173 @@
+name: Publish AI Study Sheet promo assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-ai-study-sheet-promo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Pillow
+        run: python3 -m pip install --quiet pillow
+
+      - name: Fetch localized App Store screenshots and build promo bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from io import BytesIO
+          from PIL import Image
+          import json, shutil, time
+
+          APP_ID = '6782023263'
+          BASE = Path('shared/ai-study-sheet-v3/promo')
+          BASE.mkdir(parents=True, exist_ok=True)
+
+          # The first screenshots in each storefront correspond to the approved
+          # promotional sequence supplied for this release. Korean and Chinese
+          # storefronts intentionally keep their approved older light-mode set.
+          specs = {
+              'en': ('us', [('iphone', 4)]),
+              'ja': ('jp', [('iphone', 4)]),
+              'ko': ('kr', [('iphone', 3), ('ipad', 2)]),
+              'zh-hans': ('cn', [('iphone', 3), ('ipad', 2)]),
+          }
+          names = {
+              'en': {'iphone': ['01-import.png','02-background-processing.png','03-active-recall.png','04-library.png']},
+              'ja': {'iphone': ['01-import.png','02-background-processing.png','03-active-recall.png','04-review.png']},
+              'ko': {
+                  'iphone': ['iphone-01-import.png','iphone-02-mask-review.png','iphone-03-library.png'],
+                  'ipad': ['ipad-01-import.png','ipad-02-mask-review.png'],
+              },
+              'zh-hans': {
+                  'iphone': ['iphone-01-import.png','iphone-02-mask-review.png','iphone-03-library.png'],
+                  'ipad': ['ipad-01-import.png','ipad-02-mask-review.png'],
+              },
+          }
+
+          def fetch_json(country):
+              urls = [
+                  f'https://itunes.apple.com/lookup?id={APP_ID}&country={country}',
+                  f'https://itunes.apple.com/{country}/lookup?id={APP_ID}',
+              ]
+              last = None
+              for u in urls:
+                  try:
+                      req = Request(u, headers={'User-Agent':'Mozilla/5.0'})
+                      with urlopen(req, timeout=30) as r:
+                          data = json.load(r)
+                      if data.get('results'):
+                          return data['results'][0]
+                  except Exception as e:
+                      last = e
+              raise RuntimeError(f'No App Store lookup result for {country}: {last}')
+
+          def download_image(url, out):
+              req = Request(url, headers={'User-Agent':'Mozilla/5.0'})
+              with urlopen(req, timeout=60) as r:
+                  raw = r.read()
+              im = Image.open(BytesIO(raw))
+              # Publish as PNG so every submission target receives a predictable file type.
+              if im.mode not in ('RGB','RGBA'):
+                  im = im.convert('RGB')
+              out.parent.mkdir(parents=True, exist_ok=True)
+              im.save(out, format='PNG', optimize=True)
+
+          for lang, (country, groups) in specs.items():
+              item = fetch_json(country)
+              arrays = {
+                  'iphone': item.get('screenshotUrls') or [],
+                  'ipad': item.get('ipadScreenshotUrls') or [],
+              }
+              for device, count in groups:
+                  urls = arrays[device]
+                  if len(urls) < count:
+                      raise RuntimeError(f'{lang}/{device}: expected {count} screenshots, found {len(urls)}')
+                  for url, filename in zip(urls[:count], names[lang][device]):
+                      out = BASE / lang / filename
+                      download_image(url, out)
+                      print(lang, device, out, url)
+
+          icon_src = Path('shared/ai-study-sheet-v3/app-icon.png')
+          if not icon_src.exists():
+              raise RuntimeError('Existing AI Study Sheet app icon was not found')
+          shutil.copy2(icon_src, BASE / 'app-icon.png')
+
+          root = 'https://lp.toybird.com/shared/ai-study-sheet-v3/promo'
+          manifest = {
+              'product': 'AI Study Sheet',
+              'version': '3.0.0',
+              'asset_usage': {
+                  'default': 'Use English screenshots for global or non-Japanese/Korean/Chinese sites.',
+                  'ja': 'Use Japanese screenshots for Japanese sites.',
+                  'ko': 'Use Korean screenshots for Korean sites. These are approved older light-mode screenshots.',
+                  'zh-hans': 'Use Simplified Chinese screenshots for Simplified Chinese sites. These are approved older light-mode screenshots.',
+                  'video': 'No video asset. If a site requires video, leave that submission incomplete and report the requirement.'
+              },
+              'icon': f'{root}/app-icon.png',
+              'screenshots': {
+                  'en': [f'{root}/en/{x}' for x in names['en']['iphone']],
+                  'ja': [f'{root}/ja/{x}' for x in names['ja']['iphone']],
+                  'ko': {
+                      'iphone': [f'{root}/ko/{x}' for x in names['ko']['iphone']],
+                      'ipad': [f'{root}/ko/{x}' for x in names['ko']['ipad']],
+                  },
+                  'zh-hans': {
+                      'iphone': [f'{root}/zh-hans/{x}' for x in names['zh-hans']['iphone']],
+                      'ipad': [f'{root}/zh-hans/{x}' for x in names['zh-hans']['ipad']],
+                  },
+              },
+          }
+          (BASE / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          sections = []
+          for lang in ('en','ja','ko','zh-hans'):
+              urls = []
+              val = manifest['screenshots'][lang]
+              if isinstance(val, list):
+                  urls = val
+              else:
+                  urls = val['iphone'] + val['ipad']
+              imgs = ''.join(f'<a href="{u}"><img src="{u}" alt="{lang} screenshot" loading="lazy"></a>' for u in urls)
+              sections.append(f'<section><h2>{lang}</h2><div class="grid">{imgs}</div></section>')
+          html = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>AI Study Sheet v3 Promotion Assets</title><style>body{font-family:system-ui;margin:32px;max-width:1200px}.grid{display:flex;gap:16px;flex-wrap:wrap}.grid img{width:180px;height:auto;border:1px solid #ddd;border-radius:12px}section{margin:32px 0}</style></head><body><h1>AI Study Sheet v3 Promotion Assets</h1><p>For submission automation. <a href="manifest.json">manifest.json</a></p><p>Icon: <a href="app-icon.png">app-icon.png</a></p>' + ''.join(sections) + '</body></html>'
+          (BASE / 'index.html').write_text(html, encoding='utf-8')
+          PY
+
+      - name: Verify promo bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f shared/ai-study-sheet-v3/promo/manifest.json
+          test -f shared/ai-study-sheet-v3/promo/app-icon.png
+          test "$(find shared/ai-study-sheet-v3/promo/en -type f -name '*.png' | wc -l)" -eq 4
+          test "$(find shared/ai-study-sheet-v3/promo/ja -type f -name '*.png' | wc -l)" -eq 4
+          test "$(find shared/ai-study-sheet-v3/promo/ko -type f -name '*.png' | wc -l)" -eq 5
+          test "$(find shared/ai-study-sheet-v3/promo/zh-hans -type f -name '*.png' | wc -l)" -eq 5
+
+      - name: Commit published assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add shared/ai-study-sheet-v3/promo
+          if git diff --cached --quiet; then
+            echo 'No promo asset changes to commit.'
+            exit 0
+          fi
+          git commit -m "Publish AI Study Sheet v3 promotion assets"
+          git push origin HEAD:main
