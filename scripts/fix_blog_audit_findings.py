@@ -22,8 +22,7 @@ BLOG_ROOTS = [
     ROOT / "zh-tw" / "blog",
 ]
 
-AI_APP_MARKER = "app-id=6782023263"
-AI_APP_MARKER_HTML = 'app-id=6782023263'
+AI_APP_MARKER_HTML = "app-id=6782023263"
 
 INTERNAL_MARKERS = [
     "Editorial method",
@@ -82,7 +81,9 @@ def redirect_target_for_korean_duplicate(path: Path) -> str:
     target_dir = path.parent.parent / slug
     target = target_dir / "index.html"
     if not target.exists():
-        raise RuntimeError(f"Missing NFC target for {path.relative_to(ROOT)}: {target.relative_to(ROOT)}")
+        raise RuntimeError(
+            f"Missing NFC target for {path.relative_to(ROOT)}: {target.relative_to(ROOT)}"
+        )
     return f"{SITE}/ko/blog/{slug}/"
 
 
@@ -116,7 +117,13 @@ def clean_internal_markers(text: str) -> str:
 def clean_ai_version_copy(text: str) -> str:
     # Remove the structured softwareVersion field before removing free text so
     # the JSON-LD object cannot be left with an empty version string.
-    text = SOFTWARE_VERSION_RE.sub(lambda m: "," if m.group(0).strip().startswith(",") and m.group(0).strip().endswith(",") else "", text)
+    text = SOFTWARE_VERSION_RE.sub(
+        lambda m: ","
+        if m.group(0).strip().startswith(",")
+        and m.group(0).strip().endswith(",")
+        else "",
+        text,
+    )
     text = re.sub(r",\s*([}\]])", r"\1", text)
     text = re.sub(r"([\[{])\s*,", r"\1", text)
 
@@ -124,10 +131,12 @@ def clean_ai_version_copy(text: str) -> str:
     # transient v3.0.0/release labels from metadata, schema, headings and alt text.
     text = VERSION_RELEASE_RE.sub("", text)
 
-    # Clean punctuation left by removed release labels.
-    text = re.sub(r"\s+([,.。])", r"\1", text)
-    text = re.sub(r"([·•—–|-])\s*(?=</h2>)", "", text)
-    text = re.sub(r"\s{2,}", " ", text)
+    # Clean only inline spacing/punctuation left by removed release labels.
+    # Do not collapse newlines: keeping the existing HTML formatting makes the
+    # production diff reviewable and avoids unrelated whole-file rewrites.
+    text = re.sub(r"[ \t]+([,.。])", r"\1", text)
+    text = re.sub(r"([·•—–|-])[ \t]*(?=</h2>)", "", text)
+    text = re.sub(r" {2,}", " ", text)
     return text
 
 
@@ -226,9 +235,13 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
         if AI_APP_MARKER_HTML in text:
             active_ai += 1
             if "v3.0.0" in text:
-                errors.append(f"{rel}: v3.0.0 remains in evergreen AI Study Sheet article")
+                errors.append(
+                    f"{rel}: v3.0.0 remains in evergreen AI Study Sheet article"
+                )
             if re.search(r'"softwareVersion"\s*:', text):
-                errors.append(f"{rel}: softwareVersion remains in evergreen article schema")
+                errors.append(
+                    f"{rel}: softwareVersion remains in evergreen article schema"
+                )
 
         for marker in INTERNAL_MARKERS:
             if marker in text:
@@ -250,19 +263,30 @@ def validate(paths: list[Path], expected_ai_before: int, expected_redirects: int
             errors.append(f"{rel}: og:image is not localised article visual")
         if checks["twitter:image"] not in text:
             errors.append(f"{rel}: twitter:image is not localised article visual")
-        if checks["schema image"] not in text and checks["schema image compact"] not in text:
+        if (
+            checks["schema image"] not in text
+            and checks["schema image compact"] not in text
+        ):
             errors.append(f"{rel}: schema image is not localised article visual")
         if checks["hero image"] not in text:
             errors.append(f"{rel}: hero image is not localised article visual")
 
     if redirect_count != expected_redirects:
-        errors.append(f"Expected {expected_redirects} Korean Unicode redirects, found {redirect_count}")
+        errors.append(
+            f"Expected {expected_redirects} Korean Unicode redirects, found {redirect_count}"
+        )
     if expected_ai_before != 38:
-        errors.append(f"Expected 38 AI Study Sheet article files before redirect cleanup, found {expected_ai_before}")
+        errors.append(
+            f"Expected 38 AI Study Sheet article files before redirect cleanup, found {expected_ai_before}"
+        )
     if active_ai != 36:
-        errors.append(f"Expected 36 canonical AI Study Sheet articles after duplicate redirects, found {active_ai}")
+        errors.append(
+            f"Expected 36 canonical AI Study Sheet articles after duplicate redirects, found {active_ai}"
+        )
     if active_count != 98:
-        errors.append(f"Expected 98 canonical article pages after duplicate redirects, found {active_count}")
+        errors.append(
+            f"Expected 98 canonical article pages after duplicate redirects, found {active_count}"
+        )
 
     if errors:
         raise SystemExit("\n".join(errors))
@@ -288,8 +312,12 @@ def main() -> None:
 
     validate(paths, expected_ai_before, expected_redirects)
     print(f"Validated {len(paths)} article files.")
-    print(f"AI Study Sheet files before duplicate redirect cleanup: {expected_ai_before}.")
-    print(f"Canonical article pages: 98; Korean Unicode redirects: {expected_redirects}.")
+    print(
+        f"AI Study Sheet files before duplicate redirect cleanup: {expected_ai_before}."
+    )
+    print(
+        f"Canonical article pages: 98; Korean Unicode redirects: {expected_redirects}."
+    )
     print(f"Changed {len(changed)} files.")
     for name in changed:
         print(name)
