@@ -1,6 +1,6 @@
-name: Export blog visuals for editorial review
+name: Export public site for editorial review
 
-# Audit helper: collects all localized blog HTML and OG visuals after the Korean canonical repair.
+# Audit helper: exports every public HTML page plus the visual assets affected by the editorial cleanup.
 on:
   push:
     branches: [main]
@@ -17,23 +17,43 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Collect multilingual blog audit material
+      - name: Collect public-site audit material
         run: |
           mkdir -p review-material
-          find . -type f \( -iname '*-og.png' -o -iname '*-og.jpg' -o -path './shared/blog-visuals/*' -o -path './shared/ai-study-sheet-v3/*' -o -name 'index.html' \) \
+          git -c core.quotepath=false ls-files > review-material/__repo_files.txt
+
+          find . -type f -name '*.html' \
+            -not -path './.git/*' \
+            -not -path './.github/*' \
             | while read -r f; do
-                case "$f" in
-                  ./blog/*|./en/blog/*|./de/blog/*|./fr/blog/*|./es/blog/*|./it/blog/*|./pt-br/blog/*|./ko/blog/*|./zh-cn/blog/*|./zh-tw/blog/*|./shared/blog-visuals/*|./shared/ai-study-sheet-v3/*)
-                    mkdir -p "review-material/$(dirname "$f")"
-                    cp "$f" "review-material/$f"
-                    ;;
-                esac
+                mkdir -p "review-material/$(dirname "$f")"
+                cp "$f" "review-material/$f"
               done
+
+          for f in sitemap.xml robots.txt CNAME; do
+            if [ -f "$f" ]; then
+              cp "$f" "review-material/$f"
+            fi
+          done
+
+          find shared/ai-study-sheet-v3 -maxdepth 1 -type f \( -name 'article-*.png' -o -name '*-overview.png' \) \
+            | while read -r f; do
+                mkdir -p "review-material/$(dirname "$f")"
+                cp "$f" "review-material/$f"
+              done
+
+          find blog en/blog de/blog fr/blog es/blog it/blog pt-br/blog ko/blog zh-cn/blog zh-tw/blog \
+            -type f \( -name '*-og.png' -o -name '*-og.jpg' \) 2>/dev/null \
+            | while read -r f; do
+                mkdir -p "review-material/$(dirname "$f")"
+                cp "$f" "review-material/$f"
+              done
+
           find review-material -type f | sort
 
       - name: Upload review material
         uses: actions/upload-artifact@v4
         with:
-          name: blog-audit-all-locales
+          name: public-site-audit
           path: review-material
           if-no-files-found: error
