@@ -6,8 +6,6 @@ import re
 import shutil
 import unicodedata
 
-from bs4 import BeautifulSoup
-
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://lp.toybird.com"
 
@@ -25,6 +23,10 @@ SOFTWARE_VERSION_RE = re.compile(
 VERSION_RELEASE_RE = re.compile(
     r"\s*(?:[·•—–|-]\s*)?v3\.0\.0(?:\s*출시)?\.?",
     re.IGNORECASE,
+)
+JSONLD_RE = re.compile(
+    r'<script\s+type="application/ld\+json">(.*?)</script>',
+    re.IGNORECASE | re.DOTALL,
 )
 
 
@@ -45,9 +47,10 @@ def clean_version_copy(text: str) -> str:
 
 
 def validate_jsonld(text: str, page: Path) -> None:
-    soup = BeautifulSoup(text, "html.parser")
-    for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
-        raw = script.string if script.string is not None else script.get_text()
+    blocks = JSONLD_RE.findall(text)
+    if not blocks:
+        raise RuntimeError(f"{page.relative_to(ROOT)}: JSON-LD block missing")
+    for raw in blocks:
         json.loads(raw)
 
 
