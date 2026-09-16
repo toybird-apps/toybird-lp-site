@@ -1,0 +1,97 @@
+name: Clean AI Study Sheet public version messaging
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/cleanup_ai_study_sheet_public_versioning.py'
+      - '.github/workflows/cleanup-ai-study-sheet-public-versioning.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install image and font dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-core fonts-noto-cjk
+          python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Remove public version and release messaging
+        run: python3 scripts/cleanup_ai_study_sheet_public_versioning.py
+
+      - name: Validate exact change scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+
+          changed = subprocess.check_output(
+              ['git', '-c', 'core.quotepath=false', 'diff', '--name-only'],
+              text=True,
+          ).splitlines()
+          if len(changed) != 42:
+              raise SystemExit(f'Expected exactly 42 public files changed, got {len(changed)}')
+
+          required = {
+              'ai-memorize-sheet/index.html',
+              'en/ai-memorize-sheet/index.html',
+              'shared/ai-study-sheet-v3/ja-overview.png',
+              'shared/ai-study-sheet-v3/en-overview.png',
+          }
+          missing = required - set(changed)
+          if missing:
+              raise SystemExit(f'Missing required changes: {sorted(missing)}')
+
+          shared_articles = [
+              name for name in changed
+              if name.startswith('shared/ai-study-sheet-v3/article-') and name.endswith('.png')
+          ]
+          if len(shared_articles) != 38:
+              raise SystemExit(f'Expected 38 legacy shared article visuals, got {len(shared_articles)}')
+
+          unexpected = []
+          for name in changed:
+              p = Path(name)
+              allowed = (
+                  name in required
+                  or (name.startswith('shared/ai-study-sheet-v3/article-') and p.suffix == '.png')
+              )
+              if not allowed:
+                  unexpected.append(name)
+          if unexpected:
+              raise SystemExit(f'Unexpected files changed: {unexpected}')
+          print('Validated 2 LP pages, 2 overview visuals, and 38 legacy shared article visuals.')
+          PY
+
+      - name: Validate no public v3.0.0 remains in product HTML
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for path in [Path('ai-memorize-sheet/index.html'), Path('en/ai-memorize-sheet/index.html')]:
+              text = path.read_text(encoding='utf-8')
+              if 'v3.0.0' in text:
+                  raise SystemExit(f'v3.0.0 remains in {path}')
+              if 'softwareVersion' in text:
+                  raise SystemExit(f'softwareVersion remains in {path}')
+          print('Product HTML is evergreen.')
+          PY
+
+      - name: Check repository diff
+        run: git diff --check
+
+      - name: Commit production cleanup
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -u
+          git commit -m "Remove AI Study Sheet version labels from public site"
+          git push origin HEAD:main
