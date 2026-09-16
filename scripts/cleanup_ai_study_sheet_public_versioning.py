@@ -87,8 +87,15 @@ def cleanup_page(path: Path, locale: str) -> None:
     text = clean_json_commas(text)
 
     if "v3.0.0" in text:
-        occurrences = [m.start() for m in re.finditer(r"v3\.0\.0", text, re.IGNORECASE)]
-        raise RuntimeError(f"{path.relative_to(ROOT)}: v3.0.0 remains at {occurrences}")
+        matches = list(re.finditer(r"v3\.0\.0", text, re.IGNORECASE))
+        snippets = []
+        for match in matches:
+            start = max(0, match.start() - 90)
+            end = min(len(text), match.end() + 130)
+            snippets.append(text[start:end].replace("\n", " "))
+        raise RuntimeError(
+            f"{path.relative_to(ROOT)}: v3.0.0 remains in contexts: {snippets}"
+        )
     if re.search(r'"softwareVersion"\s*:', text):
         raise RuntimeError(f"{path.relative_to(ROOT)}: softwareVersion remains")
 
