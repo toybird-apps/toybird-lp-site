@@ -187,22 +187,18 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   runwayLink.setAttribute(
     'aria-label',
     isJapanese
-      ? 'The Runway RadarでPocket ScreenがWeekly Builder Favoriteに選ばれた掲載ページを見る'
-      : 'View Pocket Screen on The Runway after being featured as a Weekly Builder Favorite'
+      ? 'The Runway RadarでPocket Screenが411件の公開週で2位になった掲載ページを見る'
+      : 'View Pocket Screen on The Runway after placing #2 in a 411-launch week'
   );
 
   const runwayCopy = document.createElement('span');
   runwayCopy.className = 'runway-radar-copy';
 
   const runwayHeadline = document.createElement('strong');
-  runwayHeadline.textContent = isJapanese
-    ? 'The Runway Radar — Weekly Builder Favorite'
-    : 'The Runway Radar — Weekly Builder Favorite';
+  runwayHeadline.textContent = 'The Runway Radar — #2 Weekly Launch';
 
   const runwayDetail = document.createElement('span');
-  runwayDetail.textContent = isJapanese
-    ? '411件の公開週で、コミュニティ投票上位枠に掲載'
-    : 'Featured among the community-voted picks in a 411-launch week';
+  runwayDetail.textContent = '#2 in a 411-launch week';
 
   runwayCopy.append(runwayHeadline, runwayDetail);
 
