@@ -1,0 +1,54 @@
+name: Final public copy cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/final_public_copy_cleanup.py'
+      - '.github/workflows/final-public-copy-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply final public copy cleanup
+        run: python3 scripts/final_public_copy_cleanup.py
+
+      - name: Re-run multilingual blog validation
+        run: python3 scripts/fix_blog_audit_findings.py
+
+      - name: Validate exact change scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          expected = {
+              'index.html',
+              'en/ai-memorize-sheet/index.html',
+          }
+          changed = set(subprocess.check_output(
+              ['git', '-c', 'core.quotepath=false', 'diff', '--name-only'],
+              text=True,
+          ).splitlines())
+          if changed != expected:
+              raise SystemExit(f'Expected exactly {sorted(expected)}, got {sorted(changed)}')
+          print('Validated exact two-page final cleanup scope.')
+          PY
+
+      - name: Check repository diff
+        run: git diff --check
+
+      - name: Commit production cleanup
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html en/ai-memorize-sheet/index.html
+          git commit -m "Finish public editorial cleanup"
+          git push origin HEAD:main
