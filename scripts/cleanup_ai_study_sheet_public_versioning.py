@@ -58,7 +58,11 @@ def cleanup_page(path: Path, locale: str) -> None:
                 'data-section-id="flexible_setup" data-section-name="Flexible Setup" data-track-section="" id="flexible-setup"',
             '<p class="section-kicker">v3.0.0 リリース済み</p>':
                 '<p class="section-kicker">取り込みから復習まで</p>',
+            '<p>v3.0.0のアプリ画面。教材は掲載用のサンプルです。</p>':
+                '<p>実際のアプリ画面です。教材は掲載用のサンプルです。</p>',
         }
+        versioned_alt_prefix = "AI赤シート v3.0.0 — "
+        evergreen_alt_prefix = "AI赤シート — "
     else:
         replacements = {
             "AI Study Sheet v3.0.0 — Photos and PDFs for active recall | Toybird Labs":
@@ -74,9 +78,12 @@ def cleanup_page(path: Path, locale: str) -> None:
             '<p class="section-kicker">v3.0.0 Released</p>':
                 '<p class="section-kicker">From import to review</p>',
         }
+        versioned_alt_prefix = "AI Study Sheet v3.0.0 — "
+        evergreen_alt_prefix = "AI Study Sheet — "
 
     for old, new in replacements.items():
         text = text.replace(old, new)
+    text = text.replace(versioned_alt_prefix, evergreen_alt_prefix)
 
     text = SOFTWARE_VERSION_RE.sub(
         lambda m: ","
