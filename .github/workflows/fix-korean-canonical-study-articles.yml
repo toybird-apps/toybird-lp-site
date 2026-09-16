@@ -1,0 +1,79 @@
+name: Fix Korean canonical AI Study Sheet articles
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fix_korean_canonical_study_articles.py'
+      - '.github/workflows/fix-korean-canonical-study-articles.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Repair Korean canonical article pages and visuals
+        run: python3 scripts/fix_korean_canonical_study_articles.py
+
+      - name: Re-run full multilingual article validation
+        run: python3 scripts/fix_blog_audit_findings.py
+
+      - name: Validate exact change scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+
+          expected = {
+              'ko/blog/교재-사진-빈칸-복습/index.html',
+              'ko/blog/교재-사진-빈칸-복습/assets/교재-사진-빈칸-복습-og.png',
+              'ko/blog/내신-수능-자격증-내-교재/index.html',
+              'ko/blog/내신-수능-자격증-내-교재/assets/내신-수능-자격증-내-교재-og.png',
+          }
+          changed = set(subprocess.check_output(
+              ['git', '-c', 'core.quotepath=false', 'diff', '--name-only'],
+              text=True,
+          ).splitlines())
+          if changed != expected:
+              raise SystemExit(f'Expected exactly {sorted(expected)}, got {sorted(changed)}')
+          print('Validated exact two-page/two-visual Korean repair scope.')
+          PY
+
+      - name: Validate copied PNG dimensions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import struct
+
+          paths = [
+              Path('ko/blog/교재-写真-빈칸-복습/assets/교재-사진-빈칸-복습-og.png'),
+              Path('ko/blog/내신-수능-자격증-내-교재/assets/내신-수능-자격증-내-교재-og.png'),
+          ]
+          # Correct a typo-safe first path by reconstructing it literally.
+          paths[0] = Path('ko/blog/교재-사진-빈칸-복습/assets/교재-사진-빈칸-복습-og.png')
+          for path in paths:
+              data = path.read_bytes()[:24]
+              if data[:8] != b'\x89PNG\r\n\x1a\n':
+                  raise SystemExit(f'Not a PNG: {path}')
+              width, height = struct.unpack('>II', data[16:24])
+              if (width, height) != (1200, 630):
+                  raise SystemExit(f'Unexpected size for {path}: {(width, height)}')
+          print('Validated both Korean OG visuals at 1200x630.')
+          PY
+
+      - name: Check repository diff
+        run: git diff --check
+
+      - name: Commit production repair
+        run: |
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Fix remaining Korean AI Study Sheet article metadata"
+          git push origin HEAD:main
