@@ -36,10 +36,15 @@ jobs:
               'ko/blog/내신-수능-자격증-내-교재/index.html',
               'ko/blog/내신-수능-자격증-내-교재/assets/내신-수능-자격증-내-교재-og.png',
           }
-          changed = set(subprocess.check_output(
+          modified = set(subprocess.check_output(
               ['git', '-c', 'core.quotepath=false', 'diff', '--name-only'],
               text=True,
           ).splitlines())
+          untracked = set(subprocess.check_output(
+              ['git', '-c', 'core.quotepath=false', 'ls-files', '--others', '--exclude-standard'],
+              text=True,
+          ).splitlines())
+          changed = modified | untracked
           if changed != expected:
               raise SystemExit(f'Expected exactly {sorted(expected)}, got {sorted(changed)}')
           print('Validated exact two-page/two-visual Korean repair scope.')
@@ -52,11 +57,9 @@ jobs:
           import struct
 
           paths = [
-              Path('ko/blog/교재-写真-빈칸-복습/assets/교재-사진-빈칸-복습-og.png'),
+              Path('ko/blog/교재-사진-빈칸-복습/assets/교재-사진-빈칸-복습-og.png'),
               Path('ko/blog/내신-수능-자격증-내-교재/assets/내신-수능-자격증-내-교재-og.png'),
           ]
-          # Correct a typo-safe first path by reconstructing it literally.
-          paths[0] = Path('ko/blog/교재-사진-빈칸-복습/assets/교재-사진-빈칸-복습-og.png')
           for path in paths:
               data = path.read_bytes()[:24]
               if data[:8] != b'\x89PNG\r\n\x1a\n':
