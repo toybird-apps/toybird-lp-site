@@ -1,0 +1,23 @@
+name: Blog108 export for review
+on:
+  push:
+    branches: [blog108-production-20260917]
+    paths: [.github/workflows/blog108-export-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Export tracked files
+        run: git archive --format=zip HEAD -o "$RUNNER_TEMP/blog108-source.zip"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: blog108-source
+          path: ${{ runner.temp }}/blog108-source.zip
+          retention-days: 3
