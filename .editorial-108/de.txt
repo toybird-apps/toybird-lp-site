@@ -1,0 +1,395 @@
+@@ chatgpt-customer-reply-email
+# Mit ChatGPT auf Kundenanfragen antworten: Fakten, Zusagen und nächstes Update
+Der Kunde braucht seine Daten vor einem Termin, doch die Ursache der Störung steht noch nicht fest. Eine hilfreiche erste Antwort kann den nächsten Schritt nennen, ohne eine Wiederherstellung zu versprechen.
+
+Die folgende Anfrage, die internen Notizen und die Antwort sind ein erfundenes Übungsbeispiel. Sie sind weder eine echte Kundenkommunikation noch ein protokolliertes KI-Ergebnis.
+
+## Zwei Uhrzeiten, zwei verschiedene Bedeutungen
+> Der CSV-Export liefert keine Datei mehr. Ich brauche die Daten heute um 17 Uhr für eine interne Besprechung. Wird das rechtzeitig behoben? Bitte teilen Sie mir den aktuellen Stand mit.
+
+17 Uhr ist der Bedarf des Kunden. 15 Uhr ist in diesem Beispiel der intern zugesagte Zeitpunkt für eine Rückmeldung. Beides ist kein bestätigter Reparaturtermin.
+
+| Kategorie | Vorliegende Information |
+| Bestätigt | Die Meldung wurde entgegengenommen und zur Untersuchung an das technische Team weitergegeben. |
+| Unbekannt | Ursache, betroffene Nutzer, Wiederherstellungszeit und funktionierende Ausweichlösung. |
+| Freigegebene Zusage | Bis 15 Uhr einen Status senden, auch ohne Fortschritt. |
+| Rückfragen | Zeitpunkt des Fehlers, Browser und Version, angezeigte Fehlermeldung. |
+| Nicht freigegeben | Erstattung, Entschädigung, manuelle Datenlieferung oder Reparaturfrist. |
+
+## Den Antwortauftrag begrenzen
+Nutzen Sie nur eine KI-Umgebung, die für diese Informationen zugelassen ist. Ein entfernter Name macht Unternehmensdaten nicht automatisch unkritisch.
+
+```text
+Erstelle eine erste Antwort auf die Kundenanfrage. Verwende ausschließlich die Anfrage und die internen Notizen.
+Bestätige den Bedarf für 17 Uhr und die Weitergabe an das technische Team.
+Versprich keine Wiederherstellung bis 17 Uhr: Der Zeitpunkt ist unbekannt.
+Sage ein Statusupdate bis 15 Uhr zu, auch wenn es keine neuen Erkenntnisse gibt.
+Frage nach Fehlerzeitpunkt, Browser und Version sowie Fehlermeldung.
+Ergänze keine Ursache, Lösungsschritte, Ausweichlösung, Erstattung oder weitere Zusage.
+Liefere Betreff und Nachricht. Liste anschließend getrennt für die interne Prüfung jede Zusage mit ihrer Grundlage auf.
+[Anfrage und Tabelle einfügen.]
+```
+
+## Eine Antwort, die zu den Notizen passt
+> Betreff: Rückmeldung zum CSV-Export
+>
+> Vielen Dank für Ihre Meldung. Ich verstehe, dass Sie die Daten für Ihre Besprechung um 17 Uhr benötigen.
+>
+> Wir haben Ihre Meldung zur Untersuchung an das technische Team weitergegeben. Ursache und Wiederherstellungszeit sind noch nicht bestätigt. Deshalb kann ich nicht zusagen, dass der Export vor Ihrem Termin wieder funktioniert. Bis 15 Uhr erhalten Sie von mir ein Statusupdate, auch wenn noch keine neuen Erkenntnisse vorliegen.
+>
+> Bitte nennen Sie uns den Zeitpunkt des Fehlers, Ihren Browser mit Version und eine gegebenenfalls angezeigte Fehlermeldung. Lassen Sie nicht benötigte personenbezogene oder vertrauliche Geschäftsdaten weg.
+>
+> Es tut mir leid, dass die Störung Ihre Arbeit beeinträchtigt.
+
+Die Formulierung ist eine redaktionell erstellte Musterantwort. Entscheidend ist nicht ihr genauer Wortlaut, sondern die Grenze der Zusage: eine Rückmeldung, keine Reparatur.
+
+## Konkrete Fehler gezielt korrigieren
+| Fehler im Entwurf | Warum er hier falsch ist | Korrektur |
+| „Hohe Systemlast ist die Ursache.“ | Die Ursache ist unbekannt. | Nur die Weitergabe zur Untersuchung nennen. |
+| „Bis 15 Uhr ist der Fehler behoben.“ | Ein Kontakttermin wurde zur Reparaturfrist. | „Bis 15 Uhr erhalten Sie ein Statusupdate.“ |
+| „Installieren Sie die App neu.“ | Dieser Schritt ist nicht bestätigt. | Stattdessen die vorgesehenen Umgebungsdaten erfragen. |
+
+Eine passende Folgeanweisung lautet: „Korrigiere nur die Zusage im zweiten Absatz. 15 Uhr betrifft die Rückmeldung, nicht die Wiederherstellung. Alle anderen Fakten bleiben unverändert.“
+
+## Auch ohne Fortschritt zum vereinbarten Zeitpunkt melden
+Falls das Team um 15 Uhr nur bestätigen kann, dass die Untersuchung weiterläuft, reicht eine kurze Nachricht: „Wie zugesagt erhalten Sie den aktuellen Stand. Die Untersuchung läuft weiter; Ursache und Wiederherstellungszeit stehen noch nicht fest.“ Einen weiteren Kontakttermin erst nach interner Abstimmung ergänzen. Die KI soll ihn nicht erfinden, um beruhigender zu wirken.
+
+## Die Materialien in Prompt Ready vorbereiten
+{{MEDIA:PR-EN-EMPTY}}
+
+Der Screenshot zeigt die englische Oberfläche vor der Eingabe, nicht die Ausführung dieses CSV-Beispiels. Wählen Sie in Prompt Ready die passende Schreibaufgabe und geben Sie Anfrage, bestätigte Fakten und Grenzen ein. Kontrollieren Sie vor dem Kopieren ausdrücklich: „15 Uhr ist ein Statusupdate, kein Reparaturtermin.“ Die externe KI erstellt danach die Antwort; ob sie versendet werden darf, prüfen Sie anhand der Notizen.
+
+@@ chatgpt-compare-options
+# Angebote mit ChatGPT vergleichen: Gleiche Mengen, klare Pflichtbedingungen
+Ein Preis pro Termin, ein Pauschalangebot und eine Gebühr pro Person sind noch keine vergleichbaren Gesamtkosten. Rechnen Sie zuerst dieselbe Leistung durch und prüfen Sie dann, welche Pflichtbedingungen belegt sind.
+
+Die drei Schulungsangebote sind erfunden. Die Beträge in japanischen Yen, jeweils ohne Steuer, dienen nur dem Rechenbeispiel. Es handelt sich nicht um Marktpreise oder Empfehlungen für reale Anbieter.
+
+## Die gemeinsame Aufgabe festlegen
+30 Personen sollen bis zum 20. Oktober geschult werden. Das Budget beträgt 450.000 JPY. Eine Fragemöglichkeit für 30 Tage nach der Schulung ist zwingend erforderlich.
+
+| Angebot | Angaben des Anbieters |
+| A | 180.000 JPY je Termin für höchstens 10 Personen; drei Termine für 30 Personen. Termine vor der Frist und 30 Tage Fragenbetreuung bestätigt. Keine Zusatzkosten. |
+| B | 420.000 JPY pauschal für 30 Personen. Frist und 30 Tage Fragenbetreuung bestätigt. Keine Zusatzkosten. |
+| C | 9.000 JPY pro Person plus 60.000 JPY Einrichtung. Für 30 Personen geeignet. Termine und Dauer der Fragenbetreuung nicht genannt; keine weiteren Gebühren angegeben. |
+
+A ist für diese Gruppe keine Lösung für 180.000 JPY. Bei C bedeutet die fehlende Angabe nicht, dass Fragenbetreuung ausgeschlossen ist.
+
+## Pflichtbedingungen nicht mit Präferenzen verrechnen
+```text
+Vergleiche die drei Angebote für 30 Personen.
+Pflichtbedingungen: höchstens 450.000 JPY ohne Steuer, Abschluss bis 20. Oktober, 30 Tage Fragenbetreuung danach.
+Nutze nur die Angebotsangaben.
+Berechne die Gesamtkosten mit Formel.
+Kennzeichne jede Pflichtbedingung als erfüllt, nicht erfüllt oder ungeklärt.
+Behandle fehlende Angaben nicht als „nicht vorhanden“ oder null Punkte.
+Trenne derzeit bewertbare Angebote von Angeboten mit Rückfragen.
+Formuliere die vor einer Entscheidung nötigen Rückfragen.
+Wähle nicht allein nach dem niedrigsten Einzelpreis.
+[Angebote einfügen.]
+```
+
+## So sieht die vollständige Vergleichstabelle aus
+| Kriterium | A | B | C |
+| Rechnung | 180.000 × 3 | Pauschal 420.000 | 9.000 × 30 + 60.000 |
+| Summe in JPY ohne Steuer | 540.000 | 420.000 | 330.000 |
+| Im Budget | Nein | Ja | Ja |
+| Bis 20. Oktober fertig | Bestätigt | Bestätigt | Ungeklärt |
+| 30 Tage Fragenbetreuung | Bestätigt | Bestätigt | Ungeklärt |
+| Aktueller Stand | Nicht budgetkonform | Pflichtbedingungen belegt | Termine und Betreuung nachfragen |
+
+Nur bei B sind derzeit alle Pflichtbedingungen bestätigt. Das ist keine allgemeine Qualitätsrangliste. C kann nach Klärung ebenfalls geeignet sein. Prüfen Sie die Rechnungen selbst und ergänzen Sie bei echten Angeboten Dokumentname, Datum und Fundstelle.
+
+## Die offenen Zellen in eine Rückfrage übersetzen
+> Wir planen die Schulung für 30 Personen. Ist ein Abschluss bis zum 20. Oktober möglich? Können die Teilnehmenden anschließend 30 Tage lang Fragen stellen? Bitte bestätigen Sie auch, ob beides im angebotenen Gesamtpreis von 330.000 JPY enthalten ist.
+
+Nennt die Antwort eine zusätzliche Gebühr, ändern Sie sowohl die Kosten als auch die betreffende Bedingung. Eine schöne Tabelle darf nicht die frühere Annahme unverändert weitertragen.
+
+## Eine neue Gewichtung darf keine Pflichtbedingung verschwinden lassen
+```text
+Teilnehmerzahl, Frist und Fragenbetreuung bleiben verpflichtend.
+Falls C diese Bedingungen bestätigt, vergleiche die geeigneten Angebote zuerst nach Gesamtpreis.
+Behandle heutige Unklarheiten nicht als bereits bestätigt.
+Nenne die neue Information, die das Ergebnis verändert.
+```
+
+Der Nutzen liegt darin, die Entscheidung erklären zu können. Eine neue Empfehlung ist wenig wert, wenn sie unbemerkt eine andere Frage beantwortet.
+
+## Wechselnde Vergleichsbedingungen mit Prompt Ready vorbereiten
+Übernehmen Sie nicht das Urteil über A, B oder C als Vorlage. Wiederverwendbar sind Menge, Abrechnungseinheit, Pflichtbedingungen und der Umgang mit Unbekanntem. Tragen Sie diese Punkte in Prompt Ready ein, prüfen Sie die Anweisung und verwenden Sie sie in Ihrer gewählten KI. Die Prüfung der Originalangebote und die Einkaufsentscheidung bleiben davon getrennt.
+
+@@ chatgpt-meeting-notes-todo
+# Besprechungsnotizen mit ChatGPT in Aufgaben umwandeln: Zuständigkeit nicht erraten
+Ein Name in einer Notiz ist nicht automatisch der Aufgabenverantwortliche. „Tanaka fragen“ kann Satos Aufgabe sein. Trennen Sie Beschlüsse, Fragen, zurückgezogene Aufträge und offene Zuweisungen, bevor Sie eine Nachfassmail schreiben.
+
+Die Besprechung vom 5. Oktober 2026 ist ein erfundenes Übungsbeispiel. Die Ergebnistabelle ist eine redaktionelle Musterlösung, kein protokollierter KI-Test.
+
+## Acht Notizen mit unterschiedlichen Bedeutungen
+```text
+M1: Die aktuelle Preisliste soll im Angebot verwendet werden; das ist beschlossen.
+M2: Yamada teilt die Liste möglicher Dienste bis 7. Oktober.
+M3: Kann die Demoumgebung bis Freitag bereitstehen? Zunächst Verfügbarkeit prüfen.
+M4: Sato fragt Tanaka, ob eine rechtliche Beratung möglich ist. Keine Frist festgelegt.
+M5: Der Kunde plant nächste Woche eine interne Prüfung; das Datum ist unbekannt.
+M6: Die Vergleichstabelle muss diesmal nicht aktualisiert werden. Der frühere Auftrag wird zurückgezogen.
+M7: Für den Austausch der Preisliste wurde niemand benannt.
+M8: Den nächsten Termin nach der Antwort des Kunden festlegen.
+```
+
+Freitag in M3 ist noch keine Zusage. M5 ist ein Plan des Kunden, keine zugewiesene Aufgabe Ihres Teams. M6 gehört nicht zurück in die offene Aufgabenliste.
+
+## Zuerst ordnen, danach formulieren
+```text
+Teile die Notizen in Beschlüsse, Aufgaben, Klärungsbedarf und zurückgezogene Arbeit.
+Aufgabenfelder: Tätigkeit, Verantwortlicher, zu konsultierende Person, Frist, Notiznummer.
+Leite Zuständigkeit nicht allein aus einem Namen ab.
+Mache Fragen nicht zu vereinbarten Terminen und Kundenpläne nicht zu unseren Aufgaben.
+Lasse fehlende Zuständigkeiten und Fristen ungeklärt.
+Fasse echte Dubletten zusammen, behalte aber die Belege.
+Löse widersprüchliche Notizen nicht stillschweigend auf.
+[Notizen M1–M8 einfügen.]
+```
+
+## Ergebnis mit nachvollziehbaren Belegen
+| Aufgabe | Verantwortlich | Zu konsultieren | Frist | Beleg |
+| Liste möglicher Dienste teilen | Yamada | Nicht erforderlich | 7. Oktober | M2 |
+| Möglichkeit einer Rechtsberatung klären | Sato | Tanaka | Offen | M4 |
+| Preisliste im Angebot ersetzen | Ungeklärt | Ungeklärt | Ungeklärt | M1, M7 |
+
+Die aktuelle Preisliste zu verwenden ist beschlossen; wer sie austauscht, ist noch offen. Die Demoumgebung, ihre Zuständigkeit und Frist, der Kundentermin und der nächste Besprechungstermin gehören in die Klärungsliste. Der Vergleichstabellen-Auftrag ist laut M6 zurückgezogen.
+
+„Ungeklärt“ ist hier ein nützliches Ergebnis. Vollständig ausgefüllte, aber erfundene Felder wären schlechter.
+
+## Fehler an der konkreten Zeile korrigieren
+```text
+In M4 ist Sato für die Nachfrage verantwortlich; Tanaka wird konsultiert.
+Korrigiere nur diese beiden Felder. Ändere keine anderen Aufgaben oder Termine.
+```
+
+Wird aus M3 „Demo bis 9. Oktober fertigstellen“, weisen Sie darauf hin, dass die Notiz eine Frage enthält. Ein Kalender kann Freitag einem Datum zuordnen, aber keinen Beschluss erzeugen.
+
+## Nachträgliche Vereinbarungen als neue Informationen ergänzen
+Angenommen, nach der Sitzung wird bestätigt: Takahashi ersetzt die Preisliste bis 8. Oktober. Ergänzen Sie diese neue Grundlage vor der Mail:
+
+> Yamada teilt die Diensteliste bis 7. Oktober. Nach der Sitzung wurde bestätigt, dass Takahashi die Preisliste bis 8. Oktober ersetzt. Sato fragt Tanaka nach einer Rechtsberatung; die Frist bleibt offen. Demobereitschaft und nächster Termin sind noch zu klären. Der frühere Auftrag zur Vergleichstabelle wurde zurückgezogen.
+
+Vor externer Weitergabe prüfen Sie zusätzlich, welche internen Namen oder Erwägungen sichtbar sein dürfen.
+
+## Den Arbeitsauftrag für wiederkehrende Besprechungen vorbereiten
+{{MEDIA:PR-EN-IDEAS}}
+
+Die Abbildung zeigt die englische Ideenübersicht von Prompt Ready. Die App bereitet die Anweisung zur Organisation vorhandener Notizen vor; sie ist nicht die Aufnahme oder Transkription. Geben Sie Regeln wie „Verantwortlicher und konsultierte Person getrennt“ mit, kontrollieren Sie die Anweisung und kopieren Sie sie in die zugelassene KI. Die tatsächlichen Beteiligten bestätigen am Ende die Aufgaben.
+
+@@ chatgpt-prompt-work-tips
+# ChatGPT im Beruf: Zehn Aufgaben mit klaren Materialien und Ergebnissen
+E-Mails und Zusammenfassungen sind ein Anfang. Weitere Einsatzmöglichkeiten finden Sie, indem Sie eine echte Aufgabe in Ausgangsmaterial, gewünschtes Ergebnis und Abschlussprüfung zerlegen.
+
+Dieser Leitfaden hilft bei der Auswahl. Die verlinkten Einzelartikel zeigen vollständige Beispiele statt einer langen Liste vermeintlich universeller Formulierungen. Die Methoden funktionieren auch ohne zusätzliche App.
+
+## Erst die Aufgabe, dann den Prompt wählen
+| Aufgabe | Benötigtes Material | Ergebnis | Wichtigste Prüfung |
+| Kunden antworten | Anfrage, bestätigte Fakten, nächster Schritt | Antwortentwurf | Keine erfundene Ursache oder Zusage |
+| Anfrage ablehnen | Grenzen und freigegebene Alternativen | Klare Absage | Beginn nicht mit Fertigstellung verwechseln |
+| Besprechung ordnen | Aussagen und Beschlüsse | Aufgaben mit Zuständigkeit | Fragen nicht als Beschluss ausgeben |
+| Dokument zusammenfassen | Quelle, Leser und Entscheidung | Belegbare Entscheidungsnotiz | Zahlen und Fußnoten erhalten |
+| Angebote vergleichen | Angebote und Pflichtbedingungen | Vergleich auf gleicher Basis | Unbekannt nicht als null behandeln |
+| Auftrag präzisieren | Bekanntes und Schwierigkeiten | Wenige wichtige Rückfragen | Bereits Bekanntes nicht erneut fragen |
+| Gespräch üben | Rolle, Phase und Ziel | Dialog mit anschließender Auswertung | Rolle und Coaching trennen |
+| Für andere Leser erklären | Richtiger Ausgangstext und Vorwissen | Verständliche Erklärung | Bedingungen nicht vereinfachend verändern |
+| Anleitung entwerfen | Tatsächliche Schritte und Ausnahmen | Nachvollziehbarer Ablauf | Keine erfundenen Schaltflächen |
+| Recherche ordnen | Quellen, Daten und Fragestellung | Fakten und Interpretation getrennt | Belege auf die einzelne Aussage beziehen |
+
+Eine Kundenantwort zu schreiben, eine Aufgabe aus Notizen zu entnehmen und ein Gespräch zu üben sind verschiedene Arbeiten. Packen Sie nicht alle Ausgaben und Vorsichtsregeln gleichzeitig in einen riesigen Prompt.
+
+## Eine andere Verwendung verlangt ein anderes Ergebnis
+Bei einem Angebot kann „kurz zusammenfassen“ eine Inhaltsübersicht liefern. „Was muss die Führungskraft vor einer Einführung entscheiden?“ verlangt eher Kosten, Bedingungen und offene Verantwortlichkeiten. Bei drei Angeboten hilft zuerst die Umrechnung auf dieselbe Personenzahl; eine Empfehlung folgt erst nach der Prüfung der Pflichtbedingungen.
+
+## Ein kurzer, veränderbarer Arbeitsauftrag
+```text
+Aufgabe: [eine konkrete Tätigkeit]
+Zweck: [welche Entscheidung oder Handlung folgt]
+Material: [Nachricht, Notizen, Dokument oder Daten]
+Bestätigte Bedingungen: [Fristen, Grenzen, Fakten]
+Unbekannt: [was nicht ergänzt werden darf]
+Ausgabe: [Mail, Tabelle, Rückfragen, Checkliste oder Dialog]
+Vor Abschluss prüfen: [den für diese Aufgabe wichtigen Fehler]
+```
+
+Die Felder sind Denkhilfen, keine Pflichtform. Bei einer kleinen Aufgabe reichen wenige Punkte. Ist eine Antwort unpassend, suchen Sie nach der fehlenden Entscheidungsgrundlage statt nur „ausführlicher“ zu verlangen.
+
+## Mit einem vollständigen Beispiel weiterarbeiten
+{{RELATED-INLINE}}
+
+Lesen Sie das fertige Ergebnis zusammen mit seinem Material. Ein plausibler Text beweist noch nicht, dass alle Bedingungen erhalten geblieben sind.
+
+## Gezielt nachbessern
+„Beträge und Bedingungen unverändert lassen, aber das Fazit nach vorn stellen“ ist prüfbarer als „verbessern“. Bei einem Faktenfehler zuerst zur Quelle zurückkehren und erst danach Ton oder Länge anpassen. Vertrauliche Inhalte gehören ausschließlich in eine dafür zugelassene Umgebung.
+
+## Einsatzmöglichkeiten finden und für den heutigen Fall anpassen
+{{MEDIA:PR-EN-HOME}}
+
+Die englische Startseite von Prompt Ready zeigt Kategorien; die Ideenübersicht zeigt konkrete Arbeiten. Die zwei Ebenen helfen, neue Einsatzmöglichkeiten zu entdecken und anschließend die Bedingungen eines aktuellen Auftrags zu ergänzen.
+
+{{MEDIA:PR-EN-IDEAS}}
+
+Wählen Sie einen Zweck, ergänzen Sie Text oder Thema und Bedingungen, prüfen Sie den Auftrag und kopieren Sie ihn in die gewohnte KI. Prompt Ready erstellt die Anweisung lokal, nicht die Antwort des externen Dienstes. Nach dem Einfügen gelten dessen Datenbedingungen. Beginnen Sie mit einer regelmäßig anfallenden Aufgabe und behalten Sie das Ergebnis samt den hilfreichen Prüfschritten.
+
+@@ lernzettel-arbeitsblaetter-aktiv-abfragen
+# Ein Arbeitsblatt auf dem iPhone aktiv abfragen: Drei Fragen statt einer bloßen Fotokopie
+Eine gut lesbare Aufnahme ist noch keine gute Abfrage. Entscheiden Sie bei einem Lernzettel, welche Antwort verborgen werden soll und welche Erklärung sichtbar bleiben muss.
+
+Das kleine Arbeitsblatt ist für diesen Artikel erstellt. Die Erläuterungen zum Wasserkreislauf stützen sich auf USGS; Fragen und Gestaltung sind ein Unterrichtsbeispiel, kein Ergebnis automatischer App-Erkennung.
+
+## Eine überprüfbare Ausgangsseite
+| Stelle | Begriff | Erklärung |
+| R1 | Verdunstung | Flüssiges Wasser geht in Wasserdampf über. |
+| R2 | Kondensation | Wasserdampf wird zu flüssigem Wasser; kleine Tröpfchen können Wolken bilden. |
+| R3 | Niederschlag | Wasser fällt etwa als Regen oder Schnee aus Wolken. |
+
+Wichtig ist der Unterschied zwischen einer Zustandsänderung und dem Herabfallen. Wer Kondensation und Niederschlag vertauscht, sollte R2 und R3 vergleichen. Grundlagen: [USGS zur Kondensation](https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle) und [USGS zum Niederschlag](https://www.usgs.gov/water-science-school/science/precipitation-and-water-cycle).
+
+## Antwort verdecken, Zusammenhang behalten
+| Sichtbar lassen | Verdecken | Zweck |
+| Flüssiges Wasser wird zu Dampf | Verdunstung | Die Zustandsänderung benennen |
+| Dampf wird zu flüssigem Wasser | Kondensation | Den umgekehrten Vorgang unterscheiden |
+| Wasser fällt als Regen oder Schnee | Niederschlag | Das Fallen statt der Tröpfchenbildung erkennen |
+
+Sind Begriff und Erklärung verdeckt, fehlt die Frage. Steht die Antwort noch in einer Überschrift, wird eher abgelesen. Kontrollieren Sie deshalb auch Randnotizen und Bildunterschriften.
+
+## Erst antworten, dann aufdecken
+{{QUIZ:WATER-3}}
+
+Die Übung gehört zu diesem Artikel, nicht zur App. Übertragen Sie das Prinzip auf eigene, rechtmäßig nutzbare Unterlagen: Erklärung behalten, Zielbegriff verdecken, Antwort nennen, dann vergleichen.
+
+## Die Seite mit AI Study Sheet vorbereiten
+Fotografieren Sie die Seite klar oder wählen Sie ein Bild beziehungsweise PDF. Prüfen Sie im Standardmodus die vorgeschlagenen Masken und passen Sie sie im verfügbaren Umfang an. Der Modus für bereits rot/orange markierte Materialien hat andere Bearbeitungsmöglichkeiten. Nicht jede dort erkannte Maske lässt sich wie im Standardmodus ändern.
+
+{{MEDIA:AS-LEARN}}
+
+Die Abbildung zeigt eine bestehende App-Demonstration, nicht die Verarbeitung des Wasserkreislauf-Beispiels. Bei unleserlicher Schrift oder ungünstiger Bildqualität zuerst die Aufnahme verbessern; ein Bildfehler ist kein Gedächtnisfehler.
+
+## Den Fehler zum richtigen Ursprung zurückführen
+| Beobachtung | Nächster Schritt |
+| Begriff richtig und erklärt | Später erneut prüfen, nicht nur sofort wiederholen |
+| Niederschlag statt Kondensation | R2/R3 vergleichen und die beiden Vorgänge erklären |
+| Antwort in einer Überschrift sichtbar | Verdeckung prüfen, bevor die Antwort als erinnert gilt |
+| Ohne verdeckte Wörter weiterhin unklar | Erklärung lesen oder Aufgabe lösen, statt mehr Masken anzulegen |
+
+Das erste Ziel ist eine brauchbare Seite mit drei beantwortbaren Fragen und einer kurzen Rückkehr zur Erklärung. Für mehrere Arbeitsblätter benötigen Sie anschließend einen Plan, der Abfragen und tatsächliches Lösen von Aufgaben voneinander trennt.
+
+@@ abitur-ausbildung-studium-eigene-unterlagen
+# Eigene Unterlagen für Abitur, Ausbildung und Studium: Ein anpassbarer Wochenplan
+Gespeicherte Lernzettel werden erst dann zu einem brauchbaren System, wenn klar ist, welche Seite Sie warum wiederholen. Verknüpfen Sie konkrete Fehler mit der Erklärung und reservieren Sie Zeit für Aufgaben im Originalformat.
+
+Die sechs Seiten und sieben Tage sind ein erfundenes Planungsbeispiel. Sie ersetzen weder den Lehrplan noch einen Prüfungsplan und behaupten keinen für alle optimalen Wiederholungsabstand.
+
+## Sechs Unterlagen, sechs Aufgaben
+| Seite | Inhalt | Verwendung |
+| P1 | Drei Definitionen | Begriffe abfragen |
+| P2 | Prozessschaubild | Pfeile und Zusammenhang erklären |
+| P3 | Gegenüberstellung ähnlicher Begriffe | Unterschiede benennen |
+| P4 | Übungsaufgaben | Im ursprünglichen Format lösen |
+| P5 | Musterlösungen | Fehlerbegründung wiederfinden |
+| P6 | Dublette von P1 | Nicht erneut in die Wiederholung aufnehmen |
+
+Bei Abituraufgaben kann P4 eine Quellenanalyse enthalten, in einer Ausbildung einen Anwendungsfall und im Studium eine Rechnung. Solche Arbeiten werden nicht durch das Erkennen einzelner verdeckter Wörter ersetzt. Übernehmen Sie Ihre tatsächlichen Kursvorgaben statt einen idealisierten Stoffkatalog zu bauen.
+
+## Namen müssen zur Fehlerstelle führen
+„Thema 3 — Ablauf — P2“ hilft mehr als „Foto 48“. Behalten Sie die Seitenzahl und den Zusammenhang im Titel oder in der Notiz. Ein Ordner kann einen Kurs oder Themenblock bündeln, während die Bezeichnung die konkrete Rückkehr ermöglicht.
+
+{{MEDIA:AS-LIB}}
+
+Die Abbildung ist eine Orientierung zur App-Oberfläche. Die erfundene Sammlung P1–P6 steht in der Tabelle und wurde nicht in den Screenshot hineinkopiert.
+
+## Ein erster Wochenlauf
+| Tag | Arbeit | Ergebnis für die nächste Runde |
+| 1 | P1–P3 lesen, wenige klare Fragen vorbereiten | Fundstellen und unklare Masken |
+| 2 | P1 beantworten und P2 erklären | Konkrete Fehler statt nur Fehlerzahl |
+| 3 | Begriffe auf P3 vergleichen und Fehler erneut prüfen | Begründung des Unterschieds |
+| 4 | P4 im Originalformat lösen | Fehler mit P1–P3 oder P5 verbinden |
+| 5 | Nur die betroffenen Stellen aufrufen | Eigene Korrekturerklärung |
+| 6 | Eine andere Aufgabe zum schwachen Thema lösen | Übertragung auf eine neue Frage |
+| 7 | Offene Punkte prüfen und nächste Woche planen | Kleine Liste verbleibender Ziele |
+
+## Zwei Fehler brauchen nicht dieselbe Wiederholung
+E1 ist ein vergessener Begriff auf P1. E2 ist ein falsch erklärter Pfeil auf P2. E1 lässt sich mit einer Begriffskontrolle prüfen. Bei E2 muss der Ablauf erklärt werden; das bloße Aufdecken einer Beschriftung reicht nicht.
+
+Fällt Tag drei aus, verdoppeln Sie nicht automatisch Tag vier. Behalten Sie einen echten Lösungsversuch bei und wählen Sie die zwei Fehler, die ihn am stärksten behindern. Bereits sichere Begriffe können später geprüft werden. Der Plan soll nutzbar bleiben, statt aus offenen Kästchen eine immer größere Last zu machen.
+
+## Die wiederholbare Arbeit in AI Study Sheet organisieren
+Importieren Sie ausgewählte Fotos oder PDFs, kontrollieren Sie Masken vor dem Speichern und wählen Sie den Umfang über Ordner oder Suche. Reihenfolge, Zufall und schwache Punkte zuerst haben unterschiedliche Aufgaben: einen Ablauf verfolgen, Erinnerung ohne feste Seitenreihenfolge prüfen oder aufgezeichnete Schwächen erneut bearbeiten.
+
+Wählen Sie eine abschließbare Sitzung. App-Ergebnisse sind kein Nachweis, dass eine Fachprüfung vollständig beherrscht wird. Die sinnvolle Wochenbilanz lautet: Welche Seite brauche ich noch, welchen Fehler bearbeite ich damit und welche Aufgabe zeigt, ob die Erklärung verstanden wurde?
+
+@@ mac-view-reference-while-working
+# Auf einem Mac-Bildschirm arbeiten und die passende Referenz sichtbar halten
+Wenn die eigentliche Arbeit in einem Fenster stattfindet, muss das Nachschlagewerk nicht ständig den halben Bildschirm belegen. Eine kleine Referenzansicht kann die benötigten Informationen sichtbar halten, während das Arbeitsfenster im Mittelpunkt bleibt.
+
+Vergleichen Sie Anordnungen an derselben Aufgabe. Die folgende Spezifikation ist erfunden und kein gemessener Produktivitätsvergleich.
+
+## Aus drei Angeboten eine kurze Entscheidungsnotiz machen
+Benötigt wird eine Komponente innerhalb von zwei Wochen mit mindestens einem Jahr Garantie. Die Preise sind beliebige Beispielwerte.
+
+| Option | Lieferzeit | Beispielpreis | Garantie |
+| A | 2 Wochen | 120 | 1 Jahr |
+| B | 3 Wochen | 100 | 2 Jahre |
+| C | Unbestätigt | 90 | Unbestätigt |
+
+Die Notiz muss A als passend zu den beiden Bedingungen einordnen, B wegen der Lieferzeit ausscheiden lassen und bei C Rückfragen offenhalten. Nur die Preisspalte sichtbar zu lassen würde gerade den Zusammenhang entfernen, den Sie zum Entscheiden brauchen.
+
+## Die Fensteranordnung aus der Arbeit ableiten
+| Arbeitsweise | Ausgangspunkt | Warum |
+| Beide Dokumente ständig bearbeiten | Normale Fenster nebeneinander | Beide Oberflächen brauchen Bedienraum |
+| Im Hauptfenster schreiben, wenige Zeilen nachschlagen | Hauptfenster plus kleine Referenz | Der Schreibbereich bleibt groß |
+| Dichtes Diagramm oder ganze Seite verstehen | Größere Quelle oder geteilte Ansicht | Lesbarkeit und Zusammenhang gehen vor |
+
+macOS bietet Kacheln und Split View. Bedienelemente unterscheiden sich je nach Systemversion; [Apple beschreibt die Fensteranordnung](https://support.apple.com/guide/mac-help/tile-app-windows-mchlef287e5d/mac). Eine Referenzansicht ergänzt diese Möglichkeiten, ersetzt sie aber nicht für jeden Arbeitsstil.
+
+## Die richtigen Zeilen mit ihren Überschriften behalten
+Öffnen Sie Quelle und Notiz. Wählen Sie in Pocket Screen das Quellfenster für die Referenz, lassen Sie relevante Zeilen samt Spaltenüberschriften sichtbar und schreiben Sie im Hauptfenster weiter. Die Referenz darf die gerade bearbeitete Zeile oder wichtige Schaltflächen nicht verdecken.
+
+Müssen Sie ständig vergrößern, geben Sie der Quelle mehr Platz. Ziel ist nicht das kleinstmögliche Fenster, sondern weniger unnötiger Wechsel bei noch lesbaren Informationen.
+
+## Live-Information und festgehaltenen Zustand unterscheiden
+Eine Live-Referenz ist sinnvoll, wenn der aktuelle Zustand zählt. Eine eingefrorene Ansicht bewahrt einen Vergleichsstand; spätere Änderungen an der Quelle erscheinen dort nicht automatisch. Prüfen Sie deshalb vor einer endgültigen Entscheidung den Ursprung erneut.
+
+Aus einem Demo-Video mit einem Browserfenster folgt nicht, dass alle Browser-Tabs gleichzeitig unabhängig live erfasst werden. Verwenden Sie nur die Funktionen Ihrer veröffentlichten App-Version und übertragen Sie keine angekündigte Funktion ungeprüft auf den aktuellen Stand.
+
+## Das fertige Ergebnis bleibt an die Quelle gebunden
+> A erfüllt die Lieferfrist von zwei Wochen und ein Jahr Garantie. B bietet mehr Garantie, verfehlt aber die Lieferfrist. C muss Lieferzeit und Garantie bestätigen, bevor es als geeignete Alternative verglichen wird.
+
+Die Ansicht hilft beim Zugriff, bestätigt aber weder Aktualität noch Richtigkeit des Angebots. Vor Bildschirmfreigaben prüfen Sie zudem mit harmlosen Inhalten, was beim Gegenüber ankommt. Diese Aufgabe zeigt eine sinnvolle Anordnung, keine behauptete Zeitersparnis oder universelle Freigabe-Eigenschaft.
+
+@@ screen-sharing-show-where-to-look
+# Bildschirmfreigaben verständlich erklären: Ein 30-Sekunden-Ablauf
+Ein bewegter Mauszeiger erklärt noch nicht, warum ein Schalter wichtig ist. Stimmen Sie Satz, Ziel, Bedienung und Ergebnis aufeinander ab, damit die Zuschauer nicht raten müssen.
+
+Die folgende Oberfläche ist eine erfundene Übung: „Sofortige Benachrichtigungen“ und „Wöchentliche Zusammenfassung“ sind an. Nur die sofortigen Benachrichtigungen sollen ausgeschaltet werden. Die Zeitangaben sind ein Übungsrahmen, keine gemessene Optimaldauer.
+
+## Das Ergebnis vor dem Klick benennen
+Nicht „ich klicke hier“, sondern „sofort aus, wöchentlich weiter an“ ist die Aussage, die hängenbleiben soll.
+
+| Zeit | Sagen | Tun | Hervorhebung |
+| 0–5 s | „Wir stoppen sofortige Nachrichten, behalten aber die Wochenübersicht.“ | Beide Schalter sichtbar lassen | Noch keine zusätzliche Markierung |
+| 5–10 s | „Das ist die Einstellung für sofortige Benachrichtigungen.“ | Zeiger an Beschriftung und Schalter | Kurze Zeigerhervorhebung |
+| 10–16 s | „Die beiden Einstellungen sind unabhängig.“ | Beide Zeilen zeigen | Bei Bedarf kurz den Bereich markieren |
+| 16–22 s | „Ich schalte nur diese aus.“ | Einmal den ersten Schalter betätigen | Bedienung ruhig und sichtbar lassen |
+| 22–30 s | „Sofort ist aus, die Wochenübersicht bleibt an.“ | Auf dem Ergebnis bleiben | Keine neue Animation über das Ergebnis legen |
+
+{{DEMO:NOTIFICATIONS}}
+
+## Ein Punkt für ein Bedienelement, ein Bereich für einen Zusammenhang
+Eine Zeigermarkierung beantwortet „welcher Schalter?“, eine Bereichsmarkierung „welche Zeilen gehören zur Erklärung?“. Beide ersetzen weder lesbare Schrift noch eine verständliche Aussage. Die ganze Oberfläche hervorzuheben hilft wenig, wenn nur eine Einstellung zählt.
+
+Pointer Cue kann auf dem Mac temporäre Zeiger- und Bereichsmarkierungen ergänzen. Verwenden Sie die in Ihrer installierten Version eingestellte Geste. Soll ein Pfeil dauerhaft als Erklärung stehenbleiben, ist ein Zeichenwerkzeug eine andere, passende Wahl.
+
+## Nach der Bedienung das Resultat bestätigen
+Sagen Sie die beiden Endzustände und lassen Sie sie einen Moment sichtbar. Das ist konkreter als „wie Sie sehen“. Üben Sie den Ablauf einmal ohne und einmal mit zusätzlicher Markierung. Prüfen Sie, ob Ziel und Ergebnis erkennbar sind, statt möglichst viele Effekte unterzubringen.
+
+## Den Empfang prüfen
+Kontrollieren Sie bei einer echten Remote-Demo mit unkritischen Inhalten die Teilnehmeransicht. Kleine Schrift und dezente Linien können nach Aufnahme und Übertragung anders wirken. Ein lokales Produktvideo ist kein Test der Bildqualität auf der Empfängerseite.
+
+Eine Produktaufnahme auf einer Website kann die Hervorhebung veranschaulichen, ist aber nicht die Ausführung dieser erfundenen Benachrichtigungsoberfläche. Auch Vorabversionen belegen nicht automatisch den Funktionsumfang der veröffentlichten Version.
+
+## Für die eigene Vorführung übernehmen
+Ersetzen Sie die Übung durch eine einzige echte, nicht vertrauliche Aufgabe. Notieren Sie Vorher und Nachher, wählen Sie eine Stelle, an der eine Markierung zusätzliche Orientierung gibt, und üben Sie die Pause nach der Änderung. Pointer Cue unterstützt den Satz dort, wo ein temporärer Hinweis hilft; das Ergebnis darf anschließend selbst sprechen.
