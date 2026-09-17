@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'chatgpt-compare-options'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト | Toybird Labs Blog</title><meta content="ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja" rel="alternate"/>
+<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'chatgpt-compare-options'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す | Toybird Labs Blog</title><meta content="30名の研修を選ぶ架空の見積もり3件で、料金単位を揃える方法を解説。計算式、必須条件の比較表、未確認事項を問い合わせるメールまで作ります。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja" rel="alternate"/>
 <link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="en" rel="alternate"/>
 <link href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" hreflang="de" rel="alternate"/>
 <link href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" hreflang="fr" rel="alternate"/>
@@ -8,43 +8,130 @@
 <link href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" hreflang="it" rel="alternate"/>
 <link href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" hreflang="pt-BR" rel="alternate"/>
 <link href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" hreflang="ko" rel="alternate"/>
-<link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト" property="og:title"/><meta content="ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。" property="og:description"/><meta content="https://lp.toybird.com/blog/chatgpt-compare-options/" property="og:url"/><meta content="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" property="og:image"/><meta content="2026-08-03" property="article:published_time"/><meta content="2026-08-24T10:00:00+09:00" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト","description":"ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。","image":"https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png","datePublished":"2026-08-03","dateModified":"2026-08-24","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-compare-options/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"生成AI・仕事効率化","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト","item":"https://lp.toybird.com/blog/chatgpt-compare-options/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ChatGPTにWeb上の製品情報を調べながら比較してもらえますか？","acceptedAnswer":{"@type":"Answer","text":"Web検索を利用できる環境では可能ですが、情報の時点、地域、プラン、出典を確認する必要があります。公式サイトや見積書を優先し、比較表の各項目へ出典と確認日を付けるよう指示します。"}},{"@type":"Question","name":"比較項目はChatGPTに考えてもらってもよいですか？","acceptedAnswer":{"@type":"Answer","text":"候補を選ぶ前の整理には役立ちます。ただし、AIが提案した項目をそのまま採用せず、今回の目的、社内ルール、必須条件に合うかを人が確認してください。"}},{"@type":"Question","name":"点数を付けて比較した方が分かりやすいですか？","acceptedAnswer":{"@type":"Answer","text":"点数は分かりやすい一方、配点の根拠が曖昧だと結論を強く見せすぎます。重みと採点基準を明示し、不明項目をゼロ点にしないようにします。"}}]}]}</script></head><body class="global-article"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/chatgpt-compare-options/">日本語</option><option value="https://lp.toybird.com/en/blog/chatgpt-compare-options/">English</option><option value="https://lp.toybird.com/de/blog/chatgpt-compare-options/">Deutsch</option><option value="https://lp.toybird.com/fr/blog/chatgpt-compare-options/">Français</option><option value="https://lp.toybird.com/es/blog/chatgpt-compare-options/">Español</option><option value="https://lp.toybird.com/it/blog/chatgpt-compare-options/">Italiano</option><option value="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/">Português (Brasil)</option><option value="https://lp.toybird.com/ko/blog/chatgpt-compare-options/">한국어</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト</li></ol></nav><div class="article-heading"><span class="category">生成AI・仕事効率化</span><h1>ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト</h1><p class="article-deck">ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。</p><div class="byline"><time datetime="2026-08-03">公開: 2026-08-03</time><time datetime="2026-08-24">更新: 2026-08-24</time><span>読了目安: 4 分</span></div></div><figure class="hero-image"><img alt="ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト" fetchpriority="high" height="630" src="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" id="article"><section class="summary-box"><h2>この記事で分かること</h2><ul class="check-list"><li>候補の情報を同じ形式で揃え、入力されていない事実は推測させない</li><li>利用者、目的、必須条件、比較項目、優先順位を指定する</li><li>比較表の事実と、目的に基づく評価・推奨を分ける</li><li>不明な項目は「なし」ではなく「未確認」とする</li><li>優先順位を変えた場合の推奨案も確認し、判断の偏りを減らす</li></ul></section>
-<section class="rebuilt-core-section" id="same-format"><h2>比較の前に、候補ごとの情報を同じ形式へ揃える</h2>
-<p>比較表が見やすくても、候補Aだけ料金が税込、候補Bは年額、候補Cは情報未確認という状態では判断を誤ります。まず、比較に使う事実を同じ項目で揃えます。</p>
-<ul><li>候補名</li><li>料金と課金単位</li><li>必須機能の有無</li><li>対応環境・地域</li><li>契約条件</li><li>確認日と出典</li></ul>
-<p>分からない項目は「なし」ではなく「未確認」とします。情報がないことと、機能がないことを区別するためです。</p></section>
-<section class="rebuilt-core-section" id="criteria"><h2>先に「誰が、何のために選ぶか」を決める</h2>
-<p>同じ候補でも、少人数で早く導入したい場合と、全社利用で管理機能を重視する場合では評価が変わります。比較項目より先に、目的と必須条件を固定します。</p>
-<pre>利用者: [誰が使うか]
-目的: [何を改善したいか]
-必須条件: [満たさないと候補から外す条件]
-重視する順: [例: 運用の簡単さ &gt; 価格 &gt; 高度な機能]
-比較対象: [候補A / 候補B / 候補C]</pre></section>
-<section class="rebuilt-core-section" id="prompt"><h2>比較表と推奨案を分けて作るプロンプト</h2>
-<pre>以下の候補を比較してください。
-入力した情報だけを事実として扱い、欠けている情報は推測せず「未確認」としてください。
+<link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す" property="og:title"/><meta content="30名の研修を選ぶ架空の見積もり3件で、料金単位を揃える方法を解説。計算式、必須条件の比較表、未確認事項を問い合わせるメールまで作ります。" property="og:description"/><meta content="https://lp.toybird.com/blog/chatgpt-compare-options/" property="og:url"/><meta content="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" property="og:image"/><meta content="2026-08-03" property="article:published_time"/><meta content="2026-09-17" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す","description":"30名の研修を選ぶ架空の見積もり3件で、料金単位を揃える方法を解説。計算式、必須条件の比較表、未確認事項を問い合わせるメールまで作ります。","image":"https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png","datePublished":"2026-08-03","dateModified":"2026-09-17","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-compare-options/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"生成AI・仕事効率化","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す","item":"https://lp.toybird.com/blog/chatgpt-compare-options/"}]}]}</script><link href="/blog/editorial-assets/editorial.css" rel="stylesheet"/></head><body class="global-article editorial-20260917"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/chatgpt-compare-options/">日本語</option><option value="https://lp.toybird.com/en/blog/chatgpt-compare-options/">English</option><option value="https://lp.toybird.com/de/blog/chatgpt-compare-options/">Deutsch</option><option value="https://lp.toybird.com/fr/blog/chatgpt-compare-options/">Français</option><option value="https://lp.toybird.com/es/blog/chatgpt-compare-options/">Español</option><option value="https://lp.toybird.com/it/blog/chatgpt-compare-options/">Italiano</option><option value="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/">Português (Brasil)</option><option value="https://lp.toybird.com/ko/blog/chatgpt-compare-options/">한국어</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す</li></ol></nav><div class="article-heading"><span class="category">生成AI・仕事効率化</span><h1>ChatGPTで比較表を作る｜3社の見積もりを同じ条件に揃え、未確認事項を残す</h1><p class="article-deck">30名の研修を選ぶ架空の見積もり3件で、料金単位を揃える方法を解説。計算式、必須条件の比較表、未確認事項を問い合わせるメールまで作ります。</p><div class="byline"><time datetime="2026-08-03">公開: 2026-08-03</time><time datetime="2026-09-17">更新: 2026-09-17</time><span class="editorial-author">Toybird Labs / Masaki Iino</span></div></div><figure class="hero-image"><img alt="ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト" fetchpriority="high" height="630" src="https://lp.toybird.com/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" data-article-id="chatgpt-compare-options" id="article">
+<p>3社の見積もりを並べたのに、一番安い提案が分からない。そんなときは、計算する前に比較の単位を揃える必要があります。</p>
+<p>1回あたりの料金、全体の料金、1人あたりの料金を、そのまま同じ列へ置かないこと。もう一つは、見積もりに書かれていない機能を「なし」と判断しないことです。</p>
+<p>ここでは、30名向けの社内研修を選ぶ架空ケースを使います。価格や条件は比較方法を説明するための教材で、実在のサービスの相場や推奨ではありません。比較表は編集上の作例で、AIの実測出力ではありません。</p>
+<nav aria-label="この記事の内容" class="article-toc"><p>この記事の内容</p><ol><li><a href="#section-1">比較の対象は「見積書の金額」ではなく「必要な研修を実施する総額」</a></li><li><a href="#section-2">必須条件と、好みの条件を分けてから依頼する</a></li><li><a href="#section-3">比較表の完成例：未確認の候補は、落とさず保留にする</a></li><li><a href="#section-4">C社へ送る質問は、比較表の空欄から作る</a></li><li><a href="#section-5">重みを変える場合も、必須条件は勝手に緩めない</a></li><li><a href="#section-6">数字より先に、結論を説明できるかを確認する</a></li><li><a href="#section-7">比較の条件を変えながら使う人へ</a></li><li><a href="#section-8">参考情報</a></li></ol></nav><section aria-labelledby="section-1" class="editorial-section"><h2 id="section-1">比較の対象は「見積書の金額」ではなく「必要な研修を実施する総額」</h2>
+<p>今回の条件は、対象者30名、総予算45万円、10月20日までに研修を終えることです。研修後30日間、受講者が質問できることも必須とします。金額はすべて税別で比較します。</p>
+<div aria-label="この記事の内容 — 比較の対象は「見積書の金額」ではなく「必要な研修を実施する総額」" class="editorial-table" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">見積書</th>
+<th scope="col">提示された内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A社</td>
+<td>1回18万円、1回の定員10名。30名なら同内容を3回実施。30日間の質問対応を含む。期限内に3回実施できる。追加費用なし。</td>
+</tr>
+<tr>
+<td>B社</td>
+<td>30名一式42万円。30日間の質問対応を含む。期限内の実施が確定。追加費用なし。</td>
+</tr>
+<tr>
+<td>C社</td>
+<td>1名9,000円、初期設定6万円。30名での受講に対応。質問対応の期間と、実施できる日は記載なし。その他の追加費用はない。</td>
+</tr>
+</tbody>
+</table></div>
+<p>「A社は18万円だから最安」と結論すると、定員を見落としています。「C社は質問対応なし」と書くのも、見積書に書かれていないことを確定した判断です。</p>
+</section><section aria-labelledby="section-2" class="editorial-section"><h2 id="section-2">必須条件と、好みの条件を分けてから依頼する</h2>
+<p>必須条件は、満たさなければ採用できない条件です。「できれば安い」「資料が見やすい」などの好みと一緒に平均点へ混ぜません。</p>
+<pre><code class="language-text">以下の研修提案を、社内の選定会議に使える形へ整理してください。
 
-目的: [目的]
-必須条件: [条件]
-優先順位: [優先順位]
-候補情報: [各候補の情報]
+必要条件:
+・対象者30名
+・総額45万円以内（全額を税別で比較）
+・10月20日までに研修を完了
+・研修後30日間、受講者が質問できる
 
-出力:
-1. 事実だけの比較表
-2. 必須条件を満たすか
-3. 優先順位に基づく評価
-4. 現時点の推奨案と理由
-5. 結論を出す前に確認すべき不足情報</pre>
-<p>「比較表」と「評価」を分けるのがポイントです。事実の欄にAIの推測や好みが混ざりにくくなります。</p></section>
-<section class="rebuilt-core-section" id="example-table"><h2>例：3候補を比較するときの出力イメージ</h2>
-<table><thead><tr><th>項目</th><th>候補A</th><th>候補B</th><th>候補C</th></tr></thead><tbody><tr><td>必須機能</td><td>あり</td><td>あり</td><td>未確認</td></tr><tr><td>料金</td><td>確認済み</td><td>確認済み</td><td>未確認</td></tr><tr><td>管理機能</td><td>標準</td><td>詳細</td><td>確認済み</td></tr><tr><td>次に確認すること</td><td>—</td><td>—</td><td>必須機能と料金</td></tr></tbody></table>
-<p>情報が未確認の候補を自動的に0点にすると、単に調査不足なだけなのに不利になります。採点する場合も、未確認は点数とは別に扱います。</p></section>
-<section class="rebuilt-core-section" id="stress-test"><h2>推奨案は、優先順位を変えてもう一度見る</h2>
-<p>ひとつの点数だけで決めると、最初に置いた重みが結論を支配します。「価格を最優先にした場合」「運用負荷を最優先にした場合」のように条件を変え、推奨がどこで入れ替わるかを確認すると判断材料が増えます。</p>
-<pre>同じ事実を使い、次の2パターンでも評価してください。
-A: 価格を最優先
-B: 運用の簡単さを最優先
-推奨が変わる場合は、どの条件が分岐点か説明してください。</pre></section>
-<section class="rebuilt-core-section" id="final-check"><h2>最終判断の前に確認すること</h2>
-<ul class="check-list"><li>料金の通貨、税、月額・年額が揃っているか</li><li>比較対象のプランや地域が同じか</li><li>公式情報と第三者レビューを混同していないか</li><li>未確認項目が結論へ大きく影響しないか</li><li>AIの推奨理由を、自分たちの優先順位で説明できるか</li></ul></section>
-<section class="field-note" id="first-party"><h2>Prompt Ready</h2><p>Prompt Readyで用途を選び、事実・読み手・禁止事項・出力形式を変えながら、作成される依頼文の差を確認しました。アプリはAIへ自動送信せず、貼り付け前に人が確認できます。</p><ul><li>日付・金額・製品仕様は、元資料と照合する</li><li>外部AIに渡せない機密情報や個人情報を入力しない</li><li>生成結果をそのまま送らず、読み手と事実を確認する</li></ul></section><section id="sources"><h2>公式情報・参考資料</h2><ul class="source-list"><li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" rel="noopener" target="_blank">OpenAI: Prompt engineering best practices</a></li><li><a href="https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth" rel="noopener" target="_blank">OpenAI: Does ChatGPT tell the truth?</a></li><li><a href="https://lp.toybird.com/prompt-ready/" rel="noopener" target="_blank">Prompt Ready product page</a></li></ul></section><section id="related"><h2>次に読む記事</h2><div class="related-grid"><a class="related-card" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/"><span>生成AI・仕事効率化</span><strong>ChatGPTで営業ロールプレイ｜商談練習のプロンプト例</strong><small>ChatGPTを顧客役にして営業・商談をロールプレイする方法を解説。一問ずつ質問させ、反論対応と終了後のフィードバックを行うプロンプト例を紹介します。</small></a><a class="related-card" href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/"><span>生成AI・仕事効率化</span><strong>ChatGPTに不足情報を質問してもらう方法｜プロンプト例</strong><small>何を指示すればよいか分からないときに、ChatGPTへ不足情報を先に質問させる方法を解説。一度に一つ、最大3つ、選択式などのプロンプト例を紹介します。</small></a><a class="related-card" href="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/"><span>Mac・作業効率化</span><strong>スクリーンショット・画面共有に映らないPiPを実測する</strong><small>Macのフローティング表示をスクリーンショット、画面収録、ZoomやGoogle Meetの共有から除外できるかを、用途別に確認します。</small></a></div></section><section id="faq"><h2>よくある質問</h2><div class="faq-list"><details><summary>ChatGPTにWeb上の製品情報を調べながら比較してもらえますか？</summary><p>Web検索を利用できる環境では可能ですが、情報の時点、地域、プラン、出典を確認する必要があります。公式サイトや見積書を優先し、比較表の各項目へ出典と確認日を付けるよう指示します。</p></details><details><summary>比較項目はChatGPTに考えてもらってもよいですか？</summary><p>候補を選ぶ前の整理には役立ちます。ただし、AIが提案した項目をそのまま採用せず、今回の目的、社内ルール、必須条件に合うかを人が確認してください。</p></details><details><summary>点数を付けて比較した方が分かりやすいですか？</summary><p>点数は分かりやすい一方、配点の根拠が曖昧だと結論を強く見せすぎます。重みと採点基準を明示し、不明項目をゼロ点にしないようにします。</p></details></div></section><section class="article-cta"><div><strong>Prompt Ready</strong><h2>製品を見る</h2><p>用途と条件を選び、AIに渡す依頼文を貼り付け前に確認したい場合は、Prompt Readyで試せます。</p></div><a href="https://lp.toybird.com/prompt-ready/">製品を見る</a></section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer></body></html>
+上の見積書3件を材料にしてください。
+
+まず、30名分の総額を計算し、計算式を残してください。
+次に、各必須条件を「満たす・満たさない・未確認」で表示してください。
+記載されていない条件は「なし」や0点にせず、「未確認」にしてください。
+最後に、現時点で採用を判断できる候補と、判断前に追加確認が必要な候補を分けてください。
+最も安い金額だけを理由に結論を出さないでください。
+</code></pre>
+<p>比較する対象によっては、年間契約と月払い、必須オプション、利用者数の違いも総額へ反映します。ただし、入力資料にない価格をAIが補ってよいという意味ではありません。</p>
+</section><section aria-labelledby="section-3" class="editorial-section"><h2 id="section-3">比較表の完成例：未確認の候補は、落とさず保留にする</h2>
+<p class="table-scroll-hint">表は横にスクロールできます。</p><div aria-label="この記事の内容 — 比較表の完成例：未確認の候補は、落とさず保留にする" class="editorial-table editorial-table--wide" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">項目</th>
+<th scope="col">A社</th>
+<th scope="col">B社</th>
+<th scope="col">C社</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30名分の計算</td>
+<td>18万円×3回</td>
+<td>一式42万円</td>
+<td>9,000円×30名＋6万円</td>
+</tr>
+<tr>
+<td>総額</td>
+<td>54万円</td>
+<td>42万円</td>
+<td>33万円</td>
+</tr>
+<tr>
+<td>45万円以内</td>
+<td>満たさない</td>
+<td>満たす</td>
+<td>満たす</td>
+</tr>
+<tr>
+<td>10月20日までに完了</td>
+<td>満たす</td>
+<td>満たす</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>30日間の質問対応</td>
+<td>満たす</td>
+<td>満たす</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>現時点の扱い</td>
+<td>今回の予算では採用不可</td>
+<td>必須条件を満たすと判断できる</td>
+<td>期限と質問対応を確認するまで保留</td>
+</tr>
+</tbody>
+</table></div>
+<p>現時点では、B社だけがすべての必須条件を満たすと確認できます。ただし、C社が悪いサービスだと分かったわけではありません。条件が確認できれば、C社も予算内の候補になります。</p>
+<p>ここで必要なのは「B社が一番優秀」という評価ではなく、<strong>今回の条件で、どこまで判断できるか</strong>という整理です。</p>
+</section><section aria-labelledby="section-4" class="editorial-section"><h2 id="section-4">C社へ送る質問は、比較表の空欄から作る</h2>
+<p>「詳しい資料をください」では、同じような資料がもう一度届くかもしれません。判断を止めている2点を、そのまま質問にします。</p>
+<blockquote>
+<p>30名での研修を検討しています。10月20日までの実施は可能でしょうか。また、受講後30日間、受講者からの質問に対応いただけるかを確認させてください。可能な場合は、見積もり済みの33万円に含まれるかもお知らせください。</p>
+</blockquote>
+<p>このメールも編集上の作例です。回答が来たら、比較表の「未確認」を更新します。結論だけを先に変えるのではなく、根拠となる条件を先に変える順序にします。</p>
+</section><section aria-labelledby="section-5" class="editorial-section"><h2 id="section-5">重みを変える場合も、必須条件は勝手に緩めない</h2>
+<p>AIに「価格を最優先で再評価」と伝えたとき、期限やサポートの条件まで無視されては困ります。再評価するなら、変更する条件と固定する条件を別々に示します。</p>
+<pre><code class="language-text">30名、完了期限、30日間の質問対応は必須のまま維持します。
+C社がこれらを満たすと確認できた場合に限り、総額を最優先で再比較してください。
+現在の未確認情報を、確認済みとして扱わないでください。
+</code></pre>
+<p>A社の実施回数が変わる、C社に追加費用が発生するなど、新しい条件が出たら、元の計算も更新します。比較表は一度作って終わりではなく、条件と出典を対応させて更新する資料です。</p>
+</section><section aria-labelledby="section-6" class="editorial-section"><h2 id="section-6">数字より先に、結論を説明できるかを確認する</h2>
+<p>送る前に確認するのは、総額の計算、単位、定員、期限、未確認項目の扱いです。5段階評価を使う場合も、「なぜ4点なのか」を資料から説明できなければ、点数を置かない方が判断に役立つことがあります。</p>
+<p>実案件では、各行に見積書名・確認日・参照箇所を付けます。今回のA社・B社・C社は架空の教材なので、実案件の価格を埋める代わりにはなりません。</p>
+</section><section aria-labelledby="section-7" class="editorial-section"><h2 id="section-7">比較の条件を変えながら使う人へ</h2>
+<p>比較のたびに、人数、期限、必須条件、何を未確認として扱うかを書き直す。その準備を繰り返す場面が、Prompt Readyの使いどころです。</p>
+<p>用途と背景情報を整理して依頼文を作り、コピー前に「条件未確認を0点にしない」「必須条件を勝手に変えない」が含まれているかを確認します。作成した依頼文は、自分で選んだAIへ貼り付けて使います。返ってきた比較表の金額と条件を見積書に照合し、採用判断は担当者が行います。</p>
+<p><a href="https://lp.toybird.com/prompt-ready/">比較する条件をPrompt Readyで整理する</a></p>
+<p>比較を始める材料そのものが足りない場合は、<a href="https://lp.toybird.com/blog/chatgpt-ask-questions-prompt/">AIに確認質問を作らせる方法</a>へ進んでください。</p>
+<hr/>
+</section><section aria-labelledby="section-8" class="editorial-section"><h2 id="section-8">参考情報</h2>
+<ul>
+<li>OpenAI: <a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt">Prompt engineering best practices for ChatGPT</a></li>
+<li>Toybird Labs: <a href="https://labs.toybird.com/apps/prompt-ready/support.html">Prompt Readyの使い方</a></li>
+</ul>
+</section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer><script defer="" src="/blog/editorial-assets/editorial.js"></script></body></html>

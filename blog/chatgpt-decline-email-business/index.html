@@ -1,120 +1,61 @@
 <!DOCTYPE html>
 
-<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'chatgpt-decline-email-business'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト | Toybird Labs Blog</title><meta content="取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" hreflang="ja" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト" property="og:title"/><meta content="取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。" property="og:description"/><meta content="https://lp.toybird.com/blog/chatgpt-decline-email-business/" property="og:url"/><meta content="https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png" property="og:image"/><meta content="2026-08-03" property="article:published_time"/><meta content="2026-08-24T10:00:00+09:00" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト","description":"取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。","image":"https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png","datePublished":"2026-08-03","dateModified":"2026-08-24","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-decline-email-business/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"生成AI・仕事効率化","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト","item":"https://lp.toybird.com/blog/chatgpt-decline-email-business/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"断りメールでは理由を詳しく書いた方がよいですか？","acceptedAnswer":{"@type":"Answer","text":"詳しく書けばよいとは限りません。相手が状況を理解するために必要な範囲へ絞り、社内事情や他の顧客に関する情報を過度に説明しないようにします。"}},{"@type":"Question","name":"ChatGPTが勝手に代替案を追加する場合はどうすればよいですか？","acceptedAnswer":{"@type":"Answer","text":"「ここに書かれていない代替案や日程は追加しないでください」と指示します。出力形式に「確認が必要な点」を設け、未確定情報を本文へ入れないようにする方法も有効です。"}},{"@type":"Question","name":"断る意思をやわらかく伝える表現はありますか？","acceptedAnswer":{"@type":"Answer","text":"表現は丁寧にしつつ、「今週中の対応はできません」のように条件は明確にします。「難しい状況です」だけでは、対応の可能性が残っているように受け取られることがあります。"}}]}]}</script></head><body class="global-article"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/chatgpt-decline-email-business/">日本語</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト</li></ol></nav><div class="article-heading"><span class="category">生成AI・仕事効率化</span><h1>ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト</h1><p class="article-deck">取引先からの依頼を断るメールをChatGPTで作る方法を解説。断る理由、代替案、期限を伝えるプロンプトと、追加作業・納期・値下げの例文を紹介します。</p><div class="byline"><time datetime="2026-08-03">公開: 2026-08-03</time><time datetime="2026-08-24">更新: 2026-08-24</time><span>読了目安: 6 分</span></div></div><figure class="hero-image"><img alt="ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト" fetchpriority="high" height="630" src="https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" id="article"><section class="summary-box"><h2>この記事で分かること</h2><ul class="check-list"><li>断る意思は曖昧にせず、対応できない範囲を明確にする</li><li>理由は簡潔に伝え、相手や依頼内容を否定しない</li><li>可能であれば代替案と次のアクションを添える</li><li>ChatGPTには、相手・依頼・制約・代替案・文体を渡す</li><li>日程や条件などの事実は、送信前に必ず人が確認する</li></ul></section><section class="rebuilt-core-section" data-section-id="decline_principles" data-section-name="関係を悪くせず、断る内容を伝える5つの要素" data-section-order="2" data-track-section="" id="decline-principles">
-<h2>関係を悪くせず、断る内容を伝える5つの要素</h2>
-<p>取引先への断りメールでは、相手に配慮することと、できないことを明確に伝えることの両方が必要です。表現をやわらかくしすぎると、対応できる可能性があるように受け取られることがあります。</p>
-<ol class="step-list">
-<li><strong>依頼への感謝や受領を最初に伝える</strong><br/>まず依頼を確認したことを示し、連絡へのお礼を簡潔に入れます。</li>
-<li><strong>対応できない範囲を明確にする</strong><br/>「難しいかもしれません」ではなく、「今週中の対応はできません」のように、今回できない条件を明らかにします。</li>
-<li><strong>理由は簡潔にし、相手を否定しない</strong><br/>社内の人員や既存の予定など、必要な範囲だけを説明します。依頼そのものを批判する表現は避けます。</li>
-<li><strong>可能な代替案を示す</strong><br/>別の日程、作業範囲の縮小、段階的な対応など、実行できる選択肢があれば提示します。</li>
-<li><strong>相手に求める次のアクションを明確にする</strong><br/>代替案で進めてよいか、別案を相談したいかなど、返信してほしい内容を示します。</li>
-</ol>
-<div class="note-box"><strong>断りメールの目的</strong><br/>相手を不快にさせないことだけではなく、今回できないことと、次に選べる対応を誤解なく伝えることです。</div>
-</section><section class="rebuilt-core-section" data-section-id="information_to_give" data-section-name="まず「断る理由」と「代わりにできること」を分ける" data-section-order="3" data-track-section="" id="information-to-give">
-<h2>まず「断る理由」と「代わりにできること」を分ける</h2>
-<p>「この依頼を断るメールを作ってください」だけでも文章は作れます。しかし、事情が分からないため、断り方が曖昧になったり、実際には約束できない代替案が追加されたりする可能性があります。</p>
-<div class="compare-grid">
-<div class="compare-card before">
-<h3>情報が少ない指示</h3>
-<p>この依頼を丁寧に断るメールを作ってください。</p>
-</div>
-<div class="compare-card after">
-<h3>仕事で使いやすい指示</h3>
-<p>相手、依頼内容、対応できない条件、理由、提示できる代替案、希望する文体を指定します。</p>
-</div>
-</div>
-<p>最低限、次の項目を用意します。</p>
-<ul class="check-list">
-<li>誰から、どのような依頼を受けたか</li>
-<li>何ができず、何なら対応できるか</li>
-<li>相手へ伝えてよい理由</li>
-<li>代替案と、その期限や条件</li>
-<li>丁寧、簡潔、フォーマルなどの文体</li>
-</ul>
-</section><section class="rebuilt-core-section" data-section-id="prompt_template" data-section-name="取引先への断りメールを作るプロンプト" data-section-order="4" data-track-section="" id="prompt-template">
-<h2>取引先への断りメールを作るプロンプト</h2>
-<p>下のテンプレートで角括弧の部分を今回の内容へ置き換えます。まだ決まっていない情報は、無理に埋めず「未確認」として扱います。</p>
-<div class="prompt-box">
-<div class="prompt-head"><span>取引先への断りメール用テンプレート</span></div>
-<pre id="decline-email-template"><code>## 依頼
-以下の取引先からの依頼に対する返信メールを作成してください。
+<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'chatgpt-decline-email-business'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない | Toybird Labs Blog</title><meta content="追加作業を断る架空ケースで、着手日と納期、費用と対応範囲を整理。依頼文、完成メール、丁寧さを変えても条件を維持する修正例を掲載します。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-decline-email-business/" hreflang="ja" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない" property="og:title"/><meta content="追加作業を断る架空ケースで、着手日と納期、費用と対応範囲を整理。依頼文、完成メール、丁寧さを変えても条件を維持する修正例を掲載します。" property="og:description"/><meta content="https://lp.toybird.com/blog/chatgpt-decline-email-business/" property="og:url"/><meta content="https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png" property="og:image"/><meta content="2026-08-03" property="article:published_time"/><meta content="2026-09-17" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない","description":"追加作業を断る架空ケースで、着手日と納期、費用と対応範囲を整理。依頼文、完成メール、丁寧さを変えても条件を維持する修正例を掲載します。","image":"https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png","datePublished":"2026-08-03","dateModified":"2026-09-17","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/chatgpt-decline-email-business/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"生成AI・仕事効率化","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない","item":"https://lp.toybird.com/blog/chatgpt-decline-email-business/"}]}]}</script><link href="/blog/editorial-assets/editorial.css" rel="stylesheet"/></head><body class="global-article editorial-20260917"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/chatgpt-decline-email-business/">日本語</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない</li></ol></nav><div class="article-heading"><span class="category">生成AI・仕事効率化</span><h1>ChatGPTで取引先への断りメールを書く｜納期・範囲・代替案を、曖昧な約束にしない</h1><p class="article-deck">追加作業を断る架空ケースで、着手日と納期、費用と対応範囲を整理。依頼文、完成メール、丁寧さを変えても条件を維持する修正例を掲載します。</p><div class="byline"><time datetime="2026-08-03">公開: 2026-08-03</time><time datetime="2026-09-17">更新: 2026-09-17</time><span class="editorial-author">Toybird Labs / Masaki Iino</span></div></div><figure class="hero-image"><img alt="ChatGPTで取引先への断りメールを作る方法｜例文とプロンプト" fetchpriority="high" height="630" src="https://lp.toybird.com/blog/chatgpt-decline-email-business/assets/chatgpt-decline-email-business-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" data-article-id="chatgpt-decline-email-business" id="article">
+<p>「難しい状況ですが、できる限り対応します」。丁寧に断ったつもりでも、この表現では相手が対応を期待して待ち続けるかもしれません。</p>
+<p>断りメールで最初に決めたいのは文体ではなく、何を断り、何なら約束できるかです。このページでは、追加作業を依頼された架空ケースから、着手可能日と完了予定日を取り違えない返信を作ります。</p>
+<p>以下の依頼とメールは説明用の教材です。実在の契約、顧客対応、ChatGPTの実測結果ではありません。</p>
+<nav aria-label="この記事の内容" class="article-toc"><p>この記事の内容</p><ol><li><a href="#section-1">「来週ならできます」は、着手と完了のどちらか</a></li><li><a href="#section-2">断る条件は明確に、理由は必要な範囲だけ</a></li><li><a href="#section-3">完成例：断る期限と、相談を続けられる条件を分ける</a></li><li><a href="#section-4">やわらかく直しても、変えてはいけないところ</a></li><li><a href="#section-5">値下げの依頼は、代わりの約束を増やさない</a></li><li><a href="#section-6">提案を見送る場合、将来の採用を匂わせる必要はない</a></li><li><a href="#section-7">毎回違う制約を、依頼文へ落とし込む</a></li><li><a href="#section-8">参考情報</a></li></ol></nav><section aria-labelledby="section-1" class="editorial-section"><h2 id="section-1">「来週ならできます」は、着手と完了のどちらか</h2>
+<p>取引先から、次の依頼が届いたとします。</p>
+<blockquote><p>定例レポートに集計項目を5つ追加して、10月9日までに納品いただけますか。いまの契約の範囲で対応いただけると助かります。</p></blockquote>
+<p>こちらの確認状況は次のとおりです。</p>
+<div aria-label="この記事の内容 — 「来週ならできます」は、着手と完了のどちらか" class="editorial-table" role="region" tabindex="0"><table><thead><tr><th scope="col">項目</th><th scope="col">確認できたこと</th></tr></thead><tbody><tr><td>10月9日までの追加対応</td><td>対応できない。</td></tr><tr><td>着手できる日</td><td>10月14日。</td></tr><tr><td>完了する日</td><td>追加項目の仕様確認が必要で、未確定。</td></tr><tr><td>追加費用</td><td>契約範囲の確認と見積もりが必要。無料対応は承認されていない。</td></tr><tr><td>相手へ伝えてよい理由</td><td>予定している作業との調整が必要なため。</td></tr><tr><td>提案できること</td><td>追加する5項目を確認し、納期と費用を別途相談する。</td></tr></tbody></table></div>
+<p>「10月14日なら対応可能」だけで頼むと、14日を納品日と読める文章になりかねません。材料の段階で、着手と完了を分けます。</p>
+</section><section aria-labelledby="section-2" class="editorial-section"><h2 id="section-2">断る条件は明確に、理由は必要な範囲だけ</h2>
+<pre><code class="language-text">次の依頼へ返信するビジネスメールを作ってください。
 
-## 相手からの依頼
-[届いた依頼を貼り付ける]
+相手の依頼:
+集計項目5つを追加し、10月9日までに、現契約の範囲で納品してほしい。
 
-## こちらから伝える内容
-- 対応できないこと：[今回できない内容]
-- 理由：[相手へ伝えてよい範囲の理由]
-- 代替案：[対応できる日程・範囲・方法]
-- 相手に確認したいこと：[代替案で進めてよいか、など]
+確定事項:
+・10月9日までの追加対応はできない
+・10月14日から着手できる
+・完了日は仕様確認後に決める
+・費用は契約範囲の確認と見積もりが必要
+・伝えてよい理由は「予定している作業との調整が必要なため」
 
-## 条件
-- 相手の依頼内容を否定する表現は避けてください。
-- 断る内容は曖昧にせず、誤解なく伝えてください。
-- 決まっていない日程や条件を推測して追加しないでください。
-- 丁寧で落ち着いたビジネスメールにしてください。
+相手にお願いすること:
+追加する5項目の定義と、希望する出力例を共有してもらう。
+それを確認して、納期と費用を別途相談する。
 
-## 出力形式
-1. 件名
-2. 本文
-3. 送信前に確認が必要な点</code></pre>
-</div>
-</section><section class="rebuilt-core-section" data-section-id="worked_example" data-section-name="例文：予定外の追加作業を今週中に依頼された場合" data-section-order="5" data-track-section="" id="worked-example">
-<h2>例文：予定外の追加作業を今週中に依頼された場合</h2>
-<p>取引先から、予定していなかった追加作業を今週中に対応してほしいと依頼された場面を想定します。現在の人員では今週中の対応はできませんが、来週水曜日であれば対応可能です。</p>
-<div class="prompt-box">
-<div class="prompt-head"><span>条件を入れた指示</span></div>
-<pre id="decline-email-example"><code>以下の依頼を断るメールを作ってください。
-取引先から、予定していなかった追加作業を今週中に対応してほしいと依頼されています。
-現在の人員では今週中の対応はできません。来週水曜日であれば対応可能です。
+条件:
+・断る期限を曖昧にしない
+・着手日を完了日へ変えない
+・無料対応や値引きを約束しない
+・入力にない代替案や社内事情を追加しない
+・丁寧だが、長い謝罪を繰り返さない
 
-相手の依頼を否定するような表現は避けてください。
-今週中は対応できないことを曖昧にせず伝え、代替案として来週水曜日の対応を提案してください。
-フォーマルな日本語で、件名と本文を作成してください。
-不明な点は推測せず、確認が必要な点として分けてください。</code></pre>
-</div>
-<div class="example-answer">
-<h3>回答のイメージ</h3>
-<p><strong>件名：追加作業の対応日程について</strong></p>
-<p>○○様</p>
-<p>いつもお世話になっております。追加作業についてご連絡いただき、ありがとうございます。</p>
-<p>恐れ入りますが、現在の対応状況を踏まえると、今週中に作業を完了することはできません。来週水曜日であれば対応可能です。</p>
-<p>来週水曜日の対応で進めてよいか、ご確認いただけますでしょうか。ご希望に沿えず恐縮ですが、何卒ご理解賜りますようお願いいたします。</p>
-</div>
-<p>「丁寧に断る」だけでなく、できない期限と対応可能な期限を明示したことで、相手が次の判断をしやすい文章になります。</p>
-</section><section class="rebuilt-core-section" data-section-id="situation_examples" data-section-name="状況別に使える断りメールの指示例" data-section-order="6" data-track-section="" id="situation-examples">
-<h2>状況別に使える断りメールの指示例</h2>
-<div class="use-case">
-<h3>納期の前倒しを断る</h3>
-<p>現在の納期、依頼された納期、品質を維持できる最短日を分けて伝えます。</p>
-<div class="prompt-box"><div class="prompt-head"><span>納期短縮を断る指示</span></div><pre id="decline-deadline"><code>取引先から、納品日を9月15日から9月8日へ前倒しできないか相談されています。
-品質を維持したまま対応できる最短日は9月12日です。
-9月8日には対応できないことを明確にし、代替案として9月12日を提案するメールを作ってください。
-相手を責める表現や、社内事情の細かな説明は避けてください。</code></pre></div>
-</div>
-<div class="use-case">
-<h3>値下げの依頼を断る</h3>
-<p>価格を変更できない理由と、価格以外に提案できる条件があるかを整理します。</p>
-<div class="prompt-box"><div class="prompt-head"><span>値下げを断る指示</span></div><pre id="decline-discount"><code>取引先から10％の値下げを依頼されていますが、提示済みの金額が最終価格のため値下げはできません。
-価格を維持する必要があることを簡潔に説明し、代わりに導入時の説明会を1回追加できることを提案してください。
-強い否定表現を避けつつ、価格変更はできないことが明確に伝わるメールにしてください。</code></pre></div>
-</div>
-<div class="use-case">
-<h3>今回は提案を見送る</h3>
-<p>採用しない理由をどこまで伝えるか、今後の可能性を示すかを事前に決めます。</p>
-<div class="prompt-box"><div class="prompt-head"><span>提案を見送る指示</span></div><pre id="decline-proposal"><code>提案を検討した結果、今回は導入を見送ることを伝えるメールを作ってください。
-理由は「今年度の優先施策との兼ね合い」とだけ記載し、製品や提案内容を否定しないでください。
-提案へのお礼を伝え、今後状況が変わった場合には改めて相談する可能性があることを添えてください。</code></pre></div>
-</div>
-</section><section class="rebuilt-core-section" data-section-id="review_checklist" data-section-name="送信前に、曖昧な約束がないか確認する" data-section-order="7" data-track-section="" id="review-checklist">
-<h2>送信前に、曖昧な約束がないか確認する</h2>
-<ul class="check-list">
-<li><strong>対応できない内容が曖昧になっていないか</strong></li>
-<li><strong>実際には約束していない日程や条件が追加されていないか</strong></li>
-<li><strong>謝罪が強すぎて、自社の過失を認める文章になっていないか</strong></li>
-<li><strong>相手の依頼や担当者を責める表現が入っていないか</strong></li>
-<li><strong>代替案で進めるために、相手へ何を確認するか明確か</strong></li>
-</ul>
-<div class="warning-box">顧客名、契約内容、未公開情報などを入力する場合は、所属先の生成AI利用ルールと、利用するサービスのデータ利用条件を確認してください。必要に応じて、固有名詞や金額を仮の情報へ置き換えます。</div>
-</section><section class="field-note" id="first-party"><h2>Prompt Ready</h2><p>Prompt Readyで用途を選び、事実・読み手・禁止事項・出力形式を変えながら、作成される依頼文の差を確認しました。アプリはAIへ自動送信せず、貼り付け前に人が確認できます。</p><ul><li>日付・金額・製品仕様は、元資料と照合する</li><li>外部AIに渡せない機密情報や個人情報を入力しない</li><li>生成結果をそのまま送らず、読み手と事実を確認する</li></ul></section><section id="sources"><h2>公式情報・参考資料</h2><ul class="source-list"><li><a href="https://lp.toybird.com/prompt-ready/" rel="noopener" target="_blank">Prompt Ready product page</a></li></ul></section><section id="related"><h2>次に読む記事</h2><div class="related-grid"><a class="related-card" href="https://lp.toybird.com/blog/chatgpt-prompt-work-tips/"><span>生成AI・仕事効率化</span><strong>ChatGPTの使い方｜仕事で役立つプロンプトのコツと10の活用例</strong><small>ChatGPTを仕事で使うための指示（プロンプト）のコツを、返信メール・会議メモの具体例と10の活用例で解説。目的・条件・出力形式の伝え方が分かります。</small></a><a class="related-card" href="https://lp.toybird.com/blog/chatgpt-sales-roleplay/"><span>生成AI・仕事効率化</span><strong>ChatGPTで営業ロールプレイ｜商談練習のプロンプト例</strong><small>ChatGPTを顧客役にして営業・商談をロールプレイする方法を解説。一問ずつ質問させ、反論対応と終了後のフィードバックを行うプロンプト例を紹介します。</small></a><a class="related-card" href="https://lp.toybird.com/blog/red-sheet-vs-flashcards/"><span>学習・暗記</span><strong>赤シートと暗記カードはどっちがいい？勉強方法別に比較</strong><small>赤シートと暗記カードの違いを、作成の手間、文脈、図表、ランダム出題、復習管理で比較。教材と目的に合う勉強法を紹介します。</small></a></div></section><section id="faq"><h2>よくある質問</h2><div class="faq-list"><details><summary>断りメールでは理由を詳しく書いた方がよいですか？</summary><p>詳しく書けばよいとは限りません。相手が状況を理解するために必要な範囲へ絞り、社内事情や他の顧客に関する情報を過度に説明しないようにします。</p></details><details><summary>ChatGPTが勝手に代替案を追加する場合はどうすればよいですか？</summary><p>「ここに書かれていない代替案や日程は追加しないでください」と指示します。出力形式に「確認が必要な点」を設け、未確定情報を本文へ入れないようにする方法も有効です。</p></details><details><summary>断る意思をやわらかく伝える表現はありますか？</summary><p>表現は丁寧にしつつ、「今週中の対応はできません」のように条件は明確にします。「難しい状況です」だけでは、対応の可能性が残っているように受け取られることがあります。</p></details></div></section><section class="article-cta"><div><strong>Prompt Ready</strong><h2>製品を見る</h2><p>用途と条件を選び、AIに渡す依頼文を貼り付け前に確認したい場合は、Prompt Readyで試せます。</p></div><a href="https://lp.toybird.com/prompt-ready/">製品を見る</a></section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer></body></html>
+件名と本文の後に、送信前に確認する約束だけを別欄に出してください。
+</code></pre>
+<p>相手を否定しないことと、できない条件を明確にすることは両立できます。理由を詳しく書きすぎず、相手が次に判断できる情報を残します。</p>
+</section><section aria-labelledby="section-3" class="editorial-section"><h2 id="section-3">完成例：断る期限と、相談を続けられる条件を分ける</h2>
+<blockquote><p>件名：集計項目の追加に関するご相談</p><p>追加項目についてご連絡いただき、ありがとうございます。</p><p>恐れ入りますが、予定している作業との調整が必要なため、10月9日までの追加対応はできません。10月14日から着手可能ですが、完了日は追加内容を確認したうえでご相談させてください。</p><p>また、今回の追加内容が現在の契約範囲に含まれるかを確認し、必要に応じてお見積もりをご案内します。まず、追加する5項目の定義と、ご希望の出力例を共有いただけますでしょうか。</p><p>内容を確認のうえ、納期と費用について改めてご相談します。</p></blockquote>
+<p>これは確認済みの条件だけを使った編集例です。納期も費用も未確定なのに、文章だけで確定したことにしない形です。</p>
+</section><section aria-labelledby="section-4" class="editorial-section"><h2 id="section-4">やわらかく直しても、変えてはいけないところ</h2>
+<p>「もう少しやわらかい文章にして」と追加するときは、固定する事実も伝えます。</p>
+<pre><code class="language-text">冒頭と結びだけを、少しやわらかい表現へ直してください。
+10月9日は不可、10月14日は着手日、納期と費用は未確定、という条件は変更しないでください。
+</code></pre>
+<p>「10月9日は難しいかもしれません」に戻すと、確定した不可条件が交渉余地のある状態へ変わります。丁寧さを上げても、判断の強さまで変えないようにします。</p>
+</section><section aria-labelledby="section-5" class="editorial-section"><h2 id="section-5">値下げの依頼は、代わりの約束を増やさない</h2>
+<p>別の架空ケースで、10％の値下げを求められ、提示済み価格から変更できないとします。追加研修や無償作業が承認されていないなら、AIが気を利かせて提案しないようにします。</p>
+<blockquote><p>ご相談ありがとうございます。今回ご提示している金額からの値下げには対応できません。ご予算との調整が必要でしたら、ご希望の対象範囲をお伺いし、実施範囲を変更できるか確認させてください。</p></blockquote>
+<p>この例でも、範囲を減らせば必ず安くなるとは約束していません。「確認する」と「できる」を分けています。</p>
+</section><section aria-labelledby="section-6" class="editorial-section"><h2 id="section-6">提案を見送る場合、将来の採用を匂わせる必要はない</h2>
+<p>導入を見送るケースでは、「次回はぜひお願いします」「来年度なら検討できます」を、材料にないまま足さないようにします。次回の予定が未定なら、お礼と今回の判断だけで締めても構いません。</p>
+<p>断りメールの完成条件は、相手が次に何を期待してよいかを誤解しないことです。温かい言い回しを増やすことだけが、良い返信ではありません。</p>
+</section><section aria-labelledby="section-7" class="editorial-section"><h2 id="section-7">毎回違う制約を、依頼文へ落とし込む</h2>
+<p>Prompt Readyを使うなら、「丁寧なメール」という用途だけで終わらせず、今回なら着手日と完了日、別の案件なら価格と対応範囲、といった境界を背景情報に含めます。</p>
+<p>生成された依頼文を確認し、譲れない条件が弱くなっていないかを見てから、普段利用するAIへコピーします。Prompt Readyは契約条件を判断したり、相手へ自動返信したりするツールではありません。</p>
+<p><a href="https://lp.toybird.com/prompt-ready/">相手と制約に合わせた依頼文をPrompt Readyで作る</a></p>
+<p>断るのではなく、未解決の問い合わせへ現状を伝えたい場合は、<a href="https://lp.toybird.com/blog/chatgpt-customer-reply-email/">顧客への初動返信</a>を参照してください。</p>
+<hr/></section><section aria-labelledby="section-8" class="editorial-section"><h2 id="section-8">参考情報</h2><ul><li>OpenAI: <a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt">Prompt engineering best practices for ChatGPT</a></li><li>Toybird Labs: <a href="https://labs.toybird.com/apps/prompt-ready/support.html">Prompt Readyの使い方</a></li></ul></section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer><script defer="" src="/blog/editorial-assets/editorial.js"></script></body></html>
