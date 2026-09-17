@@ -23,6 +23,16 @@ jobs:
           mkdir -p .editorial-108/media
           gh api repos/toybird-apps/toybird-lp-site/git/blobs/a1eea4442f5de72d1234e6aad74c58f8b4203afb --jq .content | base64 --decode > .editorial-108/media/pr-en-home.webp
           test "$(git hash-object .editorial-108/media/pr-en-home.webp)" = a1eea4442f5de72d1234e6aad74c58f8b4203afb
+      - name: Keep the introduction once, in the article header
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.editorial-108/integrate.py');s=p.read_text()
+          old="  first=a.find('p',recursive=False)\n  if first:first.insert_after(nav)"
+          new="  first=a.find('p',recursive=False)\n  if p in drafts and text(first)==lead:\n   first.decompose();first=None\n  if first:first.insert_after(nav)"
+          assert old in s
+          p.write_text(s.replace(old,new))
+          PY
       - name: Integrate the 98 articles and 10 indexes
         run: python .editorial-108/integrate.py --root . --config .editorial-108 --date 2026-09-17
       - name: Assemble clean tree with only approved public changes
@@ -32,7 +42,7 @@ jobs:
           python - <<'PY'
           import json, os, subprocess, pathlib
           def git(*args, **kwargs):
-              return subprocess.check_output(['git',*args], text=True, **kwargs).strip()
+              return subprocess.check_output(['git','-c','core.quotePath=false',*args], text=True, **kwargs).strip()
           qa=json.loads(pathlib.Path('.editorial-108/qa-static.json').read_text())
           assert qa['scope_count']==108 and qa['issues']==[]
           env=os.environ.copy();env['GIT_INDEX_FILE']=os.environ['RUNNER_TEMP']+'/blog108-clean.index'
@@ -45,10 +55,9 @@ jobs:
           git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
           commit=git('commit-tree',tree,'-p',os.environ['BASE'],'-m','Strengthen all 108 multilingual blog pages with complete cases and working examples')
           changed=git('diff','--name-only',os.environ['BASE'],commit).splitlines()
-          assert set(changed)==set(qa['changed_files'])
+          assert set(changed)==set(qa['changed_files']), {'actual_only':list(set(changed)-set(qa['changed_files'])),'expected_only':list(set(qa['changed_files'])-set(changed))}
           assert len([x for x in changed if x.endswith('/index.html')])==108
-          forbidden=[x for x in changed if x!='sitemap.xml' and '/blog/' not in '/'+x]
-          assert not forbidden,forbidden
+          assert all(x=='sitemap.xml' or '/blog/' in '/'+x for x in changed)
           branch='blog108-release-'+os.environ['GITHUB_RUN_ID']+'-'+os.environ['GITHUB_RUN_ATTEMPT']
           git('push','origin',commit+':refs/heads/'+branch)
           out=pathlib.Path(os.environ['RUNNER_TEMP'])/'blog108-review';out.mkdir()
