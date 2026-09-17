@@ -1,0 +1,395 @@
+@@ chatgpt-customer-reply-email
+# Répondre à un client avec ChatGPT : les faits, les engagements et la prochaine information
+Un client attend ses données avant une réunion, mais l'équipe technique n'a pas encore identifié la panne. Une première réponse peut être utile sans transformer son urgence en promesse de rétablissement.
+
+Le message, les notes internes et les réponses ci-dessous forment un cas fictif créé pour cet article. Ce ne sont ni des échanges clients réels ni les résultats enregistrés d'un test d'IA.
+
+## Deux heures à ne pas confondre
+> L'export CSV ne produit plus de fichier. J'ai besoin des données aujourd'hui à 17 h pour une réunion interne. Le problème sera-t-il résolu à temps ? Merci de me communiquer la situation.
+
+17 h correspond au besoin du client. Dans les notes internes, 15 h correspond à l'heure promise pour donner des nouvelles. Aucune des deux heures ne constitue une date de réparation confirmée.
+
+| Catégorie | Information disponible |
+| Confirmé | Le signalement a été reçu et transmis à l'équipe technique pour investigation. |
+| Inconnu | Cause, utilisateurs concernés, heure de rétablissement, solution de remplacement. |
+| Engagement autorisé | Envoyer un point de situation avant 15 h, même sans progrès. |
+| À demander | Heure du problème, navigateur et version, éventuel message d'erreur. |
+| Non autorisé | Remboursement, indemnisation, livraison manuelle des données ou délai de réparation. |
+
+## Donner les matériaux de la réponse, pas le droit de combler les lacunes
+Utilisez un environnement d'IA autorisé pour les informations concernées. Supprimer le nom du client ne suffit pas nécessairement à rendre les données non confidentielles.
+
+```text
+Rédige une première réponse en utilisant uniquement le message client et les notes internes.
+Reconnais le besoin de données à 17 h et indique la transmission à l'équipe technique.
+Ne promets pas de rétablissement avant 17 h : l'heure est inconnue.
+Promets un point de situation avant 15 h, même sans nouvel élément.
+Demande l'heure du problème, le navigateur avec sa version et le message d'erreur éventuel.
+N'ajoute ni cause, ni dépannage, ni solution de remplacement, ni remboursement, ni autre engagement.
+Fournis un objet et le corps du message. Dans une partie interne séparée, liste chaque engagement et la note qui l'autorise.
+[Insérer le message et le tableau.]
+```
+
+## Une réponse compatible avec les notes
+> Objet : Point sur le problème d'export CSV
+>
+> Merci de nous avoir signalé ce problème. Je comprends que vous avez besoin des données pour votre réunion de 17 h.
+>
+> Votre signalement a été transmis à l'équipe technique pour investigation. La cause et l'heure de rétablissement ne sont pas encore confirmées ; je ne peux donc pas vous assurer que l'export fonctionnera avant votre réunion. Je vous enverrai un point de situation avant 15 h, même en l'absence de nouvel élément.
+>
+> Pourriez-vous nous indiquer l'heure du problème, votre navigateur et sa version, ainsi que le message d'erreur éventuel ? Merci de ne pas inclure de données personnelles ou métier inutiles à l'investigation.
+>
+> Je suis désolé pour la gêne occasionnée.
+
+C'est un exemple de rédaction, pas une formulation garantie par tous les modèles. La promesse porte sur une information, pas sur la réparation.
+
+## Corriger l'erreur précise
+| Formulation du brouillon | Problème | Correction |
+| « Une surcharge du système est en cause. » | Cause non établie. | Mentionner uniquement la transmission pour investigation. |
+| « Le service sera rétabli à 15 h. » | L'heure d'information est devenue une échéance technique. | « Vous recevrez un point de situation avant 15 h. » |
+| « Réinstallez l'application. » | Consigne de dépannage non confirmée. | Demander les informations prévues. |
+
+Une instruction de correction utile : « Modifie uniquement la promesse du deuxième paragraphe. 15 h est l'heure du point de situation, pas celle du rétablissement. Ne change pas les autres faits. »
+
+## Donner des nouvelles même sans progrès
+Si l'équipe confirme seulement que l'investigation continue, le point de 15 h peut dire : « Comme convenu, voici la situation : l'investigation se poursuit, mais la cause et l'heure de rétablissement restent inconnues. » Ajoutez une nouvelle heure de contact seulement après l'avoir convenue en interne. L'IA ne doit pas inventer un délai rassurant.
+
+## Préparer les conditions dans Prompt Ready
+{{MEDIA:PR-EN-EMPTY}}
+
+L'image montre l'interface anglaise avant saisie, pas l'exécution de ce cas CSV. Choisissez la tâche de rédaction, ajoutez le message reçu, les faits autorisés et la distinction entre information et réparation. Relisez la demande avant de la copier dans votre IA habituelle. Prompt Ready prépare la demande ; l'IA externe rédige la réponse, et vous vérifiez ce qui peut être envoyé.
+
+@@ chatgpt-compare-options
+# Comparer trois devis avec ChatGPT : mêmes quantités, mêmes conditions
+Un prix par séance, un forfait et un tarif par personne ne sont pas directement comparables. Calculez le même service pour tous les candidats avant de vérifier les conditions obligatoires.
+
+Les devis de formation ci-dessous sont fictifs. Les montants en yens japonais, hors taxes, servent uniquement au calcul ; ils ne représentent pas des prix de marché ou des fournisseurs recommandés.
+
+## Définir le service à acheter
+Il faut former 30 personnes avant le 20 octobre, pour un budget maximal de 450 000 JPY. La possibilité de poser des questions pendant 30 jours après la formation est obligatoire.
+
+| Devis | Informations fournies |
+| A | 180 000 JPY par séance, capacité de 10 personnes ; trois séances pour 30 personnes. Délai et questions pendant 30 jours confirmés. Aucun supplément. |
+| B | 420 000 JPY pour les 30 personnes. Délai et questions pendant 30 jours confirmés. Aucun supplément. |
+| C | 9 000 JPY par personne plus 60 000 JPY de mise en place. Accepte 30 personnes. Dates et durée des questions non indiquées. Aucun autre frais mentionné. |
+
+A n'est pas une solution à 180 000 JPY pour ce groupe. L'absence d'information sur C n'établit pas non plus l'absence du service.
+
+## Ne pas compenser une obligation par un bon score ailleurs
+```text
+Compare les trois devis pour une décision interne.
+Obligations : 30 personnes, au plus 450 000 JPY hors taxes, fin avant le 20 octobre, questions possibles pendant 30 jours ensuite.
+Utilise uniquement les devis fournis.
+Montre la formule et le coût total pour 30 personnes.
+Pour chaque obligation, indique satisfaite, non satisfaite ou non confirmée.
+Ne transforme pas une information absente en zéro point ou en service inexistant.
+Sépare les candidats actuellement évaluables de ceux nécessitant des précisions.
+Rédige les questions qui bloquent encore la décision.
+Ne conclus pas uniquement à partir du prix le plus bas.
+[Insérer les devis.]
+```
+
+## Tableau de comparaison terminé
+| Vérification | A | B | C |
+| Calcul | 180 000 × 3 | Forfait 420 000 | 9 000 × 30 + 60 000 |
+| Total JPY hors taxes | 540 000 | 420 000 | 330 000 |
+| Dans le budget | Non | Oui | Oui |
+| Fin avant le 20 octobre | Confirmée | Confirmée | Non confirmée |
+| Questions pendant 30 jours | Confirmées | Confirmées | Non confirmées |
+| Situation actuelle | Hors budget | Obligations établies | Clarifier dates et questions |
+
+B est le seul candidat dont toutes les conditions sont confirmées. Ce n'est pas un classement universel de qualité : C peut devenir admissible après vérification. Recalculez les montants et, dans un dossier réel, conservez le nom du devis, sa date et le passage justificatif.
+
+## Transformer les cases manquantes en demande précise
+> Nous envisageons une formation pour 30 personnes. Peut-elle se terminer avant le 20 octobre ? Les participants pourront-ils poser des questions pendant 30 jours après la formation ? Merci de préciser si ces deux conditions sont incluses dans le total proposé de 330 000 JPY.
+
+Si la réponse introduit un supplément, modifiez également le calcul. Une nouvelle réponse fournisseur peut changer plusieurs lignes, pas seulement le verdict final.
+
+## Changer les préférences sans déplacer les obligations
+```text
+Conserve le nombre de participants, la date et les trente jours de questions comme obligations.
+Si C les confirme, compare les candidats admissibles en privilégiant le coût total.
+Ne considère pas les inconnues actuelles comme déjà confirmées.
+Indique quelle information nouvelle modifie le résultat.
+```
+
+La valeur du tableau est de montrer jusqu'où les données permettent de décider. Un score sans justification ou une recommandation qui assouplit discrètement le délai ne répond plus à la même demande.
+
+## Préparer des comparaisons répétées avec Prompt Ready
+Les éléments réutilisables sont la quantité, l'unité de facturation, les obligations et le traitement des inconnues, pas le choix de B. Saisissez ces conditions dans Prompt Ready, contrôlez la demande puis copiez-la dans votre IA. La vérification des devis et l'approbation de l'achat restent des étapes distinctes.
+
+@@ chatgpt-meeting-notes-todo
+# Transformer des notes de réunion en tâches sans inventer de responsable
+Le nom cité dans une note peut désigner la personne à consulter et non celle qui doit agir. Avant le compte rendu, séparez décisions, propositions, annulations et attributions encore ouvertes.
+
+La réunion du 5 octobre 2026 ci-dessous est fictive. La réponse est un corrigé rédigé pour l'article, pas un résultat mesuré de transcription ou d'IA.
+
+## Huit notes à interpréter sans les compléter
+```text
+M1 : Accord pour utiliser la dernière grille tarifaire dans la proposition.
+M2 : Yamada partagera la liste des services candidats avant le 7 octobre.
+M3 : L'environnement de démonstration peut-il être prêt vendredi ? Il faut d'abord vérifier sa disponibilité.
+M4 : Sato demandera à Tanaka si une consultation juridique est possible. Pas de date fixée.
+M5 : Le client prévoit une revue interne la semaine prochaine ; le jour est inconnu.
+M6 : La mise à jour du comparatif n'est plus nécessaire. La demande précédente est retirée.
+M7 : Personne n'a été désigné pour remplacer la grille tarifaire.
+M8 : Fixer la prochaine réunion après la réponse du client.
+```
+
+Vendredi, dans M3, est une question. M5 décrit un projet du client. M6 annule un travail. Les trois ne doivent pas devenir automatiquement des tâches fermes de votre équipe.
+
+## Extraire les faits avant de rédiger
+```text
+Classe ces notes en décisions, tâches, points à confirmer et travaux retirés.
+Pour chaque tâche : action, responsable, personne à consulter, échéance, numéro de note.
+Ne déduis pas la responsabilité d'un nom seul.
+Ne transforme ni une question en date convenue ni le projet du client en tâche interne.
+Laisse les responsables et dates absents non confirmés.
+Fusionne les vrais doublons en conservant leurs références.
+Signale les contradictions au lieu de les résoudre toi-même.
+[Insérer M1 à M8.]
+```
+
+## Un résultat dont chaque ligne a une origine
+| Action | Responsable | À consulter | Échéance | Référence |
+| Partager la liste des services | Yamada | Sans objet | 7 octobre | M2 |
+| Vérifier la possibilité d'une consultation juridique | Sato | Tanaka | Non fixée | M4 |
+| Remplacer la grille tarifaire | Non confirmé | Non confirmé | Non confirmée | M1, M7 |
+
+L'usage de la nouvelle grille est décidé, mais son remplacement n'est pas attribué. Disponibilité, responsable et date de la démonstration, date de revue client et prochaine réunion sont à confirmer. La mise à jour du comparatif figure dans les travaux retirés, avec M6 comme preuve.
+
+Une case non confirmée n'est pas nécessairement un échec de l'extraction. Elle peut être précisément le point que les participants doivent traiter.
+
+## Réparer une ligne sans dérégler le reste
+```text
+Dans M4, Sato effectue la demande et Tanaka est la personne consultée.
+Corrige uniquement ces deux champs. Ne change aucune autre action ou date.
+```
+
+Si le résultat fixe la démonstration au 9 octobre, rappelez que M3 est interrogative. Le calendrier donne la date du vendredi ; il ne donne pas l'accord des participants.
+
+## Ajouter explicitement ce qui est confirmé ensuite
+Supposons qu'après la réunion Takahashi accepte de remplacer la grille avant le 8 octobre. Cette information est nouvelle. Mettez le tableau à jour avant d'envoyer :
+
+> Yamada partagera la liste des services avant le 7 octobre. Après confirmation à l'issue de la réunion, Takahashi remplacera la grille tarifaire avant le 8 octobre. Sato contactera Tanaka pour la consultation juridique ; l'échéance reste ouverte. La disponibilité de la démonstration et la prochaine réunion sont à confirmer. L'ancienne demande de mise à jour du comparatif est retirée.
+
+Une transmission au client nécessite une autre relecture : les noms et délibérations internes ne sont pas forcément destinés à l'extérieur.
+
+## Préparer la prochaine demande avec Prompt Ready
+{{MEDIA:PR-EN-IDEAS}}
+
+L'illustration montre les idées d'usage dans l'interface anglaise. Prompt Ready prépare la demande d'organisation de notes ; il ne correspond pas à l'étape d'enregistrement ou de transcription. Ajoutez vos notes et les règles utiles, vérifiez la demande, puis utilisez-la dans l'IA autorisée. Les personnes concernées confirment les véritables attributions.
+
+@@ chatgpt-prompt-work-tips
+# Dix usages de ChatGPT au travail : choisir les matériaux et le résultat attendu
+Pour aller au-delà des e-mails et des résumés, partez d'une tâche réelle. Déterminez ce que vous pouvez fournir, ce que vous voulez obtenir et ce qui doit être vérifié avant utilisation.
+
+Ce guide sert à choisir un point de départ. Les articles spécialisés donnent les matériaux et des exemples terminés ; il ne s'agit pas d'accumuler des formules supposées fonctionner partout.
+
+## Choisir le travail avant la formulation
+| Travail | Matériaux | Résultat | Vérification essentielle |
+| Répondre à un client | Message, faits confirmés, prochaine action | Brouillon de réponse | Aucune cause ou promesse inventée |
+| Décliner une demande | Limites et alternatives autorisées | Refus clair | Début et fin de prestation distincts |
+| Organiser une réunion | Notes et décisions | Tâches attribuées | Questions non transformées en accords |
+| Résumer un document | Source, lecteur, décision | Note avec références | Chiffres et notes de bas de page conservés |
+| Comparer des offres | Devis et obligations | Tableau homogène | Inconnu différent de zéro |
+| Préciser une demande | Informations déjà connues | Questions importantes | Pas de répétition de ce qui est répondu |
+| S'entraîner à un entretien | Rôle, étape, objectif | Dialogue puis retour | Jeu de rôle distinct du coaching |
+| Expliquer autrement | Texte exact et public visé | Explication accessible | Conditions non déformées |
+| Préparer une procédure | Étapes réelles, exceptions | Première procédure | Aucun bouton imaginaire |
+| Organiser une recherche | Sources, dates, question | Faits et interprétations séparés | Chaque source soutient l'affirmation |
+
+Créer une réponse, extraire un responsable et répéter une conversation ne demandent pas le même type de travail. Choisissez une ligne plutôt que d'entasser toutes les sorties dans un prompt unique.
+
+## Le but change ce qui mérite d'être conservé
+« Résume cette proposition » peut donner un aperçu. « Indique ce que le responsable doit décider avant adoption » appelle des coûts, des conditions et des points non résolus. Pour trois devis, commencez par les quantités et unités ; la recommandation vient après la vérification des exigences.
+
+## Une structure courte à adapter
+```text
+Tâche : [action précise]
+But : [décision ou étape suivante]
+Matériaux : [message, notes, document, données]
+Conditions confirmées : [dates, limites, faits]
+Inconnues : [ce qu'il ne faut pas inventer]
+Sortie : [mail, tableau, questions, liste ou dialogue]
+Avant de terminer : [erreur propre à cette tâche à vérifier]
+```
+
+Ce sont des repères, pas un formulaire obligatoire. Une petite tâche peut n'en nécessiter que quelques-uns. Face à un résultat mal adapté, cherchez l'information de décision manquante avant de demander davantage de texte.
+
+## Passer à un exemple complet
+{{RELATED-INLINE}}
+
+Comparez le résultat terminé avec ses matériaux. Une réponse bien présentée ne prouve pas, à elle seule, que toutes les conditions ont été comprises.
+
+## Corriger une différence à la fois
+« Garde les montants et les conditions, mais commence par la conclusion » est vérifiable. Pour une erreur factuelle, retournez d'abord à la source. Ajustez ensuite le ton ou la longueur. Les données sensibles ne doivent être utilisées que dans un environnement et un périmètre autorisés.
+
+## Découvrir des tâches puis préparer leurs conditions
+{{MEDIA:PR-EN-HOME}}
+
+La page d'accueil anglaise de Prompt Ready propose des catégories ; la liste d'idées montre des tâches concrètes. On peut ainsi découvrir un usage puis adapter la demande à son travail du jour.
+
+{{MEDIA:PR-EN-IDEAS}}
+
+Choisissez un usage, ajoutez texte ou thème et conditions, relisez la demande puis copiez-la dans l'IA habituelle. Prompt Ready construit la demande localement, pas la réponse du service externe. Les conditions de ce dernier s'appliquent après le collage. Commencez par une tâche répétée et conservez son résultat avec les vérifications qui le rendent utilisable.
+
+@@ photo-cours-revision-active
+# Transformer une photo de cours en trois questions de rappel actif
+Une page lisible n'est pas automatiquement une bonne interrogation. Choisissez les réponses à cacher tout en conservant les indices qui permettent de comprendre la question.
+
+Le petit support sur le cycle de l'eau est créé pour cet article à partir des explications de l'USGS. Les questions et la mise en page ne sont pas un résultat de détection automatique dans l'application.
+
+## Partir d'un support vérifiable
+| Repère | Terme | Explication |
+| R1 | Évaporation | L'eau liquide devient de la vapeur d'eau. |
+| R2 | Condensation | La vapeur devient de l'eau liquide ; de fines gouttelettes peuvent former des nuages. |
+| R3 | Précipitations | L'eau tombe des nuages, par exemple sous forme de pluie ou de neige. |
+
+L'enjeu est de distinguer le changement d'état de la chute de l'eau. Une confusion entre R2 et R3 demande de comparer les deux explications. Références : [condensation selon l'USGS](https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle), [précipitations selon l'USGS](https://www.usgs.gov/water-science-school/science/precipitation-and-water-cycle).
+
+## Garder la question, masquer la réponse
+| Garder visible | Cacher | Ce que l'on vérifie |
+| Eau liquide vers vapeur | Évaporation | Le nom du changement d'état |
+| Vapeur vers eau liquide | Condensation | Le processus inverse |
+| Eau qui tombe des nuages | Précipitations | La chute, distincte de la formation de gouttes |
+
+Cacher terme et explication supprime la question. Laisser le terme dans un titre voisin révèle la réponse. Inspectez aussi les légendes et les marges avant de juger le masquage satisfaisant.
+
+## Répondre avant d'afficher le corrigé
+{{QUIZ:WATER-3}}
+
+Cette activité appartient à l'article, pas à AI Study Sheet. Reprenez le principe avec une page que vous êtes autorisé à utiliser : conserver le contexte, cacher la réponse, la formuler, puis vérifier.
+
+## Préparer la page sur iPhone
+Photographiez clairement votre page ou choisissez une image/PDF. En mode standard, contrôlez les masques proposés et ajustez-les avec les commandes disponibles. Le mode destiné aux supports déjà marqués en rouge ou orange n'offre pas les mêmes possibilités d'édition. Commencez par un document lisible plutôt que par une page dense et difficile à reconnaître.
+
+{{MEDIA:AS-LEARN}}
+
+L'image présente une démonstration existante de l'interface, pas l'importation du support sur l'eau. Une photo illisible est un problème de matériau d'entrée, pas un échec de mémorisation.
+
+## Choisir la bonne correction
+| Observation | Suite utile |
+| Terme correct et expliqué | Revoir après un intervalle plutôt que répéter immédiatement |
+| « Précipitations » donné pour « condensation » | Comparer R2/R3 et décrire les deux phénomènes |
+| Réponse encore visible dans le titre | Corriger le masquage avant de compter une réussite |
+| Explication incomprise même sans masque | Relire ou résoudre un exercice avant de multiplier les blancs |
+
+Le premier objectif est une page avec trois questions auxquelles on peut répondre et un chemin court vers l'explication. L'application facilite la répétition de vos supports ; elle ne décide pas à votre place de tout ce qui sera utile à votre évaluation.
+
+@@ bac-brevet-concours-propres-supports
+# Réviser le brevet, le bac ou un concours avec ses supports : une semaine concrète
+Un dossier de photos ne remplace pas un plan de révision. Donnez un rôle à chaque page et reliez une erreur précise à l'endroit qui l'explique, sans supprimer le travail sur de vrais exercices.
+
+Les six supports et les sept jours sont fictifs. Le planning est à adapter à votre programme ; ce n'est ni un calendrier officiel ni un intervalle optimal prouvé pour tous.
+
+## Six supports qui ne servent pas de la même manière
+| Page | Contenu | Usage |
+| P1 | Trois définitions | Rappeler les termes |
+| P2 | Schéma de processus | Expliquer flèches et relations |
+| P3 | Tableau de notions proches | Dire les différences |
+| P4 | Exercices | Résoudre au format d'origine |
+| P5 | Corrigés expliqués | Comprendre une erreur |
+| P6 | Copie de P1 | Éviter un doublon de révision |
+
+Pour le brevet ou le bac, P4 peut être un exercice de cours ou une analyse de document ; pour un concours, un cas d'application. Ces travaux ne deviennent pas de simples questions de vocabulaire. Appuyez-vous sur vos consignes réelles, pas sur une liste idéale de tout ce qu'il faudrait apprendre.
+
+## Donner un nom qui permet de retrouver la cause
+« Chapitre 3 — processus — P2 » est plus utile que « photo 48 ». Gardez le numéro original et le thème dans le titre ou la note. Un dossier regroupe la matière ; le repère de page sert à retrouver la bonne explication après une erreur.
+
+{{MEDIA:AS-LIB}}
+
+L'image sert de repère pour l'interface de bibliothèque. La collection fictive P1–P6 figure dans le tableau, pas dans la capture.
+
+## Une première boucle sur sept jours
+| Jour | Travail | Trace à conserver |
+| 1 | Lire P1–P3 et préparer quelques questions | Repères et masques à revoir |
+| 2 | Répondre sur P1 et expliquer P2 | Erreurs précises, pas seulement un total |
+| 3 | Comparer les notions de P3 et reprendre les erreurs | Raison de la différence |
+| 4 | Résoudre P4 dans son format d'origine | Erreurs reliées à P1–P3 ou P5 |
+| 5 | Revoir seulement les passages concernés | Explication de la correction |
+| 6 | Essayer une autre question sur la difficulté | Capacité à réutiliser la connaissance |
+| 7 | Vérifier ce qui reste ouvert | Petite liste pour la semaine suivante |
+
+## Adapter selon le type d'erreur
+E1 est un terme oublié sur P1 ; E2 est une flèche mal expliquée sur P2. Pour E1, une question de rappel convient. Pour E2, conservez le schéma et faites expliquer le sens : montrer à nouveau le mot ne suffit pas à vérifier le raisonnement.
+
+Si le troisième jour est manqué, ne doublez pas mécaniquement le quatrième. Gardez une tentative réelle d'exercice, puis choisissez les deux difficultés qui la gênent le plus. Repoussez une partie des notions déjà sûres. Le plan doit rester exécutable.
+
+## Utiliser AI Study Sheet pour ce qui se répète
+Importez les photos/PDF choisis, contrôlez les masques puis sélectionnez le périmètre avec dossiers ou recherche. L'ordre sert à suivre un processus ; le hasard évite de dépendre de la position ; la priorité aux points faibles revient sur les difficultés enregistrées. Choisissez une session que vous pouvez finir.
+
+Les résultats de l'application ne prouvent pas la maîtrise complète d'une matière. Calculs, argumentation et nouvelles questions gardent leur place. Une bonne fin de semaine laisse une réponse claire : quelle page revoir, pour quelle erreur, et quel exercice permettra de vérifier le progrès ?
+
+@@ mac-view-reference-while-working
+# Travailler sur un seul écran Mac en gardant la bonne référence visible
+Quand l'essentiel du travail se fait dans une fenêtre, le document consulté n'a pas toujours besoin d'occuper la moitié de l'écran. Une petite vue de référence peut laisser de la place à la rédaction tout en conservant les données nécessaires.
+
+Comparez les dispositions avec une même tâche. Le tableau et la note ci-dessous sont fictifs ; ils ne constituent pas une mesure de productivité.
+
+## Rédiger une décision à partir de trois options
+Il faut un composant livré en deux semaines au plus, avec au moins un an de garantie. Les prix sont des valeurs arbitraires d'exemple.
+
+| Option | Livraison | Prix d'exemple | Garantie |
+| A | 2 semaines | 120 | 1 an |
+| B | 3 semaines | 100 | 2 ans |
+| C | Non confirmée | 90 | Non confirmée |
+
+La note doit distinguer A, qui respecte les deux conditions, B, qui manque le délai, et C, qui nécessite une question. Garder seulement la colonne des prix visible ferait perdre le contexte de la décision.
+
+## Choisir selon les fenêtres réellement manipulées
+| Travail | Disposition de départ | Raison |
+| Modifier sans cesse les deux documents | Fenêtres côte à côte | Les deux interfaces ont besoin d'espace |
+| Rédiger et consulter quelques lignes | Fenêtre principale et petite référence | La rédaction reste prioritaire |
+| Comprendre un grand schéma ou un tableau dense | Source plus grande ou vue partagée | La lisibilité passe avant la compacité |
+
+macOS propose notamment la disposition en mosaïque et Split View. Les commandes varient selon la version ; consultez [l'aide Apple sur les fenêtres](https://support.apple.com/guide/mac-help/tile-app-windows-mchlef287e5d/mac). Une référence flottante complète ces possibilités, sans être préférable dans chaque situation.
+
+## Conserver les lignes et leurs en-têtes
+Ouvrez source et note, choisissez la fenêtre source dans Pocket Screen et gardez visibles les lignes utiles avec leurs en-têtes. Revenez à la rédaction. Placez la référence pour qu'elle ne masque ni la ligne saisie ni une commande importante.
+
+Si vous devez l'agrandir continuellement pour lire, accordez davantage de place à la source. Le but n'est pas la fenêtre la plus petite possible, mais un accès au contexte qui reste confortable.
+
+## Distinguer information en direct et état figé
+Une référence en direct convient à un état qui doit rester actuel. Une vue figée conserve un état de comparaison et ne reflète pas ensuite chaque modification. Avant une décision finale, retournez à la source et vérifiez si les conditions ont changé.
+
+Un exemple avec une fenêtre de navigateur ne prouve pas la capture indépendante et simultanée de tous ses onglets. Utilisez les commandes disponibles dans la version publiée que vous avez installée, sans assimiler une présentation future à une fonction déjà disponible.
+
+## Vérifier la note finale
+> A respecte les deux semaines et l'année de garantie. B offre une garantie plus longue, mais dépasse le délai. C doit confirmer livraison et garantie avant d'être comparé comme option admissible.
+
+La référence facilite la consultation ; elle ne certifie ni l'actualité de l'offre ni la décision. Avant une réunion, vérifiez séparément ce qui arrive au destinataire du partage. Cette page explique une disposition de travail, pas un gain de temps mesuré ou une garantie d'exclusion dans toutes les captures.
+
+@@ screen-sharing-show-where-to-look
+# Expliquer une manipulation en partage d'écran : un scénario de 30 secondes
+Un pointeur qui bouge n'explique pas l'importance d'un bouton. Coordonnez la phrase, la cible, l'action et le résultat pour que le spectateur n'ait pas à deviner.
+
+L'interface d'exercice est fictive : « Notifications immédiates » et « Résumé hebdomadaire » sont activés. Il faut désactiver uniquement les notifications immédiates. Les durées sont un cadre de répétition, pas un résultat expérimental.
+
+## Annoncer le résultat avant le clic
+L'idée à retenir n'est pas « j'ai cliqué », mais « immédiat désactivé, résumé hebdomadaire conservé ».
+
+| Temps | Dire | Faire | Repère |
+| 0–5 s | « Nous arrêtons les notifications immédiates, mais gardons le résumé. » | Laisser les deux réglages visibles | Pas de marqueur supplémentaire |
+| 5–10 s | « Voici le réglage des notifications immédiates. » | Placer le pointeur sur libellé et commande | Mise en évidence brève du pointeur |
+| 10–16 s | « Ces réglages sont indépendants. » | Montrer les deux lignes | Encadrer brièvement la zone si utile |
+| 16–22 s | « Je désactive seulement celui-ci. » | Cliquer une fois sur le premier | Garder le geste lisible |
+| 22–30 s | « L'immédiat est désactivé ; le résumé reste activé. » | S'arrêter sur le résultat | Ne pas ajouter une animation concurrente |
+
+{{DEMO:NOTIFICATIONS}}
+
+## Une cible ponctuelle et une relation ne se montrent pas pareil
+Le pointeur répond à « quel bouton ? ». La zone répond à « quelles lignes sont liées à cette explication ? ». Ni l'un ni l'autre ne remplace un texte lisible ou une phrase sur l'objectif. Tout entourer lorsque seule une commande compte peut brouiller l'attention.
+
+Pointer Cue peut ajouter une mise en évidence temporaire du pointeur ou d'une zone sur Mac. Utilisez le geste configuré dans votre version installée. Pour une flèche qui doit rester à l'écran, un outil de dessin répond à un autre besoin.
+
+## Confirmer l'état après la manipulation
+Dites les deux états finaux, puis laissez-les visibles un instant. C'est plus précis que « comme vous le voyez ». Répétez le scénario sans repère supplémentaire, puis avec un repère ponctuel ou de zone. Demandez-vous si la cible et le résultat sont identifiables, pas si les effets sont nombreux.
+
+## Contrôler la vue reçue
+Pour une vraie démonstration à distance, vérifiez avec des données inoffensives la vue d'un participant. Petites lettres et lignes discrètes peuvent changer d'apparence après capture et transmission. Une vidéo locale du produit ne mesure pas cette qualité côté réception.
+
+Une séquence produit sur un site web illustre le principe d'une mise en évidence ; elle n'est pas l'exécution de cet exercice fictif. Une vidéo de préversion ne prouve pas non plus les fonctions ou conditions de la version publiée.
+
+## Adapter le scénario à votre prochaine démonstration
+Choisissez une seule tâche réelle non confidentielle. Notez les états avant et après, gardez un endroit où un repère apporte une information, puis répétez la pause finale. Pointer Cue accompagne la phrase lorsque le repère temporaire aide ; laissez ensuite le résultat parler de lui-même.
