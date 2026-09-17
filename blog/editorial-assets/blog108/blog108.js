@@ -2,6 +2,7 @@
 'use strict';
 const body=document.body;
 if(!body.classList.contains('blog108'))return;
+document.querySelectorAll('.b108-byline').forEach(el=>{el.textContent='Presented by Masaki Iino';});
 const event=(name,extra={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{page_language:body.dataset.language,product_group:body.dataset.group,...extra});};
 document.querySelectorAll('article pre').forEach((pre,index)=>{
  const bar=document.createElement('div');bar.className='b108-copy';
