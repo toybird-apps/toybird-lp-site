@@ -1,4 +1,4 @@
-# Full manuscript export after all 90 article drafts were saved.
+# Export saved manuscripts and integration configuration for resumable QA.
 name: Blog108 export for review
 on:
   push:
