@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="ko"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ko',article_id:'chatgpt-compare-options'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법 | Toybird Labs Blog</title><meta content="비교 기준, 우선순위, 누락 정보 처리, 추천 조건을 지정해 ChatGPT로 제품이나 서비스를 비교하는 방법을 소개합니다." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja" rel="alternate"/>
+<html lang="ko"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ko',article_id:'chatgpt-compare-options'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기 | Toybird Labs Blog</title><meta content="회당 요금, 전체 요금, 인당 요금은 숫자만 나란히 놓아서는 비교할 수 없습니다. 같은 서비스를 제공하는 총액으로 계산한 뒤 필수 조건을 확인해야 합니다." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" rel="canonical"/><link href="https://lp.toybird.com/blog/chatgpt-compare-options/" hreflang="ja" rel="alternate"/>
 <link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="en" rel="alternate"/>
 <link href="https://lp.toybird.com/de/blog/chatgpt-compare-options/" hreflang="de" rel="alternate"/>
 <link href="https://lp.toybird.com/fr/blog/chatgpt-compare-options/" hreflang="fr" rel="alternate"/>
@@ -8,16 +8,107 @@
 <link href="https://lp.toybird.com/it/blog/chatgpt-compare-options/" hreflang="it" rel="alternate"/>
 <link href="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/" hreflang="pt-BR" rel="alternate"/>
 <link href="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" hreflang="ko" rel="alternate"/>
-<link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법" property="og:title"/><meta content="비교 기준, 우선순위, 누락 정보 처리, 추천 조건을 지정해 ChatGPT로 제품이나 서비스를 비교하는 방법을 소개합니다." property="og:description"/><meta content="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" property="og:url"/><meta content="https://lp.toybird.com/ko/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" property="og:image"/><meta content="2026-08-20" property="article:published_time"/><meta content="2026-08-24T10:00:00+09:00" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/ko/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법","description":"비교 기준, 우선순위, 누락 정보 처리, 추천 조건을 지정해 ChatGPT로 제품이나 서비스를 비교하는 방법을 소개합니다.","image":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png","datePublished":"2026-08-20","dateModified":"2026-08-24","inLanguage":"ko","mainEntityOfPage":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"업무 AI","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/en/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/ko/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법","item":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"점수를 매기게 하는 것이 좋나요?","acceptedAnswer":{"@type":"Answer","text":"평가 규칙과 근거가 분명할 때만 권장합니다. 그렇지 않으면 정성 비교가 더 정직할 수 있습니다."}},{"@type":"Question","name":"몇 개까지 비교할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"선택지가 많으면 분석이 얕아집니다. 먼저 실제 후보를 줄인 뒤 동일한 기준으로 비교하세요."}},{"@type":"Question","name":"ChatGPT가 직접 최신 정보를 조사해도 되나요?","acceptedAnswer":{"@type":"Answer","text":"도움을 받을 수 있지만 가격과 사양은 날짜가 있는 공식 자료로 확인해야 합니다."}}]}]}</script></head><body class="global-article"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/ko/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/ko/blog/">글 목록</a><a href="https://lp.toybird.com/en/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>언어</span><select onchange="if(this.value)location.href=this.value"><option value="https://lp.toybird.com/blog/chatgpt-compare-options/">日本語</option><option value="https://lp.toybird.com/en/blog/chatgpt-compare-options/">English</option><option value="https://lp.toybird.com/de/blog/chatgpt-compare-options/">Deutsch</option><option value="https://lp.toybird.com/fr/blog/chatgpt-compare-options/">Français</option><option value="https://lp.toybird.com/es/blog/chatgpt-compare-options/">Español</option><option value="https://lp.toybird.com/it/blog/chatgpt-compare-options/">Italiano</option><option value="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/">Português (Brasil)</option><option selected="" value="https://lp.toybird.com/ko/blog/chatgpt-compare-options/">한국어</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/ko/blog/">Toybird Labs Blog</a></li><li>ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법</li></ol></nav><div class="article-heading"><span class="category">업무 AI</span><h1>ChatGPT로 여러 선택지를 비교하고 의사결정표 만드는 방법</h1><p class="article-deck">비교 기준, 우선순위, 누락 정보 처리, 추천 조건을 지정해 ChatGPT로 제품이나 서비스를 비교하는 방법을 소개합니다.</p><div class="byline"><time datetime="2026-08-20">게시: 2026-08-20</time><time datetime="2026-08-24">업데이트: 2026-08-24</time><span>읽는 시간: 3분</span></div></div><figure class="hero-image"><img alt="Prompt Ready English interface preview" fetchpriority="high" height="630" src="https://lp.toybird.com/ko/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" id="article"><section class="summary-box"><h2>이 글에서 적용할 수 있는 것</h2><ul class="check-list"><li>모든 선택지에 동일한 기준을 적용합니다.</li><li>조직, 사용자, 사용 상황을 설명합니다.</li><li>가장 중요한 기준과 우선순위를 지정합니다.</li><li>정보가 없다는 이유만으로 낮게 평가하지 않게 합니다.</li></ul></section><section class="rebuilt-core-section" data-section-id="prompt" data-section-name="바로 사용할 수 있는 프롬프트" data-section-order="4" data-track-section="" id="prompt"><h2>바로 사용할 수 있는 프롬프트</h2><p>실제 비교 기준과 확인된 후보 정보를 넣습니다. 확인되지 않은 항목은 그대로 표시해 조사 부족이 낮은 점수로 바뀌지 않게 합니다.</p><div class="prompt-box"><div class="prompt-head"><span>바로 사용할 수 있는 프롬프트</span></div><pre id="chatgpt-compare-options-main-prompt"><code>아래 선택지를 우리 상황에 맞게 비교해 주세요.
-상황: [조직, 사용자, 사용 목적]
-선택지: [A, B, C]
-비교 기준: [가격, 지원, 도입 기간, 사용 편의성 등]
-우선순위: [무엇을 가장 중요하게 보는지와 이유]
-누락 정보: “확인 필요”로 표시하고 단점으로 간주하지 마세요.
-출력:
-1. 비교표
-2. 중요한 장단점과 상충 관계
-3. 추가로 확인할 정보
-4. 근거가 있는 추천안
-
-제공한 정보만 사용하고 사실과 해석을 구분하세요.</code></pre></div></section><section class="rebuilt-core-section" data-section-id="example" data-section-name="예시: 직원 30명 규모 회사의 생성형 AI 교육 비교" data-section-order="5" data-track-section="" id="example"><h2>예시: 직원 30명 규모 회사의 생성형 AI 교육 비교</h2><p>직원 대부분이 생성형 AI 초보자입니다. 가장 낮은 가격보다 초보자 교육과 후속 지원이 중요합니다.</p><div class="example-answer"><p>표에는 참여 인원, 진행 방식, 초보자 지원, 교육 후 지원, 도입 기간, 가격이 포함되어야 합니다. 추천 이유는 가격보다 지속적인 사용과 지원을 높게 평가한 이유를 설명하고, 계약 및 해지 정보가 빠져 있으면 별도로 표시해야 합니다.</p></div><p>아래 예시는 같은 구조를 실제 업무 상황에 적용한 모습입니다.</p></section><section class="rebuilt-core-section" data-section-id="variations" data-section-name="상황에 맞게 프롬프트를 바꾸는 방법" data-section-order="6" data-track-section="" id="variations"><h2>상황에 맞게 프롬프트를 바꾸는 방법</h2><p>기본 구조는 같지만 업무에 따라 사실, 대상 독자, 원하는 출력 형식을 바꿔야 합니다.</p><div class="use-case"><h3>예산을 가장 중요하게 보기</h3><p>최대 예산과 필수 조건을 지정하고 그 조건을 만족하는 가장 저렴한 선택지를 찾습니다.</p></div><div class="use-case"><h3>도입 속도를 가장 중요하게 보기</h3><p>필요한 시작일을 적고 확인되지 않은 도입 기간은 미확인으로 표시합니다.</p></div><div class="use-case"><h3>추천 없이 사실만 비교하기</h3><p>최종 결정이 위원회에 있을 때 사실표, 상충 관계, 공급사 질문만 요청합니다.</p></div></section><section class="rebuilt-core-section" data-section-id="checklist" data-section-name="결과를 사용하기 전 확인 사항" data-section-order="7" data-track-section="" id="checklist"><h2>결과를 사용하기 전 확인 사항</h2><p>결정 전에 요금제, 통화, 기간, 미확인 항목이 실제로 같은 조건에서 비교되는지 확인합니다.</p><ul class="check-list"><li>모든 평가가 자료에 근거하거나 해석으로 표시되었는지 확인합니다.</li><li>누락 정보를 0점이나 단점으로 처리하지 않았는지 봅니다.</li><li>우선순위가 실제 결정과 일치하는지 확인합니다.</li><li>추천안이 단순히 1등만 말하지 않고 상충 관계를 설명하는지 봅니다.</li><li>계약, 보안, 최신 가격은 공식 자료로 다시 확인합니다.</li></ul></section><section class="field-note" id="first-party"><h2>Prompt Ready</h2><p>Prompt Ready에서 사실, 대상, 제외 조건, 출력 형식을 바꾸고 생성되는 요청문을 비교했습니다. 앱은 AI 서비스로 자동 전송하지 않습니다.</p><ul><li>날짜·금액·제품 관련 사실을 원문과 대조합니다</li><li>조직 규칙이 허용하지 않는 기밀정보나 개인정보는 외부 AI 서비스에 입력하지 않습니다</li><li>초안을 그대로 보내지 말고 실제 독자와 사실관계를 확인합니다</li></ul></section><section id="sources"><h2>공식 자료와 참고 링크</h2><ul class="source-list"><li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" rel="noopener" target="_blank">OpenAI: Prompt engineering best practices</a></li><li><a href="https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth" rel="noopener" target="_blank">OpenAI: Does ChatGPT tell the truth?</a></li><li><a href="https://lp.toybird.com/en/prompt-ready/" rel="noopener" target="_blank">Prompt Ready product page</a></li></ul></section><section id="related"><h2>함께 읽을 글</h2><div class="related-grid"><a class="related-card" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/"><span>업무 AI</span><strong>ChatGPT로 회의 메모에서 할 일·담당자·기한 정리하기</strong><small>정리되지 않은 회의 메모에서 결정 사항, 할 일, 담당자, 기한, 미결 사항을 ChatGPT로 구분하는 방법을 소개합니다.</small></a><a class="related-card" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/"><span>업무 AI</span><strong>업무에서 ChatGPT를 활용하는 방법: 프롬프트 5가지 원칙과 실전 예시 10개</strong><small>업무에서 ChatGPT를 활용할 때 필요한 프롬프트 작성 원칙 5가지와 고객 답변, 회의 정리 등 바로 써볼 수 있는 사례 10개를 소개합니다.</small></a><a class="related-card" href="https://lp.toybird.com/ko/blog/mac-view-reference-while-working/"><span>Mac 작업 흐름</span><strong>MacBook 한 화면에서 참고 자료를 보며 생산성을 높이는 방법</strong><small>MacBook 한 화면에서 PDF, 웹페이지, 채팅을 보면서 생산성을 높이는 방법을 설명합니다. 타일 배치, Split View, Stage Manager, 작은 참조 창을 비교합니다.</small></a></div></section><section id="faq"><h2>자주 묻는 질문</h2><div class="faq-list"><details><summary>점수를 매기게 하는 것이 좋나요?</summary><p>평가 규칙과 근거가 분명할 때만 권장합니다. 그렇지 않으면 정성 비교가 더 정직할 수 있습니다.</p></details><details><summary>몇 개까지 비교할 수 있나요?</summary><p>선택지가 많으면 분석이 얕아집니다. 먼저 실제 후보를 줄인 뒤 동일한 기준으로 비교하세요.</p></details><details><summary>ChatGPT가 직접 최신 정보를 조사해도 되나요?</summary><p>도움을 받을 수 있지만 가격과 사양은 날짜가 있는 공식 자료로 확인해야 합니다.</p></details></div></section><section class="article-cta"><div><strong>Prompt Ready</strong><h2>제품 보기</h2><p>Prompt Ready에서 작업과 몇 가지 조건을 정리해 AI 서비스에 붙여넣기 전에 검토할 수 있는 요청문으로 만들 수 있습니다.</p></div><a href="https://lp.toybird.com/en/prompt-ready/">제품 보기</a></section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/ko/blog/">글 목록</a></footer></body></html>
+<link href="https://lp.toybird.com/en/blog/chatgpt-compare-options/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기" property="og:title"/><meta content="회당 요금, 전체 요금, 인당 요금은 숫자만 나란히 놓아서는 비교할 수 없습니다. 같은 서비스를 제공하는 총액으로 계산한 뒤 필수 조건을 확인해야 합니다." property="og:description"/><meta content="https://lp.toybird.com/ko/blog/chatgpt-compare-options/" property="og:url"/><meta content="https://lp.toybird.com/ko/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png" property="og:image"/><meta content="2026-08-20" property="article:published_time"/><meta content="2026-09-17" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/ko/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기","description":"회당 요금, 전체 요금, 인당 요금은 숫자만 나란히 놓아서는 비교할 수 없습니다. 같은 서비스를 제공하는 총액으로 계산한 뒤 필수 조건을 확인해야 합니다.","image":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/assets/chatgpt-compare-options-og.png","datePublished":"2026-08-20","dateModified":"2026-09-17","inLanguage":"ko","mainEntityOfPage":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"업무 AI","about":{"@type":"SoftwareApplication","name":"Prompt Ready","url":"https://lp.toybird.com/en/prompt-ready/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/ko/blog/"},{"@type":"ListItem","position":2,"name":"ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기","item":"https://lp.toybird.com/ko/blog/chatgpt-compare-options/"}]}]}</script><link href="/blog/editorial-assets/blog108/blog108.css" rel="stylesheet"/><meta content="ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기" name="twitter:title"/><meta content="회당 요금, 전체 요금, 인당 요금은 숫자만 나란히 놓아서는 비교할 수 없습니다. 같은 서비스를 제공하는 총액으로 계산한 뒤 필수 조건을 확인해야 합니다." name="twitter:description"/></head><body class="global-article blog108" data-copied="복사했습니다" data-copy="복사" data-failed="복사하지 못했습니다. 본문을 선택해 주세요." data-group="Prompt Ready" data-language="ko"><a class="skip-link" href="#article">이 글의 내용</a><header class="global-header"><a href="https://lp.toybird.com/ko/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/ko/blog/">글 목록</a><a href="https://lp.toybird.com/en/prompt-ready/">Prompt Ready</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>언어</span><select onchange="if(this.value)location.href=this.value"><option value="https://lp.toybird.com/blog/chatgpt-compare-options/">日本語</option><option value="https://lp.toybird.com/en/blog/chatgpt-compare-options/">English</option><option value="https://lp.toybird.com/de/blog/chatgpt-compare-options/">Deutsch</option><option value="https://lp.toybird.com/fr/blog/chatgpt-compare-options/">Français</option><option value="https://lp.toybird.com/es/blog/chatgpt-compare-options/">Español</option><option value="https://lp.toybird.com/it/blog/chatgpt-compare-options/">Italiano</option><option value="https://lp.toybird.com/pt-br/blog/chatgpt-compare-options/">Português (Brasil)</option><option selected="" value="https://lp.toybird.com/ko/blog/chatgpt-compare-options/">한국어</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/ko/blog/">Toybird Labs Blog</a></li><li>ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기</li></ol></nav><div class="article-heading"><span class="category">업무 AI</span><h1>ChatGPT로 견적 비교표 만들기: 인원과 필수 조건을 먼저 맞추기</h1><p class="article-deck">회당 요금, 전체 요금, 인당 요금은 숫자만 나란히 놓아서는 비교할 수 없습니다. 같은 서비스를 제공하는 총액으로 계산한 뒤 필수 조건을 확인해야 합니다.</p><div class="byline"><time datetime="2026-08-20">공개: 2026-08-20</time><time datetime="2026-09-17">수정: 2026-09-17</time><span>5 분</span></div></div></section><div class="article-shell"><article class="article-content" id="article"><nav aria-label="이 글의 내용" class="b108-toc"><b>이 글의 내용</b><ol><li><a href="#guide-1">구매하려는 교육의 범위를 고정합니다</a></li><li><a href="#guide-2">필수 조건과 선호 조건을 분리해 요청합니다</a></li><li><a href="#guide-3">계산까지 완료한 비교표</a></li><li><a href="#guide-4">빈칸에서 공급업체에 보낼 질문을 만듭니다</a></li><li><a href="#guide-5">우선순위를 바꿔도 필수 조건은 유지합니다</a></li><li><a href="#guide-6">비교 준비를 Prompt Ready로 반복합니다</a></li><li><a href="#guide-7">다음에 읽기</a></li></ol></nav>
+<p>다음 교육 견적은 모두 가상 사례입니다. 금액은 계산 설명을 위한 일본 엔화이며 세금을 제외합니다. 실제 시세나 공급업체 추천이 아닙니다.</p>
+<h2 id="guide-1">구매하려는 교육의 범위를 고정합니다</h2>
+<p>대상은 30명이고 예산은 450,000엔입니다. 10월 20일까지 교육을 마쳐야 하며, 교육 후 30일간 질문할 수 있어야 합니다.</p>
+<div aria-label="글 안의 연습 1" class="b108-table" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">견적</th>
+<th scope="col">제공된 정보</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>회당 180,000엔, 정원 10명. 30명은 같은 교육을 3회 실시. 기한과 30일 질문 지원 확인. 추가 비용 없음.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>30명 전체 420,000엔. 기한과 30일 질문 지원 확인. 추가 비용 없음.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>인당 9,000엔과 초기 설정 60,000엔. 30명 지원. 실시일과 질문 지원 기간은 미기재. 그 밖의 요금은 기재되지 않음.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A는 이번 인원 기준으로 180,000엔짜리 대안이 아닙니다. C에 정보가 없다고 질문 지원이 아예 없다고 판단해서도 안 됩니다.</p>
+<h2 id="guide-2">필수 조건과 선호 조건을 분리해 요청합니다</h2>
+<pre tabindex="0"><code class="language-text">세 견적을 내부 선정 회의용으로 비교해 주세요.
+필수 조건: 30명, 세금 제외 총액 450,000엔 이하, 10월 20일까지 완료, 교육 후 30일 질문 지원.
+제공된 견적만 사실로 사용하세요.
+30명 총액과 계산식을 표시하세요.
+각 필수 조건을 충족, 미충족, 미확인으로 구분하세요.
+누락된 정보를 0점 또는 기능 없음으로 처리하지 마세요.
+현재 판단할 수 있는 후보와 추가 확인이 필요한 후보를 나누세요.
+결정 전에 필요한 확인 질문도 작성하세요.
+최저 금액 하나만으로 추천하지 마세요.
+[견적을 붙여 넣으세요.]
+</code></pre>
+<h2 id="guide-3">계산까지 완료한 비교표</h2>
+<div aria-label="글 안의 연습 2" class="b108-table" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">확인 항목</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>계산식</td>
+<td>180,000 × 3</td>
+<td>전체 420,000</td>
+<td>9,000 × 30 + 60,000</td>
+</tr>
+<tr>
+<td>총액, 엔·세금 제외</td>
+<td>540,000</td>
+<td>420,000</td>
+<td>330,000</td>
+</tr>
+<tr>
+<td>예산 이내</td>
+<td>미충족</td>
+<td>충족</td>
+<td>충족</td>
+</tr>
+<tr>
+<td>10월 20일까지 완료</td>
+<td>확인</td>
+<td>확인</td>
+<td>미확인</td>
+</tr>
+<tr>
+<td>30일 질문 지원</td>
+<td>확인</td>
+<td>확인</td>
+<td>미확인</td>
+</tr>
+<tr>
+<td>현재 판단</td>
+<td>예산 초과</td>
+<td>필수 조건 확인됨</td>
+<td>기한과 지원 확인 후 판단</td>
+</tr>
+</tbody>
+</table></div>
+<p>지금 모든 조건을 확인할 수 있는 곳은 B입니다. 그렇다고 B가 모든 면에서 가장 좋다는 뜻은 아닙니다. C도 조건을 확인하면 후보가 될 수 있습니다. 실제 업무에서는 계산을 별도로 점검하고 각 행에 견적 이름, 확인일, 근거 위치를 남기세요.</p>
+<h2 id="guide-4">빈칸에서 공급업체에 보낼 질문을 만듭니다</h2>
+<blockquote>
+<p>30명 교육을 검토하고 있습니다. 10월 20일까지 완료할 수 있나요? 교육 후 30일간 참가자가 질문할 수 있나요? 두 조건이 가능하다면 제시된 총액 330,000엔에 포함되는지도 확인 부탁드립니다.</p>
+</blockquote>
+<p>추가 비용이 생기면 지원 항목뿐 아니라 총액도 수정합니다. 결론만 바꾸고 오래된 계산을 남기면 다음 검토자가 다른 조건으로 판단하게 됩니다.</p>
+<h2 id="guide-5">우선순위를 바꿔도 필수 조건은 유지합니다</h2>
+<pre tabindex="0"><code class="language-text">인원, 완료 기한, 30일 질문 지원은 필수로 유지하세요.
+C가 이를 확인한 경우에만 적격 후보를 총액 우선으로 다시 비교하세요.
+현재 미확인인 내용을 확인된 사실처럼 다루지 마세요.
+어떤 새 정보가 결론을 바꾸었는지 설명하세요.
+</code></pre>
+<p>점수 평균이 필수 조건 위반을 가리지 않도록 합니다. 비교의 가치는 멋진 순위를 만드는 것보다 현재 자료로 어디까지 판단할 수 있는지 드러내는 데 있습니다.</p>
+<h2 id="guide-6">비교 준비를 Prompt Ready로 반복합니다</h2>
+<p>재사용할 것은 “B를 선택한다”가 아니라 인원, 요금 단위, 필수 조건, 미확인 처리 방식입니다. 이를 Prompt Ready에서 정리하고 요청문을 확인한 뒤 AI에 붙여 넣습니다. 원본 견적 검증과 실제 구매 승인은 별도 업무입니다.</p>
+<section class="b108-related"><h2 id="guide-7">다음에 읽기</h2><div class="b108-cards"><a class="b108-card" href="https://lp.toybird.com/ko/blog/chatgpt-meeting-notes-todo/"><strong>회의 메모를 할 일로 바꾸기: 담당자와 문의 대상을 바꾸지 않는 방법</strong><span>메모에 이름이 있다고 그 사람이 담당자는 아닙니다. “다나카에게 물어보기”는 사토의 할 일일 수 있습니다. 결정, 제안, 취소, 미배정 사항을 분리한 뒤 후속 메일을 만드세요.</span></a><a class="b108-card" href="https://lp.toybird.com/ko/blog/chatgpt-prompt-work-tips/"><strong>ChatGPT 업무 활용 10가지: 재료와 완성 기준으로 고르기</strong><span>메일과 요약 외의 쓰임을 찾으려면 현재의 업무에서 출발하세요. 무엇을 자료로 줄 수 있고, 무엇이 나오면 다음 일로 진행할 수 있는지 나누면 됩니다.</span></a><a class="b108-card" href="https://lp.toybird.com/ko/blog/chatgpt-customer-reply-email/"><strong>ChatGPT로 고객 답장 쓰기: 확인된 사실과 약속할 수 있는 범위부터</strong><span>고객은 회의 전에 자료가 필요하지만 기술팀은 아직 장애 원인을 모릅니다. 이때 필요한 것은 복구를 장담하는 답장이 아니라, 현재 상황과 다음 연락을 분명히 알리는 첫 답장입니다.</span></a></div></section><aside class="b108-product"><p class="b108-label">Prompt Ready</p><a class="b108-product-link" data-blog-product="Prompt Ready" href="https://lp.toybird.com/en/prompt-ready/">제품 사용 방법 보기 · 영어 UI</a><a href="https://labs.toybird.com/apps/prompt-ready/support.html">공식 사용 방법과 사양</a></aside><p class="b108-byline">Toybird Labs / Masaki Iino. 이 글에서 소개하는 제품을 개발하고 제공합니다.</p></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/ko/blog/">글 목록</a></footer><script defer="" src="/blog/editorial-assets/blog108/blog108.js"></script></body></html>

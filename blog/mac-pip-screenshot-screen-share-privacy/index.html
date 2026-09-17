@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 
-<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'mac-pip-screenshot-screen-share-privacy'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>スクリーンショット・画面共有に映らないPiPを実測する | Toybird Labs Blog</title><meta content="Pocket Screenの小窓を手元に残しながら、macOSのスクリーンショット・画面収録、Zoom・Google Meetの共有結果から除外できるかを実機で確認。安全なテスト手順と注意点も整理します。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" rel="canonical"/><link href="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" hreflang="ja" rel="alternate"/>
+<html lang="ja"><head><!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MTD9Z8S7QG"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MTD9Z8S7QG',{content_group:'Toybird Labs Blog',page_type:'article',page_language:'ja',article_id:'mac-pip-screenshot-screen-share-privacy'});</script><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順 | Toybird Labs Blog</title><meta content="自分のMacで小窓が見えていることと、相手の画面や録画にその小窓が入ることは、別々に確かめる必要があります。設定をオンにした画面だけでは、出力結果を確認したことになりません。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/><link href="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" rel="canonical"/><link href="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" hreflang="ja" rel="alternate"/>
 <link href="https://lp.toybird.com/en/blog/mac-pip-screenshot-screen-share-privacy/" hreflang="en" rel="alternate"/>
-<link href="https://lp.toybird.com/en/blog/mac-pip-screenshot-screen-share-privacy/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="スクリーンショット・画面共有に映らないPiPを実測する" property="og:title"/><meta content="Pocket Screenの小窓を手元に残しながら、macOSのスクリーンショット・画面収録、Zoom・Google Meetの共有結果から除外できるかを実機で確認。安全なテスト手順と注意点も整理します。" property="og:description"/><meta content="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" property="og:url"/><meta content="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/assets/mac-pip-screenshot-screen-share-privacy-og.png" property="og:image"/><meta content="2026-08-20" property="article:published_time"/><meta content="2026-08-24T10:00:00+09:00" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"スクリーンショット・画面共有に映らないPiPを実測する","description":"Pocket Screenの小窓を手元に残しながら、macOSのスクリーンショット・画面収録、Zoom・Google Meetの共有結果から除外できるかを実機で確認。安全なテスト手順と注意点も整理します。","image":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/assets/mac-pip-screenshot-screen-share-privacy-og.png","datePublished":"2026-08-20","dateModified":"2026-08-24","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"Mac・作業効率化","about":{"@type":"SoftwareApplication","name":"Pocket Screen","url":"https://lp.toybird.com/pocket-screen/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"スクリーンショット・画面共有に映らないPiPを実測する","item":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"除外を有効にすれば必ず映りませんか？","acceptedAnswer":{"@type":"Answer","text":"OS、会議アプリ、共有方式の変更で結果が変わる可能性があります。重要な会議では相手側画面を別端末で確認してください。"}}]}]}</script></head><body class="global-article"><a class="skip-link" href="#article">Skip to content</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/pocket-screen/">Pocket Screen</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/">日本語</option><option value="https://lp.toybird.com/en/blog/mac-pip-screenshot-screen-share-privacy/">English</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>スクリーンショット・画面共有に映らないPiPを実測する</li></ol></nav><div class="article-heading"><span class="category">Mac・作業効率化</span><h1>スクリーンショット・画面共有に映らないPiPを実測する</h1><p class="article-deck">Pocket Screenの小窓を手元に残しながら、macOSのスクリーンショット・画面収録、Zoom・Google Meetの共有結果から除外できるかを実機で確認。安全なテスト手順と注意点も整理します。</p><div class="byline"><time datetime="2026-08-20">公開: 2026-08-20</time><time datetime="2026-08-24">更新: 2026-08-24</time><span>読了目安: 4 分</span></div></div><figure class="hero-image"><img alt="スクリーンショット・画面共有に映らないPiPを実測する" fetchpriority="high" height="630" src="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/assets/mac-pip-screenshot-screen-share-privacy-og.png" width="1200"/></figure></section><div class="article-shell"><article class="article-content" id="article"><section class="summary-box"><h2>この記事で分かること</h2><ul class="check-list"><li>「自分に見える」と「共有相手に見える」を分けて確認する</li><li>確認した4つの場面</li><li>話者メモを置くときの安全な手順</li><li>カメラ付近に話す内容を置きながら、共有相手には表示しないリモート会議を想定して確認します。</li></ul></section><section class="rebuilt-core-section" id="capture-paths"><h2>スクリーンショットと画面共有は、同じ「画面を見せる」処理ではない</h2>
-<p>Mac上では同じ画面が見えていても、スクリーンショット、画面収録、会議アプリのウインドウ共有、画面全体共有は別の経路で映像を取得します。そのため「自分の画面には見えているから相手にも見える」「スクリーンショットに入らないから会議でも入らない」とは限りません。</p>
-<p>Pocket Screenの除外設定は、手元では参照したい小窓を、キャプチャや共有結果には含めたくない場面を想定しています。ただしOSや会議アプリの更新で挙動が変わる可能性があるため、重要な会議では実際に使う方式で確認します。</p></section><section class="rebuilt-core-section" id="test-matrix"><h2>当方環境で確認した4つの出力</h2>
-<div class="data-table-wrap"><table class="data-table"><thead><tr><th>確認した場面</th><th>確認方法</th><th>見るポイント</th></tr></thead><tbody>
-<tr><td>macOSのスクリーンショット</td><td>Pocket Screenを表示した状態で画面を撮影</td><td>保存された画像に小窓が含まれないか</td></tr>
-<tr><td>macOSの画面収録</td><td>小窓を表示したまま操作を録画</td><td>完成した録画ファイルに小窓が入らないか</td></tr>
-<tr><td>Zoomの画面共有</td><td>共有側と参加者側を分けて確認</td><td>手元では見えていても参加者側には表示されないか</td></tr>
-<tr><td>Google Meetの画面共有</td><td>共有方法を選び、別側の表示を確認</td><td>共有対象を変えたときにも意図した状態か</td></tr>
-</tbody></table></div>
-<p>2026年8月の当方テストでは、除外設定を有効にしたPocket Screenの小窓を手元に残しながら、上記のキャプチャ・共有結果から外れることを確認しました。これは特定のMac・OS・アプリ構成での実測であり、すべての環境を保証するものではありません。</p></section><section class="rebuilt-core-section" id="speaker-notes"><h2>話者メモをカメラ付近に置くときの手順</h2>
-<ol class="step-list"><li>最初は「TEST」など漏れても問題ないダミー文章を小窓に表示する</li><li>本番と同じ会議アプリ・同じ共有方式で開始する</li><li>別端末または参加者側で、ダミー文章が共有されていないことを確認する</li><li>確認後に、話す順番やキーワードなど必要最小限のメモへ差し替える</li><li>共有方式を画面全体からウインドウ共有へ変えるなど、途中で条件を変えたらもう一度確認する</li></ol>
-<p>「一度テストしたから大丈夫」ではなく、共有対象を切り替えた時点を再確認ポイントにする方が安全です。</p></section><section class="rebuilt-core-section" id="not-security-boundary"><h2>「映らない」は、機密情報を置くためのセキュリティ境界ではない</h2>
-<p>共有除外はプレゼンや作業をしやすくする機能であり、パスワードや秘密鍵などを表示してよいという意味ではありません。通知、別の録画ソフト、OSやアプリの仕様変更など、記事で確認していない経路もあります。</p>
-<ul><li>パスワード、認証コード、秘密鍵は置かない</li><li>顧客名や未公開情報は必要最小限にする</li><li>外部共有前は別側の画面で確認する</li><li>OS・Zoom・Meet・Pocket Screenを更新した後は短い再テストをする</li></ul></section><section class="rebuilt-core-section" id="if-visible"><h2>相手側に小窓が見えた場合に確認する順番</h2>
-<ol><li>Pocket Screen側の共有・キャプチャ除外設定が有効か</li><li>対象の小窓を作り直した後も設定が反映されているか</li><li>会議アプリで何を共有しているか（画面全体・ウインドウ・タブなど）</li><li>別の録画・キャプチャアプリが同時に動いていないか</li><li>OSや会議アプリ更新後にだけ再現していないか</li></ol>
-<p>本番直前に原因調査を始めるより、ダミー内容で1分程度の共有確認をルーチンにした方がトラブルを避けやすくなります。</p></section><section class="field-note" id="first-party"><h2>Pocket Screen</h2><p>Pocket ScreenでPDF、ブラウザ、動画、チャットを小窓化し、透過、Freeze、クリック透過、復元、画面共有除外を実際のMac環境で確認しました。</p><ul><li>スクリーンショット・録画・画面共有は、実際に使う方式で相手側表示を確認する</li><li>Spaces・フルスクリーン・Stage Managerなど表示環境を変えた後は配置を再確認する</li><li>重要なメモを置く前に、ダミー内容で共有テストする</li></ul></section><section id="sources"><h2>公式情報・参考資料</h2><ul class="source-list"><li><a href="https://support.apple.com/102646" rel="noopener" target="_blank">Apple Support: Take a screenshot on Mac</a></li><li><a href="https://apps.apple.com/app/pocket-screen/id6788211562" rel="noopener" target="_blank">Pocket Screen on the App Store</a></li></ul></section><section id="related"><h2>次に読む記事</h2><div class="related-grid"><a class="related-card" href="https://lp.toybird.com/blog/mac-floating-window-reference/"><span>Mac・作業効率化</span><strong>Macでウインドウ切り替えを減らす方法｜PDF・Web・チャットを常に表示</strong><small>MacでPDF、Web、チャット、ダッシュボードを確認するたびにウインドウを切り替える負担を減らす方法を解説。標準機能と常時表示の使い分け、実践的な配置手順を紹介します。</small></a><a class="related-card" href="https://lp.toybird.com/blog/mac-view-reference-while-working/"><span>Mac・作業効率化</span><strong>MacBook 1台・1画面で作業効率を上げる方法｜資料を見ながら快適に作業</strong><small>MacBook 1台の1画面でPDFやWeb資料を見ながら快適に作業する方法を解説。タイル表示、Split View、Stage Manager、小窓表示を比較し、ウインドウ切り替えを減らす実践手順を紹介します。</small></a><a class="related-card" href="https://lp.toybird.com/blog/chatgpt-compare-options/"><span>生成AI・仕事効率化</span><strong>ChatGPTで候補を比較する方法｜比較表・推奨案のプロンプト</strong><small>ChatGPTで複数の製品やサービスを比較し、比較表と推奨案を作る方法を解説。比較項目、優先順位、不足情報を整理するプロンプト例を紹介します。</small></a></div></section><section id="faq"><h2>よくある質問</h2><div class="faq-list"><details><summary>除外を有効にすれば必ず映りませんか？</summary><p>OS、会議アプリ、共有方式の変更で結果が変わる可能性があります。重要な会議では相手側画面を別端末で確認してください。</p></details></div></section><section class="article-cta"><div><strong>Pocket Screen</strong><h2>製品を見る</h2><p>PDFやWebページを小窓で参照しながらMacで作業したい場合は、Pocket Screenで試せます。</p></div><a href="https://lp.toybird.com/pocket-screen/">製品を見る</a></section></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer></body></html>
+<link href="https://lp.toybird.com/en/blog/mac-pip-screenshot-screen-share-privacy/" hreflang="x-default" rel="alternate"/><meta content="article" property="og:type"/><meta content="Toybird Labs Blog" property="og:site_name"/><meta content="PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順" property="og:title"/><meta content="自分のMacで小窓が見えていることと、相手の画面や録画にその小窓が入ることは、別々に確かめる必要があります。設定をオンにした画面だけでは、出力結果を確認したことになりません。" property="og:description"/><meta content="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/" property="og:url"/><meta content="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/assets/mac-pip-screenshot-screen-share-privacy-og.png" property="og:image"/><meta content="2026-08-20" property="article:published_time"/><meta content="2026-09-17" property="article:modified_time"/><meta content="summary_large_image" name="twitter:card"/><link href="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" rel="icon"/><link href="https://lp.toybird.com/blog/styles.css?v=20260820-2" rel="stylesheet"/><link href="https://lp.toybird.com/shared/global-article.css?v=20260820-3" rel="stylesheet"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順","description":"自分のMacで小窓が見えていることと、相手の画面や録画にその小窓が入ることは、別々に確かめる必要があります。設定をオンにした画面だけでは、出力結果を確認したことになりません。","image":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/assets/mac-pip-screenshot-screen-share-privacy-og.png","datePublished":"2026-08-20","dateModified":"2026-09-17","inLanguage":"ja","mainEntityOfPage":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/","author":{"@type":"Person","name":"Masaki Iino","url":"https://labs.toybird.com/"},"publisher":{"@type":"Organization","name":"Toybird Labs","url":"https://labs.toybird.com/","logo":{"@type":"ImageObject","url":"https://lp.toybird.com/blog/assets/toybird-labs-icon.png"}},"articleSection":"Mac・作業効率化","about":{"@type":"SoftwareApplication","name":"Pocket Screen","url":"https://lp.toybird.com/pocket-screen/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Toybird Labs Blog","item":"https://lp.toybird.com/blog/"},{"@type":"ListItem","position":2,"name":"PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順","item":"https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/"}]}]}</script><link href="/blog/editorial-assets/blog108/blog108.css" rel="stylesheet"/><meta content="PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順" name="twitter:title"/><meta content="自分のMacで小窓が見えていることと、相手の画面や録画にその小窓が入ることは、別々に確かめる必要があります。設定をオンにした画面だけでは、出力結果を確認したことになりません。" name="twitter:description"/></head><body class="global-article blog108" data-copied="コピーしました" data-copy="コピー" data-failed="コピーできません。本文を選択してください" data-group="Pocket Screen" data-language="ja"><a class="skip-link" href="#article">この記事の内容</a><header class="global-header"><a href="https://lp.toybird.com/blog/"><img alt="" height="36" src="https://lp.toybird.com/blog/assets/toybird-labs-icon.webp" width="36"/><strong>Toybird Labs Blog</strong></a><nav><a href="https://lp.toybird.com/">Portfolio</a><a href="https://lp.toybird.com/blog/">記事一覧</a><a href="https://lp.toybird.com/pocket-screen/">Pocket Screen</a><a href="https://labs.toybird.com/">Toybird Labs</a></nav><label><span>言語</span><select onchange="if(this.value)location.href=this.value"><option selected="" value="https://lp.toybird.com/blog/mac-pip-screenshot-screen-share-privacy/">日本語</option><option value="https://lp.toybird.com/en/blog/mac-pip-screenshot-screen-share-privacy/">English</option></select></label></header><main><section class="article-hero"><nav class="breadcrumbs"><ol><li><a href="https://lp.toybird.com/blog/">Toybird Labs Blog</a></li><li>PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順</li></ol></nav><div class="article-heading"><span class="category">Mac・作業効率化</span><h1>PiPが画面共有や録画に映るか確認する｜手元と出力を分けるテスト手順</h1><p class="article-deck">自分のMacで小窓が見えていることと、相手の画面や録画にその小窓が入ることは、別々に確かめる必要があります。設定をオンにした画面だけでは、出力結果を確認したことになりません。</p><div class="byline"><time datetime="2026-08-20">公開: 2026-08-20</time><time datetime="2026-09-17">更新: 2026-09-17</time><span>4 分</span></div></div></section><div class="article-shell"><article class="article-content" id="article"><nav aria-label="この記事の内容" class="b108-toc"><b>この記事の内容</b><ol><li><a href="#guide-1">本番のメモではなく「TEST」で始める</a></li><li><a href="#guide-2">四つの出力を、それぞれ確かめる</a></li><li><a href="#guide-3">結果欄は、確認できるまで埋めない</a></li><li><a href="#guide-4">共有途中の変更は、再確認のきっかけにする</a></li><li><a href="#guide-5">相手に見えていたら、先に表示を止める</a></li><li><a href="#guide-6">除外機能は、秘密情報を置いてよい境界ではない</a></li><li><a href="#guide-7">次に読む</a></li></ol></nav>
+<p>この記事は、無害なテスト内容と記録用の表を使う確認手順です。今回新たにすべての環境を実測した結果や、どの会議サービスでも必ず除外できるという保証は示していません。</p>
+<h2 id="guide-1">本番のメモではなく「TEST」で始める</h2>
+<p>参照元に「TEST：参照ビューの確認」だけを表示します。パスワード、顧客情報、秘密鍵は使いません。Pocket Screenの参照表示と、インストールした版にある画面キャプチャ除外設定を確認します。</p>
+<p>MacとmacOS、Pocket Screen、会議アプリまたはブラウザーの版を記録してから始めます。設定の場所を示す画像と、相手側で見えなかった記録は別の資料です。前者だけで後者を判断しないでください。</p>
+<h2 id="guide-2">四つの出力を、それぞれ確かめる</h2>
+<div aria-label="記事内の練習 1" class="b108-table" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">出力</th>
+<th scope="col">すること</th>
+<th scope="col">実際に見る場所</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOSのスクリーンショット</td>
+<td>TEST参照を手元に表示したまま撮る</td>
+<td>保存された画像を開く</td>
+</tr>
+<tr>
+<td>macOSの画面収録</td>
+<td>参照を表示して短い操作を録る</td>
+<td>完成した録画ファイルを再生する</td>
+</tr>
+<tr>
+<td>会議の画面全体共有</td>
+<td>実際に使うディスプレイを共有する</td>
+<td>別端末または参加者の受信画面</td>
+</tr>
+<tr>
+<td>会議のウィンドウ共有</td>
+<td>対象アプリのウィンドウへ切り替える</td>
+<td>その方式の受信画面を別に確認</td>
+</tr>
+</tbody>
+</table></div>
+<p>Zoom、Google Meet等では、画面全体・ウィンドウ・タブを同じものとして扱いません。使った方式と対象を記録します。macOSの収録操作は<a href="https://support.apple.com/en-us/102618">Appleの案内</a>、Pocket Screenの設定は<a href="https://labs.toybird.com/apps/pocket-screen/support.html">公式サポート</a>で現在の情報を確認できます。</p>
+<h2 id="guide-3">結果欄は、確認できるまで埋めない</h2>
+<div aria-label="記事内の練習 2" class="b108-table" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">記録項目</th>
+<th scope="col">書く内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>確認日時</td>
+<td>実際にテストした日時</td>
+</tr>
+<tr>
+<td>Mac・OS</td>
+<td>機種とmacOSの版</td>
+</tr>
+<tr>
+<td>Pocket Screen</td>
+<td>版と関連設定の状態</td>
+</tr>
+<tr>
+<td>共有・収録アプリ</td>
+<td>アプリまたはブラウザーの版</td>
+</tr>
+<tr>
+<td>共有対象</td>
+<td>画面全体・ウィンドウ・タブと対象名</td>
+</tr>
+<tr>
+<td>手元のTEST</td>
+<td>見える／見えない</td>
+</tr>
+<tr>
+<td>保存物または受信側のTEST</td>
+<td>見える／見えない／未確認</td>
+</tr>
+<tr>
+<td>前回からの変更</td>
+<td>OS更新、方式、ディスプレイ変更など</td>
+</tr>
+</tbody>
+</table></div>
+<p>これは空の記録様式です。別端末が用意できなければ受信側は「未確認」で、予想だけで「見えない」にしません。一つのスクリーンショットが合格でも、会議の画面全体共有まで確認済みとは数えません。</p>
+<h2 id="guide-4">共有途中の変更は、再確認のきっかけにする</h2>
+<p>画面全体からウィンドウへ切り替えた、別のモニターへ移した、アプリを更新した、といった変更があれば、該当する経路を再度点検します。同じ設定名でも、受け取る結果は実際の方式で確認します。</p>
+<p>重要な会議では、最初に小さなTESTだけでリハーサルします。手元のプレビューを眺めるより、送った先の画面や保存されたファイルを開く方が、確認したいことに直接対応します。</p>
+<h2 id="guide-5">相手に見えていたら、先に表示を止める</h2>
+<p>本番中に小窓が見えた場合は、共有停止や参照の非表示を先に行い、その後に設定・共有対象・別の録画ソフト・直前の更新を調べます。再起動や作り直しが必ず解決すると決め付けません。</p>
+<p>確認できない環境では、非公開メモを共有対象の外や別端末に置くなど、実際に検証できる方法へ切り替えます。問い合わせには無害なTESTと版・再現手順を添え、機密を含む録画を送らないようにします。</p>
+<h2 id="guide-6">除外機能は、秘密情報を置いてよい境界ではない</h2>
+<p>共有をしやすくする設定と、秘密情報を守る仕組みは同一ではありません。通知、別の収録経路、ソフトウェアの変更は、この表で確認していない露出を作る可能性があります。</p>
+<p>Pocket Screenの参照を使う場合も、情報を必要最小限にし、実際に送る出力を確かめる習慣を優先します。記事の完成物は「必ず映らない」という宣言ではなく、自分の環境で何を確認し、何が未確認か分かる記録です。</p>
+<section class="b108-related"><h2 id="guide-7">次に読む</h2><div class="b108-cards"><a class="b108-card" href="https://lp.toybird.com/blog/mac-view-reference-while-working/"><strong>MacBookの1画面で資料を見ながら作業する｜同じ比較メモで配置を選ぶ</strong><span>資料を見返すたびに作業中の画面を切り替えているなら、必要な部分だけ参照として残す方法があります。資料全体に半分の画面を渡すか、小さな参照を置くかは、両方をどれくらい操作するかで選びます。</span></a></div></section><aside class="b108-product"><p class="b108-label">Pocket Screen</p><a class="b108-product-link" data-blog-product="Pocket Screen" href="https://lp.toybird.com/pocket-screen/">製品の使い方を見る</a><a href="https://labs.toybird.com/apps/pocket-screen/support.html">公式の使い方・仕様</a></aside><p class="b108-byline">Toybird Labs／Masaki Iino。本文で紹介する製品の開発・提供者です。</p></article></div></main><footer class="global-footer"><div><strong>Toybird Labs</strong></div><a href="https://lp.toybird.com/blog/">記事一覧</a></footer><script defer="" src="/blog/editorial-assets/blog108/blog108.js"></script></body></html>
