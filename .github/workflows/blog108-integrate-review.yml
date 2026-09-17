@@ -1,0 +1,66 @@
+name: Blog108 integrate and validate
+on:
+  push:
+    branches: [blog108-production-20260917]
+    paths: [.github/workflows/blog108-integrate-review.yml]
+permissions:
+  contents: write
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Install explicit build dependencies
+        run: python -m pip install beautifulsoup4==4.14.3 lxml==6.0.2 markdown-it-py==4.0.0 Pillow==12.0.0
+      - name: Check baseline and recover verified supplied image
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(git rev-parse origin/main)" = ba2f0da0bb207bca5fa5c9ac1ba70614305d339f
+          mkdir -p .editorial-108/media
+          gh api repos/toybird-apps/toybird-lp-site/git/blobs/a1eea4442f5de72d1234e6aad74c58f8b4203afb --jq .content | base64 --decode > .editorial-108/media/pr-en-home.webp
+          test "$(git hash-object .editorial-108/media/pr-en-home.webp)" = a1eea4442f5de72d1234e6aad74c58f8b4203afb
+      - name: Integrate the 98 articles and 10 indexes
+        run: python .editorial-108/integrate.py --root . --config .editorial-108 --date 2026-09-17
+      - name: Assemble clean tree with only approved public changes
+        env:
+          BASE: ba2f0da0bb207bca5fa5c9ac1ba70614305d339f
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, pathlib
+          def git(*args, **kwargs):
+              return subprocess.check_output(['git',*args], text=True, **kwargs).strip()
+          qa=json.loads(pathlib.Path('.editorial-108/qa-static.json').read_text())
+          assert qa['scope_count']==108 and qa['issues']==[]
+          env=os.environ.copy();env['GIT_INDEX_FILE']=os.environ['RUNNER_TEMP']+'/blog108-clean.index'
+          git('read-tree',os.environ['BASE'],env=env)
+          for path in qa['changed_files']:
+              assert path=='sitemap.xml' or '/blog/' in '/'+path
+              git('add','--',path,env=env)
+          tree=git('write-tree',env=env)
+          git('config','user.name','Toybird editorial update')
+          git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
+          commit=git('commit-tree',tree,'-p',os.environ['BASE'],'-m','Strengthen all 108 multilingual blog pages with complete cases and working examples')
+          changed=git('diff','--name-only',os.environ['BASE'],commit).splitlines()
+          assert set(changed)==set(qa['changed_files'])
+          assert len([x for x in changed if x.endswith('/index.html')])==108
+          forbidden=[x for x in changed if x!='sitemap.xml' and '/blog/' not in '/'+x]
+          assert not forbidden,forbidden
+          branch='blog108-release-'+os.environ['GITHUB_RUN_ID']+'-'+os.environ['GITHUB_RUN_ATTEMPT']
+          git('push','origin',commit+':refs/heads/'+branch)
+          out=pathlib.Path(os.environ['RUNNER_TEMP'])/'blog108-review';out.mkdir()
+          git('archive','--format=zip',commit,'-o',str(out/'site.zip'))
+          for src,target in [('qa-static.json','qa-static.json'),('registry-generated.json','registry.json')]:
+              (out/target).write_bytes((pathlib.Path('.editorial-108')/src).read_bytes())
+          release={'base':os.environ['BASE'],'commit':commit,'tree':tree,'branch':branch,'changed_files':changed,'production_deployed':False}
+          (out/'release.json').write_text(json.dumps(release,ensure_ascii=False,indent=2))
+          print(json.dumps(release,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: blog108-integration-review
+          path: ${{ runner.temp }}/blog108-review
+          retention-days: 5
