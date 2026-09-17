@@ -1,0 +1,24 @@
+name: Blog108 recover media
+on:
+  push:
+    branches: [blog108-production-20260917]
+    paths: [.github/workflows/blog108-recover-media.yml]
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Recover existing image object
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/recovered"
+          gh api repos/toybird-apps/toybird-lp-site/git/blobs/a1eea4442f5de72d1234e6aad74c58f8b4203afb --jq .content | base64 --decode > "$RUNNER_TEMP/recovered/existing.webp"
+          file "$RUNNER_TEMP/recovered/existing.webp"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: recovered-media
+          path: ${{ runner.temp }}/recovered
+          retention-days: 3
