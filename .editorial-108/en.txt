@@ -1,0 +1,675 @@
+@@ chatgpt-customer-reply-email
+# Write a Customer Reply with ChatGPT: Facts, Promises and the Next Update
+A customer needs an answer before their meeting. Your technical team has not established the cause. You can still write a useful initial reply without turning the customer's deadline into a recovery promise.
+
+This is a fictional training case. The email, internal notes and completed replies below were written for this guide; they are not a real customer conversation or a recorded AI output.
+
+## Start with two different times
+> The CSV export button has stopped producing a file. I need the data for an internal meeting at 17:00 today. Will it be fixed in time? Please tell me what is happening.
+
+The customer's 17:00 deadline describes their need. Your team's 15:00 commitment describes when you will send an update. Neither establishes when service will be restored.
+
+| Information type | What the team knows |
+| Confirmed | The report has been received and passed to the technical team for investigation. |
+| Unknown | Cause, affected users, recovery time and a working alternative. |
+| Approved commitment | Send a status update by 15:00, even if there is no progress. |
+| Information to request | Time of the failure, browser and version, and any error message. |
+| Not approved | Refunds, compensation, manual data delivery or a recovery deadline. |
+
+## Give the AI the reply materials, not permission to fill the gaps
+Use an AI environment approved for this information. Removing a customer's name does not necessarily remove confidential details.
+
+```text
+Draft an initial customer reply using only the customer email and internal notes below.
+Acknowledge that the data is needed by 17:00.
+Say that the report has been passed to the technical team for investigation.
+Do not promise recovery by 17:00: the recovery time is unknown.
+Promise a status update by 15:00, whether or not there is progress.
+Ask for the failure time, browser and version, and any error message.
+Do not add causes, troubleshooting instructions, workarounds, refunds or other commitments.
+Return a subject and email body. In a separate internal section, list each commitment and the note that authorizes it.
+
+[Paste the customer email and the table above.]
+```
+
+The separate commitment check is more useful here than a generic request to make the reply polite. It makes a specific error visible: changing a communication deadline into a repair deadline.
+
+## A reply that fits the notes
+> Subject: Update on the CSV export issue
+>
+> Thank you for reporting this. I understand that you need the data for your 17:00 meeting.
+>
+> We have passed your report to the technical team for investigation. The cause and recovery time are not yet confirmed, so I cannot promise that the export will be restored before your meeting. I will send you a status update by 15:00, even if there is no further progress.
+>
+> Could you share when the issue occurred, your browser and version, and any error message shown? Please leave out personal information or business data that is not needed for the investigation.
+>
+> I am sorry for the disruption.
+
+This is an edited example of an acceptable reply, not a promise that every AI will produce this wording. The authorized promise is an update, not a repair.
+
+## Repair a specific mistake without rewriting everything
+| Draft wording | Why it is wrong here | Correction |
+| “High system load caused the problem.” | The cause is unknown. | Say the report has been passed for investigation. |
+| “The issue will be fixed by 15:00.” | 15:00 is the update deadline. | “I will send a status update by 15:00.” |
+| “Please reinstall the application.” | No such troubleshooting step has been approved. | Request the known investigation details instead. |
+
+A useful follow-up instruction is: “Change only the recovery promise in paragraph two. The 15:00 commitment is to communicate, not to restore service. Keep the other facts unchanged.”
+
+## At 15:00, no progress is still an update
+If the team confirms that investigation is continuing but still cannot estimate recovery, the next message can be short:
+
+> As promised, here is the current status. The investigation is continuing, but the cause and recovery time remain unconfirmed.
+
+Add another contact time only after agreeing it internally. Do not ask the AI to invent a reassuring deadline. The reader should finish this workflow with a draft that can be checked against a short, explicit list of facts and promises.
+
+## Prepare the request in Prompt Ready
+{{MEDIA:PR-EN-EMPTY}}
+
+In Prompt Ready, choose the writing/reply task and enter the received message together with the facts you may communicate. Include “15:00 is a status update, not a recovery deadline” in the material or conditions. Check the resulting request before copying it into your usual AI service. The screenshot shows where to prepare a request; it does not show this CSV case being executed.
+
+Prompt Ready prepares the request. The AI you paste it into writes the reply, and you decide whether it can be sent. For repeated customer work, keeping those stages separate makes the same checks reusable without treating different customers as the same case.
+
+@@ chatgpt-compare-options
+# Compare Quotes with ChatGPT: Put Three Proposals on the Same Basis
+A per-session price, an all-inclusive quote and a per-person fee cannot be compared by choosing the smallest number on the page. First calculate the same required service, then check its mandatory conditions.
+
+The following training procurement example is fictional. Amounts are in Japanese yen, excluding tax, solely to demonstrate a calculation. They are not market prices, supplier recommendations or measured AI results.
+
+## The decision is a 30-person course, not a headline price
+The organization needs training for 30 people, completed by 20 October, within JPY 450,000. Thirty days of questions and answers after the course is mandatory.
+
+| Quote | Information supplied |
+| A | JPY 180,000 per session; capacity 10. Three identical sessions serve 30 people. All three can finish before the deadline. Thirty-day questions and answers are included. No additional fees. |
+| B | JPY 420,000 for all 30 people. Delivery before the deadline and thirty-day questions and answers are confirmed. No additional fees. |
+| C | JPY 9,000 per person plus JPY 60,000 setup. Supports 30 participants. Delivery dates and the duration of questions and answers are not stated. No other fees are listed. |
+
+A is not a JPY 180,000 solution for this group. Equally, C's missing support information does not establish that C offers no support.
+
+## Keep mandatory requirements out of a weighted average
+A low price cannot compensate for a mandatory condition that is not met. Separate requirements from preferences before requesting a recommendation.
+
+```text
+Compare these three training quotes for an internal selection meeting.
+Requirements: 30 participants; total no more than JPY 450,000 excluding tax; completion by 20 October; 30 days of questions and answers after training.
+Use only the supplied quote information.
+1. Calculate the total for 30 people and show each formula.
+2. For each mandatory requirement, mark met, not met, or unconfirmed.
+3. Do not treat missing information as “not offered” or zero points.
+4. Separate candidates that can currently be assessed from those requiring clarification.
+5. Draft the questions needed before a decision.
+Do not select a supplier solely because its stated price is lowest.
+[Paste the quotes.]
+```
+
+## The completed comparison
+| Check | A | B | C |
+| Calculation | 180,000 × 3 | 420,000 total | 9,000 × 30 + 60,000 |
+| Total, JPY excluding tax | 540,000 | 420,000 | 330,000 |
+| Within 450,000 | Not met | Met | Met |
+| Complete by 20 October | Met | Met | Unconfirmed |
+| Thirty-day questions and answers | Met | Met | Unconfirmed |
+| Current decision status | Outside this budget | All requirements confirmed | Clarify date and support before deciding |
+
+B is the only option whose mandatory conditions are all confirmed. That does not prove B is the best supplier in every respect, or that C is unsuitable. It tells the decision-maker what the evidence currently permits.
+
+Check the multiplication yourself or in a spreadsheet. In a real comparison, attach the quotation name, date and section to every material row. A neat table is not a substitute for that traceability.
+
+## Turn missing cells into a useful supplier email
+> We are considering training for 30 participants. Can it be completed by 20 October? Can participants ask questions for 30 days after the course? If both are possible, please confirm whether they are included in the quoted JPY 330,000 total.
+
+This asks about the two conditions blocking the decision. “Please send more information” may simply produce another brochure. If the reply introduces an additional fee, update the calculation as well as the support cell.
+
+## Reconsider preferences without moving the goalposts
+```text
+Keep participant count, completion date and thirty-day question support mandatory.
+If C confirms these conditions, compare the eligible options with total price as the first preference.
+Do not treat current unknowns as confirmed facts.
+State which new information changed the conclusion.
+```
+
+If the budget itself changes, record that separately. Otherwise a later “better recommendation” might merely be answering a different question. This approach works for subscriptions, equipment or services too, provided you normalize the actual billing unit and do not invent missing prices.
+
+## Use Prompt Ready to prepare changing comparison conditions
+The reusable part is not a verdict about A, B or C. It is the structure: participants, deadline, mandatory conditions, pricing unit and how to handle missing facts. Put those conditions into Prompt Ready, review the prepared request, then use it in your selected AI. Keep the supplier evidence with the final table; the application does not approve a purchase or verify a quote on your behalf.
+
+@@ chatgpt-meeting-notes-todo
+# Turn Meeting Notes into Action Items Without Inventing Owners or Dates
+A person's name in a meeting note does not necessarily make them the task owner. “Ask Tanaka” may be Sato's action. A reliable follow-up list distinguishes decisions, proposals, cancellations and unresolved assignments.
+
+The meeting and names below are fictional teaching material. The completed table is an edited answer key, not a transcript-processing benchmark.
+
+## Eight notes, four different kinds of information
+Assume the meeting took place on 5 October 2026.
+
+```text
+M1: Agreed to use the latest price list in the proposal.
+M2: Yamada will share the candidate-service list by 7 October.
+M3: Can the demo environment be ready by Friday? Its availability needs checking first.
+M4: Sato will ask Tanaka whether a legal consultation is possible. No deadline set.
+M5: The customer plans an internal review next week; the date has not been obtained.
+M6: The comparison-table update is not needed this time. The earlier request is withdrawn.
+M7: No owner for replacing the price list was assigned in this meeting.
+M8: Set the next meeting after the customer's reply.
+```
+
+Friday in M3 is a question, not an agreed due date. M5 describes the customer's plan, not a task assigned to your team. M6 reverses an earlier request. These distinctions matter more than making the minutes sound polished.
+
+## Extract before composing an email
+```text
+Organize the notes into:
+1. Agreed decisions
+2. Actions: task, owner, person to consult, deadline, supporting note number
+3. Items requiring confirmation
+4. Withdrawn work
+Do not infer ownership from a name alone.
+Do not turn a question into a deadline or the customer's plan into our action.
+Keep missing owners and dates unconfirmed.
+Merge genuine duplicates but retain supporting note numbers.
+If notes conflict, show the conflict rather than silently choosing one.
+Meeting date: 5 October 2026.
+[Paste M1–M8.]
+```
+
+## An answer that preserves what was actually agreed
+The decision is to use the latest price list. Assigning the replacement is still unresolved.
+
+| Action | Owner | Consult | Due | Evidence |
+| Share the candidate-service list | Yamada | Not applicable | 7 October | M2 |
+| Ask whether legal consultation is possible | Sato | Tanaka | Not set | M4 |
+| Replace the proposal's price list | Unconfirmed | Unconfirmed | Unconfirmed | M1, M7 |
+
+The confirmation list contains demo availability, demo owner and timing; price-list owner and timing; the customer's review date; and the next meeting date. Friday remains a proposed point to check, not a confirmed task deadline. The comparison-table update belongs under withdrawn work, supported by M6.
+
+An “unconfirmed” cell is useful information at this stage. Filling every cell would make the table look more complete while making it less accurate.
+
+## Correct the row, not the whole document
+```text
+M4 assigns the checking action to Sato. Tanaka is the person to consult.
+Correct only the owner and consultation fields in that row.
+Do not change the other tasks or deadlines.
+```
+
+Similarly, a draft saying “Prepare the demo by 9 October” should be corrected to a confirmation item, because M3 asks a question. The calendar can resolve which date Friday means, but it cannot create an agreement that the meeting never made.
+
+## Add new agreements explicitly, then write the follow-up
+Suppose a later check establishes that Takahashi will replace the price list by 8 October. This is new information, not something extracted from the original notes. Update the evidence record before writing:
+
+> Yamada will share the service list by 7 October. Following confirmation after the meeting, Takahashi will replace the price list by 8 October. Sato will ask Tanaka about legal consultation; the deadline remains open. Demo readiness and the next meeting date still need confirmation. The earlier comparison-table update has been withdrawn.
+
+Before forwarding externally, check whether internal names and deliberations should be included. An acceptable internal follow-up is not automatically an acceptable customer email.
+
+## Repeat the same checks for the next meeting
+{{MEDIA:PR-EN-IDEAS}}
+
+Prompt Ready helps prepare the instruction for organizing notes; it is not the recording or transcription stage. Include the actual notes and conditions such as “owner and consulted person are different fields” and “withdrawn work must not reappear.” Review the request before pasting it into an authorized AI service. Keep the note numbers until the people responsible have confirmed the assignments.
+
+@@ chatgpt-long-document-summary
+# Summarize a Long Document for a Decision, Keeping Numbers and Footnotes
+“Annual cost: JPY 360,000; launch in November” is a clear summary. It is also wrong for the proposal below because it drops setup costs and launch conditions. A decision summary must stay connected to its source.
+
+This guide uses five short sections written as a fictional proposal. They concentrate problems that can occur in a long document; they are not excerpts from a tested thirty-page customer document.
+
+## Read the proposal and its conditions together
+```text
+S1 — Outline
+Proposed rollout of a work-management service to all offices on 1 November.
+The internal adoption decision is wanted by 20 October.
+
+S2 — Fees
+Setup: JPY 120,000. Monthly subscription: JPY 30,000.
+The first year includes twelve monthly payments. All amounts exclude tax.
+These are the only mandatory first-year fees.
+
+S3 — Users
+This quote covers 25 people. Additional-user prices are not stated.
+
+S4 — Operating conditions and footnote
+Start with one office; dates for other offices will be discussed after the trial.
+Starting on 1 November requires user accounts and permissions to be finalized by 23 October.
+
+S5 — Implementation
+The internal owner and training date are not yet decided.
+Time savings have not been measured.
+```
+
+S1 and S4 disagree about the initial rollout. Do not improve the prose by silently removing that conflict.
+
+## Build an evidence table first
+```text
+Prepare decision notes from this proposal.
+First extract fees, dates and their conditions, users and rollout scope, unresolved items, and contradictions.
+Give a supporting section number for each row.
+Separate stated amounts from your calculations.
+Do not invent missing conditions or resolve conflicting wording yourself.
+Then produce a short version for a manager and an action-focused version for the implementation team.
+[Paste S1–S5.]
+```
+
+| Decision item | What can be established | Source |
+| First-year cost | JPY 480,000 = 120,000 + 30,000 × 12, excluding tax | S2 |
+| Users | 25; price above that number is missing | S3 |
+| Start | 1 November, conditional on accounts and permissions by 23 October | S4 |
+| Rollout | “All offices” conflicts with “one office initially” | S1, S4 |
+| Owner and training | Not decided | S5 |
+| Time saving | Not measured | S5 |
+
+The calculated JPY 480,000 should not be presented as a number directly quoted from S2. Keeping the formula lets another reader check it quickly.
+
+## The manager version leads with the blocked decisions
+> First-year mandatory cost is JPY 480,000 excluding tax. The proposed 1 November start depends on accounts and permissions being finalized by 23 October. The proposal conflicts on whether the initial rollout covers all offices or one office, so scope needs clarification before adoption. Extra-user prices and the internal owner are unresolved; time savings have not been measured.
+
+This retains uncertainty without reproducing the proposal paragraph by paragraph. A manager can see what needs a decision or a question.
+
+## The implementation version makes unassigned work visible
+| Preparation | Timing | What remains unresolved |
+| Finalize the user list | By 23 October, as a start condition | No owner stated |
+| Finalize permissions | By 23 October, as a start condition | No responsible person stated |
+| Clarify office scope | Before confirming rollout | Resolve the S1/S4 conflict with the proposer |
+| Arrange training | Date not decided | Set participants and date |
+
+Do not fill the empty owner cells with “IT” merely because that seems likely. The table distinguishes preparation implied by explicit start conditions from assignments the document never made.
+
+## Check five things before using either version
+Have you retained setup cost, the conditional start date, the rollout conflict, the missing additional-user price and the absence of measured savings? If one disappears, ask for that point to be restored with its source section. Do not respond only with “make the summary more accurate.”
+
+For a genuinely long document, number sections or pages, extract them in a consistent format, and consolidate the extraction. Finally, return to the original for important numbers, obligations, exceptions and contradictions. Information lost in an intermediate summary cannot be recovered merely by summarizing it again. If a table cannot be read, leave it for inspection rather than guessing its contents.
+
+## Prepare different requests for different readers
+Prompt Ready prepares the instruction, not the document analysis itself. For a manager, include cost, conditions and unresolved decisions. For the implementation team, include preparation, dates and unassigned work. Read the request, then supply it with the authorized source material to your chosen AI. The two completed versions should have different emphasis but the same facts.
+
+@@ chatgpt-ask-questions-prompt
+# Ask ChatGPT Questions First: Turn a Vague Task into a Usable Brief
+You do not need a perfect prompt before asking for help. But an unlimited interview can consume the time you hoped to save. Ask questions that change the work, then define when to stop and draft.
+
+The handover situation and dialogue below are fictional examples, not a recorded AI session or a policy recommendation for every organization.
+
+## Preserve the facts you have already supplied
+```text
+I need a handover guide for one person taking over the inquiry desk next month.
+The handover lasts two weeks. The new colleague has completed basic product training.
+Reply procedures exist, but staff disagree about when an inquiry should go to a manager.
+```
+
+“Who is the guide for?” and “Have they had training?” have already been answered. The missing information is what decisions the guide must support and which rules are actually approved.
+
+## Set a short, decision-focused interview
+```text
+Do not write the handover guide yet.
+Ask the most important missing questions one at a time, at most three in total.
+Ask about matters that materially change the work before asking about tone or layout.
+Do not repeat information already supplied.
+Briefly explain why each question is needed.
+Offer choices where useful, while allowing a free-text answer.
+If I answer “not decided,” do not convert a suggested default into a fact.
+After my answers, separate confirmed facts, unresolved matters, and the draft that can be made now.
+```
+
+Three is a limit for this example, not a universal optimum. The aim is to avoid refining formatting while the substantive task remains unknown.
+
+## Different answers lead to different documents
+| Question | Answer in this example | Consequence |
+| Will the guide be used before work, during a difficult inquiry, or for reporting afterwards? | During an inquiry, when deciding whether to escalate. | Build a short decision aid, not a long training course. |
+| Which escalation rules are approved? | Personal-data requests and compensation questions go to a manager. The rest is not standardized. | Include those two rules; do not invent a complete policy. |
+| Who reviews and approves additional rules? | The inquiry-desk lead, at next week's meeting. | Prepare a review draft with explicit open questions. |
+
+If the first answer had been “before starting the role,” the same source material might instead support an induction checklist. That is why use comes before formatting.
+
+## “Not decided” does not always mean “do nothing”
+| Situation | Confirmed handling | Still to check |
+| Personal-data request | Refer to a manager | Contact method and urgent route |
+| Compensation question | Refer to a manager | What to do if the approver is unavailable |
+| Other uncertain inquiries | Rules not yet standardized | Which scenarios the lead must define |
+
+This is a draft of the fictional organization's stated rules, not a generally applicable escalation policy. The unanswered questions are part of its usefulness: they show precisely what the lead must decide.
+
+```text
+Use confirmed facts as facts.
+Leave matters requiring approval marked as awaiting confirmation.
+You may propose headings and order, but label them as editorial suggestions.
+Do not propose an approved compensation limit or other business rule unless it is in the supplied material.
+```
+
+## Redirect an unhelpful interview
+If the AI asks about headcount again, reply: “The original brief confirms one new colleague. Move that to confirmed facts and continue with the remaining question.” If it asks about tone too early, say: “Tone can wait. First clarify the decision the guide must support.”
+
+The stopping condition is not that every conceivable question has been answered. It is that you can distinguish the document you can draft now from the decisions someone else still owns.
+
+## Use Prompt Ready to state the uncertainty clearly
+Include the task, known background and intended output in Prompt Ready. When the material is incomplete, add “ask up to three important questions first” and “keep unapproved rules unresolved.” Review the generated request before copying it to your usual AI. Prompt Ready helps frame the request; neither it nor the AI should become the authority for the organization's missing rules.
+
+@@ chatgpt-sales-roleplay
+# Practise a Sales Conversation with ChatGPT When the Customer Is Not Looking to Change
+“Be a difficult customer” often creates an argument rather than a useful rehearsal. In an early sales conversation, practise finding out whether there is a reason to change before rushing to a demonstration.
+
+The organization, product and exchanges below are fictional training material. They are not customer research, a real AI conversation, or evidence of improved sales results.
+
+## Choose the information you need to discover
+The customer is a sales-operations lead in a company with 40 salespeople. Departments submit spreadsheets for a monthly report. The lead consolidates them and has no current plan to replace the process. Extra work for the team is a concern.
+
+Your objective is to understand the workflow, the conditions under which it becomes difficult, and what could be checked next. Getting a demo booked at any cost is not the objective.
+
+```text
+Play the customer in an early discovery conversation.
+You are the sales-operations lead of a company with 40 salespeople.
+You collect departmental spreadsheets for monthly reporting. You have no current plan to change tools and are concerned about rollout workload.
+Respond naturally as the customer, one issue at a time.
+Do not reveal every problem, budget and decision-maker before I ask.
+Answer relevant questions. Do not disagree merely to make the exercise hard.
+If I assert an unsupported feature or result, ask me to substantiate it.
+Do not coach, score or give model answers during the roleplay.
+When I say “finish,” stop playing the customer.
+Begin: “Our current process isn't causing any major problems.”
+This is fictional; do not infer facts about a real company.
+```
+
+## A pitch can hide the question you needed to ask
+> Customer: Our current process isn't causing any major problems.
+> Seller: Our service makes reporting more efficient. Let me show you a demo.
+> Customer: We already produce the report. I don't want the team to learn another tool.
+
+Nothing here establishes how reporting works or what the effect of a change would be. Treating this as an objection to overcome skips the discovery work.
+
+## Four exchanges from the same opening
+| Step | Seller | Customer |
+| Understand the process | How does the monthly report get completed today? | Departments send their sheets; I align the fields and consolidate them. |
+| Find the difficult condition | When does that process become harder to finish as planned? | When different departments define the numbers differently, there are extra questions back and forth. |
+| Understand the impact | Which part of your work is affected by that back-and-forth? | The report is still on time, but there is less time to analyze it before the meeting. |
+| Agree a useful next check | Could we review a shareable example of the fields and definitions before discussing a tool change? | I cannot share live data, but a sample with field names is possible. |
+
+The result is not a proved need for your product. It is a clearer issue: inconsistent definitions reduce analysis time. The next conversation can examine definitions and workload instead of presenting every feature.
+
+## Use actual statements as feedback evidence
+```text
+Finish the roleplay.
+Review my statements against these questions:
+1. Did I learn the current workflow?
+2. Did I distinguish difficult conditions from their business impact?
+3. Did I avoid claiming a solution without evidence?
+4. Did I make the next check concrete?
+For each, mark established or not yet established and cite a short statement from my side.
+Suggest one improved question. Wait for my response before starting another round.
+```
+
+For the example above, the workflow and impact have been explored. The frequency of the problem and who approves shared definitions remain unknown. A useful next question is: “Who would need to agree if the departments used a common definition?”
+
+## Change one condition, not the entire scenario
+Repeat with the same workflow but add “the team cannot change its process this quarter.” Practise agreeing a small investigation without treating immediate rollout as inevitable. Compare the questions you asked, not an AI-generated likelihood of winning the deal.
+
+{{MEDIA:PR-EN-IDEAS}}
+
+## Prepare each rehearsal with Prompt Ready
+Use Prompt Ready to organize the stage, customer role and rehearsal objective. Include the rule that coaching waits until the conversation ends. The AI you paste the request into plays the role; Prompt Ready does not predict the real customer's response. Rebuild the brief when the stakeholder or sales stage changes, and keep genuine confidential account details out of an unapproved environment.
+
+@@ chatgpt-prompt-work-tips
+# Ten Ways to Use ChatGPT at Work: Choose a Task and a Finished Result
+Email and summarization are useful starting points. To broaden your use of AI, begin with a real piece of work: what material do you have, what result do you need, and how will you know it is ready?
+
+This guide is a route into the task-specific articles, not a collection of supposedly universal prompts. You can use the examples without installing an application.
+
+## Choose the job before choosing the wording
+Writing a reply is creating a document. Extracting an owner from notes is organizing evidence. Comparing quotes is checking conditions. Rehearsing a sales conversation is practising a skill. These jobs need different materials and different checks.
+
+| Job | Bring this material | Aim for this result | Check before using it |
+| Reply to a customer | Received message, confirmed facts, next action | A reply draft | No invented cause or promise |
+| Decline a request | Request, firm limits, approved alternatives | Clear refusal and next step | Start date is not mistaken for completion |
+| Organize meeting notes | Notes of statements and decisions | Actions with owners and dates | Questions are not turned into agreements |
+| Summarize a document | Source, reader and decision | Evidence-linked decision note | Numbers and footnotes are retained |
+| Compare options | Quotes and mandatory conditions | A like-for-like table | Unknown does not mean zero or absent |
+| Clarify a vague brief | What is known and what is difficult | A few useful questions | Already answered questions are not repeated |
+| Rehearse a conversation | Role, stage and objective | Dialogue followed by feedback | Roleplay and coaching stay separate |
+| Explain to a new audience | Accurate original and reader's knowledge | An accessible explanation | Simpler wording has not changed conditions |
+| Draft instructions | Actual steps, exceptions and checks | A reproducible first draft | No imaginary buttons or steps |
+| Organize research | Sources, dates and a question | Facts separated from interpretation | Sources support the individual claims |
+
+Choose one row. You do not need to put every possible safeguard and output type into one enormous prompt.
+
+## A small change in purpose changes the output
+Suppose you have a proposal. “Summarize this” is not the same job as “identify what a manager must decide before adoption.” The latter may need a cost calculation, a rollout contradiction and missing responsibilities rather than a page-by-page recap.
+
+Or suppose you have three quotes. Start by normalizing participant count and billing units. Ask for a recommendation only after distinguishing mandatory requirements from preferences. This makes the request useful even when the result is “clarify these two points first.”
+
+## A reusable request structure
+```text
+Task: [one specific action]
+Purpose: [what the reader will decide or do]
+Source material: [the message, notes, document or data]
+Confirmed conditions: [dates, limits, required facts]
+Unknowns: [what must not be guessed]
+Output: [reply, table, questions, checklist or dialogue]
+Before finishing: [the particular mistake to check]
+```
+
+These fields are prompts to think, not a mandatory form. A simple task may need only three of them. When a response goes wrong, check which decision-making information was absent rather than simply asking for more detail.
+
+## Continue with a complete example
+{{RELATED-INLINE}}
+
+The detailed guides contain the actual input material and an edited completed example. Read the finished result alongside its source; do not treat an attractive answer as proof that the source was understood.
+
+## Fix one meaningful difference at a time
+After a first answer, give a specific correction: “Keep the amounts and conditions. Move the conclusion first,” or “The date is a communication deadline, not a completion promise. Correct only that sentence.” If the issue is factual, return to the original material before adjusting tone.
+
+For work involving sensitive information, use your organization's approved environment and rules. The same text may be acceptable in one setting and inappropriate in another. Removing names alone is not a complete confidentiality check.
+
+## Find uses you have not yet turned into templates
+{{MEDIA:PR-EN-HOME}}
+
+Prompt Ready groups work by purpose. The home screen provides categories; the ideas view makes specific jobs easier to find. They help with two different problems: discovering what to ask an AI to do, and reconstructing the conditions for today's task.
+
+{{MEDIA:PR-EN-IDEAS}}
+
+Choose a use, add the source text or topic and conditions, inspect the request, then copy it into your usual AI. Prompt Ready constructs the request locally; it does not write the external AI's answer or send a customer email. Once you paste information into another service, that service's data terms apply.
+
+Start with one task you actually repeat. Keep its completed result and the checks that made it usable. Expand to another task when you understand the first workflow, not merely when you have collected more prompt templates.
+
+@@ photos-pdfs-active-recall-iphone
+# Turn a Photo or PDF into a Three-Question Recall Sheet on iPhone
+A page can be readable without being a good quiz. Make one useful recall sheet by deciding exactly what the learner should answer and what context must remain visible.
+
+The small worksheet below was written for this article. Its water-cycle explanations are based on USGS material; the questions and layout are our teaching example, not a screenshot of automatic app detection.
+
+## Start with a source you can check
+| Source | Term | Short explanation |
+| R1 | Evaporation | Liquid water changes into water vapor. |
+| R2 | Condensation | Water vapor changes into liquid water. Tiny droplets can form clouds. |
+| R3 | Precipitation | Water falls from clouds as rain, snow or other forms of precipitation. |
+
+The useful distinction is a change of state versus water falling. A learner who swaps condensation and precipitation needs to return to R2 and R3, not merely look at the right word once. See [USGS: condensation](https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle) and [USGS: precipitation](https://www.usgs.gov/water-science-school/science/precipitation-and-water-cycle).
+
+## Hide the answer, not the whole explanation
+| Keep visible | Hide | Why |
+| “Liquid water changes into water vapor” | Evaporation | The state change is the clue being understood. |
+| “Water vapor changes into liquid water” | Condensation | This distinguishes the reverse process. |
+| “Water falls from clouds as rain or snow” | Precipitation | Falling, not just forming droplets, is central. |
+
+Hiding both the term and its explanation leaves no meaningful question. Leaving the same term in a nearby heading gives the answer away. Inspect the whole page, including captions, before deciding that a mask is sufficient.
+
+## Try the three questions before revealing the answers
+{{QUIZ:WATER-3}}
+
+This exercise is part of the article, not the AI Study Sheet app. You can reproduce the idea with your own authorized page: keep the explanation or diagram, hide the specific answer, say the answer, then reveal it.
+
+## Move your page into AI Study Sheet
+Take a clear photograph or select an image/PDF. In standard mode, inspect the suggested masks and adjust them where the app permits. Existing red/orange marked material uses a different mode; do not assume all editing controls are available there. Start with a page whose terms and explanations are easy to read before attempting dense handwriting or complex layouts.
+
+{{MEDIA:AS-LEARN}}
+
+The image shows the app's study interface with its original demonstration material. It is not a claim that the water-cycle worksheet above was processed by the app in this session.
+
+## Record the kind of mistake, not just the count
+| Attempt | What happened | Useful next step |
+| Evaporation answered correctly | Term and explanation matched | Revisit after a gap, rather than immediately repeating only this word. |
+| Precipitation answered for condensation | Two processes were confused | Compare R2 with R3, then answer what changes in each. |
+| Answer unreadable in the photograph | Input quality failed | Replace the image before interpreting this as a memory failure. |
+
+An uncertain answer should send you back to the original paragraph or diagram. If you cannot explain the relationship even with the words visible, read or solve a problem before adding more masks.
+
+## Finish one page before importing everything
+The first useful result is one page with three answerable questions, readable source text and a clear correction route. AI Study Sheet makes the same material available for repeated recall; it does not establish whether every automatically selected word is the right thing for your exam. Once this page works, use the companion worksheet-planning guide to organize several pages over a week.
+
+@@ worksheets-without-rewriting
+# Review Your Own Worksheets Without Rewriting Them: A One-Week Example
+A growing folder of scanned handouts is not yet a review plan. Give each page a role, record the mistakes that send you back to it, and leave time to solve questions outside the app.
+
+The six-page collection and schedule below are fictional planning examples. The days are a practical starting point to adjust, not a scientifically optimal interval or a promise about exam results.
+
+## Build a small registry of material you really use
+| Page | Contents | How it will be used |
+| P1 | Three vocabulary definitions | Short recall questions |
+| P2 | A process diagram | Explain the arrows and labels |
+| P3 | A comparison table | Say how two similar terms differ |
+| P4 | Practice questions | Solve on paper or in the original format |
+| P5 | Worked solutions | Locate the reason for a missed question |
+| P6 | A duplicate of P1 | Do not add a second review item |
+
+Keeping P4 for actual problem solving prevents a common mistake: converting every task into word recognition. P5 is valuable even when you do not quiz every word on it, because it is the route back to an explanation.
+
+## Name pages so an error can point to them
+A label such as “Unit 3 — process — P2” is more useful than “photo 48.” Keep the original page number and topic in the title or note. Use folders for the current course or exam section rather than one undifferentiated collection.
+
+{{MEDIA:AS-LIB}}
+
+The image is an app-interface reference. The fictional P1–P6 collection is shown in the table, not inside the screenshot.
+
+## A first week with both recall and problem solving
+| Day | Plan | What to retain afterwards |
+| 1 | Read P1–P3 and prepare a few clear questions | Page references and any unclear masks |
+| 2 | Answer P1 and explain P2 without looking at the terms | One error record per specific confusion |
+| 3 | Compare the terms on P3; check yesterday's errors | Whether the explanation, not just the word, is now clear |
+| 4 | Solve P4 in its original format | Link each error to P1, P2, P3 or P5 |
+| 5 | Revisit the linked pages | A short explanation of each correction |
+| 6 | Attempt a different question on the same weak topic | Whether knowledge transfers beyond the original page |
+| 7 | Check unresolved points and plan the next week | A smaller list of specific targets |
+
+## Change the plan when the errors change
+Suppose E1 is a missing term on P1, while E2 is an incorrectly explained arrow on P2. E1 can be checked with a term-recall question. E2 needs the diagram and an explanation of its direction; repeating a single hidden label may not fix it.
+
+If day three is missed, do not double every task on day four. Keep the planned problem-solving attempt, then choose the two errors that most obstruct it. Move optional review of already secure words to a later gap. This is a workload decision, not a claim that a particular spacing schedule suits every learner.
+
+## Use the app for the part it helps repeat
+In AI Study Sheet, import the selected photo/PDF pages, check masks before saving, and use folders or search to choose the scope of a session. Ordered, random and weak-point-focused sessions serve different purposes: follow a process in order, check recall without relying on page order, or revisit recorded weak points. Choose a session size you can actually complete.
+
+Do not confuse app results with complete mastery of a school subject or certification. Essays, calculations and unfamiliar problems still need their own practice. The intended weekly result is a manageable set of pages, a record of why each matters and a short route from an error back to its explanation.
+
+@@ mac-view-reference-while-working
+# Work on One Mac Screen While Keeping a Reference in View
+When most of your work happens in one window, repeatedly reopening a document can interrupt the task. A small reference view can keep the relevant part visible without giving half the display to a document you only consult.
+
+Use the same task to choose between window layouts. The following specification table and decision memo are fictional teaching material, not a timed productivity test.
+
+## A reference table and a memo to complete
+You need a component delivered within two weeks, with at least a one-year warranty. The example prices are arbitrary units, not real offers.
+
+| Option | Lead time | Example price | Warranty |
+| A | 2 weeks | 120 | 1 year |
+| B | 3 weeks | 100 | 2 years |
+| C | Unconfirmed | 90 | Unconfirmed |
+
+Your memo should say that A meets the stated timing and warranty conditions, B misses the timing condition, and C requires clarification. It should not select C merely because 90 is the smallest number. Keep the condition labels visible while writing; copying only the price column removes the context that makes the comparison meaningful.
+
+## Choose a layout for how often you operate each window
+| Work pattern | Useful starting layout | Reason |
+| You edit both the source and memo repeatedly | Standard side-by-side windows | Both interfaces need room for interaction. |
+| You write in the memo and occasionally consult a few source rows | Main window plus a small reference view | The writing area remains the primary workspace. |
+| You need a whole-page diagram or dense table | A larger source window or side-by-side view | Small text or missing context would defeat the purpose. |
+
+macOS provides window tiling and Split View for working with multiple windows. Their exact controls depend on the macOS version; see [Apple's window-tiling guide](https://support.apple.com/guide/mac-help/tile-app-windows-mchlef287e5d/mac). A reference utility is an additional option, not a reason to abandon those built-in layouts.
+
+## Make the reference small enough to help, not too small to read
+Open the source document and the memo. In Pocket Screen, choose the source window for a reference view, keep the relevant rows and their headers visible, then return to writing in the memo. Adjust placement so the view does not cover the line or controls you are editing. If reading requires repeated enlargement, give the source more space instead of forcing it into a tiny corner.
+
+The key value is retaining the part you need while the main application stays usable. This is different from treating every source window as equally important or showing an entire desktop inside a miniature preview.
+
+## Distinguish a live reference from a saved state
+A live reference is appropriate when you need the source's current state. A frozen reference is useful when comparing a state that may change. After freezing, do not assume later changes in the source are reflected there. Label or otherwise remember when the state was captured.
+
+Do not infer independent, simultaneous capture of all browser tabs from a demonstration of one browser window. Changing what that window displays and retaining a state is a different operation. Check the currently released product's available controls rather than assuming a future demonstration is already shipping.
+
+## Check the memo against the original
+The finished note for this example is: “A satisfies the two-week and one-year conditions. B has a longer warranty but does not meet the delivery requirement. Ask C to confirm lead time and warranty before comparing it as an eligible option.”
+
+Return to the original source for the final check, especially if the view was frozen or the quotation changed. A reference window helps access information; it does not certify that the information is current or the decision is correct.
+
+## Before sharing your screen
+The arrangement visible to you is not automatically the arrangement received by another participant. Test the actual sharing mode with harmless content before displaying anything sensitive. The separate capture guide explains how to record that check. This article's case compares layouts and decision context; it does not claim measured time savings, capture performance or universal sharing behavior.
+
+@@ mac-pip-screenshot-screen-share-privacy
+# Check Whether a Reference View Appears in Screenshots and Screen Sharing
+What you can see on your Mac and what a recording or remote participant receives are different things to check. Test the actual output, not just the position of a setting switch.
+
+This guide provides a reproducible check and an empty record template. It does not present new measurements or imply that one successful screenshot proves every meeting application will behave the same way.
+
+## Prepare a harmless reference first
+Put only “TEST — reference view” in the source. Open the Pocket Screen reference and the capture-exclusion setting available in your installed version. Record the macOS version, Pocket Screen version and meeting/capture application version before starting. Do not use a real customer name, password or confidential note as the test content.
+
+A setting screenshot can show where a control is located. It cannot show what a remote participant received. Similarly, a preview on the sending Mac is not a substitute for inspecting the saved file or receiving device.
+
+## Run each output path separately
+| Output | What to do | What to inspect |
+| macOS screenshot | Capture while the TEST reference is visible locally | Open the saved image, not just its thumbnail |
+| macOS recording | Record a short interaction with the TEST view present | Play the finished recording |
+| Meeting: entire display | Share the selected display in a test meeting | Inspect the receiving device or participant's view |
+| Meeting: one window | Switch to the intended application window | Inspect that mode separately on the receiver |
+
+For Zoom and Google Meet, record the precise mode used. A tab, window and entire display are not interchangeable test cases. Apple's [screen-recording instructions](https://support.apple.com/en-us/102618) and the meeting provider's current help can identify the controls in your environment.
+
+## Use a record that permits “not checked”
+| Field | Record this |
+| Date and time | Your actual test time |
+| Mac and macOS | Model and installed version |
+| Pocket Screen | Installed version and relevant setting |
+| Capture/meeting application | Name, version or browser version |
+| Shared target | Display, window or tab; identify the target |
+| Local TEST visible | Yes / no |
+| TEST in saved output or receiver | Visible / not visible / not checked |
+| Change since prior test | Application update, display or sharing-mode change |
+
+Leave a result as not checked if you could not observe it. Do not fill it with an expected outcome. This is a template for your own environment, not a prefilled certification table.
+
+## Recheck at the points that change the result
+If you switch from a window to a whole display, move to another monitor, replace the source, or update the software, repeat the relevant check. Do not assume an earlier result transfers unchanged. For an important meeting, a brief rehearsal with a second device is more informative than a setting that merely looks correct.
+
+## If the reference is visible to the receiver
+Stop sharing or hide the reference before investigating. Check which setting is enabled, the actual target being shared, whether another capture application is involved, and whether the behavior began after a version or mode change. Collect the harmless TEST example and version information for support rather than sending confidential footage.
+
+Do not promise that restarting or rebuilding a view will fix every case. If exclusion cannot be confirmed in the environment you must use, keep private notes outside the shared target or use a separate device.
+
+## Exclusion is a convenience, not a security boundary
+Reference-view exclusion can support a presentation workflow, but it is not permission to display passwords or secret keys. Notifications, another recording path or a change in software can create different exposure. The reliable habit is to minimize sensitive material and verify the output you are actually sending.
+
+@@ screen-sharing-show-where-to-look
+# Make a Screen-Sharing Demo Easier to Follow: A 30-Second Script
+A moving pointer does not tell the audience why a control matters. Coordinate the sentence, the target, the operation and the visible result so the viewer does not have to guess which change to follow.
+
+Below is a fictional interface exercise, not a measured usability test. Both “Immediate notifications” and “Weekly summary” start on. The goal is to turn off immediate notifications while leaving the weekly summary on.
+
+## Write what the audience should learn first
+The outcome is not “I clicked a switch.” It is “Immediate notifications are off; the weekly summary remains on.” Naming the result stops the presenter from showing several unrelated settings just because they are nearby.
+
+| Time | Say | Do | Attention cue |
+| 0–5 seconds | “We will stop immediate notifications but keep the weekly summary.” | Leave both controls visible | No extra highlight yet |
+| 5–10 seconds | “This is the immediate-notifications control.” | Position the pointer at that label/control | Brief pointer highlight |
+| 10–16 seconds | “These two settings are separate.” | Show the two-row area without changing either | A short range highlight if helpful |
+| 16–22 seconds | “I am turning only this one off.” | Click the immediate-notifications switch once | Keep the action visible; avoid unnecessary movement |
+| 22–30 seconds | “Immediate is now off; weekly is still on.” | Pause on the final state | Let the result, not another animation, be the focus |
+
+The timings are an editorial rehearsal target. They are not a measured optimum or an app performance claim.
+
+## Use a point for a point, and a range for a relationship
+A pointer highlight can answer “which button?” A range can answer “which rows belong to this explanation?” Neither replaces readable labels, suitable zoom or a sentence explaining the purpose. Highlighting the whole screen when only one switch matters can make the target less clear.
+
+Pointer Cue can provide temporary pointer and range emphasis on Mac. Use the gesture configured in the installed release. Do not add persistent drawings when the explanation only needs a momentary marker; equally, choose a drawing tool when an arrow or annotation must remain for later reference.
+
+## Rehearse without assuming the audience saw the click
+After the operation, state the resulting status and hold it briefly. Saying “as you can see” is less informative than naming the two final states. A viewer joining late or using a small screen can then reconnect the action with its purpose.
+
+Run the same script once without extra cues and once with a pointer/range cue. Compare whether the target and final state can be identified, not how many visual effects appear. This exercise helps you choose where a cue is useful; it is not evidence that one version is universally better.
+
+## Check the receiving view, not only your own monitor
+Before a real remote demonstration, use harmless content and check the participant's view at the intended resolution and sharing mode. Cursor size, small text and subtle lines may not remain equally clear after capture and transmission. The supplied product demonstration illustrates local actions, not a receiver-side compression test.
+
+## Keep the software demonstration distinct from this worksheet
+A product clip showing a website can explain how temporary highlighting looks. It is not the execution record for the fictional notification settings above. Likewise, a pre-release clip should not be used to promise features or entitlement rules in the current release.
+
+## Turn the script into your next demo
+Replace the two fictional settings with one real, non-sensitive task. Write its before and after states, select one point where a marker adds information, and practise the pause after the change. Use Pointer Cue where a temporary cue supports the sentence. Leave it quiet where the interface result already makes the meaning clear.
