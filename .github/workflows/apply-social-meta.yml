@@ -1,0 +1,116 @@
+name: Apply social sharing metadata
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/apply_social_meta.py
+      - .github/workflows/apply-social-meta.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Snapshot visible page bodies
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re, xml.etree.ElementTree as ET
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          ns={"sm":"http://www.sitemaps.org/schemas/sitemap/0.9"}
+          tree=ET.parse("sitemap.xml")
+          snapshots={}
+          for node in tree.findall(".//sm:loc", ns):
+              url=(node.text or "").strip()
+              if not url.startswith("https://lp.toybird.com/"):
+                  continue
+              rel=urlparse(url).path.lstrip("/")
+              path=Path(rel)/"index.html" if rel else Path("index.html")
+              if not path.exists():
+                  continue
+              text=path.read_text(encoding="utf-8")
+              m=re.search(r"<body\b[^>]*>.*?</body>", text, re.I|re.S)
+              if m:
+                  snapshots[path.as_posix()]=hashlib.sha256(m.group(0).encode()).hexdigest()
+          Path("/tmp/social-body-hashes.json").write_text(json.dumps(snapshots), encoding="utf-8")
+          print(f"Snapshotted {len(snapshots)} visible bodies.")
+          PY
+
+      - name: Apply social metadata
+        run: python3 scripts/apply_social_meta.py
+
+      - name: Validate changes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re, xml.etree.ElementTree as ET
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          before=json.loads(Path("/tmp/social-body-hashes.json").read_text(encoding="utf-8"))
+          for p, expected in before.items():
+              text=Path(p).read_text(encoding="utf-8")
+              m=re.search(r"<body\b[^>]*>.*?</body>", text, re.I|re.S)
+              if not m or hashlib.sha256(m.group(0).encode()).hexdigest()!=expected:
+                  raise SystemExit(f"Visible body changed unexpectedly: {p}")
+
+          ns={"sm":"http://www.sitemaps.org/schemas/sitemap/0.9"}
+          tree=ET.parse("sitemap.xml")
+          checked=0
+          for node in tree.findall(".//sm:loc", ns):
+              url=(node.text or "").strip()
+              if not url.startswith("https://lp.toybird.com/"):
+                  continue
+              rel=urlparse(url).path.lstrip("/")
+              path=Path(rel)/"index.html" if rel else Path("index.html")
+              if not path.exists():
+                  continue
+              text=path.read_text(encoding="utf-8")
+              if 'property="og:image"' in text and 'property="og:image:alt"' not in text:
+                  raise SystemExit(f"Missing og:image:alt: {path}")
+              if 'property="og:title"' in text and 'property="og:locale"' not in text:
+                  raise SystemExit(f"Missing og:locale: {path}")
+              checked += 1
+
+          root=Path("index.html").read_text(encoding="utf-8")
+          if 'content="https://lp.toybird.com/assets/toybird-labs-og.png" property="og:image"' not in root and 'property="og:image" content="https://lp.toybird.com/assets/toybird-labs-og.png"' not in root:
+              raise SystemExit("LP homepage social image override missing.")
+
+          for p in [Path("pointer-cue/index.html"), Path("en/pointer-cue/index.html")]:
+              text=p.read_text(encoding="utf-8")
+              if 'https://lp.toybird.com/pointer-cue/assets/og-image.png' not in text:
+                  raise SystemExit(f"Pointer Cue social image override missing: {p}")
+
+          print(f"Validated {checked} sitemap pages.")
+          PY
+
+      - name: Verify changed-file scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          changed=subprocess.check_output(["git","diff","--name-only"], text=True).splitlines()
+          bad=[p for p in changed if not p.endswith("index.html")]
+          if bad:
+              raise SystemExit(f"Unexpected changed files: {bad}")
+          print(f"Safe change scope: {len(changed)} HTML files.")
+          PY
+
+      - name: Commit metadata changes
+        run: |
+          if git diff --quiet; then
+            echo "No social metadata changes were needed."
+            exit 0
+          fi
+          git config user.name "Toybird Labs Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -u
+          git commit -m "Normalize social sharing metadata"
+          git push origin HEAD:main
