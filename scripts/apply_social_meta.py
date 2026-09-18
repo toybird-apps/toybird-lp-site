@@ -34,7 +34,7 @@ IMAGE_OVERRIDES = {
     "en/pointer-cue/index.html": "https://lp.toybird.com/pointer-cue/assets/og-image.png",
 }
 
-HTML_LANG_RE = re.compile(r'<html\\b[^>]*\\blang=["\\']([^"\\']+)["\\']', re.I)
+HTML_LANG_RE = re.compile(r"<html\\b[^>]*\\blang=[\\\"']([^\\\"']+)[\\\"']", re.I)
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 
 
