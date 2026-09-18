@@ -34,17 +34,17 @@ IMAGE_OVERRIDES = {
     "en/pointer-cue/index.html": "https://lp.toybird.com/pointer-cue/assets/og-image.png",
 }
 
-HTML_LANG_RE = re.compile(r"<html\\b[^>]*\\blang=[\\\"']([^\\\"']+)[\\\"']", re.I)
+HTML_LANG_RE = re.compile(r"<html\b[^>]*\blang=[\"']([^\"']+)[\"']", re.I)
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 
 
 def meta_re(attr: str, key: str) -> re.Pattern[str]:
     return re.compile(
-        r"<meta\\b(?=[^>]*\\b"
+        r"<meta\b(?=[^>]*\b"
         + re.escape(attr)
-        + r"=[\\\"']"
+        + r"=[\"']"
         + re.escape(key)
-        + r"[\\\"'])[^>]*>",
+        + r"[\"'])[^>]*>",
         re.I,
     )
 
@@ -54,7 +54,7 @@ def get_meta(text: str, attr: str, key: str) -> str:
     if not match:
         return ""
     content_match = re.search(
-        r"\\bcontent=[\\\"']([^\\\"']*)[\\\"']",
+        r"\bcontent=[\"']([^\"']*)[\"']",
         match.group(0),
         re.I,
     )
