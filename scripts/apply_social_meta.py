@@ -40,7 +40,11 @@ TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 
 def meta_re(attr: str, key: str) -> re.Pattern[str]:
     return re.compile(
-        rf'<meta\\b(?=[^>]*\\b{attr}=["\\']{re.escape(key)}["\\'])[^>]*>',
+        r"<meta\\b(?=[^>]*\\b"
+        + re.escape(attr)
+        + r"=[\\\"']"
+        + re.escape(key)
+        + r"[\\\"'])[^>]*>",
         re.I,
     )
 
@@ -49,11 +53,21 @@ def get_meta(text: str, attr: str, key: str) -> str:
     match = meta_re(attr, key).search(text)
     if not match:
         return ""
-    content = re.search(r'\\bcontent=["\\']([^"\\']*)["\\']', match.group(0), re.I)
-    return html.unescape(content.group(1)).strip() if content else ""
+    content_match = re.search(
+        r"\\bcontent=[\\\"']([^\\\"']*)[\\\"']",
+        match.group(0),
+        re.I,
+    )
+    return html.unescape(content_match.group(1)).strip() if content_match else ""
 
 
-def set_meta(text: str, attr: str, key: str, value: str, anchor_key: str | None = None) -> str:
+def set_meta(
+    text: str,
+    attr: str,
+    key: str,
+    value: str,
+    anchor_key: str | None = None,
+) -> str:
     tag = f'<meta {attr}="{key}" content="{html.escape(value, quote=True)}">'
     pattern = meta_re(attr, key)
     if pattern.search(text):
@@ -71,9 +85,9 @@ def title_text(text: str) -> str:
     og_title = get_meta(text, "property", "og:title")
     if og_title:
         return og_title
-    m = TITLE_RE.search(text)
-    if m:
-        return html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
+    match = TITLE_RE.search(text)
+    if match:
+        return html.unescape(re.sub(r"<[^>]+>", "", match.group(1))).strip()
     return "Toybird Labs"
 
 
@@ -81,19 +95,21 @@ def lang_code(text: str, path: Path) -> str:
     parts = path.parts
     if parts and parts[0] in LOCALE_MAP:
         return parts[0]
-    m = HTML_LANG_RE.search(text)
-    if m:
-        raw = m.group(1).lower()
-        if raw in LOCALE_MAP:
-            return raw
-        if raw.startswith("pt"):
-            return "pt-br"
-        if raw.startswith("zh-cn") or raw == "zh-hans":
-            return "zh-cn"
-        if raw.startswith("zh-tw") or raw == "zh-hant":
-            return "zh-tw"
-        return raw.split("-", 1)[0]
-    return "en"
+
+    match = HTML_LANG_RE.search(text)
+    if not match:
+        return "en"
+
+    raw = match.group(1).lower()
+    if raw in LOCALE_MAP:
+        return raw
+    if raw.startswith("pt"):
+        return "pt-br"
+    if raw.startswith("zh-cn") or raw == "zh-hans":
+        return "zh-cn"
+    if raw.startswith("zh-tw") or raw == "zh-hant":
+        return "zh-tw"
+    return raw.split("-", 1)[0]
 
 
 def sitemap_pages() -> list[Path]:
@@ -117,19 +133,37 @@ def update(path: Path) -> bool:
 
     image_override = IMAGE_OVERRIDES.get(path.as_posix())
     if image_override:
-        text = set_meta(text, "property", "og:image", image_override, anchor_key="og:url")
+        text = set_meta(
+            text,
+            "property",
+            "og:image",
+            image_override,
+            anchor_key="og:url",
+        )
 
     locale_key = lang_code(text, path)
     locale = LOCALE_MAP.get(locale_key)
     if locale:
-        text = set_meta(text, "property", "og:locale", locale, anchor_key="og:type")
+        text = set_meta(
+            text,
+            "property",
+            "og:locale",
+            locale,
+            anchor_key="og:type",
+        )
 
     image = get_meta(text, "property", "og:image")
     if image:
         alt = title_text(text)
         if path == Path("index.html"):
             alt = "Toybird Labs apps, products, and practical AI projects"
-        text = set_meta(text, "property", "og:image:alt", alt, anchor_key="og:image")
+        text = set_meta(
+            text,
+            "property",
+            "og:image:alt",
+            alt,
+            anchor_key="og:image",
+        )
 
     if text != original:
         path.write_text(text, encoding="utf-8")
@@ -143,6 +177,7 @@ def main() -> None:
     for path in pages:
         if update(path):
             changed.append(path.as_posix())
+
     print(f"Processed {len(pages)} sitemap pages.")
     print(f"Changed {len(changed)} files.")
     for path in changed:
