@@ -217,3 +217,36 @@ body.blog108{
   max-width:none;
   overflow:visible;
 }
+
+
+/* 2026-09-21 concept bridge for case articles */
+.blog108 .b108-concept-note{
+  margin:30px 0 38px;
+  padding:22px 26px;
+  border:1px solid #dbe6ed;
+  border-left:4px solid #6f98b5;
+  border-radius:14px;
+  background:#f8fbfd;
+  box-shadow:0 10px 24px rgba(19,55,79,.035);
+}
+.blog108 .b108-concept-note .b108-label{
+  margin:0 0 7px;
+  color:#4f6e82;
+}
+.blog108 .b108-concept-note p:not(.b108-label){
+  margin:0;
+  line-height:1.85;
+}
+.blog108 .b108-concept-note a{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--b-blue);
+  font-weight:650;
+  text-underline-offset:3px;
+}
+@media(max-width:760px){
+  .blog108 .b108-concept-note{
+    margin:26px 0 32px;
+    padding:19px 20px;
+  }
+}
