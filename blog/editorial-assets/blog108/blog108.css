@@ -207,3 +207,13 @@ body.blog108{
     padding:24px 20px;
   }
 }
+
+
+/* 2026-09-21 table width fix: wrapper scrolls, table uses full available width */
+.blog108 .b108-table table{
+  display:table;
+  width:100%;
+  min-width:620px;
+  max-width:none;
+  overflow:visible;
+}
