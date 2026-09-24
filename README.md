@@ -61,7 +61,7 @@ toybird-lp-site/
 
 - AI暗記シート：公開用に教材名、ロゴ、社名などを匿名化した英語画像を使用
 - Pocket Screen：英語プロモーション動画を英語LP内に収録・埋め込み
-- Pointer Cue：macOS直接配布Zipを従来どおり収録
+- Pointer Cue：macOS版はMac App Store配布に集約。独自配布バイナリは収録しない
 
 ## 共通設定
 
@@ -70,10 +70,11 @@ toybird-lp-site/
 - `sitemap.xml`：日本語4URL＋英語4URL
 - `robots.txt`：サイトマップを案内
 
-## Pointer Cue macOS直接配布版
+## Pointer Cue 配布方針
 
-- パス：`/pointer-cue/downloads/PointerCue_v1.1.0_Direct2026.zip`
-- バージョン：1.1.0（Build 8）
-- アーキテクチャ：Universal（Apple Silicon / Intel）
-- 最低対応OS：macOS 13.5
-- 利用期限：2026年12月31日
+- macOS版はMac App Storeに集約
+- 現行バージョン：v1.3.0
+- アプリ本体は無料
+- 新規ユーザーはPointer Cue Proを60日間利用可能
+- 独自配布バイナリは停止
+- Windows版はMicrosoft Storeで既存版を継続提供するが、新機能の開発は停止中
