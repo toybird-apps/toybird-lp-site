@@ -75,7 +75,7 @@ button,input,textarea,select{font:inherit}
 
 
 /* Mac presentation guide links */
-.screenbrush-guides{background:linear-gradient(180deg,#f8faff,#f3f6fd)}
+
 .guide-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .guide-card{position:relative;display:flex;flex-direction:column;min-height:285px;padding:29px;border:1px solid #dce3f0;border-radius:22px;background:#fff;box-shadow:0 12px 30px rgba(31,46,84,.06);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .guide-card:hover{transform:translateY(-4px);border-color:#aebfec;box-shadow:0 18px 38px rgba(31,46,84,.11)}
