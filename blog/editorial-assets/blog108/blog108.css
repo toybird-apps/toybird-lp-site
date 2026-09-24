@@ -250,3 +250,9 @@ body.blog108{
     padding:19px 20px;
   }
 }
+
+
+/* 2026-09-24 Pointer Cue video how-to */
+.blog108 .b108-video video{display:block;width:100%;max-width:560px;height:auto;margin:0 auto;border-radius:12px;background:#101827}
+.blog108 .b108-video figcaption{max-width:560px;margin:12px auto 0;color:#526b7a;font-size:13px;line-height:1.75}
+@media(max-width:760px){.blog108 .b108-video video{border-radius:9px}.blog108 .b108-video figcaption{font-size:12px}}
