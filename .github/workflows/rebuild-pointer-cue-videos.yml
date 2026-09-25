@@ -1,0 +1,40 @@
+name: Rebuild Pointer Cue video assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".video-parts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild videos from base64 parts
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -d .video-parts ]; then
+            echo "No video parts; nothing to do."
+            exit 0
+          fi
+          mkdir -p blog/pointer-cue-how-to-use/assets
+          for name in menu-settings pointer-ring click-flash range-frame; do
+            cat .video-parts/${name}.part* | base64 -d > blog/pointer-cue-how-to-use/assets/${name}.mp4
+          done
+          rm -rf .video-parts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/pointer-cue-how-to-use/assets/*.mp4 .video-parts || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Refresh Pointer Cue how-to video clips"
+          git push
