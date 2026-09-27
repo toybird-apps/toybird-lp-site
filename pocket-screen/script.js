@@ -15,12 +15,12 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
   const style = document.createElement('style');
   style.textContent = `
-    .product-hunt-proof .smol-startup-badge{
+    .product-hunt-proof .appboard-badge{
       width:274px;
       min-height:0;
       flex:0 0 274px;
     }
-    .product-hunt-proof .smol-startup-badge img{
+    .product-hunt-proof .appboard-badge img{
       display:block;
       width:274px;
       height:auto;
@@ -118,19 +118,10 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
       .six-colors-proof,.runway-radar-proof{margin-left:auto;margin-right:auto}
     }
     @media(max-width:600px){
-      .product-hunt-proof .smol-startup-badge{flex-basis:274px}
+      .product-hunt-proof .appboard-badge{flex-basis:274px}
     }
   `;
   document.head.appendChild(style);
-
-  const smolBadge = launchProof.querySelector('.smol-startup-badge');
-  const smolImage = smolBadge && smolBadge.querySelector('img');
-  if (smolBadge && smolImage) {
-    smolBadge.href = 'https://smolstartup.com/projects/pocket-screen';
-    smolBadge.title = 'Smol Startup Top 3 Daily Winner';
-    smolImage.src = 'https://smolstartup.com/smolstartup/images/badges/top3-light.svg';
-    smolImage.alt = 'Smol Startup Top 3 Daily Winner';
-  }
 
   const language = (document.body.dataset.pageLanguage || document.documentElement.lang || 'en').toLowerCase();
   const isJapanese = language.startsWith('ja');
@@ -209,4 +200,34 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
   runwayLink.append(runwayCopy, runwayArrow);
   sixColorsLink.insertAdjacentElement('afterend', runwayLink);
+
+  const smolTextLink = document.createElement('a');
+  smolTextLink.className = 'runway-radar-proof smol-startup-proof';
+  smolTextLink.href = 'https://smolstartup.com/projects/pocket-screen';
+  smolTextLink.target = '_blank';
+  smolTextLink.rel = 'noopener noreferrer';
+  smolTextLink.setAttribute('data-track-cta', '');
+  smolTextLink.dataset.ctaId = 'smol_startup_feature';
+  smolTextLink.dataset.ctaLocation = 'hero';
+  smolTextLink.setAttribute(
+    'aria-label',
+    isJapanese
+      ? 'Smol StartupでPocket ScreenがProject of the Day 3位になった掲載ページを見る'
+      : 'View Pocket Screen on Smol Startup after placing #3 Project of the Day'
+  );
+
+  const smolCopy = document.createElement('span');
+  smolCopy.className = 'runway-radar-copy';
+
+  const smolHeadline = document.createElement('strong');
+  smolHeadline.textContent = 'Smol Startup — #3 Project of the Day';
+  smolCopy.append(smolHeadline);
+
+  const smolArrow = document.createElement('span');
+  smolArrow.className = 'runway-radar-arrow';
+  smolArrow.setAttribute('aria-hidden', 'true');
+  smolArrow.textContent = '↗';
+
+  smolTextLink.append(smolCopy, smolArrow);
+  runwayLink.insertAdjacentElement('afterend', smolTextLink);
 })();
