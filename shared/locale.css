@@ -1,4 +1,10 @@
 
+.language-switches {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
 .language-switch {
   display: inline-flex;
   align-items: center;
@@ -27,5 +33,11 @@
 .demo-video-frame video { display: block; width: 100%; height: auto; background: #05070a; }
 .demo-video-caption { margin-top: 14px; text-align: center; color: inherit; opacity: .72; font-size: 14px; }
 @media (max-width: 900px) {
-  .language-switch { min-height: 34px; padding: 0 10px; font-size: 12px; }
+  .language-switches { gap: 4px; }
+  .language-switch { min-height: 34px; padding: 0 8px; font-size: 12px; }
+}
+@media (max-width: 720px) {
+  .nav { gap: 8px; }
+  .language-switches { gap: 3px; }
+  .language-switch { min-height: 32px; padding: 0 6px; font-size: 11px; }
 }
