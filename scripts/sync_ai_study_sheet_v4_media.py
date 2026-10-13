@@ -34,8 +34,11 @@ def download(url: str) -> bytes:
 
 
 def screenshot(url: str, path: Path) -> Image.Image:
+    if url.endswith("/320x480bb.jpg"):
+        url = url.rsplit("/", 1)[0] + "/700x1520bb.jpg"
     im = Image.open(BytesIO(download(url))).convert("RGB")
-    print(f"Media source: {im.size}, url={url}", flush=True)
+    if im.width < 600 or im.height < 1200:
+        raise RuntimeError(f"CDN returned thumbnail rather than full-resolution screenshot: {im.size}, {url}")
     if im.height <= im.width:
         raise RuntimeError(f"Unexpected screenshot aspect ratio: {im.size}, {url}")
     im.thumbnail((700, 1520), Image.Resampling.LANCZOS)
