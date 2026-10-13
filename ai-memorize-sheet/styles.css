@@ -2069,3 +2069,17 @@ footer { border-top-color: var(--line); color: var(--muted); }
   .floating-card { background: rgba(255,255,255,.97); }
 }
 /* AI-STUDY-SHEET-V3-LIGHT-REFRESH:END */
+
+
+/* AI Study Sheet v4 localized App Store media */
+.v4-hero-visual{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px}
+.v4-hero-art{display:block;width:min(100%,370px);height:auto;max-height:630px;object-fit:contain;border-radius:22px;box-shadow:0 22px 58px rgba(63,39,53,.2)}
+.v4-hero-flow{font-size:13px;line-height:1.5;font-weight:750;color:#743f4d;background:rgba(255,255,255,.9);border:1px solid #eed7df;border-radius:22px;padding:11px 15px;margin:0;text-align:center}
+.v4-daily .v4-step-number{display:inline-flex;align-items:center;justify-content:center;background:#fff0f3;color:#bb3654;font-size:12px;font-weight:800;border-radius:18px;padding:5px 12px;margin-bottom:12px}
+.v4-gallery-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.v4-gallery-card{margin:0;text-align:center}
+.v4-gallery-card img{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:700/1520;object-fit:contain;margin:0 auto;border-radius:20px;box-shadow:0 13px 32px rgba(31,31,54,.14)}
+.v4-gallery-card figcaption{margin-top:15px;font-weight:700;font-size:14px;line-height:1.5}
+.focus-phone img.v4-focus-art{width:100%;height:100%;object-fit:contain}
+@media(max-width:720px){.v4-gallery-track{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.v4-hero-art{max-width:330px}.v4-hero-flow{border-radius:16px;font-size:12px}}
+@media(max-width:420px){.v4-gallery-track{gap:12px}.v4-gallery-card figcaption{font-size:12px}}
