@@ -70,7 +70,7 @@ def main() -> None:
         if payload.get("resultCount") != 1:
             raise RuntimeError(f"Store lookup not found: {country}")
         app = payload["results"][0]
-        if app.get("version") != "4.0.0":
+        if str(app.get("version", "")).removeprefix("v") != "4.0.0":
             raise RuntimeError(f"Store version isn't v4.0.0 for {country}: {app.get('version')}")
         shots = app.get("screenshotUrls") or []
         if len(shots) < len(NAMES):
