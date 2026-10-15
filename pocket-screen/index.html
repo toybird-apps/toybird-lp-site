@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Pocket Screen｜別アプリを小窓にMacの一画面作業を快適に</title>
-<meta content="Pocket Screenは、Macのウィンドウを小窓で表示し、必要な情報を見ながら作業できるMacアプリです最大4つまで並べて参照でき、画質は4つのモードから選ぶだけ1回10分まで、期間制限なく無料で使えます" name="description"/>
+<meta content="Pocket ScreenはMacのウィンドウをReference Viewとして小窓表示。1回10分まで何度でも無料、無制限版は最大4画面。Stream Deck MobileでiPhoneから操作できます。" name="description"/>
 <meta content="#eef5ff" name="theme-color"/>
 <meta content="website" property="og:type"/>
 <meta content="ja_JP" property="og:locale"/>
@@ -65,6 +65,26 @@
 @media(max-width:900px){.proof-grid-secondary{grid-template-columns:1fr;margin-top:52px}.proof-grid-secondary .proof-copy{padding-left:0}.hero-product-shot{border-radius:24px}}
 @media(max-width:600px){.hero-product-shot{border-radius:18px}.proof-grid-secondary{margin-top:42px}}
 @media(min-width:901px){.proof-grid-secondary .mode-heading{font-size:clamp(36px,3.15vw,50px);line-height:1.14}.proof-grid-secondary .mode-heading span{white-space:nowrap}}
+
+/* Pocket Screen Stream Deck Mobile section: page-local styles only. */
+.ps-mobile{background:linear-gradient(180deg,#f2f7ff 0%,#fff 100%)}
+.ps-mobile-heading{max-width:900px;margin:0 0 28px}
+.ps-mobile-heading h2{overflow-wrap:break-word}
+.ps-mobile-intro{font-size:17px;line-height:1.7;color:var(--muted);margin:0;max-width:850px}
+.ps-mobile-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(25px,4.5vw,58px);align-items:center}
+.ps-mobile-media{min-width:0;border:1px solid #dfe7f2;border-radius:24px;padding:12px;background:#fff;box-shadow:0 18px 50px rgba(31,68,117,.09)}
+.ps-mobile-player{width:100%;aspect-ratio:16/9;background:#10213f;border-radius:15px;overflow:hidden}
+.ps-mobile-player iframe{width:100%;height:100%;border:0;display:block}
+.ps-mobile-actions{display:grid;gap:20px;min-width:0}
+.ps-mobile-action{min-width:0}
+.ps-mobile-label{display:block;font-weight:700;font-size:13px;color:#53637c;margin-bottom:7px}
+.ps-mobile-action .button{font-size:15px;line-height:1.4;min-height:50px;padding:13px 16px;text-align:center;width:100%}
+.ps-mobile-secondary{background:#fff;border:1px solid #b9cae8;color:#155ec5}
+.ps-mobile-secondary:hover{background:#f6faff;transform:translateY(-2px)}
+.ps-mobile a:focus-visible{outline:3px solid #1a63ef;outline-offset:4px;border-radius:5px}
+@media(max-width:900px){.ps-mobile-layout{grid-template-columns:minmax(0,1fr);gap:26px}.ps-mobile-media{max-width:760px}.ps-mobile-heading{margin-bottom:22px}}
+@media(max-width:600px){.ps-mobile-media{border-radius:18px;padding:8px}.ps-mobile-player{border-radius:11px}.ps-mobile-actions{gap:16px}}
+
 </style></head>
 <body data-app-name="Pocket Screen" data-page-language="ja">
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -201,6 +221,23 @@
 <p class="section-kicker">設定もシンプル</p>
 <h2 class="mode-heading"><span>画質は、</span><br/><span>モードを選ぶだけ</span></h2>
 <p>Energy Saver / Standard / Smooth / Ultra。解像度やfpsを細かく設定せず、使い方に合わせて選べます。</p>
+</div>
+</div>
+</section>
+<section class="section ps-mobile" id="stream-deck-mobile" data-section-id="stream_deck_mobile" data-section-name="Stream Deck Mobile" data-section-order="5.5" data-track-section="">
+<div class="container">
+<div class="ps-mobile-heading">
+<h2>Stream Deck Mobile対応</h2>
+<p class="ps-mobile-intro">iPhoneのStream Deck Mobileから、Mac上のPocket ScreenのReference Viewを作成・追加・非表示・再表示できます。</p>
+</div>
+<div class="ps-mobile-layout">
+<div class="ps-mobile-media">
+<div class="ps-mobile-player"><iframe title="Pocket Screenの実演：Stream Deck MobileでiPhoneからMacのReference Viewを操作" src="https://www.youtube-nocookie.com/embed/CtJCV7EsP6E" width="560" height="315" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+</div>
+<div class="ps-mobile-actions">
+<div class="ps-mobile-action"><span class="ps-mobile-label">Pocket Screenをお持ちの方</span><a class="button button-primary" data-track-cta="" data-cta-id="stream_deck_profile" data-cta-location="stream_deck_mobile" href="https://marketplace.elgato.com/product/pocket-screen-reference-view-controls-f4a3c46b-5676-4c17-b4a4-482a8f2ad1b9" target="_blank" rel="noopener noreferrer">無料のStream Deckプロフィールを入手 ↗</a></div>
+<div class="ps-mobile-action"><span class="ps-mobile-label">Pocket Screenをお持ちでない方</span><a class="button ps-mobile-secondary app-store-link" data-app-name="pocket-screen" data-track-cta="" data-cta-id="app_store_stream_deck" data-cta-location="stream_deck_mobile" data-store-platform="macos" data-store-event="app_store_click" href="https://apps.apple.com/app/id6788211562" target="_blank" rel="noopener noreferrer">Pocket Screenをダウンロード ↗</a></div>
+</div>
 </div>
 </div>
 </section>
