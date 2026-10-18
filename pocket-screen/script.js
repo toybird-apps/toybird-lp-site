@@ -10,6 +10,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
 (function refreshHeroProofs() {
+  if (document.querySelector('.ps-awards')) return;
   const launchProof = document.querySelector('.product-hunt-proof');
   if (!launchProof) return;
 
