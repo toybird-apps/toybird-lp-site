@@ -48,3 +48,34 @@ section{padding:92px 0}.section-soft{background:var(--soft)}.kicker{font-size:12
 .share-panel-note{font-size:13px;color:#62728c;font-weight:700;text-align:center;margin:13px 0 0}
 .share-notice{max-width:900px}
 @media(max-width:700px){.share-preview{grid-template-columns:1fr;gap:16px}.share-panel{max-width:560px;width:100%;margin:0 auto}.share-slide{min-height:155px;padding-top:20px}.share-slide strong{font-size:24px}.share-slide-bars{height:48px}.share-slide-bars i:nth-child(4){height:47px}}
+
+/* KoeSub Japanese line-wrap refinement: preserve original copy and visual identity */
+.hero-grid{
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(28px,3.75vw,48px);
+}
+.hero h1,.section-title,.scene h3{text-wrap:balance}
+.hero h1 em{white-space:nowrap}
+.intro-grid{
+  grid-template-columns:minmax(0,1.09fr) minmax(0,.91fr);
+  gap:clamp(28px,3.75vw,52px);
+}
+.quote-panel strong{
+  font-size:clamp(28px,2.65vw,36px);
+  text-wrap:balance;
+}
+.scene h3 .keep-phrase{white-space:nowrap}
+.scene strong{display:block;text-wrap:balance;line-height:1.65}
+@media(max-width:950px){
+  .hero-grid,.intro-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .quote-panel{padding:clamp(22px,5vw,34px)}
+  .quote-panel strong{font-size:clamp(21px,6.4vw,27px)}
+}
+@media(max-width:390px){
+  #concept .section-title{font-size:clamp(24px,7.2vw,29px)}
+}
+@media(max-width:360px){
+  .hero h1{font-size:clamp(29px,8.3vw,33px)}
+}
