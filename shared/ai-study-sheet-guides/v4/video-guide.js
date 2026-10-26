@@ -23,7 +23,9 @@
     }
     // Invoke play during the click gesture so mobile browsers can play with sound.
     const playback = video.play();
-    if (playback) playback.catch(() => { error.hidden = false; });
+    if (playback) playback.catch((cause) => {
+      if (cause.name !== 'AbortError') error.hidden = false;
+    });
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (window.matchMedia('(max-width: 760px)').matches) {
       video.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth', block: 'center' });
