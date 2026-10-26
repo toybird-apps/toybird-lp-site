@@ -34,7 +34,8 @@
 .localized-library{background-position:center bottom}
 .focus-phone .localized-screen{border-radius:34px}
 .gallery-track .phone-gallery .localized-screen{height:100%}
-</style><script src="/shared/locale-router.js?v=20260927-1"></script></head>
+</style><script src="/shared/locale-router.js?v=20260927-1"></script><link rel="stylesheet" href="/shared/ai-study-sheet-guides/v4/video-guide.css"/>
+</head>
 <body data-app-name="AI背书卡" data-page-language="zh-CN">
 <a class="skip-link" href="#main">跳到主要内容</a>
 <header class="site-header">
@@ -160,6 +161,7 @@
 </div>
 <p>多页照片或 PDF 都可免费试用，直接看看自己的教材效果</p>
 </div>
+<p class="container guide-entry"><a href="#video-guide">观看视频指南 <span aria-hidden="true">↓</span></a></p>
 <div class="container steps-layout">
 <div class="step-list">
 <article class="step-item reveal">
@@ -195,6 +197,37 @@
 </div>
 </div>
 </section>
+<!-- AI-STUDY-SHEET-VIDEO-GUIDE:START -->
+<section class="section study-video-guide" id="video-guide" aria-labelledby="video-guide-title" data-section-id="video_guide" data-section-name="Video Guide" data-track-section="">
+<div class="container guide-layout">
+<div class="guide-player-column">
+<div class="guide-video-frame">
+<video id="study-video" controls playsinline preload="none" width="1080" height="1920" poster="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-zh-cn-v4.jpg" aria-label="通过视频了解使用方法">
+<source src="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-zh-cn-v4.mp4" type="video/mp4"/>
+<track kind="captions" src="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-zh-cn-v4.vtt" srclang="zh-CN" label="中文字幕"/>
+<a href="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-zh-cn-v4.mp4">在新标签页打开视频</a>
+</video>
+</div>
+<p class="guide-video-link"><a href="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-zh-cn-v4.mp4" target="_blank" rel="noopener">在新标签页打开视频 ↗</a></p>
+<p class="guide-error" role="status" hidden>如果视频无法播放，请在新标签页打开</p>
+</div>
+<div class="guide-content">
+<div class="guide-summary">
+<p class="section-kicker">视频指南</p>
+<h2 id="video-guide-title">通过视频了解使用方法</h2>
+<p class="guide-meta"><span>4:41</span><span>中文</span></p>
+<p class="guide-intro">通过实际应用画面，了解如何导入资料、复习、分享学习资料和调整设置</p>
+<p class="guide-hint">可以从头观看，也可以选择想了解的内容直接播放</p>
+<nav class="guide-languages" aria-label="视频语言"><a href="/ai-memorize-sheet/?lang=ja#video-guide" lang="ja" data-language-switch="ja">日本語</a><a href="/en/ai-memorize-sheet/?lang=en#video-guide" lang="en" data-language-switch="en">English</a><a href="/ko/ai-memorize-sheet/?lang=ko#video-guide" lang="ko" data-language-switch="ko">한국어</a><a href="/zh-cn/ai-memorize-sheet/?lang=zh-CN#video-guide" lang="zh-CN" data-language-switch="zh-CN" aria-current="page">中文</a></nav>
+</div>
+<div class="guide-topics">
+<h3 class="guide-chapter-heading">选择想了解的内容</h3>
+<ol class="guide-chapters"><li><button type="button" data-guide-seek="0.000" aria-controls="study-video"><span class="guide-time">0:00</span><span>四步开始学习</span></button></li><li><button type="button" data-guide-seek="12.000" aria-controls="study-video"><span class="guide-time">0:12</span><span>导入学习资料</span></button></li><li><button type="button" data-guide-seek="35.467" aria-controls="study-video"><span class="guide-time">0:35</span><span>确认与调整遮罩</span></button></li><li><button type="button" data-guide-seek="63.933" aria-controls="study-video"><span class="guide-time">1:03</span><span>提醒与复习</span></button></li><li><button type="button" data-guide-seek="103.000" aria-controls="study-video"><span class="guide-time">1:43</span><span>自动复习</span></button></li><li><button type="button" data-guide-seek="128.300" aria-controls="study-video"><span class="guide-time">2:08</span><span>记录学习结果</span></button></li><li><button type="button" data-guide-seek="160.667" aria-controls="study-video"><span class="guide-time">2:40</span><span>分享学习资料</span></button></li><li><button type="button" data-guide-seek="178.700" aria-controls="study-video"><span class="guide-time">2:58</span><span>按喜好调整设置</span></button></li></ol>
+</div>
+</div>
+</div>
+</section>
+<!-- AI-STUDY-SHEET-VIDEO-GUIDE:END -->
 <section class="section features" data-section-id="features" data-section-name="Features" data-section-order="6" data-track-section="" id="features">
 <div class="container narrow center reveal">
 <p class="section-kicker">先自动生成，再按自己的方式调整</p>
@@ -416,5 +449,6 @@
 </footer>
 <script src="../../ai-memorize-sheet/script.js"></script>
 <script src="../../shared/analytics.js"></script>
-<script src="../../shared/locale.js"></script></body>
+<script src="../../shared/locale.js"></script><script src="/shared/ai-study-sheet-guides/v4/video-guide.js" defer></script>
+</body>
 </html>

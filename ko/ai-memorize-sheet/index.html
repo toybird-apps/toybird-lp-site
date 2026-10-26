@@ -34,7 +34,8 @@
 .localized-library{background-position:center bottom}
 .focus-phone .localized-screen{border-radius:34px}
 .gallery-track .phone-gallery .localized-screen{height:100%}
-</style><script src="/shared/locale-router.js?v=20260927-1"></script></head>
+</style><script src="/shared/locale-router.js?v=20260927-1"></script><link rel="stylesheet" href="/shared/ai-study-sheet-guides/v4/video-guide.css"/>
+</head>
 <body data-app-name="AI 암기 시트" data-page-language="ko">
 <a class="skip-link" href="#main">주요 콘텐츠로 이동</a>
 <header class="site-header">
@@ -160,6 +161,7 @@
 </div>
 <p>여러 페이지 사진이나 PDF도 무료로 가져와 내 자료에서 직접 확인해 보세요</p>
 </div>
+<p class="container guide-entry"><a href="#video-guide">동영상 가이드 보기 <span aria-hidden="true">↓</span></a></p>
 <div class="container steps-layout">
 <div class="step-list">
 <article class="step-item reveal">
@@ -195,6 +197,37 @@
 </div>
 </div>
 </section>
+<!-- AI-STUDY-SHEET-VIDEO-GUIDE:START -->
+<section class="section study-video-guide" id="video-guide" aria-labelledby="video-guide-title" data-section-id="video_guide" data-section-name="Video Guide" data-track-section="">
+<div class="container guide-layout">
+<div class="guide-player-column">
+<div class="guide-video-frame">
+<video id="study-video" controls playsinline preload="none" width="1080" height="1920" poster="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-ko-v4.jpg" aria-label="영상으로 사용 방법 알아보기">
+<source src="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-ko-v4.mp4" type="video/mp4"/>
+<track kind="captions" src="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-ko-v4.vtt" srclang="ko" label="한국어 자막"/>
+<a href="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-ko-v4.mp4">새 탭에서 영상 열기</a>
+</video>
+</div>
+<p class="guide-video-link"><a href="/shared/ai-study-sheet-guides/v4/ai-study-sheet-howto-ko-v4.mp4" target="_blank" rel="noopener">새 탭에서 영상 열기 ↗</a></p>
+<p class="guide-error" role="status" hidden>영상이 재생되지 않으면 새 탭에서 열어 주세요</p>
+</div>
+<div class="guide-content">
+<div class="guide-summary">
+<p class="section-kicker">동영상 가이드</p>
+<h2 id="video-guide-title">영상으로 사용 방법 알아보기</h2>
+<p class="guide-meta"><span>4:25</span><span>한국어</span></p>
+<p class="guide-intro">교재 가져오기와 복습부터 교재 공유, 설정까지 실제 앱 화면으로 소개합니다</p>
+<p class="guide-hint">처음부터 보거나 원하는 항목을 선택해 바로 확인하세요</p>
+<nav class="guide-languages" aria-label="영상 언어"><a href="/ai-memorize-sheet/?lang=ja#video-guide" lang="ja" data-language-switch="ja">日本語</a><a href="/en/ai-memorize-sheet/?lang=en#video-guide" lang="en" data-language-switch="en">English</a><a href="/ko/ai-memorize-sheet/?lang=ko#video-guide" lang="ko" data-language-switch="ko" aria-current="page">한국어</a><a href="/zh-cn/ai-memorize-sheet/?lang=zh-CN#video-guide" lang="zh-CN" data-language-switch="zh-CN">中文</a></nav>
+</div>
+<div class="guide-topics">
+<h3 class="guide-chapter-heading">원하는 항목부터 보기</h3>
+<ol class="guide-chapters"><li><button type="button" data-guide-seek="0.000" aria-controls="study-video"><span class="guide-time">0:00</span><span>네 단계로 시작하기</span></button></li><li><button type="button" data-guide-seek="12.000" aria-controls="study-video"><span class="guide-time">0:12</span><span>교재 가져오기</span></button></li><li><button type="button" data-guide-seek="34.500" aria-controls="study-video"><span class="guide-time">0:34</span><span>마스크 확인 및 조정</span></button></li><li><button type="button" data-guide-seek="59.933" aria-controls="study-video"><span class="guide-time">0:59</span><span>알림과 복습</span></button></li><li><button type="button" data-guide-seek="97.933" aria-controls="study-video"><span class="guide-time">1:37</span><span>자동으로 복습하기</span></button></li><li><button type="button" data-guide-seek="122.933" aria-controls="study-video"><span class="guide-time">2:02</span><span>학습 결과 기록</span></button></li><li><button type="button" data-guide-seek="153.933" aria-controls="study-video"><span class="guide-time">2:33</span><span>교재 공유</span></button></li><li><button type="button" data-guide-seek="171.100" aria-controls="study-video"><span class="guide-time">2:51</span><span>나에게 맞게 설정</span></button></li></ol>
+</div>
+</div>
+</div>
+</section>
+<!-- AI-STUDY-SHEET-VIDEO-GUIDE:END -->
 <section class="section features" data-section-id="features" data-section-name="Features" data-section-order="6" data-track-section="" id="features">
 <div class="container narrow center reveal">
 <p class="section-kicker">자동으로 시작하고 내 방식대로 다듬기</p>
@@ -416,5 +449,6 @@
 </footer>
 <script src="../../ai-memorize-sheet/script.js"></script>
 <script src="../../shared/analytics.js"></script>
-<script src="../../shared/locale.js"></script></body>
+<script src="../../shared/locale.js"></script><script src="/shared/ai-study-sheet-guides/v4/video-guide.js" defer></script>
+</body>
 </html>

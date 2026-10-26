@@ -1,0 +1,30 @@
+/* Scoped to the tutorial component; existing LP sections retain their styling. */
+.guide-entry{margin-top:-12px;margin-bottom:28px;font-weight:750;color:var(--blue)}
+.guide-entry a{display:inline-flex;align-items:center;gap:12px;border-bottom:1px solid currentColor;padding-bottom:3px}
+.study-video-guide{scroll-margin-top:86px;background:linear-gradient(135deg,#fff8fa,#f2f7ff);border-block:1px solid var(--line)}
+.guide-layout{display:grid;grid-template-columns:minmax(260px,360px) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center;max-width:1080px}
+.guide-player-column{min-width:0}
+.guide-video-frame{overflow:hidden;border:1px solid rgba(31,42,68,.15);border-radius:24px;background:#111827;box-shadow:0 20px 56px rgba(31,42,68,.14)}
+.guide-video-frame video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:contain;background:#111827}
+.guide-video-link{margin:15px 0 0;text-align:center;font-size:.85rem;color:var(--muted)}
+.guide-video-link a{text-decoration:underline;text-underline-offset:4px}
+.guide-content{min-width:0}
+.guide-content h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.35;letter-spacing:-.035em;margin:0 0 14px}
+.guide-content .section-kicker{margin:0 0 12px}
+.guide-meta{display:flex;gap:8px;margin:0 0 20px;font-size:.82rem;color:var(--muted)}
+.guide-meta span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;background:#fff}
+.guide-intro{margin:0 0 10px;font-size:1.04rem;line-height:1.8;color:var(--text)}
+.guide-hint{margin:0;color:var(--muted);font-size:.92rem}
+.guide-languages{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.guide-languages a{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.82rem;color:var(--muted)}
+.guide-languages a[aria-current="page"]{color:#0058bb;background:#eaf3ff;border-color:#b6d7ff;font-weight:750}
+.guide-chapter-heading{font-size:.9rem;margin:0 0 12px;color:var(--muted);font-weight:650}
+.guide-chapters{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.guide-chapters li{min-width:0}
+.guide-chapters button{appearance:none;width:100%;min-height:68px;display:flex;align-items:center;gap:10px;padding:13px 12px;text-align:start;font:inherit;font-size:.88rem;font-weight:650;line-height:1.45;color:var(--text);border:1px solid #dbe2ed;border-radius:14px;background:#fff;cursor:pointer}
+.guide-chapters button:hover,.guide-chapters button[aria-current="true"]{background:#edf5ff;border-color:#a7cfff}
+.guide-time{flex-shrink:0;font-variant-numeric:tabular-nums;font-size:.75rem;font-weight:750;color:#0058bb}
+.guide-chapters button:focus-visible,.guide-languages a:focus-visible,.guide-entry a:focus-visible,.guide-video-link a:focus-visible{outline:3px solid #007aff;outline-offset:3px}
+.guide-error{color:#a12626;font-size:.9rem}
+@media(max-width:760px){.guide-layout{grid-template-columns:1fr;gap:30px}.guide-content{display:contents}.guide-summary{grid-row:1}.guide-player-column{grid-row:2;width:min(100%,360px);margin-inline:auto}.guide-topics{grid-row:3}.guide-languages{margin-bottom:0}.study-video-guide{padding-block:64px}.guide-chapters button{min-height:62px}.guide-content h2{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.guide-entry a,.guide-chapters button{transition:none}}
