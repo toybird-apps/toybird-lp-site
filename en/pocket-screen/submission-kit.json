@@ -7,7 +7,7 @@
   "x": "https://x.com/Masaki_Iino_tbl",
   "platform": "macOS",
   "pricing": "Freemium",
-  "price": "Free + $9.99 one-time purchase",
+  "price": "Free + $9.99 one-time purchase or $2.99/month",
   "launch_year": 2026,
   "tagline": "Keep your reference in view without switching windows",
   "logo": "https://lp.toybird.com/en/pocket-screen/submission-assets/icon.png",
@@ -42,14 +42,28 @@
     "free_version": {
       "sessions": "Unlimited number of sessions",
       "session_limit_minutes": 10,
-      "expiration": "None"
+      "expiration": "None",
+      "maximum_reference_views": 2,
+      "quality_modes": [
+        "Energy",
+        "Standard",
+        "Smooth"
+      ]
     },
     "paid_version": {
       "product": "Unlimited Access",
       "currency": "USD",
       "regular_price": 9.99,
-      "purchase_type": "One-time purchase",
-      "subscription": "None"
+      "purchase_type": "One-time purchase or monthly subscription",
+      "subscription": "$2.99/month",
+      "monthly_price": 2.99,
+      "maximum_reference_views": 4,
+      "quality_modes": [
+        "Energy",
+        "Standard",
+        "Smooth",
+        "Ultra"
+      ]
     }
   },
   "description": "Pocket Screen is a macOS productivity app that lets users keep another app window visible as a small, resizable live Picture-in-Picture view while continuing to work in a different app. Instead of repeatedly switching between windows, users can keep the information they need in sight while working. Typical reference material includes PDFs, web pages, documents, videos, dashboards, chats, instructions, timers, and other reference information. Pocket Screen is particularly useful when working on a single MacBook display or whenever users want to reduce repeated window switching. Pocket Screen creates a separate live reference view rather than simply forcing the original application window to remain always on top.",
@@ -67,20 +81,26 @@
   ],
   "features": [
     "Live Picture-in-Picture reference view of another Mac app window",
-    "Up to two simultaneous reference views",
+    "Up to two reference views with Free, or four with Unlimited",
     "Move and resize each view",
     "Opacity control",
     "Click Through",
     "Pause live updating",
     "Adjustable update quality",
-    "Global keyboard shortcuts",
+    "Preset or custom global keyboard shortcuts",
     "Menu bar operation",
     "Optional exclusion from supported screenshots, screen recordings and screen sharing",
-    "Local processing on the Mac"
+    "Local processing on the Mac",
+    "Multiple views of the same source window",
+    "Arrange to bring reference views back on screen",
+    "Clear selected-view, Paused and Updating indicators",
+    "Improved recovery when switching Spaces"
   ],
   "shortcuts": {
     "open_pip": "Option + Command + P",
-    "close_pip": "Option + Command + X"
+    "close_pip": "Option + Command + X",
+    "configuration": "Default preset combinations and Custom shortcuts are available in Settings. Existing shortcut choices are preserved.",
+    "stream_deck": "The Stream Deck profile and Pocket Screen shortcuts must match."
   },
   "privacy": {
     "window_content_processing": "Window content is processed locally on the user's Mac. Pocket Screen does not upload captured window content to an external server.",
@@ -121,12 +141,31 @@
     "height": 512
   },
   "screenshot_usage": {
-    "standard_order": ["04", "03", "02", "01"],
+    "standard_order": [
+      "04",
+      "03",
+      "02",
+      "01"
+    ],
     "selection_by_image_limit": {
-      "1": ["04"],
-      "2": ["04", "03"],
-      "3": ["04", "03", "02"],
-      "4": ["04", "03", "02", "01"]
+      "1": [
+        "04"
+      ],
+      "2": [
+        "04",
+        "03"
+      ],
+      "3": [
+        "04",
+        "03",
+        "02"
+      ],
+      "4": [
+        "04",
+        "03",
+        "02",
+        "01"
+      ]
     },
     "rule": "Use the screenshots array in its listed priority order. Take the first images up to the site's limit; never reorder them into ascending filename order."
   },
@@ -142,7 +181,7 @@
       "currency": "USD",
       "regular_price": 9.99,
       "discounted_price": 7.99,
-      "discount_amount": 2.00,
+      "discount_amount": 2,
       "custom_code": "GETFREEAPP",
       "redemption_url": "https://apps.apple.com/redeem?ctx=offercodes&id=6788211562&code=GETFREEAPP",
       "expiration_date": "2026-10-31",
@@ -205,5 +244,6 @@
       "paid_only_result": "Skipped — Paid only"
     },
     "needs_confirmation": "Use Needs confirmation only when a required fact is absent from this Master or another necessary decision cannot be made safely from the available information. Paid-only listings are skipped, not sent for approval."
-  }
+  },
+  "softwareVersion": "2.1.0"
 }

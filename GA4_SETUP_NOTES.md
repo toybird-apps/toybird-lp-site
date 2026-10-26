@@ -1,29 +1,27 @@
 # GA4 implementation notes
 
-Measurement ID: `G-MTD9Z8S7QG`
+Measurement ID: `G-MTD9Z8S7QG`.
 
-Implemented on:
+Google Analytics is embedded in the portfolio homepage, active product LPs, and published blog pages. Redirect aliases are not separate content pages. Preserve existing instrumentation when editing content.
 
-- `/index.html`
-- `/ai-memorize-sheet/index.html`
-- `/pocket-screen/index.html`
-- `/prompt-ready/index.html`
-- `/pointer-cue/index.html`
+## Existing events
 
-Pointer Cue custom events:
+Event availability varies by page and platform:
 
-- `microsoft_store_click`
 - `app_store_click`
-- `trial_download_click`
+- `microsoft_store_click`
+- `store_click`
 - `os_tab_select`
 - `comparison_view`
+- `language_switch`
+- `language_auto_selected`
 
-Common parameters include:
+Parameters can include app name, store platform, link URL/text, page language, page location, and target language. Read the page's actual script before changing event names or assuming every page emits every event.
 
-- `app_name`
-- `store_platform`
-- `link_url`
-- `link_text`
-- `page_location`
+Retired direct-binary trial download events are not a current Pointer Cue acquisition path.
 
-After publishing, open GA4 Realtime and confirm `page_view` and each CTA event.
+## Verification
+
+After publication, verify that existing CTA handlers and language switches still work. A live GA4 Realtime check requires authorized access to the analytics account; a successful page deployment alone does not prove event ingestion.
+
+Website privacy information: https://labs.toybird.com/privacy/#websites.
