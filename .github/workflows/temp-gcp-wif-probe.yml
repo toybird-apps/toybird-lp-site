@@ -1,0 +1,18 @@
+name: Temp GCP WIF probe
+on:
+  push:
+    branches: [chatgpt-gcp-tts-20261102]
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: projects/923694534263/locations/global/workloadIdentityPools/github/providers/github
+          service_account: top-sales-runner@chromatic-hue-495709-c4.iam.gserviceaccount.com
+      - uses: google-github-actions/setup-gcloud@v3
+      - run: gcloud auth list --filter=status:ACTIVE --format='value(account)'
