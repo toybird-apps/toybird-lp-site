@@ -92,6 +92,10 @@ def synth(text, rate, out_path, token):
         data = json.loads(resp.read())
     out_path.write_bytes(base64.b64decode(data["audioContent"]))
 
+def wav_duration(path):
+    with wave.open(str(path), "rb") as w:
+        return w.getnframes() / float(w.getframerate())
+
 def concat_wavs(parts, out_path):
     params = None
     frames = []
@@ -139,7 +143,7 @@ def main():
         manifest["videos"][vid] = {
             "file": final.name,
             "sha256": hashlib.sha256(final.read_bytes()).hexdigest(),
-            "segments": [{"label":a,"speaking_rate":b,"text":c,"gap_after_sec":d} for a,b,c,d in segs]
+            "segments": seg_meta,\n            "audio_duration_sec": round(wav_duration(final), 3)
         }
         print(f"GENERATED={final}")
     (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
