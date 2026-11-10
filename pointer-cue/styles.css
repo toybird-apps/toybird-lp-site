@@ -86,3 +86,11 @@ button,input,textarea,select{font:inherit}
 .guide-card b{margin-top:auto;padding-top:22px;color:#315fd6;font-size:12px}
 @media(max-width:1080px) and (min-width:721px){.action-grid{grid-template-columns:1fr 1fr}.action-grid .action-card:last-child{grid-column:1/-1;width:min(100%,560px);justify-self:center}.guide-card-grid{grid-template-columns:1fr 1fr}.guide-card:last-child{grid-column:1/-1}}
 @media(max-width:720px){.action-grid .action-card:last-child{grid-column:auto;width:auto}.guide-card-grid{grid-template-columns:1fr}.guide-card:last-child{grid-column:auto}.guide-card{min-height:0}}
+
+/* Pointer Cue: dated StartupBase award, secondary to the download action. */
+.pointer-cue-award{margin-top:24px}
+.pointer-cue-award a{display:inline-flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:100%;text-decoration:none}
+.pointer-cue-award img{display:block;width:240px;max-width:100%;height:auto;aspect-ratio:300/80}
+.pointer-cue-award span{font-size:12px;line-height:1.5;color:var(--muted)}
+.pointer-cue-award a:hover span{text-decoration:underline}
+.pointer-cue-award a:focus-visible{outline:2px solid var(--blue);outline-offset:5px;border-radius:8px}
