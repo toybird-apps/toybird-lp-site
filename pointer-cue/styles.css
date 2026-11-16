@@ -88,7 +88,7 @@ button,input,textarea,select{font:inherit}
 @media(max-width:720px){.action-grid .action-card:last-child{grid-column:auto;width:auto}.guide-card-grid{grid-template-columns:1fr}.guide-card:last-child{grid-column:auto}.guide-card{min-height:0}}
 
 /* Pointer Cue: dated StartupBase award, secondary to the download action. */
-.pointer-cue-award{margin-top:24px}
+.pointer-cue-award{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px 20px;align-items:flex-start}
 .pointer-cue-award a{display:inline-flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:100%;text-decoration:none}
 .pointer-cue-award img{display:block;width:240px;max-width:100%;height:auto;aspect-ratio:300/80}
 .pointer-cue-award span{font-size:12px;line-height:1.5;color:var(--muted)}
