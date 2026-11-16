@@ -1,0 +1,42 @@
+/* Only loaded by the Japanese blog hub and its two starting guides. */
+.blog108.reader-guide .article-hero{padding-top:20px;padding-bottom:18px}
+.blog108.reader-guide .article-heading{margin:16px auto}
+.blog108.reader-guide .article-heading h1{margin:12px auto}
+.blog108.reader-guide .byline{margin-top:14px}
+.blog108 .reader-start{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:30px;align-items:center;border:1px solid #c5d8e2;border-radius:18px;background:#f4f9fb;padding:28px;margin:0 0 28px;min-width:0}
+.blog108 .reader-start-wide{grid-template-columns:minmax(0,1fr)}
+.blog108 .reader-start h2{font-size:clamp(24px,3vw,31px);line-height:1.5;margin:8px 0 16px;border:0;padding:0;text-wrap:initial}
+.blog108 .reader-start p,.blog108 .reader-start li{font-size:16px;line-height:1.85}
+.blog108 .reader-start .reader-eyebrow{font-size:13px;font-weight:700;color:#2c6078;margin:0}
+.blog108 .reader-start ol{padding-left:1.45em;margin:16px 0}
+.blog108 .reader-start li{margin:5px 0}
+.blog108 .reader-start figure{margin:0;min-width:0}
+.blog108 .reader-start img{display:block;width:100%;height:auto;border-radius:10px}
+.blog108 .reader-start figcaption{font-size:11px;line-height:1.7;margin-top:8px}
+.blog108 .reader-start .reader-small{font-size:12px;line-height:1.8;color:#526b7a;margin-bottom:0}
+.blog108 .reader-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:20px 0 0}
+.blog108 .reader-actions a{font-size:14px;font-weight:700;text-underline-offset:4px}
+.blog108 .reader-primary{display:inline-block;background:#185b87;color:#fff;border:1px solid #185b87;padding:12px 18px;border-radius:8px;text-decoration:none;line-height:1.7}
+.blog108 .reader-primary:hover{background:#124868}
+.blog108 .reader-contents{margin:26px 0 32px;border:1px solid #d9e3e9;border-radius:12px;padding:16px 20px;background:#fff}
+.blog108 .reader-contents summary{font-size:15px;cursor:pointer;color:#185b87;font-weight:700}
+.blog108 .reader-contents .b108-toc{border:0;box-shadow:none;background:transparent;padding:8px 0 0;margin:0}
+.blog108 .reader-picks{max-width:1160px;margin:0 auto 32px;padding:0 24px}
+.blog108 .reader-picks h2{font-size:clamp(21px,3vw,29px);line-height:1.6;margin:0 0 20px}
+.blog108 .reader-pick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.blog108 .reader-pick{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;align-items:center;border:1px solid #c5d8e2;border-radius:16px;padding:22px;background:#fff;color:#1b2d3d;text-decoration:none;min-width:0}
+.blog108 .reader-pick img{width:100%;height:auto;border-radius:8px}
+.blog108 .reader-pick h3{font-size:20px;line-height:1.6;margin:6px 0 10px}
+.blog108 .reader-pick p{font-size:14px;line-height:1.8;margin:0 0 8px;color:#526b7a}
+.blog108 .reader-pick strong{font-size:14px;color:#185b87}
+.blog108 .reader-pick:hover{border-color:#185b87;background:#f8fbfd}
+@media(max-width:760px){
+ .blog108 .reader-start{grid-template-columns:minmax(0,1fr);padding:22px 18px;gap:22px}
+ .blog108 .reader-start:not(.reader-start-wide) figure{width:170px;justify-self:center}
+ .blog108 .reader-actions{align-items:stretch;flex-direction:column}
+ .blog108 .reader-primary{text-align:center}
+ .blog108 .reader-picks{padding:0 18px}
+ .blog108 .reader-pick-grid{grid-template-columns:minmax(0,1fr)}
+ .blog108 .reader-pick{grid-template-columns:80px minmax(0,1fr);padding:18px;gap:16px}
+ .blog108 .reader-pick h3{font-size:18px}
+}
