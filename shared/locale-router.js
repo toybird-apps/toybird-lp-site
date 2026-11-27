@@ -1,4 +1,6 @@
 (function () {
+  // Keep explicitly localized landing-page URLs stable; language links still work.
+  if (document.currentScript?.dataset.languageRouting === 'manual') return;
   const STORAGE_KEY = 'toybird_language';
   const ROUTES = {
     ja: '/ai-memorize-sheet/',
